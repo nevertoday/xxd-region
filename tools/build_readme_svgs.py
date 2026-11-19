@@ -1,55 +1,60 @@
 #!/usr/bin/env python3
-"""README 里的两张配图（SVG，轻动画，和头图 hero.svg 同一套深色风格，颜色、字体、图标都从 build_hero 拿）。
+"""README 里的两张配图（SVG，轻动画，和头图 hero.svg 同一套深色风格，颜色、字体、标志都从 build_hero 拿）。
 
     python3 tools/build_readme_svgs.py
 
 输出 assets/readme/<名字>.svg（中文）和 assets/en/readme/<名字>.svg（英文）：
-  quota    5 万美元是一条快速通道，不是一堵墙：额度以内只凭身份证；真实的收入超过了，带上材料照样能结汇；
-           还有一条本来就不用额度的路（支付机构、有交易记录的跨境电商）。三条路都通到「换成人民币」。
-           依据第 2 课（src/pages/start/2-quota.mdx）：实施细则第二条，指引第五十四至五十六条、第六十六条、第一百三十七条，外汇局厦门分局的问答。
+  move     给主账户换地区之前，Apple 要你先清掉的几样东西，一行行打勾；最后一行是国区账户才有的：
+           iCloud 里的内容迁出云上贵州，迁完以后云上贵州删掉它那份。所以另注册一个更省事（第 3 课）。
+           依据 118283（en / zh-cn）、111754 和云上贵州的 iCloud 条款，见 docs/sources/README.md 第 5、6 节。
   lessons  新手入门三课：每课多长、学完你知道什么。课名和时间从 src/data/nav.js 的 LESSONS 读。
-透明度只写在动画里，系统设了「减少动效」或者不播动画的地方，看到的都是最后的样子。
-quota 里的硬币最后停在「换成人民币」那个框下面，被框盖住，所以静态图里看不到硬币。文字改 TEXT。
+透明度只写在动画里，系统设了「减少动效」或者不播动画的地方，看到的都是最后的样子。文字改 TEXT。
 """
 import os
 import re
 from html import escape
 
-from build_hero import BG, PANEL, INK, MUTED, HOT, LINE, MONO, FONT, REDUCE, id_card, doc, read_lessons, width, txt as t
+from build_hero import BG, PANEL, INK, MUTED, HOT, LINE, MONO, FONT, REDUCE, read_lessons, width, txt as t
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 TEXT = {
     "zh": {
-        "quota": {
-            "head": "5 万美元是一条快速通道，不是一堵墙",
-            "lanes": [
-                ("额度以内", "每人每年等值 5 万美元，只凭身份证就能办", "去银行柜台、用网银或者手机银行都行"),
-                ("超过额度", "真实的收入，带上材料照样能结汇", "带上身份证和写着交易金额的材料，比如合同、发票、付款记录，到银行办"),
-                ("不占额度", "有些结汇本来就不用额度", "支付机构外汇业务下的个人结售汇；跨境电商有交易额材料或交易电子信息"),
+        "move": {
+            "head": "给主账户换地区之前，Apple 要你先清掉这些",
+            "rows": [
+                ("余额", "把 Apple 账户余额用完；不够买一件东西的零头，找 Apple 支持清零"),
+                ("订阅", "取消会挡住换区的订阅，再等到订阅期结束"),
+                ("待处理的事", "会员资格、预购、影片租借、季票，还有没处理完的退款"),
+                ("家人共享", "在家人共享群组里的成员，可能换不了地区"),
+                ("付款方式", "可能要填一个新地区能用的付款方式"),
+                ("已买的内容", "有些内容到了新地区可能用不了，先下载到要用的设备上"),
             ],
-            "dest": ("换成人民币", "这一步叫结汇"),
-            "notes": ["额度按自然年算，年底清零。客户把美元付进你的外币账户不用额度，换成人民币那一下才用。",
-                      "某一家收款平台打到卡上的人民币算不算「不占额度」，说不准，先问它或你的开户银行。"],
+            "gcbd": ("国区账户还多一件", "iCloud 里的内容会从云上贵州迁到 Apple，迁完以后云上贵州删掉它那份"),
+            "end": "所以，另注册一个外区账户更省事",
+            "src": "出处：Apple 支持 118283、111754，云上贵州运营的 iCloud 条款",
         },
         "lessons": {"num": "第 {n} 课", "get_label": "学完你知道：",
-                    "get": ["钱回国的三段路，每段扣什么钱", "额度管什么，超过了要带什么材料", "你能开哪些账户，为什么只能用自己的身份"]},
+                    "get": ["地区管什么，Apple 的条款怎么说你住在哪", "iCloud 不动，只在「媒体与购买项目」里换", "为什么不给主账户换区，另注册一个"]},
     },
     "en": {
-        "quota": {
-            "head": "The USD 50,000 quota is a fast lane, not a wall",
-            "lanes": [
-                ("Within the quota", "USD 50,000 a year, with just your ID", "At the bank counter, online, or in your bank's app"),
-                ("Above it", "Real income still gets settled", "Bring your ID and documents showing the amount, like a contract or invoice"),
-                ("No quota used", "Some settlements never use the quota", "A payment institution's FX business; e-commerce with transaction records"),
+        "move": {
+            "head": "Before your main account changes region, Apple asks you to clear these",
+            "rows": [
+                ("Balance", "Spend your Apple Account balance; Apple Support can clear an amount too small to buy anything"),
+                ("Subscriptions", "Cancel the ones that block the change, then wait for the period to end"),
+                ("Pending items", "Memberships, pre-orders, movie rentals, season passes and refunds still processing"),
+                ("Family Sharing", "A member of a Family Sharing group might not be able to change region"),
+                ("Payment method", "You might need one that works in the new country or region"),
+                ("What you bought", "Some content might not be available in the new region, so download it first"),
             ],
-            "dest": ("Into RMB", "That's settlement"),
-            "notes": ["The quota runs by calendar year and doesn't carry over. USD paid into your account doesn't use it; changing it into RMB does.",
-                      "Whether a particular provider's RMB payout counts as quota-free is unclear. Ask the provider or your bank."],
+            "gcbd": ("China mainland accounts: one more", "iCloud content moves from GCBD to Apple, and GCBD then deletes its copy"),
+            "end": "So a second account is simpler",
+            "src": "Sources: Apple Support 118283 and 111754, the iCloud (operated by GCBD) terms",
         },
         "lessons": {"num": "Lesson {n}", "get_label": "After this lesson, you know:",
-                    "get": ["The three legs home, and what each one takes", "What the quota covers, and what to bring above it",
-                            "Which accounts you can open, and why only in your name"]},
+                    "get": ["What the region decides, and what Apple's terms say about where you live",
+                            "iCloud stays put; only Media & Purchases switches", "Why you leave your main account alone and make a second one"]},
     },
 }
 
@@ -66,9 +71,9 @@ def wrap(s, size, maxw):
 def greedy(s, size, maxw):
     """英文在空格处断，中文在字间断，优先断在逗号后面。"""
     lines, cur = [], []
-    for tok in re.findall(r"[^\s⺀-￿]+\s*|\s+|.[，、。；：）]?", s):
+    for tok in re.findall(r"[^\s⺀-￿]+\s*|\s+|.[，、。；：）」]?", s):
         if cur and width("".join(cur) + tok.rstrip(), size) > maxw:
-            commas = [i for i, c in enumerate(cur) if c[-1] in "，、"]
+            commas = [i for i, c in enumerate(cur) if c[-1] in "，、；"]
             cut = commas[-1] + 1 if commas else len(cur)
             lines.append("".join(cur[:cut]).rstrip())
             cur = cur[cut:]
@@ -88,18 +93,20 @@ def show(name, start, total, dur=.4):
     """在 start 秒淡入，循环结束前 0.8 秒淡出。"""
     p = lambda s: pct(s, total)
     end = total - .8
-    return (f"@keyframes {name}{{0%,{p(start)}{{opacity:0;transform:translateY(6px)}}{p(start + dur)},{p(end)}{{opacity:1;transform:translateY(0)}}"
-            f"{p(end + .5)},100%{{opacity:0}}}}.{name}{{animation:{name} {total}s infinite;transform-box:fill-box}}")
+    return (f"@keyframes {name}{{0%,{p(start)}{{opacity:0}}{p(start + dur)},{p(end)}{{opacity:1}}"
+            f"{p(end + .5)},100%{{opacity:0}}}}.{name}{{animation:{name} {total}s infinite}}")
 
 
-def slide(name, total, start, stops):
-    """一枚硬币：start 秒出现，按 stops [(秒, 离终点还差多少 px)] 往右走，最后一站是终点（0）。"""
+def light(name, start, total, prop, off, on):
     p = lambda s: pct(s, total)
-    x0 = stops[0][1]
-    frames = [f"0%,{p(start)}{{opacity:0;transform:translateX({x0}px)}}", f"{p(start + .3)}{{opacity:1;transform:translateX({x0}px)}}"]
-    frames += [f"{p(s)}{{opacity:1;transform:translateX({dx}px)}}" for s, dx in stops]
-    frames.append(f"{p(stops[-1][0] + .01)},100%{{opacity:1;transform:none}}")
-    return f"@keyframes {name}{{{''.join(frames)}}}.{name}{{animation:{name} {total}s infinite}}"
+    end = total - .8
+    return (f"@keyframes {name}{{0%,{p(start)}{{{prop}:{off}}}{p(start + .3)},{p(end)}{{{prop}:{on}}}"
+            f"{p(end + .5)},100%{{{prop}:{off}}}}}.{name}{{animation:{name} {total}s infinite}}")
+
+
+def tick(x, y, s, cls):
+    return (f'<g class="{cls}"><rect x="{x}" y="{y}" width="{s}" height="{s}" fill="{HOT}"/>'
+            f'<path d="M{x + s * .24:.1f} {y + s * .52:.1f} l{s * .2:.1f} {s * .2:.1f} l{s * .34:.1f} -{s * .38:.1f}" stroke="{BG}" stroke-width="{s * .12:.1f}" fill="none"/></g>')
 
 
 def wrap_svg(w, h, css, body, label):
@@ -107,48 +114,39 @@ def wrap_svg(w, h, css, body, label):
             f'<style>{css}{REDUCE}</style><rect width="{w}" height="{h}" fill="{BG}"/>{body}</svg>\n')
 
 
-def quota(lang):
-    T, f = TEXT[lang]["quota"], FONT[lang]
+def move(lang):
+    T, f = TEXT[lang]["move"], FONT[lang]
     W, TOTAL = 1200, 10.0
-    x0, x1, dx0, dx1 = 40, 920, 960, 1160      # 三条路的左右边，「换成人民币」那个框的左右边
-    lane_h, gap, top = 112, 14, 84
-    coin_end = dx0 + 40                          # 硬币的终点藏在框下面
-    css, out, coins = [], [], []
+    x0, x1 = 40, 1160
+    tag_w = round(max(width(tag, 18) for tag, _ in T["rows"]) + 36)
+    sub_x = x0 + 24 + tag_w + 24
+    sub_w = x1 - 24 - 30 - 24 - sub_x          # 说明文字的宽度：右边留给勾
+    css, out = [], []
     out.append(t(x0, 52, T["head"], 26, INK, f, 700))
-    styles = [  # 边框、标签底色、标签字色、路的颜色、虚线
-        (HOT, HOT, BG, HOT, ""), (LINE, LINE, INK, MUTED, ""), (LINE, LINE, INK, MUTED, ' stroke-dasharray="8 6"')]
-    tag_w = round(max(width(tag, 16) for tag, _, _ in T["lanes"]) + 28)
-    times = [(.3, .7, [(.9, x0 + 32 - coin_end), (2.1, 0)]),
-             (2.4, 2.8, [(3.0, x0 + 32 - coin_end), (3.8, 836 - coin_end), (4.3, 836 - coin_end), (4.9, 0)]),
-             (5.1, 5.5, [(5.7, x0 + 32 - coin_end), (6.7, 0)])]
-    for i, ((tag, title, sub), (stroke, tag_fill, tag_ink, road, dash), (t0, c0, stops)) in enumerate(zip(T["lanes"], styles, times)):
-        y = top + i * (lane_h + gap)
-        ry = y + 94
-        g = [f'<g class="lane{i}"><rect x="{x0}" y="{y}" width="{x1 - x0}" height="{lane_h}" fill="{PANEL}" stroke="{stroke}" stroke-width="2"{dash}/>',
-             f'<rect x="{x0 + 20}" y="{y + 18}" width="{tag_w}" height="30" fill="{tag_fill}"/>',
-             t(x0 + 34, y + 39, tag, 16, tag_ink, f, 700),
-             t(x0 + 20 + tag_w + 16, y + 41, title, 22, INK, f, 700),
-             t(x0 + 20, y + 72, sub, 17, MUTED, f, 500),
-             f'<path d="M{x0 + 20} {ry} H{dx0 - 10}" stroke="{road}" stroke-width="3"{dash}/>',
-             f'<path d="M{dx0 - 18} {ry - 7} l8 7 l-8 7" stroke="{road}" stroke-width="3" fill="none"/>']
-        if i == 0:
-            g.append(id_card(846, y + 22))
-        elif i == 1:
-            g.append(id_card(790, y + 22) + doc(852, y + 18))
-        out.append("".join(g) + "</g>")
-        css.append(show(f"lane{i}", t0, TOTAL))
-        coins.append(f'<circle class="coin{i}" cx="{coin_end}" cy="{ry}" r="9" fill="{HOT}"/>')
-        css.append(slide(f"coin{i}", TOTAL, c0, stops))
-    out += coins
-    bottom = top + 3 * lane_h + 2 * gap
-    cy = (top + bottom) // 2
-    out.append(f'<rect x="{dx0}" y="{top}" width="{dx1 - dx0}" height="{bottom - top}" fill="{PANEL}" stroke="{HOT}" stroke-width="2"/>')
-    out.append(t((dx0 + dx1) // 2, cy - 2, T["dest"][0], 26, INK, f, 700, "middle"))
-    out.append(t((dx0 + dx1) // 2, cy + 30, T["dest"][1], 17, MUTED, f, 500, "middle"))
-    out.append(f'<g class="notes">{lines(x0, bottom + 44, T["notes"], 17, MUTED, f, 30)}</g>')
-    css.append(show("notes", 7.0, TOTAL))
-    H = bottom + 44 + 30 * (len(T["notes"]) - 1) + 30
-    label = f'{T["head"]}. ' + " ".join(f"{tag}: {title}. {sub}." for tag, title, sub in T["lanes"]) + f' → {T["dest"][0]}. ' + " ".join(T["notes"])
+    y = 84
+    for i, (tag, sub) in enumerate(T["rows"]):
+        rows = wrap(sub, 18, sub_w)
+        h = 30 + 26 * len(rows) + 12
+        out.append(f'<rect x="{x0}" y="{y}" width="{x1 - x0}" height="{h}" fill="{PANEL}" stroke="{LINE}" stroke-width="2"/>')
+        out.append(t(x0 + 24, y + 38, tag, 18, INK, f, 700))
+        out.append(lines(sub_x, y + 38, rows, 18, MUTED, f, 26, 500))
+        out.append(tick(x1 - 24 - 30, y + (h - 30) // 2, 30, f"k{i}"))
+        css.append(show(f"k{i}", .4 + i * .7, TOTAL, .3))
+        y += h + 10
+    # 国区账户才有的那一件：主色描边，图标位置放一个往外的箭头
+    tag, sub = T["gcbd"]
+    rows = wrap(sub, 18, x1 - x0 - 48)
+    h = 26 + 30 + 26 * len(rows) + 12
+    out.append(f'<g class="gc"><rect x="{x0}" y="{y}" width="{x1 - x0}" height="{h}" fill="{PANEL}" stroke="{HOT}" stroke-width="2" stroke-dasharray="8 6"/>'
+               f'{t(x0 + 24, y + 36, tag, 18, HOT, f, 700)}{lines(x0 + 24, y + 68, rows, 18, INK, f, 26, 500)}</g>')
+    css.append(show("gc", .4 + 6 * .7 + .2, TOTAL))
+    y += h + 26
+    out.append(f'<g class="end"><rect x="{x0}" y="{y}" width="8" height="34" fill="{HOT}"/>{t(x0 + 24, y + 26, T["end"], 24, INK, f, 700)}</g>')
+    css.append(show("end", .4 + 6 * .7 + 1.2, TOTAL))
+    y += 34 + 34
+    out.append(t(x0, y, T["src"], 15, MUTED, f, 400))
+    H = y + 26
+    label = f'{T["head"]}: ' + " ".join(f"{tag}: {sub}." for tag, sub in T["rows"]) + f' {T["gcbd"][0]}: {T["gcbd"][1]}. {T["end"]}. {T["src"]}'
     return wrap_svg(W, H, "".join(css), "".join(out), label)
 
 
@@ -189,7 +187,7 @@ if __name__ == "__main__":
     for lang, sub in [("zh", "readme"), ("en", "en/readme")]:
         d = os.path.join(ROOT, "assets", sub)
         os.makedirs(d, exist_ok=True)
-        for name, fn in [("quota", quota), ("lessons", lessons)]:
+        for name, fn in [("move", move), ("lessons", lessons)]:
             with open(os.path.join(d, f"{name}.svg"), "w") as fh:
                 fh.write(fn(lang))
-        print("wrote", f"assets/{sub}/" + "{quota,lessons}.svg")
+        print("wrote", f"assets/{sub}/" + "{move,lessons}.svg")

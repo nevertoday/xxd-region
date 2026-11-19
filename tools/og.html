@@ -11,8 +11,8 @@
   h1 { font-weight: 600; line-height: 1.12; letter-spacing: -.01em; white-space: nowrap; display: inline-block; }
   h1 em { font-style: normal; color: #ff7a4d; }
   .sub { margin-top: 30px; font-size: 38px; font-weight: 500; color: #a7a194; }
-  /* 右边：一枚硬币（本站标志：中间一个往左下指的箭头），落进下面一张银行卡 */
-  .art { position: absolute; right: 110px; top: 150px; width: 260px; height: 340px; }
+  /* 右边：一个设置面板，两个登录位：上面一条是 iCloud（你自己的账户，锁着不动），下面一条主色的是商店（换了地区） */
+  .art { position: absolute; right: 96px; top: 136px; width: 300px; height: 368px; }
   .art svg { width: 100%; height: 100%; overflow: visible; }
   .brand { position: absolute; left: 88px; bottom: 56px; font-size: 26px; font-weight: 600; display: flex; align-items: center; gap: 12px; }
   .brand svg { width: 30px; height: 30px; }
@@ -20,21 +20,26 @@
 </head>
 <body>
 <div class="copy"><h1 id="h1"></h1><p class="sub" id="sub"></p></div>
-<div class="art"><svg viewBox="0 0 260 340" aria-hidden="true">
-  <rect x="14" y="196" width="232" height="130" fill="none" stroke="#f3f0ea" stroke-width="14"/>
-  <rect x="14" y="230" width="232" height="24" fill="#f3f0ea" opacity=".55"/>
-  <rect x="44" y="282" width="64" height="14" fill="#f3f0ea"/>
-  <circle cx="160" cy="92" r="78" fill="#ff7a4d"/>
-  <path d="M192 60 L128 124 M128 76 V124 H176" fill="none" stroke="#171612" stroke-width="16" stroke-linejoin="miter" stroke-linecap="butt"/>
+<div class="art"><svg viewBox="0 0 300 368" aria-hidden="true">
+  <rect x="7" y="7" width="286" height="354" fill="none" stroke="#f3f0ea" stroke-width="14"/>
+  <rect x="44" y="62" width="212" height="88" fill="#f3f0ea"/>
+  <rect x="72" y="92" width="96" height="14" fill="#171612"/>
+  <rect x="72" y="116" width="64" height="10" fill="#171612" opacity=".45"/>
+  <path d="M206 86 h28 v16 h-28 Z M212 86 v-8 a8 8 0 0 1 16 0 v8" fill="none" stroke="#171612" stroke-width="7" stroke-linejoin="miter"/>
+  <rect x="44" y="182" width="212" height="88" fill="#ff7a4d"/>
+  <rect x="72" y="212" width="96" height="14" fill="#171612"/>
+  <rect x="72" y="236" width="64" height="10" fill="#171612" opacity=".45"/>
+  <path d="M204 214 H236 M226 204 L236 214 L226 224 M236 240 H204 M214 230 L204 240 L214 250" fill="none" stroke="#171612" stroke-width="7" stroke-linejoin="miter"/>
+  <rect x="44" y="302" width="120" height="12" fill="#f3f0ea" opacity=".35"/>
 </svg></div>
-<div class="brand"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#f3f0ea"/><path d="M13.6 6.4 6.9 13.1M6.9 8.1V13.1H11.9" fill="none" stroke="#171612" stroke-width="2" stroke-linejoin="miter"/></svg><span id="brand"></span></div>
+<div class="brand"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#f3f0ea"/><path d="M10 3.6A6.4 6.4 0 1 0 10 16.4A6.4 6.4 0 1 0 10 3.6M10 3.6C7.6 5.6 7.6 14.4 10 16.4C12.4 14.4 12.4 5.6 10 3.6M3.6 10H16.4" fill="none" stroke="#171612" stroke-width="1.5"/></svg><span id="brand"></span></div>
 <script>
-  // 定稿（2026-11-19）：标题问的就是读者的事（钱怎么收回国），副标题列出要讲的几家和 5 万美元额度
-  const SUB = { zh: "PayPal · Wise · Payoneer · 5 万美元额度，一次讲清", en: "PayPal, Wise, Payoneer and the USD 50,000 quota, explained" };
-  const BRAND = { zh: "跨境收款新手教程 · 非官方", en: "Getting paid from abroad · unofficial" };
+  // 定稿（2026-11-19）：标题就是本站的办法（主账户不动，只给商店换个区），副标题说清讲哪两个区、出处是 Apple 官方
+  const SUB = { zh: "美区、土区 Apple ID 怎么注册、付款、切换，照 Apple 官方讲清", en: "US and Turkey accounts, explained from Apple's own pages" };
+  const BRAND = { zh: "外区 Apple ID 新手教程 · 非官方", en: "Apple Account regions, for beginners · unofficial" };
   const COPY = {
-    zh: "海外的钱<br><em>怎么收回国</em>",
-    en: "Getting paid<br>from <em>abroad</em>",
+    zh: "主账户不动<br><em>只给商店换个区</em>",
+    en: "Keep your account,<br><em>switch the store</em>",
   };
   const q = new URLSearchParams(location.search);
   const lang = q.get("lang") === "en" ? "en" : "zh";
