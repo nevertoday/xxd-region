@@ -1,0 +1,30 @@
+---
+// 每页末尾一行：这一页没看懂、照做不成，就到 GitHub 提出来（带好页面信息的模板），或者先翻常见问题。
+// 不放个人联系方式：学的人在 GitHub 上提问、讨论，大家都看得到，答案也能补进教程。
+import { link, langOf, REPO } from "../data/nav.js";
+interface Props { page: string }
+const lang = langOf(Astro.url.pathname);
+const en = lang === "en";
+const site = Astro.site ? Astro.site.href.replace(/\/$/, "") : "";
+const url = site + Astro.url.pathname;
+const T = en
+  ? {
+      title: `[Feedback] ${Astro.props.page}`,
+      body: `Page: ${url}\n\nWhat was unclear / what didn't work:\n\nWhich region the account is in (e.g. United States, Turkey) and where you were (iPhone Settings, App Store, account.apple.com), with your iOS version:\n\nWhat you saw (paste the message; no account email, phone number, card or gift card codes, or screenshots with your name):\n\nWhat you tried:\n`,
+      lead: "Something on this page unclear, or didn't work as written?",
+      gh: "Bring it up on GitHub",
+      faq: [". Or check the ", "FAQ", " first."],
+    }
+  : {
+      title: `[教程反馈] ${Astro.props.page}`,
+      body: `页面：${url}\n\n哪里没看懂 / 照做不成功：\n\n账户是哪个地区的（比如美国、土耳其），在哪里操作的（iPhone 设置、App Store、account.apple.com），iOS 是哪个版本：\n\n看到了什么提示（直接复制文字；别贴账户邮箱、手机号、银行卡和礼品卡号，也别贴带你名字的截图）：\n\n试过什么：\n`,
+      lead: "这一页有没看懂、或者照做不成的地方？",
+      gh: "到 GitHub 提出来",
+      faq: ["，也可以先翻翻", "常见问题", "。"],
+    };
+const href = `${REPO}/issues/new?title=${encodeURIComponent(T.title)}&body=${encodeURIComponent(T.body)}`;
+---
+<aside class="feedback">
+  <i data-xxd-icon="MessagesSquare" data-size="16"></i>
+  <span>{T.lead}{en ? " " : ""}<a class="xxd-link" href={href} rel="noopener">{T.gh}</a>{T.faq[0]}<a class="xxd-link" href={link("/faq/", lang)}>{T.faq[1]}</a>{T.faq[2]}</span>
+</aside>

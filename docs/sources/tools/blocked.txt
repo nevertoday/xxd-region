@@ -1,0 +1,1 @@
+https://account.apple.com/account | 500 to curl (page is script-rendered; create-account form not read) | 2026-11-19

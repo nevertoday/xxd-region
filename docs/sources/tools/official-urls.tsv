@@ -1,0 +1,119 @@
+# url	out path under raw/official/	(--en to send Accept-Language en-US)
+https://www.apple.com/legal/internet-services/itunes/us/terms.html	legal/ams-terms-us-en.md	--en
+https://www.apple.com/tr/legal/internet-services/itunes/tr/terms.html	legal/ams-terms-tr-tr.md	--en
+https://www.apple.com.cn/legal/internet-services/itunes/cn/terms.html	legal/ams-terms-cn-zh.md	
+https://www.apple.com/legal/internet-services/itunes/giftcards/us/terms.html	legal/gift-card-terms-us-en.md	--en
+https://www.apple.com/legal/internet-services/itunes/giftcards/tr/terms.html	legal/gift-card-terms-tr.md	--en
+https://www.apple.com/legal/giftcards/applestore/	legal/apple-store-gift-card-terms-us-en.md	--en
+https://www.apple.com.cn/legal/internet-services/icloud/cn_si/gcbd-terms.html	legal/icloud-gcbd-terms-zh.md	
+https://www.apple.com/legal/internet-services/icloud/en/gcbd-terms.html	legal/icloud-gcbd-terms-en.md	--en
+https://www.apple.com/legal/intellectual-property/guidelinesfor3rdparties.html	legal/trademark-guidelines-en.md	--en
+https://www.apple.com/apple-one/	pricing/apple-one-us-en.md	--en
+https://support.apple.com/en-us/108647	support-en/108647.md	--en
+https://support.apple.com/zh-cn/108647	support-zh/108647.md	
+https://support.apple.com/en-us/102617	support-en/102617.md	--en
+https://support.apple.com/zh-cn/102617	support-zh/102617.md	
+https://support.apple.com/en-us/102660	support-en/102660.md	--en
+https://support.apple.com/zh-cn/102660	support-zh/102660.md	
+https://support.apple.com/en-us/111741	support-en/111741.md	--en
+https://support.apple.com/zh-cn/111741	support-zh/111741.md	
+https://support.apple.com/en-us/118429	support-en/118429.md	--en
+https://support.apple.com/zh-cn/118429	support-zh/118429.md	
+https://support.apple.com/en-us/118293	support-en/118293.md	--en
+https://support.apple.com/zh-cn/118293	support-zh/118293.md	
+https://support.apple.com/en-us/118283	support-en/118283.md	--en
+https://support.apple.com/zh-cn/118283	support-zh/118283.md	
+https://support.apple.com/en-us/111754	support-en/111754.md	--en
+https://support.apple.com/zh-cn/111754	support-zh/111754.md	
+https://support.apple.com/en-us/111001	support-en/111001.md	--en
+https://support.apple.com/zh-cn/111001	support-zh/111001.md	
+https://support.apple.com/en-us/105023	support-en/105023.md	--en
+https://support.apple.com/zh-cn/105023	support-zh/105023.md	
+https://support.apple.com/en-us/108794	support-en/108794.md	--en
+https://support.apple.com/zh-cn/108794	support-zh/108794.md	
+https://support.apple.com/en-us/108934	support-en/108934.md	--en
+https://support.apple.com/zh-cn/108934	support-zh/108934.md	
+https://support.apple.com/en-us/109511	support-en/109511.md	--en
+https://support.apple.com/zh-cn/109511	support-zh/109511.md	
+https://support.apple.com/en-us/102614	support-en/102614.md	--en
+https://support.apple.com/zh-cn/102614	support-zh/102614.md	
+https://support.apple.com/en-us/102568	support-en/102568.md	--en
+https://support.apple.com/zh-cn/102568	support-zh/102568.md	
+https://support.apple.com/en-us/120933	support-en/120933.md	--en
+https://support.apple.com/zh-cn/120933	support-zh/120933.md	
+https://support.apple.com/en-us/105062	support-en/105062.md	--en
+https://support.apple.com/zh-cn/105062	support-zh/105062.md	
+https://support.apple.com/en-us/108380	support-en/108380.md	--en
+https://support.apple.com/zh-cn/108380	support-zh/108380.md	
+https://support.apple.com/en-us/102652	support-en/102652.md	--en
+https://support.apple.com/zh-cn/102652	support-zh/102652.md	
+https://support.apple.com/en-us/108774	support-en/108774.md	--en
+https://support.apple.com/zh-cn/108774	support-zh/108774.md	
+https://support.apple.com/en-us/118205	support-en/118205.md	--en
+https://support.apple.com/zh-cn/118205	support-zh/118205.md	
+https://support.apple.com/en-us/108047	support-en/108047.md	--en
+https://support.apple.com/zh-cn/108047	support-zh/108047.md	
+https://support.apple.com/en-us/102775	support-en/102775.md	--en
+https://support.apple.com/zh-cn/102775	support-zh/102775.md	
+https://support.apple.com/en-us/117294	support-en/117294.md	--en
+https://support.apple.com/zh-cn/117294	support-zh/117294.md	
+https://support.apple.com/en-us/117267	support-en/117267.md	--en
+https://support.apple.com/zh-cn/117267	support-zh/117267.md	
+https://support.apple.com/en-us/108091	support-en/108091.md	--en
+https://support.apple.com/zh-cn/108091	support-zh/108091.md	
+https://support.apple.com/en-us/108105	support-en/108105.md	--en --html
+https://support.apple.com/zh-cn/108105	support-zh/108105.md	
+https://support.apple.com/en-us/118428	support-en/118428.md	--en
+https://support.apple.com/zh-cn/118428	support-zh/118428.md	
+https://support.apple.com/en-us/118242	support-en/118242.md	--en
+https://support.apple.com/zh-cn/118242	support-zh/118242.md	
+https://support.apple.com/en-us/122621	support-en/122621.md	--en
+https://support.apple.com/zh-cn/122621	support-zh/122621.md	
+https://support.apple.com/en-us/102606	support-en/102606.md	--en
+https://support.apple.com/zh-cn/102606	support-zh/102606.md	
+https://support.apple.com/en-us/102627	support-en/102627.md	--en
+https://support.apple.com/zh-cn/102627	support-zh/102627.md	
+https://support.apple.com/en-us/125662	support-en/125662.md	--en
+https://support.apple.com/zh-cn/125662	support-zh/125662.md	
+https://support.apple.com/en-us/120636	support-en/120636.md	--en
+https://support.apple.com/zh-cn/120636	support-zh/120636.md	
+https://support.apple.com/en-us/101661	support-en/101661.md	--en
+https://support.apple.com/zh-cn/101661	support-zh/101661.md	
+https://support.apple.com/en-us/104958	support-en/104958.md	--en
+https://support.apple.com/zh-cn/104958	support-zh/104958.md	
+https://support.apple.com/en-us/108318	support-en/108318.md	--en
+https://support.apple.com/zh-cn/108318	support-zh/108318.md	
+https://support.apple.com/en-us/119902	support-en/119902.md	--en
+https://support.apple.com/zh-cn/119902	support-zh/119902.md	
+https://support.apple.com/en-us/118414	support-en/118414.md	--en
+https://support.apple.com/zh-cn/118414	support-zh/118414.md	
+https://support.apple.com/en-us/118291	support-en/118291.md	--en
+https://support.apple.com/zh-cn/118291	support-zh/118291.md	
+https://support.apple.com/en-us/118297	support-en/118297.md	--en
+https://support.apple.com/zh-cn/118297	support-zh/118297.md	
+https://support.apple.com/en-us/102552	support-en/102552.md	--en
+https://support.apple.com/zh-cn/102552	support-zh/102552.md	
+https://support.apple.com/en-us/102417	support-en/102417.md	--en
+https://support.apple.com/zh-cn/102417	support-zh/102417.md	
+https://support.apple.com/en-us/118412	support-en/118412.md	--en
+https://support.apple.com/zh-cn/118412	support-zh/118412.md	
+https://www.icloud.com/info/icloud-plus-tv-arcade	pricing/icloud-plus-tv-arcade.md	--en
+https://support.apple.com/en-us/118407	support-en/118407.md	--en --html
+https://support.apple.com/zh-cn/118407	support-zh/118407.md	
+https://www.apple.com/newsroom/2024/06/new-features-come-to-apple-services-this-fall/	newsroom/2024-06-new-features-apple-services-en.md	--en
+https://developer.apple.com/news/?id=gvnljl3f	developer/news-gvnljl3f-price-tax-updates.md	--en
+https://developer.apple.com/help/app-store-connect/manage-your-apps-availability/manage-availability-for-your-app-on-the-app-store	developer/asc-manage-app-availability.md	--en
+https://support.apple.com/en-us/125666	support-en/125666.md	--en --html
+https://support.apple.com/zh-cn/125666	support-zh/125666.md	
+https://support.apple.com/en-us/118244	support-en/118244.md	--en --html
+https://support.apple.com/zh-cn/118244	support-zh/118244.md	
+https://www.icloud.com/tr-tr/info/icloud-plus-tv-arcade	pricing/icloud-plus-tv-arcade-tr.md	
+https://support.apple.com/en-us/102640	support-en/102640.md	--en
+https://support.apple.com/zh-cn/102640	support-zh/102640.md
+https://support.apple.com/en-us/108095	support-en/108095.md	--en
+https://support.apple.com/zh-cn/108095	support-zh/108095.md
+https://support.apple.com/en-us/118223	support-en/118223.md	--en
+https://support.apple.com/zh-cn/118223	support-zh/118223.md
+https://developer.apple.com/help/app-store-connect/manage-subscriptions/manage-pricing-for-auto-renewable-subscriptions	developer/asc-subscription-pricing.md	--en
+https://developer.apple.com/help/app-store-connect/reference/in-app-purchases-and-subscriptions/auto-renewable-subscription-price-increase-thresholds/	developer/asc-price-increase-thresholds.md	--en
+# (markdown version fetched with curl: https://developer.apple.com/documentation/storekit/managing-price-increases-for-auto-renewable-subscriptions.md -> developer/storekit-managing-price-increases.md)
