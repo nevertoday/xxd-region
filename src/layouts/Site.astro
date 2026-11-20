@@ -114,7 +114,7 @@ const GITHUB_MARK = '<svg width="16" height="16" viewBox="0 0 16 16" fill="curre
         <div class="xxd-menu site-lang-menu" id="site-lang-menu" role="menu" popover data-placement={menuAt}>
           {langLinks.map((l) => <a class="xxd-menu__item" role="menuitemradio" aria-checked={l.code === lang ? "true" : "false"} href={l.href} hreflang={l.html} lang={l.html}>{l.name}</a>)}
         </div>
-        <!-- GitHub：点图标直接去本教程的仓库；旁边的小箭头展开，可以去国家外汇管理局 -->
+        <!-- GitHub：点图标直接去本教程的仓库；旁边的小箭头展开，可以去 Apple 支持 -->
         <div class="xxd-btn-group site-gh">
           <a class="xxd-btn" data-size="sm" data-variant="ghost" data-icon-only href={REPO} aria-label={L.repo} data-tooltip={L.repo} data-tooltip-placement="bottom-end" set:html={GITHUB_MARK} />
           <button class="xxd-btn site-gh__more" data-size="sm" data-variant="ghost" data-icon-only type="button" data-xxd-menu="site-gh-menu" aria-label={L.repoMore} data-tooltip={L.repoMore} data-tooltip-placement="bottom-end"><i data-xxd-icon="ChevronDown" data-size="14"></i></button>
