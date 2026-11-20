@@ -1,5 +1,70 @@
 ---
 layout: ../../../layouts/HowTo.astro
 slug: purchase-failed
+step: 3
+time: 8-minute read
+for: A purchase, subscription or free download in the App Store is refused, or an email says there's a problem with your payment method
+tldr: Apple says it has no information about why a payment method was declined, so work through the checks in Apple's order. Make sure your billing details match your bank's records, add a new payment method and remove the old one, then try again. If that fails, look for unpaid orders, check that the payment method fits your account's country or region, and ask your bank. If you see "Purchase Not Completed", select Continue and submit a review.
+description: What to do when an App Store purchase is refused or your payment method has a problem. The order of checks in Apple's article 108095, how to submit a review for "Purchase Not Completed", the order in which Apple charges your balance and payment methods, and one user's experience of a purchase failing right after topping up a new account.
 ---
-{/* 待写 TBD: body. See docs/MAINTAINING.md (voice and hard rules); facts and their links are in docs/sources/README.md. */}
+import Term from "../../../components/Term.astro";
+import Q from "../../../components/Q.astro";
+import Callout from "../../../components/Callout.astro";
+
+You've just redeemed a <Term k="充值卡" />, and your <Term k="Apple 账户余额" /> is sitting right there. But when you tap to subscribe, you're told the purchase couldn't be completed. Or you haven't touched anything, and an email arrives saying there's a problem with your payment method. The money is there, so why can't you buy anything? By the end of this page you'll know which situations Apple separates a failed purchase into, what it asks you to check first for each, and which questions only your bank or Apple Support can answer.
+
+<mark>Apple says it has no information about why a payment method was declined. So don't try to guess the reason. Work through the checks in the order Apple gives, and when you reach the last one, ask your bank or Apple Support.</mark>
+
+## First, work out which one you have
+
+A failed purchase isn't always the same problem, and Apple describes several cases with different fixes ([108095](https://support.apple.com/en-us/108095)):
+
+- If you're told your payment method was declined, go through the checks in the next section.
+- If you see "**Purchase Not Completed**", Apple says it has detected suspicious purchase activity and you might need to submit a review request. The section on it comes further down.
+- If none of your payment methods can be charged, your account shows a negative balance, and you can't buy, download or update apps until you update your payment method ([118244](https://support.apple.com/en-us/118244)).
+
+If an email says there's a problem with your payment method, open **Settings**, tap your name, then tap **Payment & Shipping** and look for yourself, rather than following a link in the email. Apple's advice is not to follow links in suspicious or unsolicited messages ([102568](https://support.apple.com/en-us/102568)).
+
+## Payment method declined, so check in this order
+
+**Check your billing details first.** Your name, billing address and other information must be spelled correctly and match what your financial institution, meaning your bank or card issuer, has on file ([108095](https://support.apple.com/en-us/108095), [118429](https://support.apple.com/en-us/118429)). That's why this site keeps saying the billing address can only be the one your bank has for you. An address that isn't yours won't match on the day you add a card. [Lesson 1](/en/start/1-region/) covers this in full.
+
+**Add a new payment method, remove the old one, and try again.** On your iPhone, open **Settings**, tap your name, tap **Payment & Shipping** (sign in if you're asked), tap **Add Payment Method**, enter the new payment method and tap **Done**. Then tap **Edit**, tap the red delete button next to the old payment method, tap **Remove**, and try your purchase again. On a Mac, click your name at the bottom of the App Store sidebar, click your name again on the page that appears, then click **Payment Methods**, and the rest is much the same ([108095](https://support.apple.com/en-us/108095)). If what you see on your iPhone is different, go by what you see.
+
+**Look for unpaid orders.** If you have an unpaid order, you might not be able to make purchases or download free apps until it's paid ([108095](https://support.apple.com/en-us/108095)). Pay it, then try again.
+
+**Check that the payment method fits your account's country or region.** Apple lists which payment methods each country or region accepts in [111741](https://support.apple.com/en-us/111741), and the United States, Turkey and China mainland are all different. Apple also says that if you're using an accepted payment method but your Apple Account is set to a different country or region, you should change your country or region ([108095](https://support.apple.com/en-us/108095)). Whether to move an account to another region, and what you have to clear first, is covered in [Move an existing account to another region](/en/howto/change-region/). As for whether a card issued in another country or region works on your US or Turkey account, Apple's pages don't say. If you're not sure, ask Apple Support.
+
+**Ask your bank last.** You might need your bank to allow international purchases on your debit or credit card, and some payment methods need you to verify through your bank's app or a text message. If you can't verify, your bank can help. If you want to know why a card was declined, Apple says to ask your financial institution, because Apple doesn't have that information ([108095](https://support.apple.com/en-us/108095)).
+
+## If you see "Purchase Not Completed"
+
+Apple says that when it detects suspicious purchase activity, you might need to submit a review request for your purchase ([108095](https://support.apple.com/en-us/108095)). Go back to the item you tried to buy and try to buy it again. When you see "**Purchase Not Completed**", select **Continue** and follow the onscreen instructions to submit a review. You can also submit a request through [Apple Support](https://getsupport.apple.com/?caller=kbase). Apple says plainly that Apple Support can't submit a review on your behalf or speed it up, so once it's submitted, all you can do is wait for the result.
+
+## When you pay with your balance, what Apple charges first
+
+If you add money to your account with gift cards, it helps to know the order in which Apple charges ([118244](https://support.apple.com/en-us/118244)). It first tries to cover the full amount with your balance. If that isn't enough, it tries your primary payment method. If there's a problem with that, or it can't cover what's left, Apple tries your other payment methods from top to bottom, and if none of them can be charged, it might try again. The same article says some subscriptions might not be charged to your balance, so having enough balance doesn't mean every subscription can be paid with it.
+
+One more rule is about the gift card itself. A card bought in the United States only works on a US account, and one bought in Turkey only works on a Turkey account ([US gift card terms](https://www.apple.com/legal/internet-services/itunes/giftcards/us/terms.html), [Turkey gift card terms](https://www.apple.com/legal/internet-services/itunes/giftcards/tr/terms.html)). How to buy and redeem one is in [Buy and redeem a gift card](/en/howto/gift-card/).
+
+## One user's experience
+
+One user on X reports that a new account was topped up with a gift card and used straight away for a subscription, and the purchase couldn't be completed. They contacted Apple Support's online chat, and after confirming the account, support told them to wait about 70 hours before using it ([post](https://x.com/HughWalker618/status/2080547506900066689)). The message in the post is "Your Purchase Could Not Be Completed", which isn't word for word the same as "Purchase Not Completed" in 108095, and Apple doesn't say whether they're the same thing. If what you see is exactly "Purchase Not Completed", select Continue in the alert and submit a review, as described above. If it's worded differently, write down the exact text and ask Apple Support.
+
+<Callout type="tip" title="Before you ask Apple Support">
+Write down what you've checked: whether your billing details match, whether you've changed payment methods, whether there's an unpaid order, and the exact wording of the message. Then you can explain it all in one go when they ask.
+</Callout>
+
+## Stuck?
+
+<Q q="My payment method is set to None. Why do I need to add one to download a free app?">
+Apple says you might need a payment method to download or update some free apps ([118429](https://support.apple.com/en-us/118429)). Also, if your account has an unpaid order, you can't download free apps until it's paid ([108095](https://support.apple.com/en-us/108095)).
+</Q>
+<Q q="I can't remove my old payment method.">
+If you have subscriptions like iCloud+, have an unpaid balance, or are a Family Sharing organizer using purchase sharing, you must keep at least one payment method on file ([118291](https://support.apple.com/en-us/118291)). Follow Apple's order and add a new one before removing the old one.
+</Q>
+<Q q="People online say you should wait a day or two after topping up before buying. Is that true?">
+What people say online varies. Apple's pages don't say. If you're not sure, ask Apple Support.
+</Q>
+
+You've now been through your payment from the top, in Apple's order, and you know which step is a question for your bank and which is one for Apple Support. To understand payment methods from the start, see [step 3 of the full guide](/en/guide/3-payment/).

@@ -1,5 +1,66 @@
 ---
 layout: ../../../layouts/HowTo.astro
 slug: locked
+step: 6
+time: 6-minute read
+for: Signing in tells you your account was disabled for security reasons, is locked or not active, or that your Media & Purchases account has been disabled
+tldr: First work out which message you have. Disabled for security reasons means resetting your password. Locked or not active means tapping Request Access in the alert or asking at iforgot.apple.com/unlock. A disabled Media & Purchases account means tapping Continue to request reactivation. If you can't get back in, Apple offers a new account, or an Activation Lock support request if you have proof of purchase.
+description: What to do when your Apple Account is locked, not active or disabled. Which route Apple's article 102640 gives for each of the three messages, the two options Apple offers if access isn't restored, what people say on X, and why not to let anyone unlock it for you.
 ---
-{/* 待写 TBD: body. See docs/MAINTAINING.md (voice and hard rules); facts and their links are in docs/sources/README.md. */}
+import Term from "../../../components/Term.astro";
+import Q from "../../../components/Q.astro";
+import Callout from "../../../components/Callout.astro";
+
+Your new other-region account is two days old. You open the App Store to update an app, and up pops a line: This Apple Account has been disabled for security reasons. Or iCloud is fine, and only <Term k="媒体与购买项目" /> won't sign in, saying the account has been disabled. Search online and one person says send an appeal by email, another says contact support, another says just make a new account. By the end of this page you'll know the three kinds of message Apple separates these into, which route Apple points to for each, and what's left if you can't get back in.
+
+<mark>There are three kinds of lock message, and Apple points to a route for each. Work out which one you're looking at and take that route. The outcome is Apple's decision, and nobody can promise it for you.</mark>
+
+## Disabled for security reasons
+
+The message is one of these ([102640](https://support.apple.com/en-us/102640)):
+
+- "This Apple Account has been disabled for security reasons"
+- "You can't sign in because your account was disabled for security reasons"
+- "This Apple Account has been locked for security reasons"
+
+Apple says this means your <Term k="Apple 账户" /> locked automatically to protect your security, and you can't sign in or use any Apple services. It might happen if you or someone else entered your password or other account information incorrectly too many times. To get back in, you need to reset your password, which Apple covers in [102656](https://support.apple.com/en-us/102656).
+
+## Locked or not active
+
+If the message says your account is locked or not active, you might be able to tap **Request Access** right in the alert to ask for your account back, or you can ask at [iforgot.apple.com/unlock](https://iforgot.apple.com/unlock) ([102640](https://support.apple.com/en-us/102640)).
+
+Apple is also clear that a request doesn't always work. You might get an alert saying "This Apple Account is locked and can't be used", or your request might be denied.
+
+## Your Media & Purchases account has been disabled
+
+If the message is "Your Media & Purchases account has been disabled", you might be able to tap **Continue** right in the alert to request reactivation, or request it through [this Apple Support page](https://getsupport.apple.com/?caller=kbase&PGF=PGF63005&category_id=SC0245&symptom_id=23362) ([102640](https://support.apple.com/en-us/102640)).
+
+Media & Purchases is the sign-in that the App Store, Music and the other places you buy things use. With the setup this site uses, the other-region account signs in only here, and iCloud and most features on your iPhone use your own account the whole time. Apple calls that one the primary Apple Account ([117294](https://support.apple.com/en-us/117294)).
+
+## If you can't get back in
+
+Apple gives two options ([102640](https://support.apple.com/en-us/102640)). One is to create a new Apple Account ([108647](https://support.apple.com/en-us/108647)), and if signing up gives you trouble, see ["Your account cannot be created at this time"](/en/howto/cannot-create/). The other is for people who need help removing <Term k="激活锁" />. If you have proof of purchase for the device, you can [start an Activation Lock support request](https://al-support.apple.com/#/kbase).
+
+What happens to the balance and purchases on the old account once you make a new one, Apple's pages don't say. If you're not sure, ask Apple Support.
+
+## What people say on X
+
+One user on X says that when an other-region account is locked, "an email appeal is all it takes" ([post](https://x.com/berryxia/status/2068879059342475395)). Another asked what to do about a locked Turkey account, and the post has twenty replies ([post](https://x.com/jaywcjlove/status/2054082597798740363)). People ask about this on X all the time, and the answers differ. Apple's 102640 doesn't mention email. The routes above are the ones it gives, so follow the one that matches your message.
+
+<Callout type="no" title="Don't let anyone unlock it for you, and never hand over your password or codes">
+Apple says never to give your Apple Account password, verification codes or other security details to anyone, and that Apple will never ask you for them ([102614](https://support.apple.com/en-us/102614)). If someone offers to unlock your account and asks for your password or a code, don't believe them, however sure they sound. Even Apple's own page says a request might be denied.
+</Callout>
+
+## Stuck?
+
+<Q q="I got an email saying my account is locked, with a link to verify it.">
+Don't follow the link. Apple's advice is not to follow links or open attachments in suspicious or unsolicited messages, and to forward suspicious emails that look like they're from Apple to reportphishing@apple.com ([102568](https://support.apple.com/en-us/102568)). To check whether your account really is locked, open Settings yourself, or sign in at account.apple.com directly.
+</Q>
+<Q q="Resetting my password needs a verification code, and I can't get one.">
+Apple says that if you can't use any <Term k="受信任电话号码" /> on file, you can start account recovery and follow the onscreen steps. Account recovery might take a few days or longer, and contacting Apple can't speed it up ([122621](https://support.apple.com/en-us/122621)).
+</Q>
+<Q q="It's my other-region account that's locked. Will my iCloud be affected?">
+102640 is about the locked account not being able to sign in to Apple services. With the setup this site uses, iCloud is signed in with your own account, and the other-region account is a separate account. Whether one account being locked affects the other, Apple's pages don't say. If you're not sure, ask Apple Support.
+</Q>
+
+You've now worked out which message you have and which route Apple points to for it. To run into this less often, see [step 6 of the full guide](/en/guide/6-keep-safe/).

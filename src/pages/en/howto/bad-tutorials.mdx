@@ -1,5 +1,65 @@
 ---
 layout: ../../../layouts/HowTo.astro
 slug: bad-tutorials
+step: 2
+time: 7-minute read
+for: You've found a tutorial online for an other-region Apple Account and aren't sure which steps are safe to follow
+tldr: If any step asks you to use an address, account or phone number that isn't yours, buy a gift card of unknown origin, sign an other-region account in to iCloud, or get around Activation Lock, don't follow that step, even if the rest of the tutorial is fine. Each one runs into an Apple rule or a practical problem.
+description: How to spot the steps in an other-region Apple Account tutorial that you shouldn't follow. Made-up addresses and tax-free states, network setup, throwaway email addresses and SMS-code services, discounted cards and top-up services, regional price gaps, shared and bought accounts, signing an other-region account in to iCloud, getting around Activation Lock, and "100% success". Which Apple rule each one runs into, with links to the originals.
 ---
-{/* 待写 TBD: body. See docs/MAINTAINING.md (voice and hard rules); facts and their links are in docs/sources/README.md. */}
+import Term from "../../../components/Term.astro";
+import Q from "../../../components/Q.astro";
+import Callout from "../../../components/Callout.astro";
+
+You search for how to sign up for a US Apple ID and find a tutorial plenty of people have saved. The first few steps make sense: use your own email address, pick the right country or region, choose None for payment. Halfway through, it casually hands you an address generator, or tells you to "pick a tax-free state", and you nod along. By the end of this page you'll have a checklist to hold any tutorial against: which steps mean you should stop, which Apple rule each one runs into, and where to read it.
+
+<mark>If any step in a tutorial asks you to use an address, account or phone number that isn't yours, or to sign an other-region account in to iCloud, don't follow that step, even if the rest of the tutorial is fine.</mark>
+
+Everything below comes from tutorials and posts that really are going around. This site doesn't name them or link to them. It only describes each practice and the rule it runs into.
+
+## When you sign up
+
+**A made-up address, or one from an address generator.** Apple's terms say the services are for use in your country or territory of residence, and that creating an account for a country or region specifies it as your <Term k="居住国家或地区" /> ([US terms](https://www.apple.com/legal/internet-services/itunes/us/terms.html)). When you add a payment method, Apple also asks that your name and billing address match what your financial institution has on file ([118429](https://support.apple.com/en-us/118429), [108095](https://support.apple.com/en-us/108095)). So an address that isn't yours stops matching on the day you add a card. [Lesson 1](/en/start/1-region/) covers this in full.
+
+**Picking a "tax-free state" address.** On US tax, Apple's pages only say that residents of some states have tax added to the monthly payment because of state law ([iCloud+ plans and pricing](https://support.apple.com/en-us/108047)). Whether tax is worked out from the billing address, Apple's pages don't say. If you're not sure, ask Apple Support. The address itself has the same problem as the item above.
+
+**Network setup.** Apple's pages have never said that signing up needs any special network, and when sign-up fails, the advice Apple gives is just to check your internet connection ([120636](https://support.apple.com/en-us/120636)). This site doesn't cover network setup and won't judge whether you need one.
+
+**Throwaway email addresses and SMS-code services.** Your email address is what you sign in to the account with ([105023](https://support.apple.com/en-us/105023)). With two-factor authentication on, you also need at least one <Term k="受信任电话号码" /> on file where you can receive verification codes ([122621](https://support.apple.com/en-us/122621)), and Apple says never to share those codes with anyone ([102614](https://support.apple.com/en-us/102614)). With an email address or number that stops working in a few days, or that someone else can also read, signing in and getting the account back are no longer up to you.
+
+## When you pay
+
+**Discounted cards, cards of unknown origin, and top-up services.** The US and Turkey gift card terms both say gift cards can't be resold, and that if Apple suspects a card was obtained unlawfully, fraudulently or otherwise against the terms, it can void the card without a refund and suspend or terminate accounts ([US gift card terms](https://www.apple.com/legal/internet-services/itunes/giftcards/us/terms.html), [Turkey gift card terms](https://www.apple.com/legal/internet-services/itunes/giftcards/tr/terms.html)). Apple doesn't publish a list of authorized sellers for each country. Where it's safe to buy from, Apple's pages don't say. If you're not sure, ask Apple Support.
+
+**Using price gaps between regions.** Subscribing in one region and then sharing the subscription out or reselling it runs into several rules at once: the services are for use in your country of residence, <Term k="家人共享" /> requires every member to have the same Home Country ([US terms](https://www.apple.com/legal/internet-services/itunes/us/terms.html)), accounts aren't to be shared with anyone ([102614](https://support.apple.com/en-us/102614)), and gift cards can't be resold. Prices change, too. Developers can change subscription prices, and when a price goes up, Apple notifies subscribers under set rules ([App Store Connect Help](https://developer.apple.com/help/app-store-connect/manage-subscriptions/manage-pricing-for-auto-renewable-subscriptions)). If it happens to you, see [When a subscription's price goes up](/en/howto/price-rise/).
+
+## Accounts and devices
+
+**Shared, bought or borrowed accounts.** Apple says not to share an account with anyone, even family members ([102614](https://support.apple.com/en-us/102614)). As for signing in to iCloud with someone else's account, Apple doesn't cover this case specifically, but given how <Term k="激活锁" /> works, your device gets linked to that account ([108794](https://support.apple.com/en-us/108794)). [Why you shouldn't sign in to an account someone gives you](/en/howto/shared-accounts/) goes into detail.
+
+**Signing an other-region account in to iCloud or Notes to avoid switching.** The setup Apple describes is your own account for iCloud and most features on your iPhone, with another account signed in only under <Term k="媒体与购买项目" /> ([117294](https://support.apple.com/en-us/117294)). Sign the other-region account in to iCloud, and whatever you put there is stored on that account, and if that account is disabled for security reasons, Apple says it can't sign in to or use any Apple services ([102640](https://support.apple.com/en-us/102640)). Going the other way and moving your whole China mainland account to another region has a cost too. When an account leaves China mainland, its iCloud content is moved across the border from <Term k="云上贵州" /> to Apple, and once the move is complete, GCBD deletes its copy ([GCBD terms](https://www.apple.com/legal/internet-services/icloud/en/gcbd-terms.html)).
+
+**Tools for getting around Activation Lock.** Once Activation Lock is on, nobody can turn off Find My, erase the device or reactivate it without that account's password ([108794](https://support.apple.com/en-us/108794)). The proper routes are in [108934](https://support.apple.com/en-us/108934): follow the steps on the device to enter the Apple Account and password used to set it up or the device passcode, remove the device from the account on the web, or, if you have proof of purchase, start an Activation Lock support request.
+
+## Promises
+
+**"100% success" and "never get banned".** Apple doesn't make those promises itself. When you ask for a locked account back, it says your request might be denied ([102640](https://support.apple.com/en-us/102640)), and when a card is declined, it says it has no information about why ([108095](https://support.apple.com/en-us/108095)). The guarantee a tutorial makes on Apple's behalf is one Apple never made.
+
+<Callout type="no" title="If you hit one of these, stop at that step">
+An address, account or number that isn't yours, a gift card of unknown origin, an other-region account in iCloud, a tool for getting around Activation Lock. You can keep reading the rest of the tutorial, but don't follow that step.
+</Callout>
+
+## How to check a tutorial
+
+You don't need to look up the terms for every step. Ask three questions first. Does this step use your own address, email address, phone number and account? Is the account going into iCloud your own? Can you find the rule it states on an Apple page? If all three answers are yes, check the step against Apple's original. Every fact on this site links to its source, and when a tutorial and an Apple page disagree, go by Apple.
+
+## Stuck?
+
+<Q q="I've already followed one of these steps. What now?">
+That's a matter of the terms between you and Apple. This site explains what the terms say, and it isn't legal advice. What you can do is switch to the proper way from now on. If an other-region account is in iCloud, use [Lesson 2](/en/start/2-two-sign-ins/) to move it to Media & Purchases. If you're using someone else's account, see [Why you shouldn't sign in to an account someone gives you](/en/howto/shared-accounts/). For anything else you're unsure about, ask Apple Support first.
+</Q>
+<Q q="The tutorial's author says they've always done it this way and never had a problem.">
+Whether someone has had a problem and whether the terms allow it are two different questions. For example, if an account's region doesn't match where you live, the terms say what Apple may do, but Apple hasn't published what it does in practice. This site goes only by the terms and Apple's support articles.
+</Q>
+
+You now have a checklist: an address, account or number that isn't yours, a gift card of unknown origin, an other-region account in iCloud, a tool for getting around Activation Lock, and promises of guaranteed success. When you see one, stop. To see where the proper route starts, go to [step 0 of the full guide](/en/guide/0-why/).

@@ -1,5 +1,68 @@
 ---
 layout: ../../layouts/HowTo.astro
 slug: shared-accounts
+step: 6
+time: 读 6 分钟
+for: 有人给了你一个现成的外区账户，朋友借的、网上买来的、群里共享的，你在想要不要登上去用
+tldr: Apple 说不要和任何人共用账户，连家人也不例外，密码和验证码也不给任何人。别人的账户，你登上去用的始终是别人的；登进 iCloud，按激活锁的工作方式，你的设备还会和那个账户绑在一起。想和家人共享买过的东西，Apple 的办法是家人共享，每个人用自己的账户。
+description: 为什么不该登别人给的 Apple 账户：Apple 在 102614、105023、117294 里怎么说共用账户，验证码和更新 App 会卡在哪里，激活锁为什么让 iCloud 这一步最要紧，家人共享怎么用，已经登过了该怎么办。
 ---
-{/* 待写：正文。写法见 docs/MAINTAINING.md 的「怎么写」和「硬规矩」，资料和出处在 docs/sources/README.md。 */}
+import Term from "../../components/Term.astro";
+import Q from "../../components/Q.astro";
+import Callout from "../../components/Callout.astro";
+
+群里有人发了一个美区账户的邮箱和密码，说大家随便用，只要别登 iCloud。或者朋友好心，把自己的外区账户借给你，让你下一个 App。省了注册的麻烦，看上去也没什么坏处。看完这一页，你会知道 Apple 对共用账户怎么说，登了别人的账户以后会卡在哪里，为什么 iCloud 那一步碰都别碰，以及想和家人一起用的时候，Apple 给的是哪条路。
+
+<mark>一个 <Term k="Apple 账户" /> 连着它主人的全部个人内容，所以 Apple 说不要和任何人共用，连家人也不例外。别人给你的账户，你登上去用的始终是别人的。</mark>
+
+## Apple 怎么说
+
+Apple 讲账户安全的文章里，有一节的标题就是「不要共用 Apple 账户」，正文第一句是：「不要与他人共用一个账户，即使是家庭成员也不例外。」它给的理由是，共用一个账户，就是让别人能访问你的全部个人内容（[102614](https://support.apple.com/zh-cn/102614)）。同一篇还说，账户密码、验证码和安全设置的详细信息不要告诉任何人；如果你的账户和密码是别人帮你设置的，就把密码改掉。
+
+Apple 还希望你每次在 Apple 设备或服务上登录时，都用同一个 Apple 账户（[105023](https://support.apple.com/zh-cn/105023)）。本站教你另用一个外区账户登<Term k="媒体与购买项目" />，这种用法 Apple 在讲迁移购买项目的文章里描述过，把两个账户叫作首选账户和<Term k="备选账户" />。就在那一段里，Apple 写明这两个账户都不应与他人共用（[117294](https://support.apple.com/zh-cn/117294)、[117267](https://support.apple.com/zh-cn/117267)）。所以哪怕是只用来买东西的那个账户，也该是你自己的。
+
+## 登了别人的账户，会卡在哪里
+
+**验证码在别人手上。** 开着<Term k="双重认证" />的账户，第一次在新设备或网页上登录时，除了密码，还要输一个六位验证码，它显示在账户主人的受信任设备上，或者发到主人的<Term k="受信任电话号码" />（[102660](https://support.apple.com/zh-cn/102660)）。你每换一台设备，都得找对方要验证码，可 Apple 说验证码不该告诉任何人。
+
+**用它下载的 App，要用它来更新。** Apple 说，你没法同时用几个账户登录 App Store，也没法更新用另一个账户购买的内容（[111001](https://support.apple.com/zh-cn/111001)）。用借来的账户下载的 App，以后要更新，还得再登那个账户。
+
+**账户是别人的，什么时候收回由对方。** 密码在别人手里，对方改了密码，你就登不上了。你在这个账户里买的东西、充的钱，也都留在别人的账户里。
+
+## 别人的账户，永远不登进 iCloud
+
+前面这几条，说到底是麻烦。登进 iCloud 就是另一回事了。<Term k="激活锁" />会在你设置「查找」时自动打开；打开以后，Apple 会把这个账户存在激活服务器上，和你的设备关联起来，之后谁要关掉「查找」、抹掉设备，或者重新激活并使用这台设备，都得输入这个账户的密码（[108794](https://support.apple.com/zh-cn/108794)）。
+
+Apple 没有专门讲这种情况，不过按激活锁的工作方式，用别人的账户登录 iCloud、设置了「查找」以后，你的 iPhone 就会和别人的账户关联在一起；照 108794 的说法，以后要关掉「查找」、抹掉或者重新激活它，都得输入那个账户的密码，而密码在别人手里。所以本站一直说，iCloud 只登你自己的账户，外区账户只登在「媒体与购买项目」里。怎么切换，看[在 iPhone 上切换 App Store 账户](/howto/switch-store/)。
+
+## 想和家人一起用，Apple 的办法是家人共享
+
+想让家里人用上你买的 App 和订阅，Apple 给的办法是<Term k="家人共享" />。你和最多五位家庭成员可以共享 iCloud+、Apple Music 这些服务；打开「**购买项目共享**」以后，大家还能用彼此买的 App、音乐、影片、电视节目和图书，有些项目除外。每个人用的都是自己的 Apple 账户（[105062](https://support.apple.com/zh-cn/105062)）。
+
+有一条要先知道。美国和中国大陆的条款都要求所有家庭成员的<Term k="居住国家或地区" />相同（[美国条款](https://www.apple.com/legal/internet-services/itunes/us/terms.html)、[中国大陆条款](https://www.apple.com.cn/legal/internet-services/itunes/cn/terms.html)），土耳其条款的字面意思是所有家庭成员都必须在居住国家（[土耳其条款](https://www.apple.com/tr/legal/internet-services/itunes/tr/terms.html)）。
+
+## 已经登过了，怎么办
+
+如果别人的账户登在「媒体与购买项目」里，在那里退出就行。别去点「**设置**」顶部你的姓名进去以后最底下的「**退出登录**」，那是整台设备的退出，iCloud、App Store、iMessage 信息和 FaceTime 通话会一起退掉（[104958](https://support.apple.com/zh-cn/104958)）。怎么只退「媒体与购买项目」、再换回自己的账户，看[在 iPhone 上切换 App Store 账户](/howto/switch-store/)。
+
+如果别人的账户已经登进了 iCloud，又开着「查找」，按上面的推断，这台设备现在关联的是对方的账户。怎么退出、怎么解除激活锁，Apple 分别写在 [104958](https://support.apple.com/zh-cn/104958) 和 [108934](https://support.apple.com/zh-cn/108934) 里；拿不准，就和账户的主人一起弄，或者先问 Apple 支持。
+
+如果你自己的账户是别人帮你注册的，Apple 说要把密码改掉（[102614](https://support.apple.com/zh-cn/102614)）；你把密码告诉过别人的，也一样改掉。
+
+<Callout type="no" title="不登别人的账户，也不把自己的给别人">
+本站不教、不推荐买号、借号、共享号，也不讲绕过激活锁。想要一个外区账户，就用自己的邮箱和手机号注册一个。
+</Callout>
+
+## 卡住了？
+
+<Q q="给我账户的人说，只登 App Store、不登 iCloud 就没事。">
+就算不登 iCloud，上面那几条也照样在：验证码在对方手上，App 要用那个账户更新，账户随时可能被收回。Apple 也写明，iCloud 那个账户和只登「媒体与购买项目」的那个账户，都不应与他人共用（[117294](https://support.apple.com/zh-cn/117294)）。
+</Q>
+<Q q="家里人共用一个账户行不行？">
+Apple 说连家人也不要共用（[102614](https://support.apple.com/zh-cn/102614)）。想共享买过的东西，用家人共享，每个人用自己的账户。
+</Q>
+<Q q="用借来的账户下载过的 App，换回自己的账户还能用吗？">
+Apple 说，你没法更新用另一个账户购买的内容（[111001](https://support.apple.com/zh-cn/111001)）。已经装好的 App 能不能一直打开，这一点 Apple 的页面没有写明，拿不准就先问 Apple 支持。
+</Q>
+
+刚才你知道了别人的账户为什么不该登，尤其是 iCloud 那一步。想自己注册一个，从[注册一个美区 Apple 账户](/howto/us-account/)或者[注册一个土区 Apple 账户](/howto/tr-account/)开始。

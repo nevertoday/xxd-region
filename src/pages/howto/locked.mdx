@@ -1,5 +1,66 @@
 ---
 layout: ../../layouts/HowTo.astro
 slug: locked
+step: 6
+time: 读 6 分钟
+for: 登录时提示账户因安全原因被停用、被锁定、处于非活跃状态，或者「媒体与购买项目」账户已被停用
+tldr: 先认出提示是哪一种。因安全原因被停用的，重设密码；被锁定或非活跃的，在提示里轻点「请求访问」，或者去 iforgot.apple.com/unlock 申请；「媒体与购买项目」被停用的，轻点「继续」申请重新激活。申请不回来，Apple 给的路是新建一个账户，或者有购买凭证的发起激活锁支持请求。
+description: Apple 账户被锁定、处于非活跃状态或被停用时怎么办：102640 里的三种提示各走哪条路，申请不回来时 Apple 给的两个办法，网友们的说法，以及为什么别找人代解锁。
 ---
-{/* 待写：正文。写法见 docs/MAINTAINING.md 的「怎么写」和「硬规矩」，资料和出处在 docs/sources/README.md。 */}
+import Term from "../../components/Term.astro";
+import Q from "../../components/Q.astro";
+import Callout from "../../components/Callout.astro";
+
+新注册的外区账户才用了两天，你打开 App Store 想更新一个 App，弹出来一句：此 Apple 账户因安全原因被停用。又或者 iCloud 好好的，只有<Term k="媒体与购买项目" />那里登不上，提示账户已被停用。网上搜一圈，有人说发邮件申诉，有人说找客服，有人说干脆重新注册一个。看完这一页，你会知道 Apple 把这类提示分成了哪三种，每一种它指的是哪条路，申请不回来时还剩什么办法。
+
+<mark>被锁的提示有三种，Apple 给每一种都指了一条路。先认出你看到的是哪一种，走那一条；结果由 Apple 决定，谁也没法替你打包票。</mark>
+
+## 提示因安全原因被停用
+
+提示是下面这几句之一（[102640](https://support.apple.com/zh-cn/102640)）：
+
+- 此 Apple 账户因安全原因被停用
+- 你无法登录，因为你的账户已出于安全原因而被停用
+- 此 Apple 账户因为安全原因而被锁定
+
+Apple 说，这是你的 <Term k="Apple 账户" /> 为了保护你的安全自动锁上了，这时你登录不了，也用不了任何 Apple 服务。原因可能是你自己或者别人输错密码或其他账户信息的次数太多。要拿回账户，就得重设密码，办法看 Apple 的 [102656](https://support.apple.com/zh-cn/102656)。
+
+## 提示被锁定或处于非活跃状态
+
+提示说账户被锁定或者处于非活跃状态时，你也许可以直接轻点提醒里的「**请求访问**」，申请拿回账户；也可以到 [iforgot.apple.com/unlock](https://iforgot.apple.com/unlock) 去申请（[102640](https://support.apple.com/zh-cn/102640)）。
+
+Apple 也写得明白，申请不一定成。你可能会收到「此 Apple 账户已锁定，无法使用」的提醒，请求也可能被拒绝。
+
+## 提示「媒体与购买项目」账户被停用
+
+如果提示是「你的『媒体与购买项目』账户已被停用」，你也许可以直接轻点提醒里的「**继续**」，申请重新激活；也可以通过 [Apple 支持的这个页面](https://getsupport.apple.com/?caller=kbase&PGF=PGF63005&category_id=SC0245&symptom_id=23362)申请（[102640](https://support.apple.com/zh-cn/102640)）。
+
+「媒体与购买项目」，就是 App Store、音乐这些买东西的地方用的那个登录。按本站的做法，外区账户只登在这里，iCloud 和手机上大部分功能用的，一直是你自己的账户，Apple 把它叫首选账户（[117294](https://support.apple.com/zh-cn/117294)）。
+
+## 申请不回来的时候
+
+Apple 给了两条路（[102640](https://support.apple.com/zh-cn/102640)）。一条是创建一个新的 Apple 账户（[108647](https://support.apple.com/zh-cn/108647)），注册时碰到问题，看[提示「此时无法创建你的账户」](/howto/cannot-create/)。另一条是给需要解除<Term k="激活锁" />的人的。手上有设备的购买凭证，就可以[发起激活锁支持请求](https://al-support.apple.com/#/getsupport/zh_CN)。
+
+新建账户以后，原来那个账户里的余额和买过的东西会怎样，这一点 Apple 的页面没有写明，拿不准就先问 Apple 支持。
+
+## 网友们怎么说
+
+有网友在 X 上说，外区账户被锁了，「邮件申诉就行」（[原帖](https://x.com/berryxia/status/2068879059342475395)）。也有人发帖问土区账户锁了该怎么办，帖子下面有二十条回复（[原帖](https://x.com/jaywcjlove/status/2054082597798740363)）。这类问题在 X 上一直有人问，说法也不一样。Apple 的 102640 里没有提到邮件，它给的就是上面这几条路，照你看到的那种提示走。
+
+<Callout type="no" title="别找人代解锁，密码和验证码不给任何人">
+Apple 说，账户密码、验证码和其他安全信息不要告诉任何人，Apple 也绝不会向你要这些（[102614](https://support.apple.com/zh-cn/102614)）。说能替你解锁、要你交出密码或验证码的，不管说得多有把握，都别信。连 Apple 自己的页面都写着，申请可能被拒。
+</Callout>
+
+## 卡住了？
+
+<Q q="收到一封邮件，说我的账户被锁了，让我点链接验证。">
+别点邮件里的链接。Apple 提醒，可疑的、你没想到会收到的信息里，链接不要点，附件也不要打开；看起来像 Apple 发的可疑邮件，可以转发给 reportphishing@apple.com（[102568](https://support.apple.com/zh-cn/102568)）。想确认账户是不是真的被锁，自己打开「设置」看，或者直接到 account.apple.com 登录。
+</Q>
+<Q q="重设密码要验证码，可我收不到。">
+Apple 说，你用不了账户里登记的任何一个<Term k="受信任电话号码" />时，可以发起账户恢复，照屏幕上的步骤做。账户恢复可能要几天或更久，联系 Apple 也没法加快（[122621](https://support.apple.com/zh-cn/122621)）。
+</Q>
+<Q q="被锁的是外区账户，我的 iCloud 会受影响吗？">
+102640 讲的是被锁的那个账户登录不了 Apple 服务。按本站的做法，iCloud 登的是你自己的账户，和外区账户是两个账户。一个被锁、另一个会怎样，这一点 Apple 的页面没有写明，拿不准就先问 Apple 支持。
+</Q>
+
+刚才你认出了自己碰到的是哪一种提示，也知道了 Apple 给它指的是哪条路。想少碰到这类事，看[完整教程第 6 步](/guide/6-keep-safe/)。
