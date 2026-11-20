@@ -558,6 +558,8 @@
   [dir="rtl"] :not(pre) > code, [dir="rtl"] .cmd, [dir="rtl"] kbd { direction: ltr; unicode-bidi: isolate; }
   [dir="rtl"] pre { direction: ltr; text-align: left; }
   [dir="rtl"] .copy-block pre, [dir="rtl"] .reply-demo pre { direction: rtl; text-align: right; }
+  /* 阿拉伯文没有等宽字形，等宽字体会把字母拉得很开：示意框和复制块里的阿拉伯文用正文字体 */
+  [dir="rtl"] .copy-block pre, [dir="rtl"] .copy-block code, [dir="rtl"] .reply-demo pre, [dir="rtl"] .reply-demo code { font-family: inherit; }
   /* UI Kit 的侧栏选中条、目录竖线写的是左边（物理方向），从右往左时换到右边 */
   [dir="rtl"] .xxd-sidebar__item[aria-current=page] { box-shadow: inset -2px 0 0 var(--action); }
   [dir="rtl"] .xxd-toc a { border-left: 0; border-right: 1px solid var(--line); padding: var(--space-1) var(--space-3) var(--space-1) 0; }
