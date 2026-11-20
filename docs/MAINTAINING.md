@@ -26,7 +26,7 @@ npm run check      # 构建以后：中英文对照检查 + 整站检查
 
 2026-11-19 全站写完、核对完、上线：新手入门 3 课、完整教程 7 步、How-to 12 篇、Wiki 12 条、常见问题 28 条，中英文各一套；首页、README、三张动图和分享大图都是本站自己的。
 
-- 写作分五路并行（课程和首页、完整教程、注册和日常 How-to、出问题和避坑 How-to、Wiki 和常见问题），再由三个独立的核对者照 `docs/FACTCHECK.md` 逐句对 Apple 原文，约 700 条事实里改了 17 处。
+- 写作分五路并行（课程和首页、完整教程、注册和日常 How-to、出问题和避坑 How-to、Wiki 和常见问题），再由三个独立的核对者照 `docs/FACTCHECK.md` 逐句对 Apple 原文，约 700 条事实里改了 18 处（含删掉的 1 处）。
 - 新加或改写一页以后，`grep -rlE '待写|TBD:' src` 要是空的；`npm run release` 看到「待写」或「TBD:」会在部署前停下，所以讲解性的注释里别写这两个词。
 - 新加一页的流程见下面「怎么改」：先在 `nav.js` 加一条 `ready: false`，`node scripts/new-pages.mjs` 生成中英文空白页，写完改成 `ready: true`。
 
