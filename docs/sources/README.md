@@ -83,7 +83,7 @@
 
 **创建失败**
 
-- [120636](https://support.apple.com/en-us/120636)：出现“此时无法创建你的账户”时，Apple 建议换一种方式创建（用 Apple 设备，或在网页上创建）、更新软件、检查网络。
+- [120636](https://support.apple.com/en-us/120636)：出现“此时无法创建你的账户”时，Apple 的建议是：有 Apple 设备的，用它在“设置”或“系统设置”里创建；有 Windows 电脑或安卓设备的，到 account.apple.com 网页上创建（“If you have an Apple device, use that to create your account in Settings or System Settings. If you have a Windows PC or Android device, try creating your account on the web”）；更新软件；检查网络，稍后再试，可以换成蜂窝数据或别的 Wi-Fi，看系统状态页。注意：在“设置”里创建会把新账户登进 iCloud，和本站“iCloud 一直登你自己的账户”的建议冲突；页面上要分开写“Apple 的建议”和“本站的建议”。
 - [101661](https://support.apple.com/en-us/101661)：“已激活了最大数目的免费账户”表示 “you have exceeded the number of accounts that you can set up with iCloud on a single device in one year”。文章没给具体数字。
 
 ## 3. 不绑定付款方式（“无”）
@@ -308,6 +308,7 @@ zh-cn 把 Gift Card 统一译作“充值卡”（如“关于充值卡诈骗”
 完整记录在 `tools/blocked.txt`。
 
 - https://account.apple.com/account ：curl 拿到 500（页面由脚本渲染）。网页版创建流程只能以 108647 的文字为准，表单本身没有读到。
+- **2026-11-19 用浏览器核对过**（主会话，Chrome，未登录，没有填任何表单）：account.apple.com 首页有 “Create Your Apple Account” 和 “Sign In” 两个按钮，和 108647 写的网页创建入口一致；iforgot.apple.com/unlock 是 “Recover Your Apple Account” 页面，正文 “Request access to your account. Enter your email address or phone number that you use with your account to continue.”，和 102640 说的申请访问一致。这两个网址对 curl 返回 403，`check-doc-links` 会把它们算作被挡住，不是坏链接。
 - 没有其他页面被拦。几处要注意：108105 和 118407 的 en-us 版要加 `--html` 才能抓到；108106 是真正的 404，不是被拦；icloud.com 美国版价格是占位符，因为美国不在适用名单里。
 
 ## 18. 文件清单与旧编号跳转

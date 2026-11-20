@@ -1,1 +1,3 @@
 https://account.apple.com/account | 500 to curl (page is script-rendered; create-account form not read) | 2026-11-19
+https://iforgot.apple.com/unlock | 403 to curl; browser-checked 2026-11-19 (Recover Your Apple Account page) | 2026-11-19
+https://account.apple.com/ | 403 to curl; browser-checked 2026-11-19 (Create Your Apple Account button present) | 2026-11-19
