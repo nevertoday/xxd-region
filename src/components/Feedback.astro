@@ -1,10 +1,12 @@
 ---
 // 每页末尾一行：这一页没看懂、照做不成，就到 GitHub 提出来（带好页面信息的模板），或者先翻常见问题。
 // 不放个人联系方式：学的人在 GitHub 上提问、讨论，大家都看得到，答案也能补进教程。
-import { link, langOf, REPO } from "../data/nav.js";
+import { link, langOf, fullLang, REPO } from "../data/nav.js";
+import { X as dict } from "../i18n/index.js";
 interface Props { page: string }
 const lang = langOf(Astro.url.pathname);
-const en = lang === "en";
+const x = dict(lang);
+const en = lang !== "zh";
 const site = Astro.site ? Astro.site.href.replace(/\/$/, "") : "";
 const url = site + Astro.url.pathname;
 const T = en
@@ -22,9 +24,13 @@ const T = en
       gh: "到 GitHub 提出来",
       faq: ["，也可以先翻翻", "常见问题", "。"],
     };
+// 其他语言：反馈的 issue 模板用英文（维护者看得懂），页面上的文字用这种语言
+if (x) Object.assign(T, x.comp.feedback);
+// 中文、日文：问号后面直接接，不空格
+const sp = /^(zh|ja)$/.test(lang) ? "" : " ";
 const href = `${REPO}/issues/new?title=${encodeURIComponent(T.title)}&body=${encodeURIComponent(T.body)}`;
 ---
 <aside class="feedback">
   <i data-xxd-icon="MessagesSquare" data-size="16"></i>
-  <span>{T.lead}{en ? " " : ""}<a class="xxd-link" href={href} rel="noopener">{T.gh}</a>{T.faq[0]}<a class="xxd-link" href={link("/faq/", lang)}>{T.faq[1]}</a>{T.faq[2]}</span>
+  <span>{T.lead}{sp}<a class="xxd-link" href={href} rel="noopener">{T.gh}</a>{T.faq[0]}<a class="xxd-link" href={link("/faq/", fullLang(lang))}>{T.faq[1]}</a>{T.faq[2]}</span>
 </aside>

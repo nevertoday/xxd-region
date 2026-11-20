@@ -3,12 +3,16 @@
 //         flow 几步流程、night 一夜、ladder 由强到弱、fan 几个模型挑刺、tree 一个带几个）
 //   base：和语言无关的部分（图标、命令、哪一步要你开口……；term 的窗口标题写在 base.app）
 //   zh / en：文字，两种语言结构一样。中文页和英文页同一位置放同一张图（check-i18n 会查）。
+//   其他语言：新手三课的图（LESSON_FIGS）在 src/i18n/<语言>.js 的 figs 里写文字，结构和这里的 en 一样（check-i18n 会查）。
 // 每种画法要哪些字段，看 Fig.astro 里对应的那一段。
 // 写图里的字：短，一格一件事；不重复正文的整句，也不重复「卖点」（见 docs/MAINTAINING.md）。
 export const FIG_UI = {
   zh: { label: "图示", replay: "再看一遍" },
   en: { label: "Diagram", replay: "Replay" },
 };
+
+// 新手三课用到的图（每种语言都要有）
+export const LESSON_FIGS = ["l2-two-sign-outs", "l3-before-change"];
 
 export const FIGS = {
   // 第 2 课：设置里两个都叫「退出登录」的按钮（104958、117294）

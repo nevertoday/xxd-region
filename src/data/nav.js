@@ -1,31 +1,63 @@
+import { EXTRA } from "../i18n/index.js";
 // 站点结构的唯一来源：左侧导航、首页路线图、上一步 / 下一步、How-to 目录、搜索都从这里读。
 // ready: true 的页面还没写，左侧导航里显示「编写中」，不给链接；写完一页改成 ready: true（check-i18n 会拦住还空着却标了 true 的页）。
 // 中文在根路径，英文在 /en/ 下（同样的 slug）。英文文字放在各条目的 en: {} 里，用 t(x, key, lang) 取。
+// 另外 8 种语言（/ja/、/ko/……）只有首页和新手入门三课，文字在 src/i18n/<语言>.js；别的页面链到英文版。
 
 const BASE = (import.meta.env?.BASE_URL || "/").replace(/\/$/, "");
-/** 网站只有两种语言：读者住在中国大陆，中文是主站，英文给想对照原文的人。 */
+/** 网站的语言。读者住在中国大陆，中文是主站，英文给想对照原文的人，两种都是全站（full: true）；其他语言只有首页和新手入门三课，别的页面链到英文版。 */
 export const LANGS = [
-  { code: "zh", name: "中文", html: "zh-CN" },
-  { code: "en", name: "English", html: "en" },
+  { code: "zh", name: "中文", html: "zh-CN", full: true },
+  { code: "en", name: "English", html: "en", full: true },
+  { code: "ja", name: "日本語", html: "ja" },
+  { code: "ko", name: "한국어", html: "ko" },
+  { code: "es", name: "Español", html: "es" },
+  { code: "pt", name: "Português", html: "pt-BR" },
+  { code: "fr", name: "Français", html: "fr" },
+  { code: "de", name: "Deutsch", html: "de" },
+  { code: "ru", name: "Русский", html: "ru" },
+  { code: "ar", name: "العربية", html: "ar", dir: "rtl" },
 ];
 export const langInfo = (lang) => LANGS.find((l) => l.code === lang) ?? LANGS[0];
-/** 当前页面的语言：路径以 /en/ 开头是英文，其余是中文 */
-export const langOf = (pathname = "") => (/^\/en(?=\/|$)/.test(pathname.slice(BASE.length)) ? "en" : "zh");
-/** 站内链接：部署在子路径时自动加前缀；英文加 /en */
+const PREFIXED = LANGS.filter((l) => l.code !== "zh").map((l) => l.code);
+const PREFIX_RE = new RegExp(`^/(${PREFIXED.join("|")})(?=/|$)`);
+/** 当前页面的语言：看路径前缀（/en/……），没有前缀是中文 */
+export const langOf = (pathname = "") => pathname.slice(BASE.length).match(PREFIX_RE)?.[1] ?? "zh";
+/** 这种语言有没有全站 */
+export const isFull = (lang) => langInfo(lang).full === true;
+/** 只在全站语言里存在的页面（完整教程、How-to、Wiki、常见问题）：非全站语言链到英文版 */
+export const fullLang = (lang) => (isFull(lang) ? lang : "en");
+/** 站内链接：部署在子路径时自动加前缀；非中文加 /<语言> */
 export const link = (path, lang = "zh") => `${BASE}${lang === "zh" ? "" : "/" + lang}${path}`;
-/** 同一页在另一种语言里的地址（两种语言的页面一一对应；404 回首页） */
+/** 同一页在另一种语言里的地址：那种语言没有这一页，就去它的首页；404 回首页 */
 export const langHref = (pathname, target) => {
-  const rel = (pathname.slice(BASE.length) || "/").replace(/^\/en(?=\/|$)/, "") || "/";
-  return link(/\/404\/?$/.test(rel) ? "/" : rel, target);
+  const rel = (pathname.slice(BASE.length) || "/").replace(PREFIX_RE, "") || "/";
+  if (/\/404\/?$/.test(rel)) return link("/", target);
+  if (isFull(target) || rel === "/" || rel.startsWith("/start/")) return link(rel, target);
+  return link("/", target);
 };
-/** 取某个对象在当前语言下的字段：英文先找 x.en[key]，没有就用中文 */
-export const t = (x, key, lang) => (lang === "zh" ? x[key] : x.en?.[key] ?? x[key]);
+/** 取某个对象在当前语言下的字段：先找 x[lang][key]，再找 x.en[key]（非中文的兜底），最后是中文 */
+export const t = (x, key, lang) => {
+  if (lang === "zh") return x[key];
+  return x[lang]?.[key] ?? x.en?.[key] ?? x[key];
+};
 
 /** 这个教程站自己的仓库（反馈、源码）。 */
 export const REPO = "https://github.com/nevertoday/xxd-region";
 /** Apple 支持：账户、付款和地区的规定以它为准。具体文章的链接写在正文里。 */
 export const APPLE = "https://support.apple.com/zh-cn/apple-account";
 export const APPLE_EN = "https://support.apple.com/en-us/apple-account";
+// 其他语言的页脚和「相关链接」指向 Apple 支持在那种语言里的 Apple 账户页（2026-11-19 都有；俄语那页的地址还叫 apple-id）
+export const APPLE_BY_LANG = {
+  ja: "https://support.apple.com/ja-jp/apple-account",
+  ko: "https://support.apple.com/ko-kr/apple-account",
+  es: "https://support.apple.com/es-es/apple-account",
+  pt: "https://support.apple.com/pt-br/apple-account",
+  fr: "https://support.apple.com/fr-fr/apple-account",
+  de: "https://support.apple.com/de-de/apple-account",
+  ru: "https://support.apple.com/ru-ru/apple-id",
+  ar: "https://support.apple.com/ar-ae/apple-account",
+};
 
 // 新手入门：给第一次想要外区账户的人。三课讲三件最要紧的事，讲完再去走完整教程。
 export const LESSONS = [
@@ -33,6 +65,8 @@ export const LESSONS = [
   { n: 2, slug: "2-two-sign-ins", title: "iCloud 和 App Store 是两个登录位", minutes: "8 分钟", ready: true, sum: "iCloud 一直登你自己的账户，外区账户只登在「媒体与购买项目」里；别人的账户永远不登进 iCloud", en: { title: "iCloud and the App Store are two separate sign-ins", minutes: "8 minutes", sum: "Keep your own account in iCloud and sign the other-region account into Media & Purchases only; never put someone else's account in iCloud" } },
   { n: 3, slug: "3-new-account", title: "另注册一个，别动你的主账户", minutes: "8 分钟", ready: true, sum: "给主账户换地区要先清掉余额、订阅和家人共享，国区账户的 iCloud 还会迁出云上贵州；另注册一个更省事", en: { title: "Make a second account; leave your main one alone", minutes: "8 minutes", sum: "Moving your main account means clearing your balance, subscriptions and Family Sharing first, and a China mainland account's iCloud moves out of GCBD; a second account is simpler" } },
 ];
+// 其他语言：新手入门标题、时间、简介在 src/i18n/<语言>.js 的 lessons 里，按顺序叠到这里
+for (const [code, d] of Object.entries(EXTRA)) (d.lessons || []).forEach((l, i) => { if (LESSONS[i]) LESSONS[i][code] = l; });
 export const lessonHref = (s, lang = "zh") => link(`/start/${s.slug}/`, lang);
 
 export const STEPS = [

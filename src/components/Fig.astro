@@ -1,17 +1,19 @@
 ---
-// 正文里的图示：<Fig id="l1-habits" />。数据和文字在 src/data/figs.js。
+// 正文里的图示：<Fig id="l1-habits" />。数据和文字在 src/data/figs.js（新手三课的其他语言在 src/i18n/<语言>.js 的 figs）。
 // 全部是 HTML + CSS，颜色、圆角都用令牌，跟着亮暗、直角圆角、主色走；文字能换行，手机上竖排。
 // 动画：进入视野后一步步亮起来（带 data-k 的部分按顺序出现），放两遍停在完整的样子，可以「再看一遍」。
 // 没有脚本、或者系统设了减少动效：直接显示完整的图。
 import { FIGS, FIG_UI } from "../data/figs.js";
 import { langOf } from "../data/nav.js";
+import { X as dict } from "../i18n/index.js";
 interface Props { id: string }
 const { id } = Astro.props;
 const F = FIGS[id];
 if (!F) throw new Error(`src/data/figs.js 里没有图「${id}」`);
 const lang = langOf(Astro.url.pathname);
-const T = F[lang];
-const UI = FIG_UI[lang];
+const x = dict(lang);
+const T = F[lang] ?? x?.figs?.[id] ?? F.en;
+const UI = FIG_UI[lang] ?? x?.figs?.ui ?? FIG_UI.en;
 const B = F.base;
 const type = F.type;
 
@@ -29,7 +31,7 @@ const n = {
   tree: () => 3,
 }[type]();
 const stage = type !== "term";
-// anatomy：编号和开头一小段粘在一起（英文取第一个词，中文取前两个字），免得编号单独留在行尾
+// anatomy：编号和开头一小段粘在一起（有空格的语言取第一个词，中日文取前两个字），免得编号单独留在行尾
 const head = (t: string) => { const i = t.indexOf(" "); const n = i > 0 && i < 24 ? i : Math.min(2, t.length); return [t.slice(0, n), t.slice(n)]; };
 // 文字里的 /命令 包成等宽、不断行的一段（先转义再包）
 const esc = (t: string) => t.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");

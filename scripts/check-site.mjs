@@ -4,6 +4,7 @@
 import { readFileSync, readdirSync, statSync, existsSync } from "node:fs";
 import { join, dirname, relative } from "node:path";
 import { fileURLToPath } from "node:url";
+import { EXTRA } from "../src/i18n/index.js";
 
 const DIST = join(dirname(fileURLToPath(import.meta.url)), "../dist");
 if (!existsSync(DIST)) {
@@ -16,8 +17,8 @@ const walk = (dir) => readdirSync(dir).flatMap((f) => {
 });
 
 const pages = walk(DIST);
-// 示意回复的标题开头：中文「示意」、英文 Illustration
-const DEMO = ["示意", "Illustration"];
+// 示意回复的标题开头：中文「示意」、英文 Illustration，其他语言取各自 i18n 文件里 comp.reply 冒号前那个词
+const DEMO = ["示意", "Illustration", ...Object.values(EXTRA).map((d) => d.comp?.reply?.split(/[:：]/)[0].trim()).filter(Boolean)];
 const cache = new Map();
 const read = (f) => cache.get(f) ?? cache.set(f, readFileSync(f, "utf8")).get(f);
 const problems = [];
@@ -29,7 +30,7 @@ for (const file of pages) {
   const marks = (body.match(/<mark[\s>]/g) ?? []).length;
   if (marks > 1) fail(file, `${marks} 处 <mark>，最多一处`);
   for (const m of html.matchAll(/<figcaption class="xxd-code__head">([^<]*)</g)) {
-    if (/reply/i.test(html.slice(Math.max(0, m.index - 400), m.index)) && !DEMO.some((w) => m[1].startsWith(w))) fail(file, `示意回复的标题没写「示意」或 Illustration：${m[1]}`);
+    if (/reply/i.test(html.slice(Math.max(0, m.index - 400), m.index)) && !DEMO.some((w) => m[1].startsWith(w))) fail(file, `示意回复的标题没写「示意」或那种语言的同义词：${m[1]}`);
   }
   for (const m of html.matchAll(/href="(\/[^"#?]*)(?:\?[^"#]*)?(#[^"]*)?"/g)) {
     const path = decodeURI(m[1]);

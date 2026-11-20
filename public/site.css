@@ -51,6 +51,7 @@
   .site-mark__fg { fill: none; stroke: var(--on-ink); stroke-width: 1.5; stroke-linejoin: miter; }
   .site-menu, .site-brand { flex: none; }
   .site-top__spacer { flex: 1; }
+  /* 间隔 6px：十种语言里最长的名字（Português）在目录栏里也能放下，不被省略 */
   .site-tools { display: flex; flex: none; align-items: center; gap: 6px; }
   /* 图标按钮不被挤窄：挤窄了图标就离开对齐线，触屏上也小于 44px 的点按区。放不下时只有语言名收成省略号（标签才省略，设计原则 §6） */
   .site-tools > :not(.site-lang) { flex-shrink: 0; }
@@ -358,6 +359,7 @@
   .fig__down { align-self: center; margin: 4px 0; color: var(--muted-2); }
   .fig-ana__head { white-space: nowrap; }
   .fig__arr { flex: none; margin-inline: 4px; color: var(--muted-2); }
+  [dir="rtl"] .fig__arr, [dir="rtl"] .fig-flow__arr > .ui-icon, [dir="rtl"] .fig-fan__arr > .ui-icon { scale: -1 1; }
 
   /* 动画：没轮到的部分淡成影子，轮到了浮上来；只动 opacity / transform */
   .fig.is-anim [data-k] { opacity: .16; transform: translateY(4px); transition: opacity .45s var(--ease-out-quart), transform .45s var(--ease-out-quart); }
@@ -463,7 +465,7 @@
   @container fig (max-width: 620px) {
     .fig-flow { --gap: 22px; grid-template-columns: 1fr; }
     .fig-flow__arr { inset-inline-start: 0; top: calc(var(--gap) * -1); align-items: center; width: 100%; height: var(--gap); margin-top: 0; }
-    .fig-flow__arr > .ui-icon { rotate: 90deg; scale: 1; }
+    .fig-flow__arr > .ui-icon, [dir="rtl"] .fig-flow__arr > .ui-icon { rotate: 90deg; scale: 1; }
     .fig-flow__box { display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: 10px; }
     .fig-flow__top { grid-row: span 3; margin: 0; }
     .fig-flow__box > :not(.fig-flow__top):not(.fig-flow__mark) { grid-column: 2; }
@@ -516,7 +518,7 @@
   @container fig (max-width: 620px) {
     .fig-fan { grid-template-columns: 1fr; }
     .fig-fan__arr { height: 24px; align-items: center; }
-    .fig-fan__arr > .ui-icon { rotate: 90deg; scale: 1; }
+    .fig-fan__arr > .ui-icon, [dir="rtl"] .fig-fan__arr > .ui-icon { rotate: 90deg; scale: 1; }
     .fig-fan__by ul { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   }
 
@@ -541,9 +543,23 @@
   @container fig (max-width: 480px) { .fig-tree__kids { grid-template-columns: 1fr; } .fig-tree__kids::before { display: none; } .fig-tree__kids > li { flex-direction: row; } .fig-tree__kids > li + li::before { display: none; } }
 }
 
-/* ---------- 语言菜单 ---------- */
+/* ---------- 多语言：语言菜单、从右往左的语言（阿拉伯语） ---------- */
 @layer site {
   .site-lang { gap: 4px; }
   .site-lang__name { font-size: var(--text-sm); }
   .site-lang-menu { min-width: 160px; }
+  @media (max-width: 820px) {
+    [dir="rtl"] .site-nav { transform: translateX(100%); }
+    [dir="rtl"] .site-nav[data-open] { transform: none; }
+  }
+  /* 箭头和流动的点：从右往左的语言里镜像过来 */
+  [dir="rtl"] .home__cta .ui-icon { transform: scaleX(-1); }
+  /* 命令、行内代码保持从左往右；要读者照抄的话和示意是这种语言写的，跟着从右往左 */
+  [dir="rtl"] :not(pre) > code, [dir="rtl"] .cmd, [dir="rtl"] kbd { direction: ltr; unicode-bidi: isolate; }
+  [dir="rtl"] pre { direction: ltr; text-align: left; }
+  [dir="rtl"] .copy-block pre, [dir="rtl"] .reply-demo pre { direction: rtl; text-align: right; }
+  /* UI Kit 的侧栏选中条、目录竖线写的是左边（物理方向），从右往左时换到右边 */
+  [dir="rtl"] .xxd-sidebar__item[aria-current=page] { box-shadow: inset -2px 0 0 var(--action); }
+  [dir="rtl"] .xxd-toc a { border-left: 0; border-right: 1px solid var(--line); padding: var(--space-1) var(--space-3) var(--space-1) 0; }
+  [dir="rtl"] .xxd-toc a[aria-current=true] { border-right-color: var(--action); box-shadow: inset -1px 0 0 var(--action); }
 }

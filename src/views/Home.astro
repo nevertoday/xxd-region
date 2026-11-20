@@ -4,7 +4,8 @@
 // 事实都出自 docs/sources/README.md 里的官方来源。
 import Site from "../layouts/Site.astro";
 import Contact from "../components/Contact.astro";
-import { LESSONS, lessonHref, STEPS, stepHref, langOf, t } from "../data/nav.js";
+import { LESSONS, lessonHref, STEPS, stepHref, langOf, fullLang, t } from "../data/nav.js";
+import { X as dict, fmt } from "../i18n/index.js";
 
 const lang = langOf(Astro.url.pathname);
 // 三件事里和语言无关的部分：图标、对应完整教程的哪几步。第一件是新手三课讲的那件，底色浅一点
@@ -65,7 +66,12 @@ const EN = {
   tracksLabel: "Matching steps in the full guide",
   stepLink: (n, title) => `Step ${n}: ${title}`,
 };
-const C = lang === "en" ? EN : ZH;
+// 其他语言：文字来自 src/i18n/<语言>.js；完整教程链到英文版
+const x = dict(lang);
+const fl = fullLang(lang);
+const C = x
+  ? { ...EN, ...x.home, brand: x.ui.brand, stepLink: (n, title) => fmt(x.home.stepLink, { n, title }) }
+  : lang === "en" ? EN : ZH;
 const TRACKS = TRACK_BASE.map(([icon, steps], i) => ({ icon, h: C.TRACKS[i][0], p: C.TRACKS[i][1], steps: steps.map((n) => STEPS.find((s) => s.n === n)) }));
 const headings = [["h-pain", C.painH], ["h-lessons", C.lessonsH], ["h-fit", C.fitH], ["h-tracks", C.tracksH]].map(([slug, text]) => ({ slug, text, depth: 2 }));
 ---
@@ -75,7 +81,7 @@ const headings = [["h-pain", C.painH], ["h-lessons", C.lessonsH], ["h-fit", C.fi
     <p class="home__lead">{C.lead[0]}<mark>{C.lead[1]}</mark>{C.lead[2]}</p>
     <div class="home__cta">
       <a class="xxd-btn" data-variant="primary" href={lessonHref(LESSONS[0], lang)}>{C.cta[0]}<i data-xxd-icon="ArrowRight" data-size="16"></i></a>
-      <a class="xxd-btn" data-variant="ghost" href={stepHref(STEPS[0], lang)}>{C.cta[1]}</a>
+      <a class="xxd-btn" data-variant="ghost" href={stepHref(STEPS[0], fl)} hreflang={fl === lang ? undefined : fl}>{C.cta[1]}</a>
     </div>
     <p class="home__note">{C.ctaNote}</p>
 
@@ -111,6 +117,7 @@ const headings = [["h-pain", C.painH], ["h-lessons", C.lessonsH], ["h-fit", C.fi
     <section aria-labelledby="h-tracks">
       <h2 id="h-tracks">{C.tracksH}</h2>
       <p>{C.tracksP}</p>
+      {x && <p class="home__note">{C.devNote}</p>}
       <div class="flow">
         {TRACKS.map((k, i) => (
           <div class="flow__box" data-mine={i === 0 ? "" : undefined}>
@@ -118,7 +125,7 @@ const headings = [["h-pain", C.painH], ["h-lessons", C.lessonsH], ["h-fit", C.fi
             <p class="flow__title">{k.h}</p>
             <p class="flow__desc">{k.p}</p>
             <ul class="flow__how" aria-label={C.tracksLabel}>
-              {k.steps.map((s) => <li><a href={stepHref(s, lang)}>{C.stepLink(s.n, t(s, "title", lang))}</a></li>)}
+              {k.steps.map((s) => <li><a href={stepHref(s, fl)} hreflang={fl === lang ? undefined : fl}>{C.stepLink(s.n, t(s, "title", fl))}</a></li>)}
             </ul>
           </div>
         ))}
