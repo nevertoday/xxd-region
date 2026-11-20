@@ -1,90 +1,90 @@
 ---
 layout: ../../../layouts/Lesson.astro
-tldr: "An Apple Account's country or region decides which store you walk into: which apps and services it has, what currency prices are in, and which payment methods it takes. Under Apple's terms, it's the country or region where you live."
+tldr: "Apple Account の国や地域で、あなたが入るお店が決まります。どんなアプリやサービスがあるか、値段がどの通貨で表示されるか、どの支払い方法が使えるか。Apple の規約では、それはあなたが住んでいる国や地域のことです。"
 lesson: 1
 ---
 import Term from "../../../components/Term.astro";
 import Q from "../../../components/Q.astro";
 
-A friend recommends an app. They've used it for months and can't do without it. You open the App Store and search for the name: two pages of results, nothing. You try the English name. Still nothing. You send them a screenshot, and they write back: "Weird, it's right here on mine."
+友だちが、あるアプリをすすめてくれました。もう何か月も使っていて、手放せないそうです。App Store を開いてその名前で検索してみると、結果を二ページ見ても出てきません。英語の名前でも探してみたけれど、やっぱりない。スクリーンショットを送ると、こんな返事が来ました。「変だね、こっちにはちゃんとあるよ」
 
-Neither phone is broken, and the App Store hasn't made a mistake. The difference is the account you're each signed in with. Theirs is a US account; yours is a China mainland one.
+どちらのスマホも壊れていないし、App Store が間違えているわけでもありません。違うのは、それぞれがサインインしているアカウントです。友だちのは米国のアカウントで、あなたのは中国本土のアカウントなのです。
 
-## One App Store, different shelves in each place
+## App Store はひとつでも、棚は場所ごとに違う
 
-Every <Term k="Apple 账户" /> belongs to one <Term k="国家或地区" />. When you open the App Store, what you see is that country or region's store.
+<Term k="Apple 账户" text="Apple Account" /> はどれも、ひとつの<Term k="国家或地区" text="国や地域" />に属しています。App Store を開いたときに見えているのは、その国や地域のお店です。
 
-Which stores an app sits in is the developer's decision. Apple's help for developers says the App Store is available in 175 countries or regions, and a developer can release an app in all of them or pick specific ones. The same page adds that an app may not be available for download or use in some countries or regions because of legal or regulatory requirements ([App Store Connect Help](https://developer.apple.com/help/app-store-connect/manage-your-apps-availability/manage-availability-for-your-app-on-the-app-store)). So your friend's app might be missing from the China mainland store because the developer didn't pick it, or for some other reason, and from the outside you can't tell which. Apple's own advice: if you think an app should be available in your country or region, contact the developer directly ([Availability of Apple Media Services](https://support.apple.com/en-us/118205)).
+アプリをどのお店に並べるかは、デベロッパが決めます。Apple のデベロッパ向けヘルプによると、App Store は 175 の国や地域で提供されていて、デベロッパはそのすべてでアプリを公開することも、特定の国や地域だけを選ぶこともできます。同じページには、法律や規制上の要件によって、一部の国や地域ではアプリをダウンロードしたり使ったりできない場合がある、とも書かれています（[App Store Connect ヘルプ](https://developer.apple.com/help/app-store-connect/manage-your-apps-availability/manage-availability-for-your-app-on-the-app-store)）。つまり、友だちのアプリが中国本土のお店にないのは、デベロッパが中国本土を選ばなかったからかもしれないし、ほかの理由かもしれません。外から見ても、どちらなのかはわかりません。Apple 自身のアドバイスは、お住まいの国や地域で提供されていないアプリについては、デベロッパに直接伝えてほしい、というものです（[Appleメディアサービスの提供状況](https://support.apple.com/ja-jp/118205)）。
 
-## The region decides a few other things too
+## 地域で決まることは、ほかにもある
 
-It isn't only apps. An account's country or region also decides these.
+決まるのはアプリだけではありません。アカウントの国や地域では、次のようなことも決まります。
 
-**Which Apple services you get.** Apple has an article listing the media services available in each country or region ([Availability of Apple Media Services](https://support.apple.com/en-us/118205)). The United States has the longest list, with Apple Books, Apple TV, Apple One, Apple Fitness+ and Apple News+ on it. China mainland has the App Store, Apple Music and Shazam, and podcasts only if they're free; Apple Books, Apple Arcade, Apple TV and Apple One aren't there, and neither are movie purchases. Türkiye has Apple Arcade and Apple TV, but books are public domain only, podcasts are free only, and Apple One isn't on its list either.
+**使える Apple のサービス。** Apple には、国や地域ごとに使えるメディアサービスをまとめた記事があります（[Appleメディアサービスの提供状況](https://support.apple.com/ja-jp/118205)）。いちばん項目が多いのは米国で、Apple Books、Apple TV、Apple One、Apple Fitness+、Apple News+ が並んでいます。中国本土にあるのは App Store、Apple Music、Shazam で、ポッドキャストは無料のものだけです。Apple Books、Apple Arcade、Apple TV、Apple One はなく、映画の購入もできません。トルコには Apple Arcade と Apple TV がありますが、ブックはパブリックドメインのものだけ、ポッドキャストも無料のものだけで、やはり Apple One は一覧にありません。
 
-**What currency prices are in.** Take the same iCloud+ plan: as of 2026-11-19, Apple's pricing page lists it in US dollars for the United States, in lira for Türkiye and in yuan for China mainland ([iCloud+ plans and pricing](https://support.apple.com/en-us/108047)). The prices themselves change, because Apple and developers both adjust them, and [step 5](/en/guide/5-subscriptions/) of the full guide covers that.
+**値段の通貨。** たとえば同じ iCloud+ のプランでも、2026 年 11 月 19 日時点の Apple の料金ページでは、米国は米ドル、トルコはリラ、中国本土は人民元で表示されています（[iCloud+のプランと料金](https://support.apple.com/ja-jp/108047)）。値段そのものは変わります。Apple もデベロッパも料金を見直すからで、そのことは完全ガイドの[ステップ 5（英語）](/en/guide/5-subscriptions/)で説明しています。
 
-**Which payment methods you can use.** Apple lists those per country or region as well ([Payment methods that you can use with your Apple Account](https://support.apple.com/en-us/111741)). China mainland takes Alipay, WeChat Pay, Douyin Pay, most credit and debit cards, and an <Term k="Apple 账户余额" />. The United States takes most credit and debit cards, Apple Pay, Apple Card, Apple Cash, PayPal and the account balance. Türkiye takes most credit and debit cards, mobile phone billing and the account balance, and there's no Apple Pay or PayPal on its list. The same page notes that payment methods are subject to change.
+**使える支払い方法。** これも Apple が国や地域ごとに一覧にしています（[Apple Accountで使えるお支払い方法](https://support.apple.com/ja-jp/111741)）。中国本土で使えるのは、Alipay、WeChat Pay、Douyin Pay、大半のクレジットカードとデビットカード、そして <Term k="Apple 账户余额" text="Apple Accountの残高" /> です。米国では、大半のクレジットカードとデビットカード、Apple Pay、Apple Card、Apple Cash、PayPal、アカウントの残高が使えます。トルコでは、大半のクレジットカードとデビットカード、キャリア決済、アカウントの残高が使えて、Apple Pay と PayPal は一覧にありません。同じページには、支払い方法は随時変更されることがある、とも書かれています。
 
-So switching to an account in another region is like walking into a shop in another country: different things on the shelves, prices in a different currency, a till that takes different ways to pay.
+だから別の地域のアカウントに切り替えるのは、よその国のお店に入るようなものです。棚に並んでいるものが違い、値札の通貨が違い、レジで使える払い方も違います。
 
-<mark><strong>An account's country or region decides which store you walk into: which apps and services it has, what currency prices are in, and how you can pay. Under Apple's terms, it's the country or region where you live.</strong></mark>
+<mark><strong>アカウントの国や地域で、あなたが入るお店が決まります。どんなアプリやサービスがあるか、値段がどの通貨か、どうやって払えるか。Apple の規約では、それはあなたが住んでいる国や地域です。</strong></mark>
 
-## What the terms say: it's where you live
+## 規約の上では、住んでいる場所のこと
 
-That second half needs a few more words, because an account's region isn't just a setting. Apple's terms give it a name. The Apple Media Services Terms call it your <Term k="居住国家或地区" />: the services are available for your use in your country or territory of residence. The US terms put it plainly: "By creating an account for use of the Services in a particular country or territory you are specifying it as your Home Country." The Turkish and China mainland terms say the same ([US terms](https://www.apple.com/legal/internet-services/itunes/us/terms.html), [Turkish terms](https://www.apple.com/tr/legal/internet-services/itunes/tr/terms.html), in Turkish, [China mainland terms](https://www.apple.com.cn/legal/internet-services/itunes/cn/terms.html), in Chinese).
+後半の部分は、もう少し説明が必要です。アカウントの地域はただの設定ではなく、Apple の規約がそれに名前をつけているからです。Apple メディアサービス利用規約では、これを<Term k="居住国家或地区" text="居住国" />（英語では Home Country）と呼び、サービスはあなたが居住する国や地域で使うためのものだとしています。米国の規約は、はっきりこう書いています。「特定の国または地域でサービスを利用するためのアカウントを作成することにより、あなたはその国または地域を Home Country として指定することになります」。トルコと中国本土の規約も、同じことを言っています（[米国の規約](https://www.apple.com/legal/internet-services/itunes/us/terms.html)（英語）、[トルコの規約](https://www.apple.com/tr/legal/internet-services/itunes/tr/terms.html)（トルコ語）、[中国本土の規約](https://www.apple.com.cn/legal/internet-services/itunes/cn/terms.html)（中国語））。
 
-In other words, the country or region you pick when you sign up is you telling Apple that you live there. Apple's advice to people who move follows the same line: if you don't want to enter a payment method for your new country or region, wait until you're physically there, then create a new Apple Account ([Change your Apple Account country or region](https://support.apple.com/en-us/118283)).
+言いかえると、登録するときに選ぶ国や地域は、「私はそこに住んでいます」と Apple に伝えることなのです。引っ越す人への Apple のアドバイスも、同じ考え方に沿っています。新しい国や地域の支払い方法を入力したくないなら、実際にその国や地域に移ってから、新しい Apple Account を作成してください、というものです（[Apple Accountの国や地域を変更する](https://support.apple.com/ja-jp/118283)）。
 
-If you live in the United States or Türkiye, this part is easy: give your own real address. If you live in mainland China and want a US or Turkey account, it's worth getting the next few things straight first.
+米国やトルコに住んでいるなら、話は簡単です。自分の本当の住所を入力すれば大丈夫です。中国本土に住んでいて、米国やトルコのアカウントがほしいなら、先に次のいくつかのことを整理しておきましょう。
 
-## The address field: this site won't fill it in for you
+## 住所の欄は、このサイトでは埋めません
 
-Signing up and adding a payment method both ask for an address. This site doesn't give out addresses or teach you how to make one up. The reasons are below, and each comes from Apple's own pages.
+アカウントの登録でも、支払い方法の追加でも、住所を聞かれます。このサイトは住所を教えませんし、住所をでっち上げる方法も教えません。理由は次のとおりで、どれも Apple 自身のページに書かれていることです。
 
-**What the terms let Apple do.** The US and China mainland terms both say that if you fail, or Apple suspects that you have failed, to comply with any of the provisions, Apple may terminate the agreement and your Apple Account without notice to you ([US terms](https://www.apple.com/legal/internet-services/itunes/us/terms.html), [China mainland terms](https://www.apple.com.cn/legal/internet-services/itunes/cn/terms.html)). The Turkish terms are narrower: they cover failing basic obligations such as paying, or fraud ([Turkish terms](https://www.apple.com/tr/legal/internet-services/itunes/tr/terms.html)).
+**規約が Apple に認めていること。** 米国と中国本土の規約にはどちらも、あなたが規定のいずれかに従わなかった場合、または従わなかったと Apple が疑う場合、Apple はあなたに通知することなく、契約とあなたの Apple Account を終了できる、と書かれています（[米国の規約](https://www.apple.com/legal/internet-services/itunes/us/terms.html)、[中国本土の規約](https://www.apple.com.cn/legal/internet-services/itunes/cn/terms.html)）。トルコの規約は範囲がもっと狭く、支払いのような基本的な義務を果たさなかった場合や、不正があった場合を対象にしています（[トルコの規約](https://www.apple.com/tr/legal/internet-services/itunes/tr/terms.html)）。
 
-**What Apple actually does.** The terms don't spell out what happens when an account's region doesn't match where you really live, and Apple hasn't said publicly how it handles that. Apple's pages don't say; if you're unsure, ask Apple Support first.
+**Apple が実際にどうしているか。** アカウントの地域が本当に住んでいる場所と違う場合にどうなるのか、規約には具体的に書かれていませんし、Apple がそれをどう扱っているのかも公表されていません。この点は Apple のページには書かれていないので、迷ったら先に Apple サポートに聞いてください。
 
-**Your billing address has to match your bank's.** When you add a payment method, Apple asks you to confirm that your name, billing address and other information are spelled correctly and match what you have on file with your financial institution, such as the bank that issued your card ([Add a payment method to your Apple Account](https://support.apple.com/en-us/118429)). When a payment method is declined, Apple again says your billing details must match the information on file with your financial institution ([If your payment method is declined in the App Store or iTunes Store](https://support.apple.com/en-us/108095)). So an address that isn't yours won't match your bank's records on the day you go to add a card.
+**請求先住所は、銀行に登録した情報と一致している必要がある。** 支払い方法を追加するとき、Apple は、名前、請求先住所、その他の情報が正しく入力されていて、金融機関（たとえばカードを発行した銀行）に登録されている情報と一致しているか確認するよう求めています（[Apple Accountのお支払い方法を追加する](https://support.apple.com/ja-jp/118429)）。支払いが拒否されたときにも、Apple は、請求先情報は金融機関に登録されている情報と一致している必要がある、と書いています（[App StoreやiTunes Storeで支払いが拒否された場合](https://support.apple.com/ja-jp/108095)）。だから自分のものではない住所は、カードを追加しようとしたその日に、銀行の記録と合わなくなります。
 
-Put those side by side, and the decision is yours. This is a matter of the terms between you and Apple; this site explains what the terms say, and it isn't legal advice.
+これらを並べてみたうえで、どうするかはあなたが決めることです。これはあなたと Apple のあいだの規約の問題です。このサイトは規約に何が書いてあるかを説明しているだけで、法的なアドバイスではありません。
 
-## The next two lessons
+## 次のふたつのレッスン
 
-Now you know what the region decides and what the terms say about it. But when you actually go to use an account in another region, what worries most people isn't the region. It's whether it could hurt the main account you've had for years: your photos and contacts are in its iCloud, and the apps you've bought are in its name.
+地域で何が決まるのか、規約がそれをどう扱っているのかは、もうわかりました。でも実際に別の地域のアカウントを使おうとすると、多くの人がいちばん心配するのは地域のことではありません。何年も使ってきたメインのアカウントに影響が出ないか、ということです。写真や連絡先はその iCloud に入っているし、買ったアプリもそのアカウントのものです。
 
-The next two lessons are about the two things that keep that main account safe. [Lesson 2](/ja/start/2-two-sign-ins/) explains that iCloud and the App Store are two separate sign-ins on your iPhone, and the other-region account goes only in the second one. [Lesson 3](/ja/start/3-new-account/) explains why making a second account is simpler than moving your main one to another region. Everything beyond the three lessons is there to look up when you need it.
+次のふたつのレッスンは、そのメインのアカウントを守るためのふたつのことについてです。[レッスン 2](/ja/start/2-two-sign-ins/)では、iPhone の iCloud と App Store は別々のサインインで、別の地域のアカウントは後者にだけ入れる、という話をします。[レッスン 3](/ja/start/3-new-account/)では、メインのアカウントを別の地域に移すより、もうひとつアカウントを作るほうが簡単な理由を説明します。この三つのレッスンで扱わないことは、必要になったときに調べれば十分です。
 
-## If something's off
+## 困ったときは
 
-<Q q="I don't know which region has the app I want.">
+<Q q="ほしいアプリが、どの地域にあるのかわからない。">
 
-The developer decides which countries or regions an app is released in, so an app missing from the China mainland store isn't necessarily in the US or Turkish one either ([App Store Connect Help](https://developer.apple.com/help/app-store-connect/manage-your-apps-availability/manage-availability-for-your-app-on-the-app-store)). The surest way is to check the app's own website or ask the developer, which is also what Apple suggests ([Availability of Apple Media Services](https://support.apple.com/en-us/118205)). Find out where the thing you want is offered before you choose a region; [step 0](/en/guide/0-why/) of the full guide is about exactly that.
-
-</Q>
-<Q q="I don't know which region my account is in right now.">
-
-See [Check which region an account is in](/en/howto/check-region/). It takes a few taps.
+アプリをどの国や地域で公開するかはデベロッパが決めるので、中国本土のお店にないアプリが、米国やトルコのお店にあるとは限りません（[App Store Connect ヘルプ](https://developer.apple.com/help/app-store-connect/manage-your-apps-availability/manage-availability-for-your-app-on-the-app-store)）。いちばん確実なのは、アプリの公式サイトを見るか、デベロッパに聞くことで、Apple もそうすすめています（[Appleメディアサービスの提供状況](https://support.apple.com/ja-jp/118205)）。地域を選ぶ前に、ほしいものがどこで提供されているのかを確かめておきましょう。完全ガイドの[ステップ 0（英語）](/en/guide/0-why/)が、まさにその話です。
 
 </Q>
-<Q q="A tutorial says you can type in any address.">
+<Q q="自分のアカウントが、いまどの地域なのかわからない。">
 
-This site doesn't teach that. Your billing address has to match what your bank has on file, and the terms treat the account's region as where you live; both are covered above. If you come across that kind of tutorial, compare it with [Tutorials you shouldn't follow](/en/howto/bad-tutorials/).
-
-</Q>
-<Q q="I heard subscriptions are cheaper in some region, so I want to sign up there.">
-
-This site doesn't compare prices or say which region is cheaper. Developers and Apple set the prices, and they change: a developer can raise a subscription's price, some increases need your consent first and Apple contacts you by email or push notification to ask, and others only notify you ([App Store Connect Help](https://developer.apple.com/help/app-store-connect/manage-subscriptions/manage-pricing-for-auto-renewable-subscriptions)). So choose a region by the apps and services you'll actually use. [Step 5](/en/guide/5-subscriptions/) of the full guide covers subscriptions and price rises in detail.
+[アカウントの地域を確かめる（英語）](/en/howto/check-region/)を見てください。何回かタップするだけでわかります。
 
 </Q>
-<Q q="I'm going to move to the United States or Türkiye.">
+<Q q="住所は何を入れてもいい、と書いてある解説を見た。">
 
-Then your Home Country changes. Apple's advice is that if you don't want to enter a payment method for the new country or region, you wait until you're physically there and then create a new Apple Account ([Change your Apple Account country or region](https://support.apple.com/en-us/118283)). If you'd rather move your current account over, there's quite a lot to clear first, and [lesson 3](/ja/start/3-new-account/) goes through it.
+このサイトは、そういうやり方は教えません。請求先住所は銀行に登録されている情報と一致している必要がありますし、規約はアカウントの地域を住んでいる場所として扱っています。どちらも上で説明したとおりです。そういう解説を見かけたら、[従わないほうがいい解説（英語）](/en/howto/bad-tutorials/)と見比べてみてください。
 
 </Q>
-<Q q="Is this legal?">
+<Q q="ある地域ではサブスクリプションが安いと聞いたので、そこで登録したい。">
 
-This is a matter of the terms between you and Apple; this site explains what the terms say, and it isn't legal advice.
+このサイトは値段を比べたり、どの地域が安いかを言ったりはしません。値段を決めるのはデベロッパと Apple で、値段は変わります。デベロッパはサブスクリプションを値上げできます。値上げの中には、先にあなたの同意が必要で、Apple がメールやプッシュ通知で同意を求めてくるものもあれば、通知が来るだけのものもあります（[App Store Connect ヘルプ](https://developer.apple.com/help/app-store-connect/manage-subscriptions/manage-pricing-for-auto-renewable-subscriptions)）。だから地域は、実際に使うアプリやサービスで選んでください。サブスクリプションと値上げについては、完全ガイドの[ステップ 5（英語）](/en/guide/5-subscriptions/)でくわしく説明しています。
+
+</Q>
+<Q q="これから米国かトルコに引っ越す予定だ。">
+
+それなら、あなたの居住国が変わります。Apple のアドバイスは、新しい国や地域の支払い方法を入力したくないなら、実際にそこへ移ってから新しい Apple Account を作成する、というものです（[Apple Accountの国や地域を変更する](https://support.apple.com/ja-jp/118283)）。いまのアカウントをそのまま移したいなら、先に片づけておくことがかなりあります。[レッスン 3](/ja/start/3-new-account/)でひとつずつ説明しています。
+
+</Q>
+<Q q="これって違法ではないの？">
+
+これはあなたと Apple のあいだの規約の問題です。このサイトは規約に何が書いてあるかを説明しているだけで、法的なアドバイスではありません。
 
 </Q>
