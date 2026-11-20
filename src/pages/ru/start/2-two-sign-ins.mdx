@@ -1,6 +1,6 @@
 ---
 layout: ../../../layouts/Lesson.astro
-tldr: "Your iPhone has two sign-ins: one for iCloud and most features, and Media & Purchases, which can use a different account. Keep your own account in iCloud, and sign the other-region account into Media & Purchases only."
+tldr: "На iPhone два входа: один для iCloud и большинства функций, а второй, «Контент и покупки», может использовать другой аккаунт. В iCloud держите свой аккаунт, а аккаунт другого региона вводите только в разделе «Контент и покупки»."
 lesson: 2
 ---
 import Callout from "../../../components/Callout.astro";
@@ -9,82 +9,82 @@ import Q from "../../../components/Q.astro";
 import Reply from "../../../components/Reply.astro";
 import Fig from "../../../components/Fig.astro";
 
-Your other-region account is ready, and you want that app right now. You open **Settings**, and there's your name at the top. You tap it, scroll all the way down, and find **Sign Out**. Sign out, sign in with the new account, that must be how you switch. Your thumb is already on it.
+Аккаунт другого региона готов, и приложение хочется прямо сейчас. Вы открываете **Настройки**, а там наверху ваше имя. Нажимаете на него, прокручиваете в самый низ и находите **Выйти**. Выйти, войти с новым аккаунтом, наверное, так и переключаются. Палец уже на кнопке.
 
-Hold on a second. That button signs you out of a lot more than the App Store.
+Подождите секунду. Эта кнопка выводит вас не только из App Store.
 
-## Settings has two Sign Out buttons
+## В настройках две кнопки «Выйти»
 
-Apple's article is clear about it: when you sign out of your <Term k="Apple 账户" /> on a device, you're automatically signed out of iCloud, the App Store and other Apple media services, iMessage and FaceTime. What's stored in iCloud stays in iCloud, but your iCloud data is removed from the device unless you choose to keep a copy when prompted ([Sign out of your Apple Account and iCloud on your devices](https://support.apple.com/en-us/104958)). All you wanted was a different store, and that one tap signs the whole phone out.
+Статья Apple говорит об этом ясно: когда вы выходите из <Term k="Apple 账户" text="Аккаунта Apple" /> на устройстве, вы автоматически выходите из iCloud, App Store и других медиасервисов Apple, а также из iMessage и FaceTime. То, что хранится в iCloud, остаётся в iCloud, но ваши данные iCloud удаляются с устройства, если только вы не решите сохранить их копию, когда появится запрос ([Выход из Аккаунта Apple и iCloud на устройствах](https://support.apple.com/ru-ru/104958)). Вам нужен был всего лишь другой магазин, а одно нажатие выводит из аккаунта весь телефон.
 
-The other **Sign Out** lives under **Media & Purchases**. <Term k="媒体与购买项目" /> is the sign-in that the App Store, Music, Books and the other places you buy things use, and it can be a different account from iCloud. Apple describes this setup in its article on migrating purchases: the account signed in for iCloud and most features on your iPhone is the primary Apple Account, and the one signed in just for Media & Purchases is the <Term k="备选账户" /> ([Migrate purchases from one Apple Account to another Apple Account](https://support.apple.com/en-us/117294)).
+Вторая кнопка **Выйти** находится в разделе **Контент и покупки** (в некоторых статьях Apple, например о смене региона, он называется «Медиаматериалы и покупки»). <Term k="媒体与购买项目" text="«Контент и покупки»" /> отвечает за вход, которым пользуются App Store, «Музыка», «Книги» и другие места, где вы что-то покупаете, и здесь может стоять не тот аккаунт, что в iCloud. Apple описывает такую схему в статье о переносе покупок: аккаунт, с которым на iPhone выполнен вход для iCloud и большинства функций, называется основным Аккаунтом Apple, а тот, что используется только для функции «Контент и покупки», называется <Term k="备选账户" text="дополнительным Аккаунтом Apple" /> ([Перенос покупок из одного Аккаунта Apple в другой](https://support.apple.com/ru-ru/117294)).
 
-So your iPhone really has two sign-ins, each doing its own job. The only one you need to switch is the one you buy things with.
+Так что на iPhone на самом деле два входа, и у каждого своя работа. Переключать нужно только тот, через который вы покупаете.
 
-<mark><strong>iCloud always stays on your own account. The other-region account goes only under Media & Purchases, and switching it back and forth never touches iCloud.</strong></mark>
+<mark><strong>iCloud всегда остаётся на вашем собственном аккаунте. Аккаунт другого региона вводится только в разделе «Контент и покупки», и переключение туда и обратно никогда не затрагивает iCloud.</strong></mark>
 
 <Fig id="l2-two-sign-outs" />
 
-## Switch only Media & Purchases
+## Переключайте только «Контент и покупки»
 
-The same Apple article gives the steps for switching ([Migrate purchases from one Apple Account to another Apple Account](https://support.apple.com/en-us/117294)):
+В той же статье Apple есть шаги для переключения ([Перенос покупок из одного Аккаунта Apple в другой](https://support.apple.com/ru-ru/117294)):
 
-1. In **Settings**, tap your name.
-2. Tap **Media & Purchases**, then tap **Sign Out**.
-3. Once you're signed out, tap **Media & Purchases** again, choose **Not [your name]?**, and sign in with the other-region account.
+1. Откройте **Настройки** и нажмите свое имя.
+2. Нажмите **Контент и покупки**, затем **Выйти**.
+3. Когда выйдете, снова нажмите **Контент и покупки**, выберите **Не [ваше имя]?** и войдите с аккаунтом другого региона.
 
 <Callout type="ok">
-Go back to **Settings** and tap your name. You're still at the top, and the other-region account shows under **Media & Purchases**. As Apple puts it, you'll see a different Apple Account displayed under Media & Purchases if you have a different account signed in for purchases.
+Вернитесь в **Настройки** и нажмите свое имя. Наверху по-прежнему вы, а в разделе **Контент и покупки** виден аккаунт другого региона. Как пишет Apple, вы увидите другой Аккаунт Apple, отображаемый в разделе «Контент и покупки», если у вас есть другой аккаунт, в который вы вошли для совершения покупок.
 </Callout>
 
-If what you see on your iPhone is different, go with what you see; button positions move between iOS versions. Switching back is the same route: sign the other-region account out of Media & Purchases, then sign in with your own. For a step-by-step walkthrough, see [Switch App Store accounts on your iPhone](/en/howto/switch-store/).
+Если на вашем iPhone всё выглядит иначе, ориентируйтесь на то, что видите: от версии к версии iOS кнопки переезжают. Обратно переключаются тем же путём: выйдите из аккаунта другого региона в разделе «Контент и покупки» и войдите со своим. Пошаговый разбор есть в инструкции [Переключение аккаунтов App Store на iPhone](/en/howto/switch-store/) (на английском).
 
-## Two limits once you've switched
+## Два ограничения после переключения
 
-The two sign-ins are separate, but the Media & Purchases seat holds one person at a time. Apple says: "You can’t sign in on the App Store and other media services with more than one Apple Account at the same time, or update the content you buy with a different Apple Account." ([Sign in to your Apple Account on the web or in your device settings](https://support.apple.com/en-us/111001)) So apps you downloaded with the other-region account need that account signed in when they update, and apps your main account bought need your main account back.
+Входы разделены, но в «Контент и покупки» за раз помещается только один аккаунт. Apple пишет: «Войти в App Store и другие медиасервисы с использованием нескольких Аккаунтов Apple одновременно или обновить содержимое, приобретенное с использованием другого Аккаунта Apple, невозможно» ([Вход в Аккаунт Apple в браузере или настройках устройства](https://support.apple.com/ru-ru/111001)). Поэтому приложениям, скачанным с аккаунтом другого региона, для обновления нужен этот аккаунт, а приложениям, купленным на основной аккаунт, нужен основной.
 
-The second limit is about devices. An Apple Account used for purchases can have ten devices associated with it at a time, no more than five of them computers, and a device joins that list when you use it to buy something from the App Store. Apple also says that when you try to associate a device that was previously associated, you might see the message below, and you might need to wait up to 90 days to associate the device with a different Apple Account ([View and remove your devices that are associated with your Apple Account for purchases](https://support.apple.com/en-us/118412)):
+Второе ограничение касается устройств. С Аккаунтом Apple для покупок одновременно можно связать до десяти устройств, из них не больше пяти компьютеров, и устройство попадает в этот список, когда вы покупаете с него что-нибудь в App Store. Apple также пишет, что при попытке связать устройство, которое уже было связано раньше, может появиться сообщение ниже и, возможно, придётся подождать до 90 дней, чтобы связать устройство с другим Аккаунтом Apple ([Просмотр и удаление устройств, связанных с Аккаунтом Apple для совершения покупок](https://support.apple.com/ru-ru/118412)):
 
-<Reply code="This device is associated with another Apple Account. You cannot associate this device with another Apple Account for [number] days." />
+<Reply code="Это устройство связано с другим Аккаунтом Apple. Устройство можно будет связать с другим Аккаунтом Apple через [число] дн." />
 
-Apple says "might" and doesn't list when it will definitely happen. Apple's pages don't say; if you're unsure, ask Apple Support first.
+Apple пишет «может» и не перечисляет, когда это случится наверняка. На страницах Apple об этом не сказано; если сомневаетесь, сначала спросите службу поддержки Apple.
 
-## Never put someone else's account in iCloud
+## Чужой аккаунт никогда не вводите в iCloud
 
-Where does the other-region account come from? Someone will always offer: I've got a US account already, borrow it, just sign in.
+Откуда взять аккаунт другого региона? Всегда найдётся кто-то с предложением: у меня уже есть американский аккаунт, бери, просто войди.
 
-Wherever they tell you to sign in, the iCloud seat never takes someone else's account. Apple is direct about it: "Don't share an account with other people, even family members." Sharing an Apple Account means giving someone else access to all of your personal content ([Security and your Apple Account](https://support.apple.com/en-us/102614)).
+Куда бы вам ни предлагали войти, в iCloud чужому аккаунту не место никогда. Apple говорит об этом прямо: «Не делитесь аккаунтом с другими людьми, даже с членами семьи». Поделиться Аккаунтом Apple значит дать другому человеку доступ ко всей вашей личной информации ([Безопасность и ваш Аккаунт Apple](https://support.apple.com/ru-ru/102614)).
 
-There's a bigger problem too. Apple doesn't cover this case directly, but going by how <Term k="激活锁" /> works: it turns on automatically when you set up Find My, Apple stores the signed-in Apple Account on its activation servers and links it to the device, and from then on that account's password is required before anyone can turn off Find My, erase the device, or reactivate it ([Activation Lock for iPhone and iPad](https://support.apple.com/en-us/108794)). So with someone else's account in your iPhone's iCloud and Find My on, the phone is tied to their account, and without their password you couldn't even erase your own phone. That's an inference, not something Apple says in so many words.
+Есть и проблема посерьёзнее. Apple не разбирает этот случай напрямую, но вот как работает <Term k="激活锁" text="блокировка активации" />. Она включается автоматически, когда вы настраиваете «Локатор», Apple хранит данные Аккаунта Apple, с которым выполнен вход, на своих серверах активации и привязывает его к устройству, и с этого момента без пароля этого аккаунта никто не сможет отключить «Локатор», стереть устройство или активировать его заново ([Блокировка активации для iPhone и iPad](https://support.apple.com/ru-ru/108794)). Значит, если в iCloud вашего iPhone чужой аккаунт и включён «Локатор», телефон привязан к чужому аккаунту, и без пароля от него вы не сможете даже стереть собственный телефон. Это вывод, а не прямые слова Apple.
 
-The account under Media & Purchases should be yours too. Apple's article on migrating purchases says neither account should be shared with anyone else ([Migrate purchases from one Apple Account to another Apple Account](https://support.apple.com/en-us/117294)). [Why you shouldn't sign in to an account someone gives you](/en/howto/shared-accounts/) goes into more detail.
+Аккаунт в разделе «Контент и покупки» тоже должен быть вашим. В статье Apple о переносе покупок сказано, что ни один из двух аккаунтов не должен быть с общим доступом ([Перенос покупок из одного Аккаунта Apple в другой](https://support.apple.com/ru-ru/117294)). Подробнее в инструкции [Почему не стоит входить в аккаунт, который вам дали](/en/howto/shared-accounts/) (на английском).
 
-So the other-region account is best one you created yourself. Why a second account, and not your main one switched to the US? That's [lesson 3](/ru/start/3-new-account/).
+Так что аккаунт другого региона лучше всего создать самостоятельно. Но почему именно второй аккаунт, а не основной, переведённый в США? Об этом [урок 3](/ru/start/3-new-account/).
 
-## If something's off
+## Если что-то не так
 
-<Q q="I already tapped Sign Out at the bottom of the page with my name.">
+<Q q="Кнопка «Выйти» внизу страницы с моим именем уже нажата.">
 
-Don't panic. What's stored in iCloud stays in iCloud ([Sign out of your Apple Account and iCloud on your devices](https://support.apple.com/en-us/104958)). Sign back in with your own account: open **Settings**, tap **Apple Account** at the top, and enter your email address or phone number and password, plus the verification code if you're asked for one ([Sign in to your Apple Account on the web or in your device settings](https://support.apple.com/en-us/111001)). Apple also reminds you that not everything is backed up in iCloud, so check on anything that wasn't syncing. Once you're back in, follow the three steps above and switch only Media & Purchases.
-
-</Q>
-<Q q="I can't find where to switch accounts in the App Store.">
-
-Apple's steps for switching are in **Settings**, not in the App Store: Settings, then your name, then **Media & Purchases** ([Migrate purchases from one Apple Account to another Apple Account](https://support.apple.com/en-us/117294)). If what you see on your iPhone is different, go with what you see, or compare it with [Switch App Store accounts on your iPhone](/en/howto/switch-store/).
+Без паники. То, что хранится в iCloud, остаётся в iCloud ([Выход из Аккаунта Apple и iCloud на устройствах](https://support.apple.com/ru-ru/104958)). Войдите обратно со своим аккаунтом: откройте **Настройки**, нажмите **Аккаунт Apple** в верхней части экрана и введите адрес электронной почты или номер телефона и пароль, а если попросят, ещё и код проверки ([Вход в Аккаунт Apple в браузере или настройках устройства](https://support.apple.com/ru-ru/111001)). Apple также напоминает, что не все данные входят в резервную копию iCloud, так что проверьте то, что не синхронизировалось. Когда вернётесь в аккаунт, пройдите три шага выше и переключите только «Контент и покупки».
 
 </Q>
-<Q q="After switching back to my main account, some apps won't update.">
+<Q q="Не могу найти в App Store, где переключить аккаунт.">
 
-Those apps were most likely downloaded with the other-region account. Apple says you can't update content you bought with a different Apple Account ([Sign in to your Apple Account on the web or in your device settings](https://support.apple.com/en-us/111001)). Switch Media & Purchases to the other-region account, update, then switch back.
-
-</Q>
-<Q q="It says “This device is associated with another Apple Account.”">
-
-That's the associated-devices limit. Apple says you might need to wait up to 90 days to associate the device with a different Apple Account ([View and remove your devices that are associated with your Apple Account for purchases](https://support.apple.com/en-us/118412)). Try again once the wait is up; if you're unsure, ask Apple Support first.
+Шаги Apple для переключения находятся не в App Store, а в настройках: откройте **Настройки**, нажмите свое имя, затем **Контент и покупки** ([Перенос покупок из одного Аккаунта Apple в другой](https://support.apple.com/ru-ru/117294)). Если на вашем iPhone всё выглядит иначе, ориентируйтесь на то, что видите, или сверьтесь с инструкцией [Переключение аккаунтов App Store на iPhone](/en/howto/switch-store/) (на английском).
 
 </Q>
-<Q q="Someone says I can borrow their account and sign in to iCloud to get apps.">
+<Q q="После возвращения на основной аккаунт некоторые приложения не обновляются.">
 
-Don't. Downloading apps only needs Media & Purchases, not iCloud. On top of that, Apple says not to share an account with anyone, and someone else's account in iCloud brings Activation Lock into it, as the section "Never put someone else's account in iCloud" above explains. See also [Why you shouldn't sign in to an account someone gives you](/en/howto/shared-accounts/).
+Скорее всего, эти приложения скачаны с аккаунтом другого региона. Apple пишет, что обновить содержимое, приобретённое с использованием другого Аккаунта Apple, невозможно ([Вход в Аккаунт Apple в браузере или настройках устройства](https://support.apple.com/ru-ru/111001)). Переключите «Контент и покупки» на аккаунт другого региона, обновите приложения и переключитесь обратно.
+
+</Q>
+<Q q="Появляется сообщение «Это устройство связано с другим Аккаунтом Apple».">
+
+Это ограничение на связанные устройства. Apple пишет, что, возможно, придётся подождать до 90 дней, чтобы связать устройство с другим Аккаунтом Apple ([Просмотр и удаление устройств, связанных с Аккаунтом Apple для совершения покупок](https://support.apple.com/ru-ru/118412)). Попробуйте снова, когда срок пройдёт; если сомневаетесь, сначала спросите службу поддержки Apple.
+
+</Q>
+<Q q="Мне предлагают одолжить аккаунт и войти с ним в iCloud, чтобы скачивать приложения.">
+
+Не надо. Для скачивания приложений нужен только раздел «Контент и покупки», а не iCloud. К тому же Apple советует ни с кем не делиться аккаунтом, а чужой аккаунт в iCloud впутывает в эту историю блокировку активации, как объясняет раздел «Чужой аккаунт никогда не вводите в iCloud» выше. Смотрите также [Почему не стоит входить в аккаунт, который вам дали](/en/howto/shared-accounts/) (на английском).
 
 </Q>
