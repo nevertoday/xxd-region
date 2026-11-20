@@ -37,6 +37,9 @@ const same = (f, what, want, got) => {
 };
 const count = (s, re) => (s.match(re) || []).length;
 const list = (s, re) => [...s.matchAll(re)].map((m) => m[1]).join(",");
+// The English spells small counts out ("ten devices", "two pages"); a translation may write them as digits, the way Apple's own localized articles do (10台, 10대)
+const WORDS = { one: "1", two: "2", three: "3", four: "4", five: "5", six: "6", seven: "7", eight: "8", nine: "9", ten: "10", eleven: "11", twelve: "12" };
+const spelled = (s) => [...s.toLowerCase().matchAll(/\b(one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve)\b/g)].map((m) => WORDS[m[1]]);
 const nums = (s) => s.replace(/https?:\/\/\S+/g, "").replace(/\(\/[^)]*\)/g, "").replace(/<(Fig|Term)\b[^>]*>/g, "").match(/\d+(?:\.\d+)?/g) || [];
 const COMPONENTS = [["<Term", /<Term /g], ["<Callout", /<Callout /g], ["<Q", /<Q /g], ["<Fig", /<Fig /g], ["<Reply", /<Reply /g], ["<Copy", /<Copy /g], ["<Tabs", /<Tabs /g], ["<mark>", /<mark>/g], ["<strong>", /<strong>/g], ["<u>", /<u>/g], ["`code`", /`[^`\n]+`/g]];
 
@@ -68,7 +71,7 @@ for (const f of LESSONS) {
 
   const left = minus(nums(tr), nums(en));
   const dropped = minus(nums(en), nums(tr));
-  const added = left.filter((n) => !nums(zh).includes(n));
+  const added = left.filter((n) => !nums(zh).includes(n) && !spelled(en).includes(n));
   if (dropped.length) fail(`${f}: numbers in the English missing here: ${dropped.join(", ")}`);
   if (added.length) fail(`${f}: numbers in neither the English nor the Chinese: ${added.join(", ")}`);
   if (left.length > added.length) console.log(`  note ${f}: extra numbers that the Chinese original also has: ${left.filter((n) => !added.includes(n)).join(", ")}`);
