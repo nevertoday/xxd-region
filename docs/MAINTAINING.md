@@ -111,7 +111,7 @@ npm run check      # 构建以后：多语言对照检查 + 整站检查
 照 [Apple 商标指南](https://www.apple.com/legal/intellectual-property/guidelinesfor3rdparties.html)（`README.md` 第 13 节）：
 
 - 不用 Apple 标志、任何 Apple 的图标和图形，不模仿 Apple 的网站设计、包装和字体。本站标志是一枚墨色圆片上挖出的地球经纬线，和小小东其他站同一套笔法，故意不像 Apple 的任何图标。
-- Apple 的名字只用来指称它的产品（「Apple 账户」「App Store」「iCloud」），不放大成标题里最显眼的字，不暗示 Apple 认可本站。站名「外区 Apple ID 新手教程」里的 Apple ID 是在说本站讲的是什么（读者搜的就是这个词），不是把 Apple 的产品名当成本站的名字；标题、分享图里它和别的字一样大、一样的颜色，主色只给「外区」「换个区」这类本站自己的话。正文照 Apple 现在的叫法写「Apple 账户」，Wiki 的 apple-account 条目讲清楚它以前叫 Apple ID。域名里不用 Apple 的商标（所以是 `region.xiaoxiaodong.ai`）。
+- Apple 的名字只用来指称它的产品（「Apple 账户」「App Store」「iCloud」），不放大成标题里最显眼的字，不暗示 Apple 认可本站。站名「外区 Apple ID 新手教程」里的 Apple ID 是在说本站讲的是什么（读者搜的就是这个词），不是把 Apple 的产品名当成本站的名字；标题、分享图里它和别的字一样大、一样的颜色，主色只给「外区」「换个区」这类本站自己的话。正文照 Apple 现在的叫法写「Apple 账户」，Wiki 的 apple-account 条目讲清楚它以前叫 Apple ID。网址是 `appleid.xiaoxiaodong.ai`（2026-11-19 由作者定的，读者搜的就是 Apple ID）。Apple 商标指南不许的是把 Apple 的商标直接当二级域名（例子是 imac.com、imac-apple.com），本站用的是自己域名下的子域名，不在那一条里；页脚的独立声明和商标归属照写。最早上线的 `region.xiaoxiaodong.ai` 由 `worker/index.js` 301 到新网址的同一页。
 - 页脚、README 写明：本站是独立的学习站，没有得到 Apple Inc. 的授权、赞助或认可；Apple、App Store 和 iCloud 是 Apple Inc. 的商标。
 
 ## 怎么写：像一个懂行的朋友，坐在旁边讲给你听
@@ -166,7 +166,7 @@ python3 -I docs/sources/tools/checkquotes.py                   # README.md 里�
 
 ## 部署
 
-线上：<https://region.xiaoxiaodong.ai>　仓库：<https://github.com/nevertoday/xxd-region>（2026-11-19 上线）。
+线上：<https://appleid.xiaoxiaodong.ai>　仓库：<https://github.com/nevertoday/xxd-region>（2026-11-19 上线）。
 
 2026-11-19 第一次部署时，Cloudflare 的 Workers 正在「部分降级」，`wrangler deploy` 上传成功后在查询 workers.dev 子域那一步连着报了两次 10013 / 10007；过几分钟单独重跑 `npx wrangler deploy` 就好了。再碰到同样的错，先看 <https://www.cloudflarestatus.com>，不用改配置。
 Cloudflare Workers 静态资源，配置在 `wrangler.jsonc`（Worker 名 `xxd-region-site`）。更新：`npm run release`（构建、跑 `npm run check`、确认 `src/` 里没有还空着的地方，都过了才 `wrangler deploy`；需要先 `npx wrangler login`）。

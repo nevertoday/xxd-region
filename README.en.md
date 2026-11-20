@@ -8,7 +8,7 @@
 
 For people in mainland China who want a US or Turkey Apple Account (Apple ID).<br>Three short lessons explain what an account's region decides, why iCloud and the App Store are two separate sign-ins, and why a second account is simpler than moving your main one.
 
-**[Start with lesson 1 →](https://region.xiaoxiaodong.ai/en/start/1-region/)**　·　**[Already have one? The full guide →](https://region.xiaoxiaodong.ai/en/guide/0-why/)**
+**[Start with lesson 1 →](https://appleid.xiaoxiaodong.ai/en/start/1-region/)**　·　**[Already have one? The full guide →](https://appleid.xiaoxiaodong.ai/en/guide/0-why/)**
 
 <sub>Unofficial · free · open source · 10 languages</sub>
 
@@ -36,9 +36,9 @@ One more thing up front. Apple's Media Services Terms say the services are for u
   <img src="assets/en/readme/lessons.svg" width="100%" alt="The three beginner lessons. Lesson 1: What an account's region decides, 8 minutes; afterwards you know what the region decides, and what Apple's terms say about where you live. Lesson 2: iCloud and the App Store are two separate sign-ins, 8 minutes; afterwards you know iCloud stays put and only Media & Purchases switches. Lesson 3: Make a second account, leave your main one alone, 8 minutes; afterwards you know why you leave your main account alone and make a second one.">
 </p>
 
-1. **[What an account's region decides](https://region.xiaoxiaodong.ai/en/start/1-region/)**: the store's catalog, its currency and how you pay, and how Apple's terms tie the region to where you live.
-2. **[iCloud and the App Store are two separate sign-ins](https://region.xiaoxiaodong.ai/en/start/2-two-sign-ins/)**: iCloud stays on your own account; the second account goes only under Media & Purchases. An account someone gives you never goes into iCloud.
-3. **[Make a second account; leave your main one alone](https://region.xiaoxiaodong.ai/en/start/3-new-account/)**: moving your main account means clearing a list of things first, and a China mainland account's iCloud content also moves out of GCBD.
+1. **[What an account's region decides](https://appleid.xiaoxiaodong.ai/en/start/1-region/)**: the store's catalog, its currency and how you pay, and how Apple's terms tie the region to where you live.
+2. **[iCloud and the App Store are two separate sign-ins](https://appleid.xiaoxiaodong.ai/en/start/2-two-sign-ins/)**: iCloud stays on your own account; the second account goes only under Media & Purchases. An account someone gives you never goes into iCloud.
+3. **[Make a second account; leave your main one alone](https://appleid.xiaoxiaodong.ai/en/start/3-new-account/)**: moving your main account means clearing a list of things first, and a China mainland account's iCloud content also moves out of GCBD.
 
 ## Before a region change, Apple asks you to clear these
 
@@ -50,9 +50,9 @@ The list comes from Apple's [Change your Apple Account country or region](https:
 
 ## Already have a second account?
 
-- **[The full guide](https://region.xiaoxiaodong.ai/en/guide/0-why/)**: seven steps, from knowing what you want it for, getting an email address and phone number ready, signing up and paying, to switching the App Store, subscription price rises and who to ask when an account is locked.
-- **[How-to](https://region.xiaoxiaodong.ai/en/howto/)**: 12 specific jobs: creating a US or Turkey account, changing region, switching App Store accounts on your iPhone, buying and redeeming gift cards, price rises, "Your account cannot be created at this time", refused purchases, locked accounts, and tutorials you shouldn't follow.
-- **[Wiki](https://region.xiaoxiaodong.ai/en/wiki/)** and **[FAQ](https://region.xiaoxiaodong.ai/en/faq/)**: terms like Media & Purchases, GCBD, gift cards and Activation Lock, and the questions people ask before signing up.
+- **[The full guide](https://appleid.xiaoxiaodong.ai/en/guide/0-why/)**: seven steps, from knowing what you want it for, getting an email address and phone number ready, signing up and paying, to switching the App Store, subscription price rises and who to ask when an account is locked.
+- **[How-to](https://appleid.xiaoxiaodong.ai/en/howto/)**: 12 specific jobs: creating a US or Turkey account, changing region, switching App Store accounts on your iPhone, buying and redeeming gift cards, price rises, "Your account cannot be created at this time", refused purchases, locked accounts, and tutorials you shouldn't follow.
+- **[Wiki](https://appleid.xiaoxiaodong.ai/en/wiki/)** and **[FAQ](https://appleid.xiaoxiaodong.ai/en/faq/)**: terms like Media & Purchases, GCBD, gift cards and Activation Lock, and the questions people ask before signing up.
 
 ## Where this comes from
 

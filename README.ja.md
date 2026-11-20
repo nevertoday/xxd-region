@@ -8,7 +8,7 @@
 
 中国本土に住んでいて、米国やトルコの Apple Account（Apple ID）がほしい人のためのガイドです。<br>三つの短いレッスンで、アカウントの地域で何が決まるのか、iCloud と App Store がなぜ別々のサインインなのか、そしてメインのアカウントを移すより、もうひとつ作るほうがなぜ簡単なのかを説明します。
 
-**[レッスン 1 から始める →](https://region.xiaoxiaodong.ai/ja/start/1-region/)**　·　**[もう持っている人は完全ガイドへ（英語）→](https://region.xiaoxiaodong.ai/en/guide/0-why/)**
+**[レッスン 1 から始める →](https://appleid.xiaoxiaodong.ai/ja/start/1-region/)**　·　**[もう持っている人は完全ガイドへ（英語）→](https://appleid.xiaoxiaodong.ai/en/guide/0-why/)**
 
 <sub>非公式 · 無料 · オープンソース · 10 言語</sub>
 
@@ -36,9 +36,9 @@ Apple Account はどれも、ひとつの国や地域に属しています。地
   <img src="assets/en/readme/lessons.svg" width="100%" alt="入門コースの三つのレッスン。レッスン 1：アカウントの地域で決まること、8 分。読み終えると、地域で何が決まるのか、そして Apple の規約が住んでいる場所について何と言っているのかがわかります。レッスン 2：iCloud と App Store は別々のサインイン、8 分。読み終えると、iCloud はそのままで、切り替えるのは「メディアと購入」だけだとわかります。レッスン 3：もうひとつ作って、メインのアカウントはそのままに、8 分。読み終えると、なぜメインのアカウントには手をつけず、もうひとつ作るのかがわかります。">
 </p>
 
-1. **[アカウントの地域で決まること](https://region.xiaoxiaodong.ai/ja/start/1-region/)**：お店の品ぞろえ、通貨、支払い方法。そして Apple の規約が、地域と住んでいる場所をどう結びつけているか。
-2. **[iCloud と App Store は別々のサインイン](https://region.xiaoxiaodong.ai/ja/start/2-two-sign-ins/)**：iCloud は自分のアカウントのまま、もうひとつのアカウントは「メディアと購入」にだけ入れます。人からもらったアカウントは、iCloud には絶対に入れません。
-3. **[もうひとつ作って、メインのアカウントはそのままに](https://region.xiaoxiaodong.ai/ja/start/3-new-account/)**：メインのアカウントを移すには、先にいくつものことを片づける必要があり、中国本土のアカウントなら iCloud のコンテンツも GCBD から移ります。
+1. **[アカウントの地域で決まること](https://appleid.xiaoxiaodong.ai/ja/start/1-region/)**：お店の品ぞろえ、通貨、支払い方法。そして Apple の規約が、地域と住んでいる場所をどう結びつけているか。
+2. **[iCloud と App Store は別々のサインイン](https://appleid.xiaoxiaodong.ai/ja/start/2-two-sign-ins/)**：iCloud は自分のアカウントのまま、もうひとつのアカウントは「メディアと購入」にだけ入れます。人からもらったアカウントは、iCloud には絶対に入れません。
+3. **[もうひとつ作って、メインのアカウントはそのままに](https://appleid.xiaoxiaodong.ai/ja/start/3-new-account/)**：メインのアカウントを移すには、先にいくつものことを片づける必要があり、中国本土のアカウントなら iCloud のコンテンツも GCBD から移ります。
 
 ## 地域を変える前に、Apple が片づけるよう求めていること
 
@@ -50,9 +50,9 @@ Apple Account はどれも、ひとつの国や地域に属しています。地
 
 ## もうひとつのアカウントを、もう持っている人へ
 
-- **[完全ガイド（英語）](https://region.xiaoxiaodong.ai/en/guide/0-why/)**：七つのステップ。何に使うのかをはっきりさせ、メールアドレスと電話番号を用意し、登録して支払うところから、App Store の切り替え、サブスクリプションの値上げ、アカウントがロックされたときに誰に相談するかまで。
-- **[How-to（英語）](https://region.xiaoxiaodong.ai/en/howto/)**：具体的な 12 の作業。米国やトルコのアカウントの作成、地域の変更、iPhone での App Store のアカウントの切り替え、ギフトカードの購入と使い方、値上げ、「現在アカウントを作成できません」、購入できないとき、ロックされたアカウント、従わないほうがいい解説。
-- **[Wiki（英語）](https://region.xiaoxiaodong.ai/en/wiki/)** と **[よくある質問（英語）](https://region.xiaoxiaodong.ai/en/faq/)**：「メディアと購入」、GCBD、ギフトカード、アクティベーションロックといった用語と、登録する前によく聞かれる質問。
+- **[完全ガイド（英語）](https://appleid.xiaoxiaodong.ai/en/guide/0-why/)**：七つのステップ。何に使うのかをはっきりさせ、メールアドレスと電話番号を用意し、登録して支払うところから、App Store の切り替え、サブスクリプションの値上げ、アカウントがロックされたときに誰に相談するかまで。
+- **[How-to（英語）](https://appleid.xiaoxiaodong.ai/en/howto/)**：具体的な 12 の作業。米国やトルコのアカウントの作成、地域の変更、iPhone での App Store のアカウントの切り替え、ギフトカードの購入と使い方、値上げ、「現在アカウントを作成できません」、購入できないとき、ロックされたアカウント、従わないほうがいい解説。
+- **[Wiki（英語）](https://appleid.xiaoxiaodong.ai/en/wiki/)** と **[よくある質問（英語）](https://appleid.xiaoxiaodong.ai/en/faq/)**：「メディアと購入」、GCBD、ギフトカード、アクティベーションロックといった用語と、登録する前によく聞かれる質問。
 
 ## 情報の出どころ
 

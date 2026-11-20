@@ -8,7 +8,7 @@
 
 중국 본토에 살면서 미국이나 튀르키예 Apple 계정(Apple ID)이 필요한 사람을 위한 가이드예요.<br>짧은 레슨 세 개로 계정의 지역이 무엇을 정하는지, iCloud와 App Store가 왜 서로 다른 로그인인지, 그리고 메인 계정을 옮기는 것보다 하나 더 만드는 게 왜 더 간단한지 설명해요.
 
-**[레슨 1부터 시작하기 →](https://region.xiaoxiaodong.ai/ko/start/1-region/)**　·　**[이미 있다면 전체 가이드로(영어) →](https://region.xiaoxiaodong.ai/en/guide/0-why/)**
+**[레슨 1부터 시작하기 →](https://appleid.xiaoxiaodong.ai/ko/start/1-region/)**　·　**[이미 있다면 전체 가이드로(영어) →](https://appleid.xiaoxiaodong.ai/en/guide/0-why/)**
 
 <sub>비공식 · 무료 · 오픈 소스 · 10개 언어</sub>
 
@@ -36,9 +36,9 @@
   <img src="assets/en/readme/lessons.svg" width="100%" alt="입문 코스의 레슨 세 개. 레슨 1: 계정의 지역이 정하는 것, 8분. 다 읽으면 지역이 무엇을 정하는지, 그리고 Apple 약관이 내가 사는 곳에 대해 뭐라고 하는지 알게 돼요. 레슨 2: iCloud와 App Store는 서로 다른 로그인, 8분. 다 읽으면 iCloud는 그대로 두고 미디어 및 구입 항목만 바꾼다는 걸 알게 돼요. 레슨 3: 하나 더 만들고 메인 계정은 그대로 두기, 8분. 다 읽으면 왜 메인 계정은 건드리지 않고 하나를 더 만드는지 알게 돼요.">
 </p>
 
-1. **[계정의 지역이 정하는 것](https://region.xiaoxiaodong.ai/ko/start/1-region/)**: 가게의 상품 구성, 통화, 결제 방법, 그리고 Apple 약관이 지역과 내가 사는 곳을 어떻게 연결하는지.
-2. **[iCloud와 App Store는 서로 다른 로그인이에요](https://region.xiaoxiaodong.ai/ko/start/2-two-sign-ins/)**: iCloud는 내 계정 그대로 두고, 두 번째 계정은 미디어 및 구입 항목에만 넣어요. 남이 준 계정은 절대 iCloud에 넣지 않아요.
-3. **[하나 더 만들고, 메인 계정은 그대로 두기](https://region.xiaoxiaodong.ai/ko/start/3-new-account/)**: 메인 계정을 옮기려면 먼저 정리할 게 여러 가지 있고, 중국 본토 계정이라면 iCloud 콘텐츠도 GCBD에서 옮겨 가요.
+1. **[계정의 지역이 정하는 것](https://appleid.xiaoxiaodong.ai/ko/start/1-region/)**: 가게의 상품 구성, 통화, 결제 방법, 그리고 Apple 약관이 지역과 내가 사는 곳을 어떻게 연결하는지.
+2. **[iCloud와 App Store는 서로 다른 로그인이에요](https://appleid.xiaoxiaodong.ai/ko/start/2-two-sign-ins/)**: iCloud는 내 계정 그대로 두고, 두 번째 계정은 미디어 및 구입 항목에만 넣어요. 남이 준 계정은 절대 iCloud에 넣지 않아요.
+3. **[하나 더 만들고, 메인 계정은 그대로 두기](https://appleid.xiaoxiaodong.ai/ko/start/3-new-account/)**: 메인 계정을 옮기려면 먼저 정리할 게 여러 가지 있고, 중국 본토 계정이라면 iCloud 콘텐츠도 GCBD에서 옮겨 가요.
 
 ## 지역을 바꾸기 전에 Apple이 정리하라고 하는 것들
 
@@ -50,9 +50,9 @@
 
 ## 두 번째 계정이 이미 있다면
 
-- **[전체 가이드(영어)](https://region.xiaoxiaodong.ai/en/guide/0-why/)**: 일곱 단계. 무엇에 쓸지 정하고, 이메일 주소와 전화번호를 준비하고, 가입하고 결제하는 것부터 App Store 계정 바꾸기, 구독 가격 인상, 계정이 잠겼을 때 누구에게 물어야 하는지까지.
-- **[How-to(영어)](https://region.xiaoxiaodong.ai/en/howto/)**: 구체적인 작업 12가지. 미국이나 튀르키예 계정 만들기, 지역 변경, iPhone에서 App Store 계정 바꾸기, 기프트 카드 사고 사용하기, 가격 인상, '지금은 계정을 생성할 수 없습니다', 구입 거절, 잠긴 계정, 따라 하면 안 되는 가이드.
-- **[Wiki(영어)](https://region.xiaoxiaodong.ai/en/wiki/)**와 **[자주 묻는 질문(영어)](https://region.xiaoxiaodong.ai/en/faq/)**: 미디어 및 구입 항목, GCBD, 기프트 카드, 활성화 잠금 같은 용어와, 가입하기 전에 많이 묻는 질문.
+- **[전체 가이드(영어)](https://appleid.xiaoxiaodong.ai/en/guide/0-why/)**: 일곱 단계. 무엇에 쓸지 정하고, 이메일 주소와 전화번호를 준비하고, 가입하고 결제하는 것부터 App Store 계정 바꾸기, 구독 가격 인상, 계정이 잠겼을 때 누구에게 물어야 하는지까지.
+- **[How-to(영어)](https://appleid.xiaoxiaodong.ai/en/howto/)**: 구체적인 작업 12가지. 미국이나 튀르키예 계정 만들기, 지역 변경, iPhone에서 App Store 계정 바꾸기, 기프트 카드 사고 사용하기, 가격 인상, '지금은 계정을 생성할 수 없습니다', 구입 거절, 잠긴 계정, 따라 하면 안 되는 가이드.
+- **[Wiki(영어)](https://appleid.xiaoxiaodong.ai/en/wiki/)**와 **[자주 묻는 질문(영어)](https://appleid.xiaoxiaodong.ai/en/faq/)**: 미디어 및 구입 항목, GCBD, 기프트 카드, 활성화 잠금 같은 용어와, 가입하기 전에 많이 묻는 질문.
 
 ## 정보의 출처
 

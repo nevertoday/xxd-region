@@ -8,7 +8,7 @@
 
 写给住在中国大陆、想要一个美区或土区 Apple 账户的人。<br>三节课讲清账户的地区管什么，iCloud 和 App Store 为什么是两个登录位，为什么另注册一个比给主账户换区省事。
 
-**[从第 1 课开始 →](https://region.xiaoxiaodong.ai/start/1-region/)**　·　**[已经有外区账户了，看完整教程 →](https://region.xiaoxiaodong.ai/guide/0-why/)**
+**[从第 1 课开始 →](https://appleid.xiaoxiaodong.ai/start/1-region/)**　·　**[已经有外区账户了，看完整教程 →](https://appleid.xiaoxiaodong.ai/guide/0-why/)**
 
 <sub>非官方 · 免费 · 开源 · 10 种语言</sub>
 
@@ -36,9 +36,9 @@
   <img src="assets/readme/lessons.svg" width="100%" alt="新手入门三课。第 1 课：账户的地区，管的是什么，8 分钟，学完你知道地区管什么，Apple 的条款怎么说你住在哪。第 2 课：iCloud 和 App Store 是两个登录位，8 分钟，学完你知道 iCloud 不动，只在「媒体与购买项目」里换。第 3 课：另注册一个，别动你的主账户，8 分钟，学完你知道为什么不给主账户换区，另注册一个。">
 </p>
 
-1. **[账户的地区，管的是什么](https://region.xiaoxiaodong.ai/start/1-region/)**：地区决定商店里有什么、用什么货币、能用什么付款，Apple 的条款把它和你住的地方连在一起。
-2. **[iCloud 和 App Store 是两个登录位](https://region.xiaoxiaodong.ai/start/2-two-sign-ins/)**：iCloud 一直登你自己的账户，外区账户只登在「媒体与购买项目」里。别人给的账户，永远不登进 iCloud。
-3. **[另注册一个，别动你的主账户](https://region.xiaoxiaodong.ai/start/3-new-account/)**：给主账户换区，先要清掉一串东西，国区账户的 iCloud 内容还会迁出云上贵州。
+1. **[账户的地区，管的是什么](https://appleid.xiaoxiaodong.ai/start/1-region/)**：地区决定商店里有什么、用什么货币、能用什么付款，Apple 的条款把它和你住的地方连在一起。
+2. **[iCloud 和 App Store 是两个登录位](https://appleid.xiaoxiaodong.ai/start/2-two-sign-ins/)**：iCloud 一直登你自己的账户，外区账户只登在「媒体与购买项目」里。别人给的账户，永远不登进 iCloud。
+3. **[另注册一个，别动你的主账户](https://appleid.xiaoxiaodong.ai/start/3-new-account/)**：给主账户换区，先要清掉一串东西，国区账户的 iCloud 内容还会迁出云上贵州。
 
 ## 换区之前，Apple 要你先清掉这些
 
@@ -50,9 +50,9 @@
 
 ## 已经有外区账户了？
 
-- **[完整教程](https://region.xiaoxiaodong.ai/guide/0-why/)**：七步，从想清楚要它做什么、准备邮箱和手机号、注册、付款，到切换 App Store、订阅涨价、账户被锁了找谁。
-- **[How-to](https://region.xiaoxiaodong.ai/howto/)**：12 件具体的事：注册美区、土区账户，换区，在 iPhone 上切换 App Store 账户，买和兑换礼品卡，订阅涨价，提示「此时无法创建你的账户」，购买被拒，账户被锁，以及哪些教程不该照做。
-- **[Wiki](https://region.xiaoxiaodong.ai/wiki/)** 和 **[常见问题](https://region.xiaoxiaodong.ai/faq/)**：媒体与购买项目、云上贵州、充值卡、激活锁这些词，和注册之前最常冒出来的问题。
+- **[完整教程](https://appleid.xiaoxiaodong.ai/guide/0-why/)**：七步，从想清楚要它做什么、准备邮箱和手机号、注册、付款，到切换 App Store、订阅涨价、账户被锁了找谁。
+- **[How-to](https://appleid.xiaoxiaodong.ai/howto/)**：12 件具体的事：注册美区、土区账户，换区，在 iPhone 上切换 App Store 账户，买和兑换礼品卡，订阅涨价，提示「此时无法创建你的账户」，购买被拒，账户被锁，以及哪些教程不该照做。
+- **[Wiki](https://appleid.xiaoxiaodong.ai/wiki/)** 和 **[常见问题](https://appleid.xiaoxiaodong.ai/faq/)**：媒体与购买项目、云上贵州、充值卡、激活锁这些词，和注册之前最常冒出来的问题。
 
 ## 资料从哪来
 

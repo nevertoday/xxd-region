@@ -1,14 +1,21 @@
-// 教程站部署到 Cloudflare（纯静态，Workers 静态资源）：https://region.xiaoxiaodong.ai
+// 教程站部署到 Cloudflare（Workers 静态资源）：https://appleid.xiaoxiaodong.ai
+// 旧网址 region.xiaoxiaodong.ai 也挂在这个 Worker 上，worker/index.js 把它 301 到新网址的同一页；其余请求直接给静态资源。
 // 部署：npm run release（先构建、检查，确认没有还空着的页，再 wrangler deploy）
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
   "name": "xxd-region-site",
+  "main": "worker/index.js",
   "compatibility_date": "2026-10-01",
   "assets": {
     "directory": "./dist",
+    "binding": "ASSETS",
     "not_found_handling": "404-page",
+    "run_worker_first": true,
   },
-  "routes": [{ "pattern": "region.xiaoxiaodong.ai", "custom_domain": true }],
+  "routes": [
+    { "pattern": "appleid.xiaoxiaodong.ai", "custom_domain": true },
+    { "pattern": "region.xiaoxiaodong.ai", "custom_domain": true },
+  ],
   "workers_dev": false,
   "preview_urls": false,
 }

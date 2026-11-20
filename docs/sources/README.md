@@ -1,6 +1,6 @@
 # Apple 账户地区资料参考库（官方部分）
 
-这是 region.xiaoxiaodong.ai 的写作参考库。该站是独立、开源、非官方的学习站，面向中国大陆读者，讲 Apple 账户（原 Apple ID）的国家或地区是怎么回事，以及美区、土耳其区账户怎么注册。这里只记 Apple 官方怎么说，不是站点文案，也不替编辑定方针。
+这是 appleid.xiaoxiaodong.ai 的写作参考库。该站是独立、开源、非官方的学习站，面向中国大陆读者，讲 Apple 账户（原 Apple ID）的国家或地区是怎么回事，以及美区、土耳其区账户怎么注册。这里只记 Apple 官方怎么说，不是站点文案，也不替编辑定方针。
 
 - 所有页面都在 **2026-11-19**（UTC）用 curl 抓取，没有登录，没有提交任何表单。每个原文副本在 `raw/official/<分组>/`，文件头写着来源 URL、跳转后的最终 URL 和抓取时间。
 - 分组：`support-en/` 和 `support-zh/` 放同一篇支持文章的 en-us 版和 zh-cn 版，文件名就是文章编号（如 `118283.md`）；`support-ja/`、`support-ko/`、`support-es/`、`support-pt/`、`support-fr/`、`support-de/`、`support-ru/`、`support-ar/` 放新手三课引用的 16 篇在 Apple 自己那种语言里的版本（ja-jp、ko-kr、es-es、pt-br、fr-fr、de-de、ru-ru、ar-ae，2026-11-20 UTC 抓取，16 篇八种语言都有），给译者查 Apple 的界面用语，`scripts/check-lesson-parity.mjs` 也拿它们核对译文里的按钮名；`legal/` 放条款；`pricing/` 放价格页；`newsroom/` 放新闻稿；`developer/` 放开发者页面。

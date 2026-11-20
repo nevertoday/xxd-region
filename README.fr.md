@@ -8,7 +8,7 @@
 
 Pour les personnes qui vivent en Chine continentale et veulent un compte Apple (l'ancien identifiant Apple) américain ou turc.<br>Trois courtes leçons expliquent ce que décide la région d'un compte, pourquoi iCloud et l'App Store sont deux connexions séparées, et pourquoi un second compte est plus simple que de déplacer votre compte principal.
 
-**[Commencer par la leçon 1 →](https://region.xiaoxiaodong.ai/fr/start/1-region/)**　·　**[Vous en avez déjà un ? Le guide complet (en anglais) →](https://region.xiaoxiaodong.ai/en/guide/0-why/)**
+**[Commencer par la leçon 1 →](https://appleid.xiaoxiaodong.ai/fr/start/1-region/)**　·　**[Vous en avez déjà un ? Le guide complet (en anglais) →](https://appleid.xiaoxiaodong.ai/en/guide/0-why/)**
 
 <sub>Non officiel · gratuit · open source · 10 langues</sub>
 
@@ -36,9 +36,9 @@ Encore une chose, dès le départ. Les Conditions générales des services multi
   <img src="assets/en/readme/lessons.svg" width="100%" alt="Les trois leçons des premiers pas, en anglais. Leçon 1 : ce que décide la région d'un compte, 8 minutes ; ensuite, vous savez ce que décide la région, et ce que disent les conditions d'Apple sur l'endroit où vous vivez. Leçon 2 : iCloud et l'App Store sont deux connexions séparées, 8 minutes ; ensuite, vous savez qu'iCloud ne bouge pas et que seul Contenu multimédia et achats change. Leçon 3 : créez un second compte, laissez le principal tranquille, 8 minutes ; ensuite, vous savez pourquoi on laisse le compte principal tranquille et on en crée un second.">
 </p>
 
-1. **[Ce que décide la région d'un compte](https://region.xiaoxiaodong.ai/fr/start/1-region/)** : le catalogue de la boutique, sa monnaie et la façon de payer, et comment les conditions d'Apple lient la région à l'endroit où vous vivez.
-2. **[iCloud et l'App Store sont deux connexions séparées](https://region.xiaoxiaodong.ai/fr/start/2-two-sign-ins/)** : iCloud reste sur votre propre compte ; le second compte ne va que dans Contenu multimédia et achats. Un compte qu'on vous donne ne va jamais dans iCloud.
-3. **[Créez un second compte, laissez le principal tranquille](https://region.xiaoxiaodong.ai/fr/start/3-new-account/)** : déplacer votre compte principal oblige d'abord à régler toute une liste de choses, et le contenu iCloud d'un compte de Chine continentale quitte aussi GCBD.
+1. **[Ce que décide la région d'un compte](https://appleid.xiaoxiaodong.ai/fr/start/1-region/)** : le catalogue de la boutique, sa monnaie et la façon de payer, et comment les conditions d'Apple lient la région à l'endroit où vous vivez.
+2. **[iCloud et l'App Store sont deux connexions séparées](https://appleid.xiaoxiaodong.ai/fr/start/2-two-sign-ins/)** : iCloud reste sur votre propre compte ; le second compte ne va que dans Contenu multimédia et achats. Un compte qu'on vous donne ne va jamais dans iCloud.
+3. **[Créez un second compte, laissez le principal tranquille](https://appleid.xiaoxiaodong.ai/fr/start/3-new-account/)** : déplacer votre compte principal oblige d'abord à régler toute une liste de choses, et le contenu iCloud d'un compte de Chine continentale quitte aussi GCBD.
 
 ## Avant un changement de région, Apple vous demande de régler ceci
 
@@ -50,9 +50,9 @@ La liste vient de l'article d'Apple [Modifier la région ou le pays associé à 
 
 ## Vous avez déjà un second compte ?
 
-- **[Le guide complet](https://region.xiaoxiaodong.ai/en/guide/0-why/)** (en anglais) : sept étapes, depuis savoir à quoi le compte va vous servir, préparer une adresse e-mail et un numéro de téléphone, s'inscrire et payer, jusqu'à changer de compte App Store, les hausses de prix des abonnements et à qui s'adresser quand un compte est verrouillé.
-- **[Fiches pratiques](https://region.xiaoxiaodong.ai/en/howto/)** (en anglais) : 12 tâches précises, comme créer un compte américain ou turc, changer de région, changer de compte App Store sur votre iPhone, acheter et utiliser des cartes cadeaux, les hausses de prix, « Impossible de créer votre compte pour le moment », les achats refusés, les comptes verrouillés et les tutoriels à ne pas suivre.
-- **[Wiki](https://region.xiaoxiaodong.ai/en/wiki/)** et **[FAQ](https://region.xiaoxiaodong.ai/en/faq/)** (en anglais) : des termes comme Contenu multimédia et achats, GCBD, cartes cadeaux et verrouillage d'activation, et les questions qu'on se pose avant de s'inscrire.
+- **[Le guide complet](https://appleid.xiaoxiaodong.ai/en/guide/0-why/)** (en anglais) : sept étapes, depuis savoir à quoi le compte va vous servir, préparer une adresse e-mail et un numéro de téléphone, s'inscrire et payer, jusqu'à changer de compte App Store, les hausses de prix des abonnements et à qui s'adresser quand un compte est verrouillé.
+- **[Fiches pratiques](https://appleid.xiaoxiaodong.ai/en/howto/)** (en anglais) : 12 tâches précises, comme créer un compte américain ou turc, changer de région, changer de compte App Store sur votre iPhone, acheter et utiliser des cartes cadeaux, les hausses de prix, « Impossible de créer votre compte pour le moment », les achats refusés, les comptes verrouillés et les tutoriels à ne pas suivre.
+- **[Wiki](https://appleid.xiaoxiaodong.ai/en/wiki/)** et **[FAQ](https://appleid.xiaoxiaodong.ai/en/faq/)** (en anglais) : des termes comme Contenu multimédia et achats, GCBD, cartes cadeaux et verrouillage d'activation, et les questions qu'on se pose avant de s'inscrire.
 
 ## D'où viennent les informations
 

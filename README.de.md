@@ -8,7 +8,7 @@
 
 Für alle in Festlandchina, die einen Apple Account (Apple ID) für die USA oder die Türkei wollen.<br>Drei kurze Lektionen erklären, was die Region eines Accounts bestimmt, warum iCloud und der App Store zwei getrennte Anmeldungen sind und warum ein zweiter Account einfacher ist, als deinen Hauptaccount umzuziehen.
 
-**[Mit Lektion 1 anfangen →](https://region.xiaoxiaodong.ai/de/start/1-region/)**　·　**[Schon einen? Zur vollständigen Anleitung (Englisch) →](https://region.xiaoxiaodong.ai/en/guide/0-why/)**
+**[Mit Lektion 1 anfangen →](https://appleid.xiaoxiaodong.ai/de/start/1-region/)**　·　**[Schon einen? Zur vollständigen Anleitung (Englisch) →](https://appleid.xiaoxiaodong.ai/en/guide/0-why/)**
 
 <sub>Inoffiziell · kostenlos · Open Source · 10 Sprachen</sub>
 
@@ -36,9 +36,9 @@ Noch etwas vorweg. Apples Nutzungsbedingungen für die Mediendienste sagen, dass
   <img src="assets/en/readme/lessons.svg" width="100%" alt="Die drei Lektionen des Einstiegskurses (englische Beschriftung). Lektion 1: What an account's region decides, 8 Minuten; danach weißt du, was die Region bestimmt und was Apples Bedingungen über deinen Wohnsitz sagen. Lektion 2: iCloud and the App Store are two separate sign-ins, 8 Minuten; danach weißt du, dass iCloud bleibt und nur Media & Purchases wechselt. Lektion 3: Make a second account, leave your main one alone, 8 Minuten; danach weißt du, warum du deinen Hauptaccount in Ruhe lässt und einen zweiten erstellst.">
 </p>
 
-1. **[Was die Region eines Accounts bestimmt](https://region.xiaoxiaodong.ai/de/start/1-region/)**: das Sortiment des Stores, seine Währung und wie du bezahlst, und wie Apples Bedingungen die Region an deinen Wohnsitz knüpfen.
-2. **[iCloud und der App Store sind zwei getrennte Anmeldungen](https://region.xiaoxiaodong.ai/de/start/2-two-sign-ins/)**: iCloud bleibt bei deinem eigenen Account; der zweite Account kommt nur unter Medien & Käufe. Ein Account, den dir jemand gibt, kommt nie in iCloud.
-3. **[Einen zweiten Account erstellen, den Hauptaccount in Ruhe lassen](https://region.xiaoxiaodong.ai/de/start/3-new-account/)**: Wer den Hauptaccount umzieht, muss vorher eine ganze Liste erledigen, und bei einem Account aus Festlandchina ziehen auch die iCloud-Inhalte von GCBD weg.
+1. **[Was die Region eines Accounts bestimmt](https://appleid.xiaoxiaodong.ai/de/start/1-region/)**: das Sortiment des Stores, seine Währung und wie du bezahlst, und wie Apples Bedingungen die Region an deinen Wohnsitz knüpfen.
+2. **[iCloud und der App Store sind zwei getrennte Anmeldungen](https://appleid.xiaoxiaodong.ai/de/start/2-two-sign-ins/)**: iCloud bleibt bei deinem eigenen Account; der zweite Account kommt nur unter Medien & Käufe. Ein Account, den dir jemand gibt, kommt nie in iCloud.
+3. **[Einen zweiten Account erstellen, den Hauptaccount in Ruhe lassen](https://appleid.xiaoxiaodong.ai/de/start/3-new-account/)**: Wer den Hauptaccount umzieht, muss vorher eine ganze Liste erledigen, und bei einem Account aus Festlandchina ziehen auch die iCloud-Inhalte von GCBD weg.
 
 ## Vor einem Regionswechsel verlangt Apple, dass du das hier erledigst
 
@@ -50,9 +50,9 @@ Die Liste stammt aus Apples Artikel [Land oder Region deines Apple Accounts änd
 
 ## Schon einen zweiten Account?
 
-- **[Die vollständige Anleitung](https://region.xiaoxiaodong.ai/en/guide/0-why/)** (auf Englisch): sieben Schritte, von der Frage, wofür du den Account brauchst, über E-Mail-Adresse und Telefonnummer, Registrierung und Bezahlen bis zum Wechseln des App Store, Preiserhöhungen bei Abos und der Frage, an wen du dich wendest, wenn ein Account gesperrt ist.
-- **[How-to](https://region.xiaoxiaodong.ai/en/howto/)** (auf Englisch): 12 konkrete Aufgaben, nämlich einen Account für die USA oder die Türkei erstellen, die Region ändern, App Store-Accounts auf dem iPhone wechseln, Geschenkkarten kaufen und einlösen, Preiserhöhungen, „Your account cannot be created at this time“, abgelehnte Käufe, gesperrte Accounts und Anleitungen, denen du nicht folgen solltest.
-- **[Wiki](https://region.xiaoxiaodong.ai/en/wiki/)** und **[häufige Fragen](https://region.xiaoxiaodong.ai/en/faq/)** (auf Englisch): Begriffe wie Medien & Käufe, GCBD, Geschenkkarten und Aktivierungssperre, und die Fragen, die Leute vor der Registrierung stellen.
+- **[Die vollständige Anleitung](https://appleid.xiaoxiaodong.ai/en/guide/0-why/)** (auf Englisch): sieben Schritte, von der Frage, wofür du den Account brauchst, über E-Mail-Adresse und Telefonnummer, Registrierung und Bezahlen bis zum Wechseln des App Store, Preiserhöhungen bei Abos und der Frage, an wen du dich wendest, wenn ein Account gesperrt ist.
+- **[How-to](https://appleid.xiaoxiaodong.ai/en/howto/)** (auf Englisch): 12 konkrete Aufgaben, nämlich einen Account für die USA oder die Türkei erstellen, die Region ändern, App Store-Accounts auf dem iPhone wechseln, Geschenkkarten kaufen und einlösen, Preiserhöhungen, „Your account cannot be created at this time“, abgelehnte Käufe, gesperrte Accounts und Anleitungen, denen du nicht folgen solltest.
+- **[Wiki](https://appleid.xiaoxiaodong.ai/en/wiki/)** und **[häufige Fragen](https://appleid.xiaoxiaodong.ai/en/faq/)** (auf Englisch): Begriffe wie Medien & Käufe, GCBD, Geschenkkarten und Aktivierungssperre, und die Fragen, die Leute vor der Registrierung stellen.
 
 ## Woher das kommt
 
