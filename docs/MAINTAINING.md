@@ -24,12 +24,11 @@ npm run check      # 构建以后：中英文对照检查 + 整站检查
 
 ## 现在的状态
 
-骨架已经搭好，内容还没写。
+2026-11-19 全站写完、核对完、上线：新手入门 3 课、完整教程 7 步、How-to 12 篇、Wiki 12 条、常见问题 28 条，中英文各一套；首页、README、三张动图和分享大图都是本站自己的。
 
-- 新手入门、完整教程、How-to 的每一页，正文都只有一行不会显示出来的注释（中文页 `{/* 待写：… */}`，英文页 `{/* 待写 TBD: … */}`），构建出来正文是空的。
-- `nav.js` 里每一课、每一步、每篇 How-to 都是 `ready: false`，左侧导航显示「编写中」、不给链接。写完一页改成 `ready: true`；页面还留着「待写」却标了 `true`，`check-i18n` 会拦下来。
-- Wiki 的 12 个条目只有标题（`src/data/wiki.js` 和 `wiki.en.js`）；首页文案还是跨境收款站的（`src/views/Home.astro` 开头那行注释写着）。常见问题只有一组空的「关于本站」。`GLOSSARY` 是空的。
-- `grep -rlE '待写|TBD:' src` 列出还没写的地方。`npm run release` 看到 `src/` 里还有「待写」或「TBD:」，会在部署前停下。所以讲解性的注释里别写这两个词。
+- 写作分五路并行（课程和首页、完整教程、注册和日常 How-to、出问题和避坑 How-to、Wiki 和常见问题），再由三个独立的核对者照 `docs/FACTCHECK.md` 逐句对 Apple 原文，约 700 条事实里改了 17 处。
+- 新加或改写一页以后，`grep -rlE '待写|TBD:' src` 要是空的；`npm run release` 看到「待写」或「TBD:」会在部署前停下，所以讲解性的注释里别写这两个词。
+- 新加一页的流程见下面「怎么改」：先在 `nav.js` 加一条 `ready: false`，`node scripts/new-pages.mjs` 生成中英文空白页，写完改成 `ready: true`。
 
 ## 怎么改
 
@@ -159,7 +158,9 @@ python3 -I docs/sources/tools/checkquotes.py                   # README.md 里�
 
 ## 部署
 
-线上：<https://region.xiaoxiaodong.ai>　仓库：<https://github.com/nevertoday/xxd-region>。
+线上：<https://region.xiaoxiaodong.ai>　仓库：<https://github.com/nevertoday/xxd-region>（2026-11-19 上线）。
+
+2026-11-19 第一次部署时，Cloudflare 的 Workers 正在「部分降级」，`wrangler deploy` 上传成功后在查询 workers.dev 子域那一步连着报了两次 10013 / 10007；过几分钟单独重跑 `npx wrangler deploy` 就好了。再碰到同样的错，先看 <https://www.cloudflarestatus.com>，不用改配置。
 Cloudflare Workers 静态资源，配置在 `wrangler.jsonc`（Worker 名 `xxd-region-site`）。更新：`npm run release`（构建、跑 `npm run check`、确认 `src/` 里没有还空着的地方，都过了才 `wrangler deploy`；需要先 `npx wrangler login`）。
 
 ## 分享大图和标志

@@ -1,4 +1,4 @@
-// 教程站部署到 Cloudflare（纯静态，Workers 静态资源）：https://region.xiaoxiaodong.ai（还没部署）
+// 教程站部署到 Cloudflare（纯静态，Workers 静态资源）：https://region.xiaoxiaodong.ai
 // 部署：npm run release（先构建、检查，确认没有还空着的页，再 wrangler deploy）
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
