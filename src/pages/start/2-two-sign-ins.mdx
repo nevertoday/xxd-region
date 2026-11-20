@@ -1,5 +1,90 @@
 ---
 layout: ../../layouts/Lesson.astro
+tldr: "一台 iPhone 上有两个登录位：iCloud 和手机上大多数功能用一个，「媒体与购买项目」可以单独登另一个。iCloud 一直登你自己的账户，外区账户只登在「媒体与购买项目」里。"
 lesson: 2
 ---
-{/* 待写：正文。写法见 docs/MAINTAINING.md 的「怎么写」和「硬规矩」，资料和出处在 docs/sources/README.md。 */}
+import Callout from "../../components/Callout.astro";
+import Term from "../../components/Term.astro";
+import Q from "../../components/Q.astro";
+import Reply from "../../components/Reply.astro";
+import Fig from "../../components/Fig.astro";
+
+外区账户注册好了，你想马上去把那个 App 下下来。打开「**设置**」，最上面是你的名字，点进去，一路滑到底，有一个「**退出登录**」。你心想，先退出，再登新账户，大概就是这么换的吧。拇指已经放上去了。
+
+先停一下。这个按钮退出的，不只是 App Store。
+
+## 设置里有两个「退出登录」
+
+Apple 的文章写得很清楚：在设备上退出 <Term k="Apple 账户" />，你会同时退出 iCloud、App Store 和其他 Apple 媒体服务、iMessage 信息和 FaceTime 通话。储存在 iCloud 里的信息还留在 iCloud，可是除非你在提示时选了保留副本，这些数据会从这台设备上移除（[在你的设备上退出登录 Apple 账户和 iCloud](https://support.apple.com/zh-cn/104958)）。你只是想换个商店，这一下却把整台手机的账户都退掉了。
+
+另一个「**退出登录**」在「**媒体与购买项目**」里面。<Term k="媒体与购买项目" />，就是 App Store、音乐、图书这些买东西的地方用的那个登录，它可以登一个和 iCloud 不一样的账户。Apple 在讲迁移购买项目的文章里描述过这种用法：登 iCloud 和 iPhone 上大多数功能的那个，叫首选 Apple 账户；只登在「媒体与购买项目」里的那个，叫<Term k="备选账户" text="备选 Apple 账户" />（[将购买项目从一个 Apple 账户迁移到另一个 Apple 账户](https://support.apple.com/zh-cn/117294)）。
+
+所以一台 iPhone 上其实有两个登录位，各管各的。你要换的只是买东西用的那一个。
+
+<mark><strong>iCloud 一直登你自己的账户；外区账户只登在「媒体与购买项目」里，换来换去都不碰 iCloud。</strong></mark>
+
+<Fig id="l2-two-sign-outs" />
+
+## 只换「媒体与购买项目」
+
+Apple 在同一篇文章里写了换账户的步骤（[将购买项目从一个 Apple 账户迁移到另一个 Apple 账户](https://support.apple.com/zh-cn/117294)）：
+
+1. 在「**设置**」里轻点你的姓名。
+2. 轻点「**媒体与购买项目**」，再轻点「**退出登录**」。
+3. 退出以后，再轻点「**媒体与购买项目**」，选取「**不是 [你的姓名]？**」，用外区账户登录。
+
+<Callout type="ok">
+回到「**设置**」，轻点你的姓名：最上面还是你自己，「**媒体与购买项目**」下面显示的是外区账户。Apple 的说法是，用不同的 Apple 账户登录购买，就会在「媒体与购买项目」下方看到这个账户。
+</Callout>
+
+如果你的 iPhone 上看到的不一样，以你看到的为准，iOS 版本之间按钮的位置会变。换回来也是这条路：在「媒体与购买项目」里退出外区账户，再登你自己的账户。要一步一步的说明，看[在 iPhone 上切换 App Store 账户](/howto/switch-store/)。
+
+## 换过去以后，有两条限制
+
+两个登录位分开了，可「媒体与购买项目」这一个位置，一次只能坐一个人。Apple 写着：「你无法同时使用多个 Apple 账户登录 App Store 和其他媒体服务，也无法更新使用另一个 Apple 账户购买的内容。」（[在网页上或设备设置中登录 Apple 账户](https://support.apple.com/zh-cn/111001)）所以用外区账户下载的 App，要更新时得换回外区账户；主账户买的 App 要更新，又得换回主账户。
+
+第二条和设备有关。一个用于购买的 Apple 账户，一次最多可以关联十台设备，其中电脑最多五台；你用一台设备在 App Store 里买东西，它就会加进这个账户的关联设备列表。Apple 还写了，一台以前关联过的设备，你再拿它去关联时，可能会看到下面这条提示，最长可能要等 90 天，才能把它和另一个 Apple 账户关联起来（[查看和移除与用于购买项目的 Apple 账户关联的设备](https://support.apple.com/zh-cn/118412)）：
+
+<Reply code="此设备已关联到另一个 Apple 账户。你在 [数字] 天内无法将此设备与其他 Apple 账户相关联。" />
+
+Apple 用的词是「可能」，没有写哪些情况一定会遇到。这一点 Apple 的页面没有写明，拿不准就先问 Apple 支持。
+
+## 别人的账户，永远不登进 iCloud
+
+外区账户从哪来？总会有人说：我这儿有个现成的美区账户，借你用，登进去就行。
+
+不管他说登在哪里，iCloud 那个登录位都不能给别人的账户。Apple 说得很直接：「不要与他人共用一个账户，即使是家庭成员也不例外。」共用一个 Apple 账户，就等于让别人能访问你所有的个人内容（[安全性和 Apple 账户](https://support.apple.com/zh-cn/102614)）。
+
+还有一件更麻烦的事。Apple 没有专门讲这种情况，不过按<Term k="激活锁" />的工作方式可以推出来：你设置「查找」时，激活锁会自动打开，Apple 把登录的那个 Apple 账户存在激活服务器上，和这台设备关联起来；之后谁要关闭「查找」、抹掉这台设备，或者重新激活它，都得输入那个账户的密码（[iPhone 和 iPad 的激活锁](https://support.apple.com/zh-cn/108794)）。所以别人的账户登在你 iPhone 的 iCloud 里、又开着「查找」，这台手机就和他的账户绑在了一起，没有他的密码，你连自己的手机都抹不掉。这一段是推断，不是 Apple 的原话。
+
+只登在「媒体与购买项目」里的那个账户，也该是你自己的。Apple 讲迁移购买项目时就写了，这两个账户都不应与他人共用（[将购买项目从一个 Apple 账户迁移到另一个 Apple 账户](https://support.apple.com/zh-cn/117294)）。为什么别人给的账户不能登，[别人给的账户为什么不能登](/howto/shared-accounts/)讲得更细。
+
+外区账户最好是你自己注册的。那为什么是另注册一个，而不是把你的主账户直接改成美区？这是[第 3 课](/start/3-new-account/)的事。
+
+## 不对怎么办
+
+<Q q="我已经点了姓名那一页最下面的「退出登录」。">
+
+先别慌。储存在 iCloud 里的信息还在 iCloud（[在你的设备上退出登录 Apple 账户和 iCloud](https://support.apple.com/zh-cn/104958)）。用你自己的账户登回去：打开「**设置**」，轻点顶部的「**Apple 账户**」，输入你的电子邮件地址或电话号码和密码，提示要验证码就输入（[在网页上或设备设置中登录 Apple 账户](https://support.apple.com/zh-cn/111001)）。Apple 也提醒过，并不是所有内容都会备份到 iCloud，没同步上去的东西要另外看一眼。登回去以后，再照上面那三步，只在「媒体与购买项目」里换账户。
+
+</Q>
+<Q q="我在 App Store 里找不到换账户的地方。">
+
+Apple 写的换账户步骤在「**设置**」里，不在 App Store 里：设置 → 你的姓名 → 「**媒体与购买项目**」（[将购买项目从一个 Apple 账户迁移到另一个 Apple 账户](https://support.apple.com/zh-cn/117294)）。如果你的 iPhone 上看到的不一样，以你看到的为准，也可以对照[在 iPhone 上切换 App Store 账户](/howto/switch-store/)。
+
+</Q>
+<Q q="换回主账户以后，有几个 App 更新不了。">
+
+这几个 App 多半是用外区账户下载的。Apple 写明，你无法更新使用另一个 Apple 账户购买的内容（[在网页上或设备设置中登录 Apple 账户](https://support.apple.com/zh-cn/111001)）。在「媒体与购买项目」里换成外区账户，更新完再换回来。
+
+</Q>
+<Q q="提示「此设备已关联到另一个 Apple 账户」。">
+
+这是关联设备的限制。Apple 说，最长可能要等 90 天，才能把这台设备和另一个 Apple 账户关联（[查看和移除与用于购买项目的 Apple 账户关联的设备](https://support.apple.com/zh-cn/118412)）。等的时间到了再试；拿不准就先问 Apple 支持。
+
+</Q>
+<Q q="有人说借我一个账户，登进 iCloud 就能下 App。">
+
+别登。下 App 只用得上「媒体与购买项目」，用不着 iCloud；而且 Apple 说不要和任何人共用账户，别人的账户登在 iCloud 里还牵扯到激活锁，上面「别人的账户，永远不登进 iCloud」那一节讲过。再看[别人给的账户为什么不能登](/howto/shared-accounts/)。
+
+</Q>

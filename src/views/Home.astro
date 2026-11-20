@@ -1,7 +1,6 @@
 ---
-// 待写：下面的首页文案还是跨境收款站的，写手照 docs/MAINTAINING.md 的「怎么写」重写，写完删掉这一行（npm run release 看到它会停下）。
 // 首页：先对新手说话（遇到过的事 → 三课入门 → 适不适合），最后是这个站讲的三件事，每件链到完整教程里对应的几步。
-// 开头的标题和导语要让人五秒内看明白：给谁看、能学到什么、本站是非官方的、不是法律或税务建议。
+// 开头的标题和导语要让人五秒内看明白：给谁看、能学到什么、本站是非官方的、不是法律建议。
 // 事实都出自 docs/sources/README.md 里的官方来源。
 import Site from "../layouts/Site.astro";
 import Contact from "../components/Contact.astro";
@@ -9,59 +8,59 @@ import { LESSONS, lessonHref, STEPS, stepHref, langOf, t } from "../data/nav.js"
 
 const lang = langOf(Astro.url.pathname);
 // 三件事里和语言无关的部分：图标、对应完整教程的哪几步。第一件是新手三课讲的那件，底色浅一点
-const TRACK_BASE = [["Wallet", [0, 1, 2, 3]], ["Landmark", [4]], ["Calculator", [5]]];
+const TRACK_BASE = [["UserPlus", [0, 1, 2, 3]], ["ArrowLeftRight", [4]], ["ShieldCheck", [5, 6]]];
 const ZH = {
-  brand: "跨境收款新手教程",
-  h1: "海外的钱，怎么正规地回到你卡上",
-  lead: ["写给住在中国大陆、从海外收钱的人：接了海外客户的活，做的内容有了收入，或者在海外平台开了网店。这里讲清楚选哪个正规的收款账户，每一段扣多少钱，为什么每人每年 5 万美元的额度不是上限，钱怎么换成人民币到你自己的卡上。", "这是一个非官方、开源的学习站", "，和 PayPal、Wise、Payoneer、万里汇或任何银行都没有关系，也不是法律或税务建议。"],
+  brand: "外区 Apple ID 新手教程",
+  h1: "要一个外区账户，又不动你的主账户",
+  lead: ["写给住在中国大陆、想要一个美区或土区 Apple 账户的人：朋友推荐的 App 在国区搜不到，想用的服务国区没有。这里讲清楚账户的国家或地区管什么，Apple 自己的注册、付款和换区流程怎么走，怎么让 App Store 单独登一个外区账户、iCloud 一直是你自己的，以及订阅、礼品卡和账户被锁时该怎么办。", "这是一个非官方、开源的学习站", "，和 Apple 没有关系，不代表 Apple 的说法，也不是法律建议。"],
   cta: ["新手从这里开始", "看完整教程"],
-  ctaNote: "新手入门一共三课：一笔钱回国要走的三段路，5 万美元额度是什么、不是什么，为什么账户只能用你自己的身份。",
+  ctaNote: "新手入门一共三课：账户的地区管什么，iCloud 和 App Store 为什么是两个登录位，为什么另注册一个账户比给主账户换地区省事。",
   painH: "你是不是也遇到过这些",
   PAIN: [
-    "海外客户说用 PayPal 付你，你却不知道住在国内能开哪种账户，钱又怎么回来。",
-    "客户付了 100 美元，到你卡上的人民币却比按汇率算的少，不知道少在哪一段。",
-    "听说一年只能换 5 万美元，收入快到这个数了，心里发慌。",
+    "朋友推荐了一个 App，你在国区的 App Store 里怎么搜都搜不到。",
+    "想把 App Store 换成外区账户，又怕点错了退出登录，把 iCloud 里的照片和通讯录弄丢。",
+    "网上的教程一篇一个说法：地址怎么填、付款选什么、要不要给主账户换地区，不知道该信哪个。",
   ],
   lessonsH: "新手只要三课",
-  lessonsP: "按顺序看，一共二十多分钟。学完你会知道一笔钱回国要经过哪三段、每一段的费用去哪里查，5 万美元额度管什么、不管什么，也知道为什么开户只能用你自己的身份和真实地址。网站上别的内容，遇到了再查。",
+  lessonsP: "按顺序看，一共二十多分钟。学完你会知道账户的地区管什么、Apple 的条款怎么说，为什么 iCloud 一直登你自己的账户、外区账户只登在「媒体与购买项目」里，也知道为什么另注册一个账户，比给主账户换地区省事。网站上别的内容，遇到了再查。",
   lessonsLabel: "新手入门：共 3 课",
   fitH: "适不适合你", yesH: "适合", noH: "本站不教",
-  YES: ["你住在中国大陆，用自己的身份证和自己名下的银行卡", "你收的是真实的收入：接活的服务费、内容收入、网店的货款", "你想先弄懂规则和费用，再决定开哪个账户"],
-  NO: ["用不是你自己的地址或身份，去开美区、港区的 PayPal 或 Stripe", "拆分金额、借别人的额度，或者把汇款用途写成别的", "用加密货币换成人民币"],
+  YES: ["你住在中国大陆，有一个自己在用的国区 Apple 账户", "你想要美区或土区才有的 App 或服务，愿意照 Apple 自己的流程来", "你想先弄懂规则，再决定要不要注册、怎么付款"],
+  NO: ["具体的地址，或者地址怎么编", "网络设置：VPN、代理、节点", "共享账户，买来或借来的账户", "利用地区差价：低价区订阅、拼车、转卖"],
   tracksH: "这个网站讲三件事",
   tracksP: "新手三课先把道理讲清楚，完整教程再一步一步带你做。",
   TRACKS: [
-    ["选一个正规的收款账户", "按付钱的人来选：PayPal 的买家、电商平台、直接打款的客户。用你自己的身份开户，从第一天起留好凭证。"],
-    ["把钱换成人民币到卡上", "让收款平台直接换成人民币打到卡上，或者先把美元电汇回国，再去银行结汇。"],
-    ["算清每一段的费用", "收款费、换汇费、提现费各算各的，每个数字都写明出自哪一页、是哪天查的。"],
+    ["注册一个外区账户", "先想清楚要它做什么，再准备邮箱和手机号；注册时选对国家或地区，付款方式照 Apple 给那个地区列的来。"],
+    ["只在「媒体与购买项目」里用它", "App Store 换成外区账户，下载、更新完再换回来，iCloud 一直登你自己的账户。"],
+    ["订阅和账户安全", "订阅在哪管、涨价时 Apple 怎么通知你；账户被锁、购买被拒时找 Apple 官方，别买、别借、别分享账户。"],
   ],
   tracksLabel: "完整教程里对应的步骤",
   stepLink: (n, title) => `第 ${n} 步：${title}`,
 };
 const EN = {
-  brand: "Getting paid from abroad, for beginners",
-  h1: "Getting money from abroad onto your own card, the legitimate way",
-  lead: ["For people who live in mainland China and get paid from abroad: a client overseas, income from what you publish, or a shop on a foreign marketplace. This site explains which legitimate receiving account to pick, what each leg of the trip costs, why the USD 50,000 yearly quota isn't a ceiling, and how the money becomes RMB on your own card. ", "This is an unofficial, open-source guide", ", not affiliated with PayPal, Wise, Payoneer, WorldFirst or any bank, and not legal or tax advice."],
+  brand: "Apple Account regions, for beginners",
+  h1: "An account in another region, without touching your main one",
+  lead: ["For people who live in mainland China and want a US or Turkey Apple Account: the app a friend recommended isn't in the China mainland store, or the service you want isn't offered there. This site explains what an account's country or region decides, how Apple's own sign-up, payment and region-change flows work, how to sign the App Store into a second account while iCloud stays yours, and what to do about subscriptions, gift cards and locked accounts. ", "This is an unofficial, open-source guide", ", not affiliated with Apple, not speaking for Apple, and not legal advice."],
   cta: ["Start here if you're new", "Go to the full guide"],
-  ctaNote: "The beginner track is three lessons: the three legs a payment takes home, what the USD 50,000 quota is and isn't, and why an account only works in your own name.",
+  ctaNote: "The beginner track is three lessons: what an account's region decides, why iCloud and the App Store are two separate sign-ins, and why a second account is simpler than moving your main one to another region.",
   painH: "Has this happened to you?",
   PAIN: [
-    "A client abroad wants to pay you by PayPal, and you don't know which account you can open living in China, or how the money gets home.",
-    "A client paid you USD 100, the RMB on your card is less than the exchange rate says it should be, and you can't tell which leg it went missing on.",
-    "You heard you can only change USD 50,000 a year, and your income is getting close.",
+    "A friend recommended an app, and however you search, it isn't in your China mainland App Store.",
+    "You want to switch the App Store to another region's account, but you're scared of tapping the wrong Sign Out and losing the photos and contacts in your iCloud.",
+    "Every tutorial says something different about the address, the payment option and whether to move your main account, and you can't tell which to believe.",
   ],
   lessonsH: "Beginners need just three lessons",
-  lessonsP: "Read them in order, about 25 minutes in all. By the end you'll know the three legs a payment takes on its way home and where to look up each leg's fee, what the USD 50,000 quota covers and what it doesn't, and why you can only open an account with your own identity and real address. Everything else on the site is there to look up when you need it.",
+  lessonsP: "Read them in order, about 25 minutes in all. By the end you'll know what an account's region decides and what Apple's terms say about it, why iCloud always stays on your own account while the other-region account goes only under Media & Purchases, and why a second account is simpler than moving your main one. Everything else on the site is there to look up when you need it.",
   lessonsLabel: "Beginner track: 3 lessons",
   fitH: "Is it for you?", yesH: "Yes, if", noH: "This site won't teach",
-  YES: ["You live in mainland China and use your own ID and a bank card in your own name", "The money is real income: fees for your work, creator income, sales from your shop", "You want to understand the rules and the fees before you pick an account"],
-  NO: ["Opening a US or Hong Kong PayPal or Stripe account with an address or identity that isn't yours", "Splitting amounts, borrowing someone's quota, or writing a different purpose on a transfer", "Turning crypto into RMB"],
+  YES: ["You live in mainland China and have a China mainland Apple Account of your own", "You want an app or service only the US or Turkey store has, and you're happy to follow Apple's own flows", "You want to understand the rules before you decide whether to sign up and how to pay"],
+  NO: ["Specific addresses, or how to make one up", "Network setup: VPNs, proxies, nodes", "Shared accounts, or accounts bought or borrowed", "Price-gap tricks: cheap-region subscriptions, splitting plans, reselling"],
   tracksH: "What this site covers",
   tracksP: "The beginner track explains the ideas; the full guide then takes you through it step by step.",
   TRACKS: [
-    ["Pick a legitimate receiving account", "Let your payer decide: PayPal buyers, marketplaces, clients who pay by bank transfer. Open it in your own name and keep the paper trail from day one."],
-    ["Bring it home in RMB", "Let the provider pay RMB to your card, or wire USD home and settle it at your bank."],
-    ["Add up each leg's fees", "Count the receiving, conversion and withdrawal fees separately, and note which page each number came from and the date you checked it."],
+    ["Create an account in another region", "Know what you want it for, get an email address and phone number ready, pick the right country or region, and pay with what Apple lists for that region."],
+    ["Use it under Media & Purchases only", "Switch the App Store to the other-region account, download and update, then switch back, with iCloud on your own account throughout."],
+    ["Subscriptions and account safety", "Where to manage subscriptions and how Apple tells you about a price rise; when the account is locked or a purchase is refused, go to Apple, and don't buy, borrow or share accounts."],
   ],
   tracksLabel: "Matching steps in the full guide",
   stepLink: (n, title) => `Step ${n}: ${title}`,
