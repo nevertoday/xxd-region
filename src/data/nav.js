@@ -48,15 +48,15 @@ export const stepHref = (s, lang = "zh") => link(`/guide/${s.slug}/`, lang);
 
 export const HOWTO = [
   { group: "注册", en: { group: "Signing up" }, items: [
-    { slug: "us-account", title: "注册一个美区 Apple 账户", ready: false, en: { title: "Create a US Apple Account" } },
-    { slug: "tr-account", title: "注册一个土区 Apple 账户", ready: false, en: { title: "Create a Turkey Apple Account" } },
-    { slug: "change-region", title: "把已有账户换到别的地区", ready: false, en: { title: "Move an existing account to another region" } },
+    { slug: "us-account", title: "注册一个美区 Apple 账户", ready: true, en: { title: "Create a US Apple Account" } },
+    { slug: "tr-account", title: "注册一个土区 Apple 账户", ready: true, en: { title: "Create a Turkey Apple Account" } },
+    { slug: "change-region", title: "把已有账户换到别的地区", ready: true, en: { title: "Move an existing account to another region" } },
   ]},
   { group: "日常用", en: { group: "Everyday use" }, items: [
-    { slug: "switch-store", title: "在 iPhone 上切换 App Store 账户", ready: false, en: { title: "Switch App Store accounts on your iPhone" } },
-    { slug: "gift-card", title: "买和兑换礼品卡", ready: false, en: { title: "Buy and redeem a gift card" } },
-    { slug: "price-rise", title: "订阅涨价了怎么办", ready: false, en: { title: "When a subscription's price goes up" } },
-    { slug: "check-region", title: "看一眼账户现在是哪个地区", ready: false, en: { title: "Check which region an account is in" } },
+    { slug: "switch-store", title: "在 iPhone 上切换 App Store 账户", ready: true, en: { title: "Switch App Store accounts on your iPhone" } },
+    { slug: "gift-card", title: "买和兑换礼品卡", ready: true, en: { title: "Buy and redeem a gift card" } },
+    { slug: "price-rise", title: "订阅涨价了怎么办", ready: true, en: { title: "When a subscription's price goes up" } },
+    { slug: "check-region", title: "看一眼账户现在是哪个地区", ready: true, en: { title: "Check which region an account is in" } },
   ]},
   { group: "出问题了", en: { group: "When things go wrong" }, items: [
     { slug: "cannot-create", title: "提示「此时无法创建你的账户」", ready: true, en: { title: "\"Your account cannot be created at this time\"" } },
