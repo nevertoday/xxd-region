@@ -10,7 +10,7 @@ For people in mainland China who want a US or Turkey Apple Account (Apple ID).<b
 
 **[Start with lesson 1 →](https://region.xiaoxiaodong.ai/en/start/1-region/)**　·　**[Already have one? The full guide →](https://region.xiaoxiaodong.ai/en/guide/0-why/)**
 
-<sub>Unofficial · free · open source · Chinese and English</sub>
+<sub>Unofficial · free · open source · 10 languages</sub>
 
 </div>
 

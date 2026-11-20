@@ -10,7 +10,7 @@
 
 **[从第 1 课开始 →](https://region.xiaoxiaodong.ai/start/1-region/)**　·　**[已经有外区账户了，看完整教程 →](https://region.xiaoxiaodong.ai/guide/0-why/)**
 
-<sub>非官方 · 免费 · 开源 · 中文和英文</sub>
+<sub>非官方 · 免费 · 开源 · 10 种语言</sub>
 
 </div>
 
