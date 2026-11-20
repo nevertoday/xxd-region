@@ -1,5 +1,90 @@
 ---
 layout: ../../../layouts/Lesson.astro
+tldr: "Your iPhone has two sign-ins: one for iCloud and most features, and Media & Purchases, which can use a different account. Keep your own account in iCloud, and sign the other-region account into Media & Purchases only."
 lesson: 2
 ---
-{/* 待写 TBD: body. See docs/MAINTAINING.md (voice and hard rules); facts and their links are in docs/sources/README.md. */}
+import Callout from "../../../components/Callout.astro";
+import Term from "../../../components/Term.astro";
+import Q from "../../../components/Q.astro";
+import Reply from "../../../components/Reply.astro";
+import Fig from "../../../components/Fig.astro";
+
+Your other-region account is ready, and you want that app right now. You open **Settings**, and there's your name at the top. You tap it, scroll all the way down, and find **Sign Out**. Sign out, sign in with the new account, that must be how you switch. Your thumb is already on it.
+
+Hold on a second. That button signs you out of a lot more than the App Store.
+
+## Settings has two Sign Out buttons
+
+Apple's article is clear about it: when you sign out of your <Term k="Apple 账户" /> on a device, you're automatically signed out of iCloud, the App Store and other Apple media services, iMessage and FaceTime. What's stored in iCloud stays in iCloud, but your iCloud data is removed from the device unless you choose to keep a copy when prompted ([Sign out of your Apple Account and iCloud on your devices](https://support.apple.com/en-us/104958)). All you wanted was a different store, and that one tap signs the whole phone out.
+
+The other **Sign Out** lives under **Media & Purchases**. <Term k="媒体与购买项目" /> is the sign-in that the App Store, Music, Books and the other places you buy things use, and it can be a different account from iCloud. Apple describes this setup in its article on migrating purchases: the account signed in for iCloud and most features on your iPhone is the primary Apple Account, and the one signed in just for Media & Purchases is the <Term k="备选账户" /> ([Migrate purchases from one Apple Account to another Apple Account](https://support.apple.com/en-us/117294)).
+
+So your iPhone really has two sign-ins, each doing its own job. The only one you need to switch is the one you buy things with.
+
+<mark><strong>iCloud always stays on your own account. The other-region account goes only under Media & Purchases, and switching it back and forth never touches iCloud.</strong></mark>
+
+<Fig id="l2-two-sign-outs" />
+
+## Switch only Media & Purchases
+
+The same Apple article gives the steps for switching ([Migrate purchases from one Apple Account to another Apple Account](https://support.apple.com/en-us/117294)):
+
+1. In **Settings**, tap your name.
+2. Tap **Media & Purchases**, then tap **Sign Out**.
+3. Once you're signed out, tap **Media & Purchases** again, choose **Not [your name]?**, and sign in with the other-region account.
+
+<Callout type="ok">
+Go back to **Settings** and tap your name. You're still at the top, and the other-region account shows under **Media & Purchases**. As Apple puts it, you'll see a different Apple Account displayed under Media & Purchases if you have a different account signed in for purchases.
+</Callout>
+
+If what you see on your iPhone is different, go with what you see; button positions move between iOS versions. Switching back is the same route: sign the other-region account out of Media & Purchases, then sign in with your own. For a step-by-step walkthrough, see [Switch App Store accounts on your iPhone](/en/howto/switch-store/).
+
+## Two limits once you've switched
+
+The two sign-ins are separate, but the Media & Purchases seat holds one person at a time. Apple says: "You can’t sign in on the App Store and other media services with more than one Apple Account at the same time, or update the content you buy with a different Apple Account." ([Sign in to your Apple Account on the web or in your device settings](https://support.apple.com/en-us/111001)) So apps you downloaded with the other-region account need that account signed in when they update, and apps your main account bought need your main account back.
+
+The second limit is about devices. An Apple Account used for purchases can have ten devices associated with it at a time, no more than five of them computers, and a device joins that list when you use it to buy something from the App Store. Apple also says that when you try to associate a device that was previously associated, you might see the message below, and you might need to wait up to 90 days to associate the device with a different Apple Account ([View and remove your devices that are associated with your Apple Account for purchases](https://support.apple.com/en-us/118412)):
+
+<Reply code="This device is associated with another Apple Account. You cannot associate this device with another Apple Account for [number] days." />
+
+Apple says "might" and doesn't list when it will definitely happen. Apple's pages don't say; if you're unsure, ask Apple Support first.
+
+## Never put someone else's account in iCloud
+
+Where does the other-region account come from? Someone will always offer: I've got a US account already, borrow it, just sign in.
+
+Wherever they tell you to sign in, the iCloud seat never takes someone else's account. Apple is direct about it: "Don't share an account with other people, even family members." Sharing an Apple Account means giving someone else access to all of your personal content ([Security and your Apple Account](https://support.apple.com/en-us/102614)).
+
+There's a bigger problem too. Apple doesn't cover this case directly, but going by how <Term k="激活锁" /> works: it turns on automatically when you set up Find My, Apple stores the signed-in Apple Account on its activation servers and links it to the device, and from then on that account's password is required before anyone can turn off Find My, erase the device, or reactivate it ([Activation Lock for iPhone and iPad](https://support.apple.com/en-us/108794)). So with someone else's account in your iPhone's iCloud and Find My on, the phone is tied to their account, and without their password you couldn't even erase your own phone. That's an inference, not something Apple says in so many words.
+
+The account under Media & Purchases should be yours too. Apple's article on migrating purchases says neither account should be shared with anyone else ([Migrate purchases from one Apple Account to another Apple Account](https://support.apple.com/en-us/117294)). [Why you shouldn't sign in to an account someone gives you](/en/howto/shared-accounts/) goes into more detail.
+
+So the other-region account is best one you created yourself. Why a second account, and not your main one switched to the US? That's [lesson 3](/en/start/3-new-account/).
+
+## If something's off
+
+<Q q="I already tapped Sign Out at the bottom of the page with my name.">
+
+Don't panic. What's stored in iCloud stays in iCloud ([Sign out of your Apple Account and iCloud on your devices](https://support.apple.com/en-us/104958)). Sign back in with your own account: open **Settings**, tap **Apple Account** at the top, and enter your email address or phone number and password, plus the verification code if you're asked for one ([Sign in to your Apple Account on the web or in your device settings](https://support.apple.com/en-us/111001)). Apple also reminds you that not everything is backed up in iCloud, so check on anything that wasn't syncing. Once you're back in, follow the three steps above and switch only Media & Purchases.
+
+</Q>
+<Q q="I can't find where to switch accounts in the App Store.">
+
+Apple's steps for switching are in **Settings**, not in the App Store: Settings, then your name, then **Media & Purchases** ([Migrate purchases from one Apple Account to another Apple Account](https://support.apple.com/en-us/117294)). If what you see on your iPhone is different, go with what you see, or compare it with [Switch App Store accounts on your iPhone](/en/howto/switch-store/).
+
+</Q>
+<Q q="After switching back to my main account, some apps won't update.">
+
+Those apps were most likely downloaded with the other-region account. Apple says you can't update content you bought with a different Apple Account ([Sign in to your Apple Account on the web or in your device settings](https://support.apple.com/en-us/111001)). Switch Media & Purchases to the other-region account, update, then switch back.
+
+</Q>
+<Q q="It says “This device is associated with another Apple Account.”">
+
+That's the associated-devices limit. Apple says you might need to wait up to 90 days to associate the device with a different Apple Account ([View and remove your devices that are associated with your Apple Account for purchases](https://support.apple.com/en-us/118412)). Try again once the wait is up; if you're unsure, ask Apple Support first.
+
+</Q>
+<Q q="Someone says I can borrow their account and sign in to iCloud to get apps.">
+
+Don't. Downloading apps only needs Media & Purchases, not iCloud. On top of that, Apple says not to share an account with anyone, and someone else's account in iCloud brings Activation Lock into it, as the section "Never put someone else's account in iCloud" above explains. See also [Why you shouldn't sign in to an account someone gives you](/en/howto/shared-accounts/).
+
+</Q>

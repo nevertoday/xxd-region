@@ -1,5 +1,90 @@
 ---
 layout: ../../layouts/Lesson.astro
+tldr: "Apple 账户的国家或地区，决定你看到的是哪一家店：有哪些 App 和服务、价格用什么货币标、能用哪些付款方式。按 Apple 的条款，它是你居住的国家或地区。"
 lesson: 1
 ---
-{/* 待写：正文。写法见 docs/MAINTAINING.md 的「怎么写」和「硬规矩」，资料和出处在 docs/sources/README.md。 */}
+import Term from "../../components/Term.astro";
+import Q from "../../components/Q.astro";
+
+朋友给你推荐了一个 App，说用了大半年，已经离不开了。你打开 App Store 照着名字搜，翻了两页没有；换成英文名再搜，还是没有。你把截图发过去，他回了一句：「奇怪，我这儿明明有啊。」
+
+你们俩的手机都没坏，App Store 也没出错。差别在登录的账户上：他的账户是美国的，你的是中国大陆的。
+
+## 同一个 App Store，各地的货架不一样
+
+每个 <Term k="Apple 账户" /> 都属于一个<Term k="国家或地区" />。你打开 App Store 看到的，其实是这个国家或地区的那一家店。
+
+一个 App 摆在哪几家店里，是开发者自己定的。Apple 给开发者的帮助页写着，App Store 在 175 个国家或地区提供，开发者可以选全部上架，也可以只挑其中几个；同一页还说，有的 App 因为法律或监管要求，在某些国家或地区不能下载或使用（[App Store Connect 帮助](https://developer.apple.com/help/app-store-connect/manage-your-apps-availability/manage-availability-for-your-app-on-the-app-store)）。所以朋友那个 App 不在国区，可能是开发者没选中国大陆，也可能是别的原因，从外面看不出来。Apple 自己的建议是：觉得某个 App 应该在你的国家或地区提供，就直接去问开发者（[Apple 媒体服务的提供情况](https://support.apple.com/zh-cn/118205)）。
+
+## 地区还管着另外几样东西
+
+不只是 App。账户的国家或地区，还决定了下面这几样。
+
+**能用哪些 Apple 服务。** Apple 有一篇文章，按国家或地区列出能用哪些媒体服务（[Apple 媒体服务的提供情况](https://support.apple.com/zh-cn/118205)）。美国那一栏最长，Apple Books、Apple TV、Apple One、Apple Fitness+、Apple News+ 都在里面。中国大陆那一栏有 App Store、Apple Music、Shazam，播客只有免费的，没有 Apple Books、Apple Arcade、Apple TV 和 Apple One，也没有影片购买。土耳其有 Apple Arcade 和 Apple TV，可图书只有公共领域的那些，播客也只有免费的，列表里同样没有 Apple One。
+
+**价格用什么货币标。** 同一个 iCloud+ 方案，截至 2026-11-19，Apple 的价格页上美国按美元标、土耳其按里拉标、中国大陆按人民币标（[iCloud+ 方案和定价](https://support.apple.com/zh-cn/108047)）。价格本身会变，Apple 和开发者都会调价，完整教程的[第 5 步](/guide/5-subscriptions/)再细讲。
+
+**能用哪些付款方式。** Apple 也按国家或地区列了收哪些付款方式（[可与 Apple 账户搭配使用的付款方式](https://support.apple.com/zh-cn/111741)）。中国大陆收支付宝、微信支付、抖音支付、大多数信用卡和借记卡，还有 <Term k="Apple 账户余额" />；美国收大多数信用卡和借记卡、Apple Pay、Apple Card、Apple Cash、PayPal 和账户余额；土耳其收大多数信用卡和借记卡、手机账单支付和账户余额，列表里没有 Apple Pay，也没有 PayPal。这一页还写着，付款方式可能会发生变化。
+
+所以换一个地区的账户，就像走进了另一个国家的商店：货架上摆的不一样，标价的货币不一样，收银台收的钱也不一样。
+
+<mark><strong>账户的国家或地区，决定你走进的是哪一家店：有哪些 App 和服务、价格用什么货币标、能用什么付款。按 Apple 的条款，它是你居住的国家或地区。</strong></mark>
+
+## 条款怎么说：它是你住的地方
+
+后半句要多说几句，因为账户的地区不只是一个设置，Apple 的条款还给它起了名字。Apple 媒体服务条款里把它叫作<Term k="居住国家或地区" />，英文是 Home Country：服务供你在你居住的国家或地区使用。中国大陆的条款写得很直白：「你创建一个在中国大陆使用服务的账户，即表示你指定中国大陆作为你的居住国家或地区。」美国和土耳其的条款也是这个意思（[中国大陆条款](https://www.apple.com.cn/legal/internet-services/itunes/cn/terms.html)、[美国条款](https://www.apple.com/legal/internet-services/itunes/us/terms.html)、[土耳其条款](https://www.apple.com/tr/legal/internet-services/itunes/tr/terms.html)）。
+
+换句话说，你注册时选了哪个国家或地区，就等于告诉 Apple 你住在那里。Apple 给搬家的人的建议也是顺着这个意思来的：搬到一个新的国家或地区，不想为新地区填付款方式的话，就等你本人到了那里，再创建一个新的 Apple 账户（[更改 Apple 账户国家或地区](https://support.apple.com/zh-cn/118283)）。
+
+住在美国或土耳其的人，事情很简单：注册时填你自己的真实地址就行。人住在中国大陆，又想要一个美区或土区的账户，就得先把下面几件事摆清楚。
+
+## 地址这一栏，本站不替你填
+
+注册账户和添加付款方式时，都会问到地址。本站不提供地址，也不教怎么编一个。原因就是下面这几条，每一条都写在 Apple 自己的页面上。
+
+**条款允许 Apple 做什么。** 美国和中国大陆的条款都写着：如果你没有遵守、或者 Apple 怀疑你没有遵守条款里的任何规定，Apple 可以不通知你，就终止协议和你的 Apple 账户（[美国条款](https://www.apple.com/legal/internet-services/itunes/us/terms.html)、[中国大陆条款](https://www.apple.com.cn/legal/internet-services/itunes/cn/terms.html)）。土耳其条款的范围窄一些，针对的是没有履行付款这类基本义务，或者欺诈（[土耳其条款](https://www.apple.com/tr/legal/internet-services/itunes/tr/terms.html)）。
+
+**Apple 实际上怎么处理。** 账户的地区和你实际住的地方不一样时会怎样，条款里没有写具体后果，Apple 也没有公开说过它怎么处理。这一点 Apple 的页面没有写明，拿不准就先问 Apple 支持。
+
+**账单地址要和银行的一致。** 添加付款方式时，Apple 要你确认姓名、账单邮寄地址和其他信息拼写正确，并且和你在金融机构（比如发卡的银行）留存的信息一致（[为你的 Apple 账户添加付款方式](https://support.apple.com/zh-cn/118429)）；付款方式被拒时，Apple 也提醒账单信息必须和金融机构存档的相符（[如果你的付款方式在 App Store 或 iTunes Store 中被拒绝](https://support.apple.com/zh-cn/108095)）。所以一个不是你的地址，到你要加一张银行卡的那一天，就会和银行留的资料对不上。
+
+这几条摆在一起，决定留给你自己。这是 Apple 和你之间的条款问题，本站讲的是条款怎么写，不是法律意见。
+
+## 接下来两课
+
+地区管什么、条款怎么说，你已经知道了。可真要用一个外区账户，最让人放心不下的，往往不是地区本身，而是会不会连累你用了好几年的主账户：照片、通讯录都在它的 iCloud 里，买过的 App 也都在它名下。
+
+接下来两课，讲的就是保住主账户的两件事。[第 2 课](/start/2-two-sign-ins/)讲 iPhone 上 iCloud 和 App Store 是两个登录位，外区账户只登在后一个里；[第 3 课](/start/3-new-account/)讲为什么另注册一个账户，比给主账户换地区省事。三课以外的内容，遇到了再查就行。
+
+## 不对怎么办
+
+<Q q="我不知道想要的 App 在哪个地区有。">
+
+App 上架哪些国家或地区，是开发者定的，所以它不在国区，也不等于就一定在美区或者土区（[App Store Connect 帮助](https://developer.apple.com/help/app-store-connect/manage-your-apps-availability/manage-availability-for-your-app-on-the-app-store)）。最可靠的办法是去 App 的官网看，或者直接问开发者，Apple 也是这样建议的（[Apple 媒体服务的提供情况](https://support.apple.com/zh-cn/118205)）。先弄清楚你要的东西在哪，再决定注册哪个地区，完整教程的[第 0 步](/guide/0-why/)就讲这件事。
+
+</Q>
+<Q q="我不知道自己的账户现在是哪个地区。">
+
+看[看一眼账户现在是哪个地区](/howto/check-region/)，几步就能查到。
+
+</Q>
+<Q q="教程说地址随便填一个就行。">
+
+本站不这么教。账单地址要和你在银行留的资料一致，条款又把账户的地区定为你居住的地方，这两条上面都讲了。看到这类教程，可以对照[哪些教程不该照做](/howto/bad-tutorials/)。
+
+</Q>
+<Q q="听说某个地区的订阅便宜，想挑那个地区注册。">
+
+本站不比价，也不说哪个地区便宜。价格是开发者和 Apple 定的，会变：开发者可以给订阅涨价，有的涨价要先征得你同意，Apple 会发邮件或推送通知来问你，有的只通知、不用你同意（[App Store Connect 帮助](https://developer.apple.com/help/app-store-connect/manage-subscriptions/manage-pricing-for-auto-renewable-subscriptions)）。所以按你要用的 App 和服务来挑地区。订阅和涨价的事，完整教程的[第 5 步](/guide/5-subscriptions/)细讲。
+
+</Q>
+<Q q="我以后要搬到美国或者土耳其去住。">
+
+那时候你的居住国家或地区就变了。Apple 的建议是，不想为新地区填付款方式的话，等你本人到了那里，再创建一个新的 Apple 账户（[更改 Apple 账户国家或地区](https://support.apple.com/zh-cn/118283)）。要是想把现在的账户直接换过去，改之前要清掉的东西不少，[第 3 课](/start/3-new-account/)一项项讲。
+
+</Q>
+<Q q="这样做违不违法？">
+
+这是 Apple 和你之间的条款问题，本站讲的是条款怎么写，不是法律意见。
+
+</Q>
