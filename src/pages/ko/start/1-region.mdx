@@ -1,90 +1,90 @@
 ---
 layout: ../../../layouts/Lesson.astro
-tldr: "An Apple Account's country or region decides which store you walk into: which apps and services it has, what currency prices are in, and which payment methods it takes. Under Apple's terms, it's the country or region where you live."
+tldr: "Apple 계정의 국가 또는 지역은 내가 어느 가게에 들어가는지를 정해요. 어떤 앱과 서비스가 있는지, 가격이 어느 통화로 표시되는지, 어떤 결제 방법을 쓸 수 있는지요. Apple 약관에서 그건 내가 사는 국가 또는 지역이에요."
 lesson: 1
 ---
 import Term from "../../../components/Term.astro";
 import Q from "../../../components/Q.astro";
 
-A friend recommends an app. They've used it for months and can't do without it. You open the App Store and search for the name: two pages of results, nothing. You try the English name. Still nothing. You send them a screenshot, and they write back: "Weird, it's right here on mine."
+친구가 앱 하나를 추천해 줬어요. 몇 달째 쓰고 있는데 이제는 없으면 안 된대요. App Store를 열고 그 이름으로 검색해 봤는데, 결과를 두 페이지나 넘겨도 안 보여요. 영어 이름으로도 찾아봤지만 역시 없어요. 스크린샷을 보냈더니 친구가 이렇게 답해요. "이상하네, 내 폰에는 분명히 있는데."
 
-Neither phone is broken, and the App Store hasn't made a mistake. The difference is the account you're each signed in with. Theirs is a US account; yours is a China mainland one.
+두 사람의 휴대폰 모두 고장 난 게 아니고, App Store가 실수한 것도 아니에요. 차이는 각자 로그인한 계정에 있어요. 친구 계정은 미국 계정이고, 내 계정은 중국 본토 계정이거든요.
 
-## One App Store, different shelves in each place
+## App Store는 하나지만, 진열대는 곳마다 달라요
 
-Every <Term k="Apple 账户" /> belongs to one <Term k="国家或地区" />. When you open the App Store, what you see is that country or region's store.
+모든 <Term k="Apple 账户" text="Apple 계정" />은 하나의 <Term k="国家或地区" text="국가 또는 지역" />에 속해요. App Store를 열었을 때 보이는 건 그 국가 또는 지역의 가게예요.
 
-Which stores an app sits in is the developer's decision. Apple's help for developers says the App Store is available in 175 countries or regions, and a developer can release an app in all of them or pick specific ones. The same page adds that an app may not be available for download or use in some countries or regions because of legal or regulatory requirements ([App Store Connect Help](https://developer.apple.com/help/app-store-connect/manage-your-apps-availability/manage-availability-for-your-app-on-the-app-store)). So your friend's app might be missing from the China mainland store because the developer didn't pick it, or for some other reason, and from the outside you can't tell which. Apple's own advice: if you think an app should be available in your country or region, contact the developer directly ([Availability of Apple Media Services](https://support.apple.com/en-us/118205)).
+앱을 어느 가게에 진열할지는 개발자가 정해요. Apple의 개발자용 도움말에 따르면 App Store는 175개 국가 또는 지역에서 제공되고, 개발자는 그 전부에 앱을 출시할 수도 있고 특정 국가 또는 지역만 고를 수도 있어요. 같은 페이지에는 법적 또는 규제상의 요건 때문에 일부 국가 또는 지역에서는 앱을 다운로드하거나 사용하지 못할 수 있다는 말도 있어요([App Store Connect 도움말](https://developer.apple.com/help/app-store-connect/manage-your-apps-availability/manage-availability-for-your-app-on-the-app-store)). 그러니까 친구의 앱이 중국 본토 가게에 없는 건 개발자가 중국 본토를 고르지 않았기 때문일 수도 있고, 다른 이유 때문일 수도 있어요. 밖에서 봐서는 어느 쪽인지 알 수 없어요. Apple의 조언은, 내 국가 또는 지역에서 제공되어야 한다고 생각하는 앱이 있으면 개발자에게 직접 문의하라는 거예요([Apple 미디어 서비스 사용 가능 여부](https://support.apple.com/ko-kr/118205)).
 
-## The region decides a few other things too
+## 지역이 정하는 건 그 밖에도 있어요
 
-It isn't only apps. An account's country or region also decides these.
+앱만이 아니에요. 계정의 국가 또는 지역은 이런 것들도 정해요.
 
-**Which Apple services you get.** Apple has an article listing the media services available in each country or region ([Availability of Apple Media Services](https://support.apple.com/en-us/118205)). The United States has the longest list, with Apple Books, Apple TV, Apple One, Apple Fitness+ and Apple News+ on it. China mainland has the App Store, Apple Music and Shazam, and podcasts only if they're free; Apple Books, Apple Arcade, Apple TV and Apple One aren't there, and neither are movie purchases. Türkiye has Apple Arcade and Apple TV, but books are public domain only, podcasts are free only, and Apple One isn't on its list either.
+**쓸 수 있는 Apple 서비스.** Apple에는 국가 또는 지역별로 쓸 수 있는 미디어 서비스를 정리한 문서가 있어요([Apple 미디어 서비스 사용 가능 여부](https://support.apple.com/ko-kr/118205)). 목록이 가장 긴 곳은 미국으로, Apple Books, Apple TV, Apple One, Apple Fitness+, Apple News+가 들어 있어요. 중국 본토에는 App Store, Apple Music, Shazam이 있고, 팟캐스트는 무료만 돼요. Apple Books, Apple Arcade, Apple TV, Apple One은 없고, 영화 구입도 안 돼요. 튀르키예에는 Apple Arcade와 Apple TV가 있지만 책은 퍼블릭 도메인 책만, 팟캐스트도 무료만 되고, Apple One은 역시 목록에 없어요.
 
-**What currency prices are in.** Take the same iCloud+ plan: as of 2026-11-19, Apple's pricing page lists it in US dollars for the United States, in lira for Türkiye and in yuan for China mainland ([iCloud+ plans and pricing](https://support.apple.com/en-us/108047)). The prices themselves change, because Apple and developers both adjust them, and [step 5](/en/guide/5-subscriptions/) of the full guide covers that.
+**가격이 표시되는 통화.** 같은 iCloud+ 요금제라도 2026년 11월 19일 기준 Apple 가격 페이지에서 미국은 미국 달러, 튀르키예는 리라, 중국 본토는 위안으로 표시돼요([iCloud+ 요금제 및 가격](https://support.apple.com/ko-kr/108047)). 가격 자체는 바뀌어요. Apple도 개발자도 가격을 조정하기 때문인데, 이 이야기는 전체 가이드의 [5단계(영어)](/en/guide/5-subscriptions/)에서 다뤄요.
 
-**Which payment methods you can use.** Apple lists those per country or region as well ([Payment methods that you can use with your Apple Account](https://support.apple.com/en-us/111741)). China mainland takes Alipay, WeChat Pay, Douyin Pay, most credit and debit cards, and an <Term k="Apple 账户余额" />. The United States takes most credit and debit cards, Apple Pay, Apple Card, Apple Cash, PayPal and the account balance. Türkiye takes most credit and debit cards, mobile phone billing and the account balance, and there's no Apple Pay or PayPal on its list. The same page notes that payment methods are subject to change.
+**쓸 수 있는 결제 방법.** 이것도 Apple이 국가 또는 지역별로 정리해 두었어요([Apple 계정으로 이용할 수 있는 결제 방법](https://support.apple.com/ko-kr/111741)). 중국 본토에서는 Alipay, WeChat Pay, Douyin Pay, 대부분의 신용카드 및 체크카드, 그리고 <Term k="Apple 账户余额" text="Apple 계정 잔액" />을 쓸 수 있어요. 미국에서는 대부분의 신용카드 및 체크카드, Apple Pay, Apple Card, Apple Cash, PayPal, 계정 잔액을 쓸 수 있어요. 튀르키예에서는 대부분의 신용카드 및 체크카드, 휴대 전화 청구, 계정 잔액을 쓸 수 있고, Apple Pay와 PayPal은 목록에 없어요. 같은 페이지에는 결제 방법이 변경될 수 있다는 말도 있어요.
 
-So switching to an account in another region is like walking into a shop in another country: different things on the shelves, prices in a different currency, a till that takes different ways to pay.
+그러니까 다른 지역 계정으로 바꾸는 건 다른 나라의 가게에 들어가는 것과 비슷해요. 진열대에 놓인 물건이 다르고, 가격표의 통화가 다르고, 계산대에서 받는 결제 수단도 달라요.
 
-<mark><strong>An account's country or region decides which store you walk into: which apps and services it has, what currency prices are in, and how you can pay. Under Apple's terms, it's the country or region where you live.</strong></mark>
+<mark><strong>계정의 국가 또는 지역은 내가 어느 가게에 들어가는지를 정해요. 어떤 앱과 서비스가 있는지, 가격이 어느 통화인지, 어떻게 결제할 수 있는지요. Apple 약관에서 그건 내가 사는 국가 또는 지역이에요.</strong></mark>
 
-## What the terms say: it's where you live
+## 약관에서는 내가 사는 곳이에요
 
-That second half needs a few more words, because an account's region isn't just a setting. Apple's terms give it a name. The Apple Media Services Terms call it your <Term k="居住国家或地区" />: the services are available for your use in your country or territory of residence. The US terms put it plainly: "By creating an account for use of the Services in a particular country or territory you are specifying it as your Home Country." The Turkish and China mainland terms say the same ([US terms](https://www.apple.com/legal/internet-services/itunes/us/terms.html), [Turkish terms](https://www.apple.com/tr/legal/internet-services/itunes/tr/terms.html), in Turkish, [China mainland terms](https://www.apple.com.cn/legal/internet-services/itunes/cn/terms.html), in Chinese).
+뒷부분은 조금 더 설명이 필요해요. 계정의 지역은 그냥 설정 하나가 아니라, Apple 약관이 따로 이름까지 붙여 둔 것이거든요. Apple 미디어 서비스 이용 약관은 이것을 <Term k="居住国家或地区" text="거주 국가" />(영어로는 Home Country)라고 부르고, 서비스는 내가 거주하는 국가 또는 지역에서 쓰도록 제공된다고 해요. 미국 약관은 아주 분명하게 써 두었어요. "특정 국가 또는 지역에서 서비스를 이용하기 위한 계정을 만들면, 그 국가 또는 지역을 자신의 Home Country로 지정하는 것입니다." 튀르키예와 중국 본토 약관도 같은 말을 해요([미국 약관](https://www.apple.com/legal/internet-services/itunes/us/terms.html)(영어), [튀르키예 약관](https://www.apple.com/tr/legal/internet-services/itunes/tr/terms.html)(튀르키예어), [중국 본토 약관](https://www.apple.com.cn/legal/internet-services/itunes/cn/terms.html)(중국어)).
 
-In other words, the country or region you pick when you sign up is you telling Apple that you live there. Apple's advice to people who move follows the same line: if you don't want to enter a payment method for your new country or region, wait until you're physically there, then create a new Apple Account ([Change your Apple Account country or region](https://support.apple.com/en-us/118283)).
+다시 말해 가입할 때 고르는 국가 또는 지역은, 내가 거기 산다고 Apple에 알리는 셈이에요. 이사하는 사람에게 주는 Apple의 조언도 같은 흐름이에요. 새 국가 또는 지역의 결제 방법을 입력하고 싶지 않다면, 실제로 그곳에 도착할 때까지 기다렸다가 새 Apple 계정을 만들라는 거예요([Apple 계정 국가 또는 지역 변경하기](https://support.apple.com/ko-kr/118283)).
 
-If you live in the United States or Türkiye, this part is easy: give your own real address. If you live in mainland China and want a US or Turkey account, it's worth getting the next few things straight first.
+미국이나 튀르키예에 산다면 간단해요. 내 실제 주소를 입력하면 돼요. 중국 본토에 살면서 미국이나 튀르키예 계정을 갖고 싶다면, 먼저 다음 몇 가지를 분명히 해 두는 게 좋아요.
 
-## The address field: this site won't fill it in for you
+## 주소 칸은 이 사이트가 채워 주지 않아요
 
-Signing up and adding a payment method both ask for an address. This site doesn't give out addresses or teach you how to make one up. The reasons are below, and each comes from Apple's own pages.
+가입할 때도, 결제 방법을 추가할 때도 주소를 물어요. 이 사이트는 주소를 알려 주지 않고, 주소를 지어내는 방법도 가르치지 않아요. 이유는 아래와 같고, 모두 Apple의 페이지에 나와 있어요.
 
-**What the terms let Apple do.** The US and China mainland terms both say that if you fail, or Apple suspects that you have failed, to comply with any of the provisions, Apple may terminate the agreement and your Apple Account without notice to you ([US terms](https://www.apple.com/legal/internet-services/itunes/us/terms.html), [China mainland terms](https://www.apple.com.cn/legal/internet-services/itunes/cn/terms.html)). The Turkish terms are narrower: they cover failing basic obligations such as paying, or fraud ([Turkish terms](https://www.apple.com/tr/legal/internet-services/itunes/tr/terms.html)).
+**약관이 Apple에 허락하는 것.** 미국과 중국 본토 약관에는 모두, 내가 조항 중 하나라도 지키지 않거나 지키지 않았다고 Apple이 의심하면, Apple은 나에게 알리지 않고 계약과 내 Apple 계정을 해지할 수 있다고 쓰여 있어요([미국 약관](https://www.apple.com/legal/internet-services/itunes/us/terms.html), [중국 본토 약관](https://www.apple.com.cn/legal/internet-services/itunes/cn/terms.html)). 튀르키예 약관은 범위가 더 좁아서, 결제 같은 기본 의무를 이행하지 않은 경우나 사기를 다뤄요([튀르키예 약관](https://www.apple.com/tr/legal/internet-services/itunes/tr/terms.html)).
 
-**What Apple actually does.** The terms don't spell out what happens when an account's region doesn't match where you really live, and Apple hasn't said publicly how it handles that. Apple's pages don't say; if you're unsure, ask Apple Support first.
+**Apple이 실제로 어떻게 하는지.** 계정의 지역이 실제로 사는 곳과 다를 때 어떻게 되는지 약관에는 구체적으로 나와 있지 않고, Apple이 그런 경우를 어떻게 처리하는지도 공개한 적이 없어요. 이 부분은 Apple 페이지에 나와 있지 않으니, 확실하지 않으면 먼저 Apple 지원에 물어보세요.
 
-**Your billing address has to match your bank's.** When you add a payment method, Apple asks you to confirm that your name, billing address and other information are spelled correctly and match what you have on file with your financial institution, such as the bank that issued your card ([Add a payment method to your Apple Account](https://support.apple.com/en-us/118429)). When a payment method is declined, Apple again says your billing details must match the information on file with your financial institution ([If your payment method is declined in the App Store or iTunes Store](https://support.apple.com/en-us/108095)). So an address that isn't yours won't match your bank's records on the day you go to add a card.
+**청구 주소는 은행에 등록된 정보와 같아야 해요.** 결제 방법을 추가할 때 Apple은 이름, 청구 주소 및 기타 정보가 정확하게 입력되었는지, 금융 기관(예를 들어 카드를 발급한 은행)에 등록된 정보와 일치하는지 확인하라고 해요([Apple 계정에 결제 방법 추가하기](https://support.apple.com/ko-kr/118429)). 결제 방법이 거절되었을 때도 Apple은 청구 세부 정보가 금융 기관에 등록된 정보와 일치해야 한다고 해요([App Store 또는 iTunes Store에서 결제 방법이 거절된 경우](https://support.apple.com/ko-kr/108095)). 그래서 내 것이 아닌 주소는 카드를 추가하려는 바로 그날 은행 기록과 맞지 않게 돼요.
 
-Put those side by side, and the decision is yours. This is a matter of the terms between you and Apple; this site explains what the terms say, and it isn't legal advice.
+이것들을 나란히 놓고 보면, 결정은 내 몫이에요. 이건 나와 Apple 사이의 약관 문제예요. 이 사이트는 약관에 무엇이 쓰여 있는지 설명할 뿐이고, 법률 자문이 아니에요.
 
-## The next two lessons
+## 다음 두 레슨
 
-Now you know what the region decides and what the terms say about it. But when you actually go to use an account in another region, what worries most people isn't the region. It's whether it could hurt the main account you've had for years: your photos and contacts are in its iCloud, and the apps you've bought are in its name.
+지역이 무엇을 정하는지, 약관이 그걸 어떻게 다루는지는 이제 알았어요. 그런데 막상 다른 지역 계정을 쓰려고 하면, 많은 사람이 가장 걱정하는 건 지역이 아니에요. 몇 년 동안 써 온 메인 계정에 문제가 생기지 않을까 하는 거예요. 사진과 연락처는 그 계정의 iCloud에 있고, 산 앱도 그 계정 명의로 되어 있으니까요.
 
-The next two lessons are about the two things that keep that main account safe. [Lesson 2](/ko/start/2-two-sign-ins/) explains that iCloud and the App Store are two separate sign-ins on your iPhone, and the other-region account goes only in the second one. [Lesson 3](/ko/start/3-new-account/) explains why making a second account is simpler than moving your main one to another region. Everything beyond the three lessons is there to look up when you need it.
+다음 두 레슨은 그 메인 계정을 지켜 주는 두 가지 이야기예요. [레슨 2](/ko/start/2-two-sign-ins/)에서는 iPhone에서 iCloud와 App Store가 서로 다른 로그인이고, 다른 지역 계정은 뒤쪽에만 넣는다는 걸 설명해요. [레슨 3](/ko/start/3-new-account/)에서는 메인 계정을 다른 지역으로 옮기는 것보다 계정을 하나 더 만드는 게 더 간단한 이유를 설명해요. 세 레슨 밖의 내용은 필요할 때 찾아보면 돼요.
 
-## If something's off
+## 뭔가 이상하다면
 
-<Q q="I don't know which region has the app I want.">
+<Q q="원하는 앱이 어느 지역에 있는지 모르겠어요.">
 
-The developer decides which countries or regions an app is released in, so an app missing from the China mainland store isn't necessarily in the US or Turkish one either ([App Store Connect Help](https://developer.apple.com/help/app-store-connect/manage-your-apps-availability/manage-availability-for-your-app-on-the-app-store)). The surest way is to check the app's own website or ask the developer, which is also what Apple suggests ([Availability of Apple Media Services](https://support.apple.com/en-us/118205)). Find out where the thing you want is offered before you choose a region; [step 0](/en/guide/0-why/) of the full guide is about exactly that.
-
-</Q>
-<Q q="I don't know which region my account is in right now.">
-
-See [Check which region an account is in](/en/howto/check-region/). It takes a few taps.
+앱을 어느 국가 또는 지역에 출시할지는 개발자가 정하니까, 중국 본토 가게에 없는 앱이라고 해서 미국이나 튀르키예 가게에 꼭 있는 건 아니에요([App Store Connect 도움말](https://developer.apple.com/help/app-store-connect/manage-your-apps-availability/manage-availability-for-your-app-on-the-app-store)). 가장 확실한 방법은 앱의 공식 웹사이트를 보거나 개발자에게 물어보는 거고, Apple도 그렇게 권해요([Apple 미디어 서비스 사용 가능 여부](https://support.apple.com/ko-kr/118205)). 지역을 고르기 전에 원하는 게 어디에서 제공되는지부터 알아보세요. 전체 가이드의 [0단계(영어)](/en/guide/0-why/)가 바로 그 이야기예요.
 
 </Q>
-<Q q="A tutorial says you can type in any address.">
+<Q q="내 계정이 지금 어느 지역인지 모르겠어요.">
 
-This site doesn't teach that. Your billing address has to match what your bank has on file, and the terms treat the account's region as where you live; both are covered above. If you come across that kind of tutorial, compare it with [Tutorials you shouldn't follow](/en/howto/bad-tutorials/).
-
-</Q>
-<Q q="I heard subscriptions are cheaper in some region, so I want to sign up there.">
-
-This site doesn't compare prices or say which region is cheaper. Developers and Apple set the prices, and they change: a developer can raise a subscription's price, some increases need your consent first and Apple contacts you by email or push notification to ask, and others only notify you ([App Store Connect Help](https://developer.apple.com/help/app-store-connect/manage-subscriptions/manage-pricing-for-auto-renewable-subscriptions)). So choose a region by the apps and services you'll actually use. [Step 5](/en/guide/5-subscriptions/) of the full guide covers subscriptions and price rises in detail.
+[계정이 어느 지역인지 확인하기(영어)](/en/howto/check-region/)를 보세요. 몇 번만 탭하면 알 수 있어요.
 
 </Q>
-<Q q="I'm going to move to the United States or Türkiye.">
+<Q q="주소는 아무거나 넣어도 된다는 가이드를 봤어요.">
 
-Then your Home Country changes. Apple's advice is that if you don't want to enter a payment method for the new country or region, you wait until you're physically there and then create a new Apple Account ([Change your Apple Account country or region](https://support.apple.com/en-us/118283)). If you'd rather move your current account over, there's quite a lot to clear first, and [lesson 3](/ko/start/3-new-account/) goes through it.
+이 사이트는 그렇게 가르치지 않아요. 청구 주소는 은행에 등록된 정보와 같아야 하고, 약관은 계정의 지역을 내가 사는 곳으로 봐요. 둘 다 위에서 설명했어요. 그런 가이드를 보면 [따라 하면 안 되는 가이드(영어)](/en/howto/bad-tutorials/)와 비교해 보세요.
 
 </Q>
-<Q q="Is this legal?">
+<Q q="어떤 지역은 구독이 싸다고 들어서 거기서 가입하고 싶어요.">
 
-This is a matter of the terms between you and Apple; this site explains what the terms say, and it isn't legal advice.
+이 사이트는 가격을 비교하거나 어느 지역이 싸다고 말하지 않아요. 가격은 개발자와 Apple이 정하고, 바뀌어요. 개발자는 구독 가격을 올릴 수 있는데, 어떤 인상은 먼저 내 동의가 필요해서 Apple이 이메일이나 푸시 알림으로 동의를 구하고, 어떤 인상은 알림만 와요([App Store Connect 도움말](https://developer.apple.com/help/app-store-connect/manage-subscriptions/manage-pricing-for-auto-renewable-subscriptions)). 그러니 지역은 실제로 쓸 앱과 서비스를 보고 고르세요. 구독과 가격 인상은 전체 가이드의 [5단계(영어)](/en/guide/5-subscriptions/)에서 자세히 다뤄요.
+
+</Q>
+<Q q="곧 미국이나 튀르키예로 이사할 예정이에요.">
+
+그렇다면 내 거주 국가가 바뀌는 거예요. Apple의 조언은, 새 국가 또는 지역의 결제 방법을 입력하고 싶지 않다면 실제로 그곳에 도착할 때까지 기다렸다가 새 Apple 계정을 만들라는 거예요([Apple 계정 국가 또는 지역 변경하기](https://support.apple.com/ko-kr/118283)). 지금 계정을 그대로 옮기고 싶다면 먼저 정리할 게 꽤 많은데, [레슨 3](/ko/start/3-new-account/)에서 하나씩 설명해요.
+
+</Q>
+<Q q="이거 불법은 아닌가요?">
+
+이건 나와 Apple 사이의 약관 문제예요. 이 사이트는 약관에 무엇이 쓰여 있는지 설명할 뿐이고, 법률 자문이 아니에요.
 
 </Q>

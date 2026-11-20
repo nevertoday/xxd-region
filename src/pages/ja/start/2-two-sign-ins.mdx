@@ -1,6 +1,6 @@
 ---
 layout: ../../../layouts/Lesson.astro
-tldr: "Your iPhone has two sign-ins: one for iCloud and most features, and Media & Purchases, which can use a different account. Keep your own account in iCloud, and sign the other-region account into Media & Purchases only."
+tldr: "iPhone には、サインインする場所がふたつあります。ひとつは iCloud とほとんどの機能のため、もうひとつは「メディアと購入」で、こちらは別のアカウントにできます。iCloud には自分のアカウントを入れたままにして、別の地域のアカウントは「メディアと購入」にだけサインインします。"
 lesson: 2
 ---
 import Callout from "../../../components/Callout.astro";
@@ -9,82 +9,82 @@ import Q from "../../../components/Q.astro";
 import Reply from "../../../components/Reply.astro";
 import Fig from "../../../components/Fig.astro";
 
-Your other-region account is ready, and you want that app right now. You open **Settings**, and there's your name at the top. You tap it, scroll all the way down, and find **Sign Out**. Sign out, sign in with the new account, that must be how you switch. Your thumb is already on it.
+別の地域のアカウントができて、あのアプリをいますぐ入れたい。**設定**を開くと、いちばん上に自分の名前があります。タップして一番下までスクロールすると、**サインアウト**がありました。いったんサインアウトして、新しいアカウントでサインインすれば切り替えられるはず。親指はもうボタンの上です。
 
-Hold on a second. That button signs you out of a lot more than the App Store.
+ちょっと待ってください。そのボタンでサインアウトするのは、App Store だけではありません。
 
-## Settings has two Sign Out buttons
+## 設定には「サインアウト」がふたつある
 
-Apple's article is clear about it: when you sign out of your <Term k="Apple 账户" /> on a device, you're automatically signed out of iCloud, the App Store and other Apple media services, iMessage and FaceTime. What's stored in iCloud stays in iCloud, but your iCloud data is removed from the device unless you choose to keep a copy when prompted ([Sign out of your Apple Account and iCloud on your devices](https://support.apple.com/en-us/104958)). All you wanted was a different store, and that one tap signs the whole phone out.
+Apple の記事は、はっきりこう書いています。デバイスで <Term k="Apple 账户" text="Apple Account" /> からサインアウトすると、iCloud、App Store、その他の Apple メディアサービス、iMessage、FaceTime からも自動的にサインアウトされます。iCloud に保存されている情報は iCloud に残りますが、確認画面でデータのコピーを残すことを選ばない限り、デバイスからは iCloud のデータが削除されます（[デバイスでApple AccountとiCloudからサインアウトする](https://support.apple.com/ja-jp/104958)）。お店を変えたかっただけなのに、そのワンタップでスマホ全体がサインアウトしてしまうのです。
 
-The other **Sign Out** lives under **Media & Purchases**. <Term k="媒体与购买项目" /> is the sign-in that the App Store, Music, Books and the other places you buy things use, and it can be a different account from iCloud. Apple describes this setup in its article on migrating purchases: the account signed in for iCloud and most features on your iPhone is the primary Apple Account, and the one signed in just for Media & Purchases is the <Term k="备选账户" /> ([Migrate purchases from one Apple Account to another Apple Account](https://support.apple.com/en-us/117294)).
+もうひとつの**サインアウト**は、**メディアと購入**の中にあります。<Term k="媒体与购买项目" text="メディアと購入" />は、App Store やミュージック、ブックなど、ものを買う場所が使うサインインで、iCloud とは別のアカウントにできます。Apple は、購入したアイテムの移行についての記事でこの使い方を説明しています。iPhone で iCloud とほとんどの機能のためにサインインしているアカウントがプライマリ Apple Account、「メディアと購入」でだけサインインしているアカウントが<Term k="备选账户" text="セカンダリApple Account" />です（[購入したアイテムを1つのApple Accountから別のApple Accountに移行する](https://support.apple.com/ja-jp/117294)）。
 
-So your iPhone really has two sign-ins, each doing its own job. The only one you need to switch is the one you buy things with.
+つまり iPhone には、それぞれ別の役目を持ったサインインがふたつあるのです。切り替える必要があるのは、ものを買うときに使うほうだけです。
 
-<mark><strong>iCloud always stays on your own account. The other-region account goes only under Media & Purchases, and switching it back and forth never touches iCloud.</strong></mark>
+<mark><strong>iCloud はいつも自分のアカウントのまま。別の地域のアカウントは「メディアと購入」にだけ入れるので、何度切り替えても iCloud には触れません。</strong></mark>
 
 <Fig id="l2-two-sign-outs" />
 
-## Switch only Media & Purchases
+## 切り替えるのは「メディアと購入」だけ
 
-The same Apple article gives the steps for switching ([Migrate purchases from one Apple Account to another Apple Account](https://support.apple.com/en-us/117294)):
+同じ Apple の記事に、切り替えの手順が書かれています（[購入したアイテムを1つのApple Accountから別のApple Accountに移行する](https://support.apple.com/ja-jp/117294)）。
 
-1. In **Settings**, tap your name.
-2. Tap **Media & Purchases**, then tap **Sign Out**.
-3. Once you're signed out, tap **Media & Purchases** again, choose **Not [your name]?**, and sign in with the other-region account.
+1. **設定**で、自分の名前をタップします。
+2. **メディアと購入**をタップし、**サインアウト**をタップします。
+3. サインアウトしたら、もう一度**メディアと購入**をタップし、**[あなたの名前]ではない場合**を選んで、別の地域のアカウントでサインインします。
 
 <Callout type="ok">
-Go back to **Settings** and tap your name. You're still at the top, and the other-region account shows under **Media & Purchases**. As Apple puts it, you'll see a different Apple Account displayed under Media & Purchases if you have a different account signed in for purchases.
+**設定**に戻って、自分の名前をタップします。いちばん上は自分のままで、**メディアと購入**の下には別の地域のアカウントが表示されています。Apple の言葉では、購入目的で別のアカウントでサインインしている場合は、「メディアと購入」の下に別の Apple Account が表示されます。
 </Callout>
 
-If what you see on your iPhone is different, go with what you see; button positions move between iOS versions. Switching back is the same route: sign the other-region account out of Media & Purchases, then sign in with your own. For a step-by-step walkthrough, see [Switch App Store accounts on your iPhone](/en/howto/switch-store/).
+あなたの iPhone で見えるものが違っていたら、見えているほうに合わせてください。iOS のバージョンによって、ボタンの位置は変わります。元に戻すときも同じ道順です。「メディアと購入」で別の地域のアカウントからサインアウトして、自分のアカウントでサインインし直します。手順をひとつずつ見たいなら、[iPhone で App Store のアカウントを切り替える（英語）](/en/howto/switch-store/)を見てください。
 
-## Two limits once you've switched
+## 切り替えたあとの、ふたつの制限
 
-The two sign-ins are separate, but the Media & Purchases seat holds one person at a time. Apple says: "You can’t sign in on the App Store and other media services with more than one Apple Account at the same time, or update the content you buy with a different Apple Account." ([Sign in to your Apple Account on the web or in your device settings](https://support.apple.com/en-us/111001)) So apps you downloaded with the other-region account need that account signed in when they update, and apps your main account bought need your main account back.
+サインインは別々になりましたが、「メディアと購入」の席に座れるのは一度にひとりだけです。Apple はこう書いています。「App Storeやその他のメディアサービスに複数のApple Accountで同時にサインインしたり、別のApple Accountで購入したコンテンツをアップデートしたりすることはできません。」（[Webまたはデバイスの「設定」でApple Accountにサインインする](https://support.apple.com/ja-jp/111001)）だから、別の地域のアカウントでダウンロードしたアプリをアップデートするにはそのアカウントでサインインしている必要があり、メインのアカウントで買ったアプリには、メインのアカウントに戻す必要があります。
 
-The second limit is about devices. An Apple Account used for purchases can have ten devices associated with it at a time, no more than five of them computers, and a device joins that list when you use it to buy something from the App Store. Apple also says that when you try to associate a device that was previously associated, you might see the message below, and you might need to wait up to 90 days to associate the device with a different Apple Account ([View and remove your devices that are associated with your Apple Account for purchases](https://support.apple.com/en-us/118412)):
+ふたつめの制限は、デバイスについてです。購入に使う Apple Account には、一度に十台までのデバイス（うちコンピュータは五台まで）を関連付けられます。App Store で何かを買うのにデバイスを使うと、そのデバイスがリストに加わります。さらに Apple によると、以前関連付けられていたデバイスを関連付けようとすると下のメッセージが表示されることがあり、そのデバイスを別の Apple Account に関連付けるまで、最長 90 日間待つ必要がある場合があります（[Apple Accountでの購入に関連付けられているデバイスを確認・削除する](https://support.apple.com/ja-jp/118412)）。
 
-<Reply code="This device is associated with another Apple Account. You cannot associate this device with another Apple Account for [number] days." />
+<Reply code="このデバイスはすでに他のApple Accountに関連付けられています。このデバイスは[日数]日間、他のApple Accountに関連付けることができません" />
 
-Apple says "might" and doesn't list when it will definitely happen. Apple's pages don't say; if you're unsure, ask Apple Support first.
+Apple は「場合があります」という書き方をしていて、必ずそうなるのがどんなときかは挙げていません。この点は Apple のページには書かれていないので、迷ったら先に Apple サポートに聞いてください。
 
-## Never put someone else's account in iCloud
+## ほかの人のアカウントは、iCloud には絶対に入れない
 
-Where does the other-region account come from? Someone will always offer: I've got a US account already, borrow it, just sign in.
+別の地域のアカウントは、どこで手に入れるのでしょう。決まって誰かがこう言ってきます。「米国のアカウントならもう持ってるから、貸してあげる。サインインするだけだよ」
 
-Wherever they tell you to sign in, the iCloud seat never takes someone else's account. Apple is direct about it: "Don't share an account with other people, even family members." Sharing an Apple Account means giving someone else access to all of your personal content ([Security and your Apple Account](https://support.apple.com/en-us/102614)).
+どこにサインインしろと言われても、iCloud の席にほかの人のアカウントを入れてはいけません。Apple ははっきり言っています。「ほかの人と (たとえ家族でも) アカウントを共有しないでください。」Apple Account をほかの人と共有すると、その人があなたの個人的なコンテンツを全部見られるようになります（[セキュリティと Apple Account](https://support.apple.com/ja-jp/102614)）。
 
-There's a bigger problem too. Apple doesn't cover this case directly, but going by how <Term k="激活锁" /> works: it turns on automatically when you set up Find My, Apple stores the signed-in Apple Account on its activation servers and links it to the device, and from then on that account's password is required before anyone can turn off Find My, erase the device, or reactivate it ([Activation Lock for iPhone and iPad](https://support.apple.com/en-us/108794)). So with someone else's account in your iPhone's iCloud and Find My on, the phone is tied to their account, and without their password you couldn't even erase your own phone. That's an inference, not something Apple says in so many words.
+もっと大きな問題もあります。Apple はこのケースを直接は取り上げていませんが、<Term k="激活锁" text="アクティベーションロック" />の仕組みから考えると、こうなります。アクティベーションロックは「探す」を設定すると自動的に有効になり、Apple はサインインしている Apple Account をアクティベーションサーバに保管して、デバイスに紐付けます。それ以降は、そのアカウントのパスワードを入力しない限り、誰も「探す」をオフにしたり、デバイスを消去したり、再アクティベートしたりできません（[iPhoneとiPadのアクティベーションロック](https://support.apple.com/ja-jp/108794)）。つまり、ほかの人のアカウントがあなたの iPhone の iCloud に入っていて「探す」がオンなら、そのスマホは相手のアカウントに紐付けられ、相手のパスワードがなければ、自分のスマホを消去することさえできません。これは推測で、Apple がそう言っているわけではありません。
 
-The account under Media & Purchases should be yours too. Apple's article on migrating purchases says neither account should be shared with anyone else ([Migrate purchases from one Apple Account to another Apple Account](https://support.apple.com/en-us/117294)). [Why you shouldn't sign in to an account someone gives you](/en/howto/shared-accounts/) goes into more detail.
+「メディアと購入」に入れるアカウントも、自分のものであるべきです。Apple は購入したアイテムの移行についての記事で、どちらのアカウントもほかの人とは共有できない、と書いています（[購入したアイテムを1つのApple Accountから別のApple Accountに移行する](https://support.apple.com/ja-jp/117294)）。くわしくは[人からもらったアカウントにサインインしてはいけない理由（英語）](/en/howto/shared-accounts/)を見てください。
 
-So the other-region account is best one you created yourself. Why a second account, and not your main one switched to the US? That's [lesson 3](/ja/start/3-new-account/).
+だから別の地域のアカウントは、自分で作ったものがいちばんです。では、なぜメインのアカウントを米国に変えるのではなく、もうひとつ作るのか。それが[レッスン 3](/ja/start/3-new-account/)の話です。
 
-## If something's off
+## 困ったときは
 
-<Q q="I already tapped Sign Out at the bottom of the page with my name.">
+<Q q="名前のページの一番下にある「サインアウト」を、もうタップしてしまった。">
 
-Don't panic. What's stored in iCloud stays in iCloud ([Sign out of your Apple Account and iCloud on your devices](https://support.apple.com/en-us/104958)). Sign back in with your own account: open **Settings**, tap **Apple Account** at the top, and enter your email address or phone number and password, plus the verification code if you're asked for one ([Sign in to your Apple Account on the web or in your device settings](https://support.apple.com/en-us/111001)). Apple also reminds you that not everything is backed up in iCloud, so check on anything that wasn't syncing. Once you're back in, follow the three steps above and switch only Media & Purchases.
-
-</Q>
-<Q q="I can't find where to switch accounts in the App Store.">
-
-Apple's steps for switching are in **Settings**, not in the App Store: Settings, then your name, then **Media & Purchases** ([Migrate purchases from one Apple Account to another Apple Account](https://support.apple.com/en-us/117294)). If what you see on your iPhone is different, go with what you see, or compare it with [Switch App Store accounts on your iPhone](/en/howto/switch-store/).
+あわてなくて大丈夫です。iCloud に保存されている情報は、iCloud に残っています（[デバイスでApple AccountとiCloudからサインアウトする](https://support.apple.com/ja-jp/104958)）。自分のアカウントでサインインし直しましょう。**設定**を開き、一番上の **Apple Account** をタップして、メールアドレスまたは電話番号とパスワードを入力し、確認コードを求められたらそれも入力します（[Webまたはデバイスの「設定」でApple Accountにサインインする](https://support.apple.com/ja-jp/111001)）。Apple は、すべてのデータが iCloud にバックアップされるわけではないとも注意しているので、同期されていなかったものがないか確かめてください。サインインし直したら、上の三つの手順で「メディアと購入」だけを切り替えます。
 
 </Q>
-<Q q="After switching back to my main account, some apps won't update.">
+<Q q="App Store の中に、アカウントを切り替える場所が見つからない。">
 
-Those apps were most likely downloaded with the other-region account. Apple says you can't update content you bought with a different Apple Account ([Sign in to your Apple Account on the web or in your device settings](https://support.apple.com/en-us/111001)). Switch Media & Purchases to the other-region account, update, then switch back.
-
-</Q>
-<Q q="It says “This device is associated with another Apple Account.”">
-
-That's the associated-devices limit. Apple says you might need to wait up to 90 days to associate the device with a different Apple Account ([View and remove your devices that are associated with your Apple Account for purchases](https://support.apple.com/en-us/118412)). Try again once the wait is up; if you're unsure, ask Apple Support first.
+Apple の切り替え手順は、App Store ではなく**設定**の中にあります。設定、自分の名前、**メディアと購入**の順です（[購入したアイテムを1つのApple Accountから別のApple Accountに移行する](https://support.apple.com/ja-jp/117294)）。あなたの iPhone で見えるものが違っていたら、見えているほうに合わせるか、[iPhone で App Store のアカウントを切り替える（英語）](/en/howto/switch-store/)と見比べてください。
 
 </Q>
-<Q q="Someone says I can borrow their account and sign in to iCloud to get apps.">
+<Q q="メインのアカウントに戻したら、アップデートできないアプリがある。">
 
-Don't. Downloading apps only needs Media & Purchases, not iCloud. On top of that, Apple says not to share an account with anyone, and someone else's account in iCloud brings Activation Lock into it, as the section "Never put someone else's account in iCloud" above explains. See also [Why you shouldn't sign in to an account someone gives you](/en/howto/shared-accounts/).
+そのアプリは、たぶん別の地域のアカウントでダウンロードしたものです。Apple によると、別の Apple Account で購入したコンテンツはアップデートできません（[Webまたはデバイスの「設定」でApple Accountにサインインする](https://support.apple.com/ja-jp/111001)）。「メディアと購入」を別の地域のアカウントに切り替えてアップデートし、それから戻してください。
+
+</Q>
+<Q q="「このデバイスはすでに他のApple Accountに関連付けられています」と表示された。">
+
+関連付けられるデバイスの制限です。Apple によると、そのデバイスを別の Apple Account に関連付けるまで、最長 90 日間待つ必要がある場合があります（[Apple Accountでの購入に関連付けられているデバイスを確認・削除する](https://support.apple.com/ja-jp/118412)）。待つ期間が過ぎたら、もう一度試してください。迷ったら、先に Apple サポートに聞いてください。
+
+</Q>
+<Q q="アカウントを貸すから、iCloud にサインインすればアプリが手に入る、と言われた。">
+
+やめておきましょう。アプリのダウンロードに必要なのは「メディアと購入」だけで、iCloud ではありません。それに Apple は誰ともアカウントを共有しないようにと言っていますし、ほかの人のアカウントを iCloud に入れると、アクティベーションロックの問題も絡んできます。上の「ほかの人のアカウントは、iCloud には絶対に入れない」で説明したとおりです。[人からもらったアカウントにサインインしてはいけない理由（英語）](/en/howto/shared-accounts/)も見てください。
 
 </Q>
