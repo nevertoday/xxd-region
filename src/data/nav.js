@@ -59,13 +59,13 @@ export const HOWTO = [
     { slug: "check-region", title: "看一眼账户现在是哪个地区", ready: false, en: { title: "Check which region an account is in" } },
   ]},
   { group: "出问题了", en: { group: "When things go wrong" }, items: [
-    { slug: "cannot-create", title: "提示「此时无法创建你的账户」", ready: false, en: { title: "\"Your account cannot be created at this time\"" } },
-    { slug: "purchase-failed", title: "购买被拒，或者说付款方式有问题", ready: false, en: { title: "A purchase is refused or your payment method has a problem" } },
-    { slug: "locked", title: "账户被锁定了", ready: false, en: { title: "Your account is locked" } },
+    { slug: "cannot-create", title: "提示「此时无法创建你的账户」", ready: true, en: { title: "\"Your account cannot be created at this time\"" } },
+    { slug: "purchase-failed", title: "购买被拒，或者说付款方式有问题", ready: true, en: { title: "A purchase is refused or your payment method has a problem" } },
+    { slug: "locked", title: "账户被锁定了", ready: true, en: { title: "Your account is locked" } },
   ]},
   { group: "避坑", en: { group: "Avoiding traps" }, items: [
-    { slug: "shared-accounts", title: "别人给的账户为什么不能登", ready: false, en: { title: "Why you shouldn't sign in to an account someone gives you" } },
-    { slug: "bad-tutorials", title: "哪些教程不该照做", ready: false, en: { title: "Tutorials you shouldn't follow" } },
+    { slug: "shared-accounts", title: "别人给的账户为什么不能登", ready: true, en: { title: "Why you shouldn't sign in to an account someone gives you" } },
+    { slug: "bad-tutorials", title: "哪些教程不该照做", ready: true, en: { title: "Tutorials you shouldn't follow" } },
   ]},
 ];
 export const howtoHref = (slug, lang = "zh") => link(`/howto/${slug}/`, lang);

@@ -300,7 +300,8 @@ zh-cn 把 Gift Card 统一译作“充值卡”（如“关于充值卡诈骗”
 4. **重新下载链接失效。** 三份条款都说可重新下载的内容类型见 HT204632，但这个链接现在跳到一篇没有该清单的文章。
 5. **家人共享规则的措辞。** 美国是 “must share the same Home Country”，中国大陆是“必须位于同一居住国家或地区”，土耳其是 “Yaşadığınız Ülkede bulunmalıdır”（直译为“必须在你的居住国家”）。意思接近，但土耳其版字面上说的是“在”这个国家，不是“同一个居住国家”。
 6. **年龄。** 中国大陆条款写 13 周岁（“或……相应最低年龄”），125666 写中国大陆 14 周岁以下要用儿童账户，GCBD 条款里也出现了“未满14周岁”。条款的括号让两者可以并存，但写作时应以 125666 的数字为准，并注明出处。
-7. **发布日期差距。** 111741 的 en-us 版是 2026-11-18，zh-cn 版是 2026-08-06；111001 的 en-us 版是 2026-11-12，zh-cn 版是 2026-02-23。美国、土耳其、中国大陆三地的付款方式在两个版本里一致。111001 里关于“媒体与购买项目”的那句话，两个版本也一致。
+7. **激活锁要什么才能解除。** [108794](https://support.apple.com/en-us/108794) 说关闭“查找”、抹掉或重新激活设备都要 Apple 账户密码；[108934](https://support.apple.com/en-us/108934) 说在设备上解除时，输入设置设备时用的 Apple 账户和密码，“or your device passcode”。写的时候以 108794 讲机制，以 108934 讲解除步骤，不把两句合成一句。
+8. **发布日期差距。** 111741 的 en-us 版是 2026-11-18，zh-cn 版是 2026-08-06；111001 的 en-us 版是 2026-11-12，zh-cn 版是 2026-02-23。美国、土耳其、中国大陆三地的付款方式在两个版本里一致。111001 里关于“媒体与购买项目”的那句话，两个版本也一致。
 
 ## 17. 需要浏览器检查
 
@@ -392,6 +393,7 @@ HT204316 → 108647；HT204034 → 108647；HT202631 → 111741；HT201266 → 1
 - 有未付款的订单时，“you might not be able to make purchases or download free apps until your balance is paid”（付款见 118284，未抓取）。
 - “If you're using an accepted payment method but your Apple Account is set to a different country or region, change your country or region.”
 - “Apple doesn't have information about why the payment method was declined.”要问发卡的金融机构；可能要让银行开通境外交易。
+- 看到 “Purchase Not Completed”：“If Apple detects suspicious purchase activity, you might need to submit a review request for your purchase.” 回到想买的项目，再买一次，看到提示时选 “Continue”，照屏幕提示提交审核；也可以在 [getsupport.apple.com](https://getsupport.apple.com/?caller=kbase) 提交。“Apple Support can't submit a review on your behalf or expedite the review process.”
 
 **请求退款**：[118223 en](https://support.apple.com/en-us/118223) / [zh](https://support.apple.com/zh-cn/118223)（en 发布于 2026-09-17）。旧链接 HT204084 跳到这里。
 
