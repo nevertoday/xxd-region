@@ -25,7 +25,7 @@ export default {
     navLabel: "Seitennavigation",
     start: "Start",
     home: "Startseite",
-    lessons: "Einsteigerkurs: hier anfangen",
+    lessons: "Einstiegskurs: hier anfangen",
     more: "Mehr (auf Englisch)",
     main: "Vollständige Anleitung: Schritt für Schritt",
     howto: "How-to: wie genau",
@@ -34,7 +34,7 @@ export default {
     toc: "Auf dieser Seite",
     tocLabel: "Auf dieser Seite",
     hintMain: "Vollständige Anleitung (Englisch)",
-    hintLesson: "Einsteigerkurs",
+    hintLesson: "Einstiegskurs",
     hintFaq: "Häufige Fragen (Englisch)",
     section: "Abschnitt",
     // 页脚里 {apple} 那个链接上的字
@@ -54,7 +54,7 @@ export default {
     // lead：前半句、荧光笔那一句、后半句
     lead: ["Für alle, die in Festlandchina leben und einen Apple Account für die USA oder die Türkei wollen: Die App, die dir jemand empfohlen hat, gibt es im App Store von Festlandchina nicht, oder der Dienst, den du willst, wird dort nicht angeboten. Diese Seite erklärt, was das Land oder die Region eines Accounts bestimmt, wie Apples eigene Abläufe für Registrierung, Zahlung und Regionswechsel funktionieren, wie du den App Store mit einem zweiten Account anmeldest, während iCloud bei dir bleibt, und was du bei Abos, Geschenkkarten und gesperrten Accounts tun kannst. ", "Das ist eine inoffizielle Open-Source-Anleitung", ", ohne Verbindung zu Apple; sie spricht nicht für Apple und ist keine Rechtsberatung."],
     cta: ["Neu hier? Fang hier an", "Zur vollständigen Anleitung (Englisch)"],
-    ctaNote: "Der Einsteigerkurs hat drei Lektionen: was die Region eines Accounts bestimmt, warum iCloud und der App Store zwei getrennte Anmeldungen sind und warum ein zweiter Account einfacher ist, als deinen Hauptaccount in eine andere Region umzuziehen.",
+    ctaNote: "Der Einstiegskurs hat drei Lektionen: was die Region eines Accounts bestimmt, warum iCloud und der App Store zwei getrennte Anmeldungen sind und warum ein zweiter Account einfacher ist, als deinen Hauptaccount in eine andere Region umzuziehen.",
     painH: "Kennst du das?",
     PAIN: [
       "Jemand hat dir eine App empfohlen, und egal, wie du suchst: In deinem App Store für Festlandchina ist sie nicht da.",
@@ -63,12 +63,12 @@ export default {
     ],
     lessonsH: "Für den Anfang reichen drei Lektionen",
     lessonsP: "Lies sie der Reihe nach, zusammen etwa 25 Minuten. Danach weißt du, was die Region eines Accounts bestimmt und was Apples Bedingungen dazu sagen, warum iCloud immer bei deinem eigenen Account bleibt, während der Account aus der anderen Region nur unter Medien & Käufe kommt, und warum ein zweiter Account einfacher ist, als deinen Hauptaccount umzuziehen. Alles andere auf der Seite kannst du nachschlagen, wenn du es brauchst.",
-    lessonsLabel: "Einsteigerkurs: 3 Lektionen",
+    lessonsLabel: "Einstiegskurs: 3 Lektionen",
     fitH: "Ist das was für dich?", yesH: "Ja, wenn", noH: "Das bringt dir diese Seite nicht bei",
     YES: ["Du wohnst in Festlandchina und hast deinen eigenen Apple Account für Festlandchina", "Du willst eine App oder einen Dienst, den es nur im Store der USA oder der Türkei gibt, und folgst gern Apples eigenen Abläufen", "Du willst die Regeln verstehen, bevor du entscheidest, ob du dich registrierst und wie du bezahlst"],
     NO: ["Konkrete Adressen oder wie man sich eine ausdenkt", "Netzwerk-Einrichtung: VPNs, Proxys, Nodes", "Geteilte Accounts oder gekaufte bzw. geliehene Accounts", "Tricks mit Preisunterschieden: Abos in „billigen Regionen“, Pläne aufteilen, Weiterverkauf"],
     tracksH: "Was diese Seite abdeckt",
-    tracksP: "Der Einsteigerkurs erklärt die Ideen; die vollständige Anleitung führt dich dann Schritt für Schritt hindurch.",
+    tracksP: "Der Einstiegskurs erklärt die Ideen; die vollständige Anleitung führt dich dann Schritt für Schritt hindurch.",
     // 完整教程只有英文和中文
     devNote: "Die vollständige Anleitung gibt es vorerst auf Englisch (und Chinesisch).",
     // TRACKS：每个是 [标题, 说明]，图标、顺序和对应的教程步骤固定（在 views/Home.astro 的 TRACK_BASE）
@@ -91,7 +91,7 @@ export default {
 
   // 一课的页面框架
   lesson: {
-    eyebrow: "Einsteigerkurs · Lektion {n} von {total}",
+    eyebrow: "Einstiegskurs · Lektion {n} von {total}",
     prog: "Fortschritt: Lektion {n} von {total}",
     nav: "Vorherige und nächste Lektion",
     prev: "Zurück",

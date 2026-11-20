@@ -33,7 +33,7 @@ Noch etwas vorweg. Apples Nutzungsbedingungen für die Mediendienste sagen, dass
 ## Drei Lektionen, eine Sache nach der anderen
 
 <p align="center">
-  <img src="assets/en/readme/lessons.svg" width="100%" alt="Die drei Lektionen des Einsteigerkurses (englische Beschriftung). Lektion 1: What an account's region decides, 8 Minuten; danach weißt du, was die Region bestimmt und was Apples Bedingungen über deinen Wohnsitz sagen. Lektion 2: iCloud and the App Store are two separate sign-ins, 8 Minuten; danach weißt du, dass iCloud bleibt und nur Media & Purchases wechselt. Lektion 3: Make a second account, leave your main one alone, 8 Minuten; danach weißt du, warum du deinen Hauptaccount in Ruhe lässt und einen zweiten erstellst.">
+  <img src="assets/en/readme/lessons.svg" width="100%" alt="Die drei Lektionen des Einstiegskurses (englische Beschriftung). Lektion 1: What an account's region decides, 8 Minuten; danach weißt du, was die Region bestimmt und was Apples Bedingungen über deinen Wohnsitz sagen. Lektion 2: iCloud and the App Store are two separate sign-ins, 8 Minuten; danach weißt du, dass iCloud bleibt und nur Media & Purchases wechselt. Lektion 3: Make a second account, leave your main one alone, 8 Minuten; danach weißt du, warum du deinen Hauptaccount in Ruhe lässt und einen zweiten erstellst.">
 </p>
 
 1. **[Was die Region eines Accounts bestimmt](https://region.xiaoxiaodong.ai/de/start/1-region/)**: das Sortiment des Stores, seine Währung und wie du bezahlst, und wie Apples Bedingungen die Region an deinen Wohnsitz knüpfen.
