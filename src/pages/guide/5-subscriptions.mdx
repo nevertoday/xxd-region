@@ -1,5 +1,67 @@
 ---
 layout: ../../layouts/Guide.astro
 step: 5
+need: 登着外区账户的 iPhone，或者能收到这个账户邮件的邮箱
+tldr: 订阅在「设置」→ 你的姓名 →「订阅」里看和取消。涨价分两种：一种 Apple 只通知你，一种要你同意，不同意就在原价的最后一期结束后到期；开发者也可以给老订阅者保留原价。土耳其的条款写明涨价至少提前 30 天发邮件，还可以联系 Apple 支持立即取消、按比例退款。换地区之前，先取消会挡住换区的订阅。
+description: 外区账户的订阅怎么管：在 iPhone 上查看和取消订阅，找不到订阅时怎么查是哪个账户买的；订阅涨价时 Apple 怎么通知你，哪些涨价要你同意，开发者为什么能给老订阅者保留原价；土耳其条款里的 30 天邮件通知和按比例退款；怎么申请退款；为什么换地区前要先取消订阅。
 ---
-{/* 待写：正文。写法见 docs/MAINTAINING.md 的「怎么写」和「硬规矩」，资料和出处在 docs/sources/README.md。 */}
+import Checkpoint from "../../components/Checkpoint.astro";
+import Term from "../../components/Term.astro";
+import Q from "../../components/Q.astro";
+
+某天早上，你的邮箱里多了一封 Apple 发来的邮件，说你订阅的一项服务要涨价了。你去问一起用这个 App 的朋友，他说自己没收到，续费页上还是原来的价格。同一个 App、同一个地区，怎么两个人不一样？
+
+2026 年 6 月，X 上就有不少人在问这件事。有网友说土区 iOS 上的 ChatGPT Plus 涨到了 999.99 里拉（[@st7evechou](https://x.com/st7evechou/status/2064866774106218518)），也有老订阅者说，自己续费显示的还是原来的价格（[@ainotes_KK](https://x.com/ainotes_KK/status/2064954319586398536)）。两种说法都可能是真的，下面讲为什么。
+
+<mark><strong>订阅的价格不是定死的，开发者和 Apple 都会调价。涨价时 Apple 会先告诉你，有的涨价还要你点同意；接不接受、要不要取消，由你决定。</strong></mark>
+
+## 订阅在哪里看、怎么取消
+
+在 iPhone 上：在「**设置**」中轻点你的姓名，轻点「**订阅**」，再轻点要取消的那一项，轻点「**取消订阅**」，这个按钮可能要往下滚动才看得到。要是没有取消按钮，或者看到一行红字写着到期信息，就说明它已经取消了（[取消 Apple 提供的订阅](https://support.apple.com/zh-cn/118428)）。
+
+你手上有两个账户，这里很容易找错地方。找不到要取消的订阅时，Apple 的办法是在邮箱里搜“Apple 提供的收据”或“Apple 提供的发票”，看收据上写的是哪个 <Term k="Apple 账户" />；是你用的另一个账户，就登录那个账户去取消。
+
+同一篇还有两条：试用期的订阅不想续，至少在试用期结束前 24 小时取消；德国、以色列、南非和土耳其的取消规则有些特殊情况，土耳其的那部分下面会讲。
+
+## 涨价时，Apple 怎么通知你
+
+订阅涨价的规则，Apple 写在给开发者的 App Store Connect 帮助里。涨价分两种（[App Store Connect 帮助：管理自动续期订阅的价格](https://developer.apple.com/help/app-store-connect/manage-subscriptions/manage-pricing-for-auto-renewable-subscriptions)）。
+
+一种只通知、不用你同意。Apple 会在下次续订前 27 天或 7 天，通过邮件和推送通知告诉你新价格，到时候就按新价续订。
+
+另一种要你同意。比如你所在的地区法律要求任何涨价都要同意，涨幅超过了 Apple 定的门槛，或者这项订阅 12 个月内已经涨过一次，Apple 就会用邮件或推送通知来问你。你不同意，或者一直不理，Apple 大约每周再问一次；到按新价第一次续订之前你还没同意，订阅就会在原价的最后一个续订周期结束时到期。
+
+那为什么朋友没涨？因为开发者可以选择给老订阅者保留原价，同一篇帮助写着“You also have the option to preserve prices for existing subscribers”。开发者选了保留，老订阅者续费还是原价，新订阅的人按新价；没选，老订阅者就照上面两种方式之一收到通知。开头那两位网友说法不一样，和这条规则对得上，有网友在 X 上也是这么解释的（[@koffuxu](https://x.com/koffuxu/status/2064965284822458653)）。
+
+Apple 自己的订阅也会调价。有网友在 X 上说，2025 年 8 月土区 iCloud+ 2 TB 从每月 249.99 里拉涨到了 399.99 里拉（[@landiantech](https://x.com/landiantech/status/1958721244058329528)）；截至 2026-11-19，Apple 的 iCloud+ 价格页上，土耳其 2 TB 是每月 549.99 里拉，含税（[iCloud+ 方案和定价](https://support.apple.com/zh-cn/108047)）。今天的价格，过一阵可能又不一样了。
+
+## 土耳其的条款多写了两条
+
+土耳其的 Apple 媒体服务条款在订阅一节里写得更细（[Apple 媒体服务条款，土耳其](https://www.apple.com/tr/legal/internet-services/itunes/tr/terms.html)）：
+
+- 订阅要涨价，Apple 至少提前 30 天发邮件通知你。你不接受新价格，可以在涨价生效之前免费取消；要你明确同意的涨价，邮件里会问你，你不同意，订阅会在涨价生效前的最后一天自动取消。
+- 在账户设置里取消，到这个计费周期结束时生效；你也可以随时联系 Apple 支持，要求立即取消，并按比例退回费用。
+
+## 退款
+
+买了不该买的，或者被扣了一笔不想要的订阅费，可以在 `reportaproblem.apple.com` 上申请：登录以后轻点「**我需要**」，选「**请求退款**」，选原因，轻点「**下一步**」，再选那个 App、订阅或项目，轻点「**提交**」。一般 24 到 48 小时内会有回音。找不到那笔扣费的话，在邮箱里搜 Apple 的收据，看是哪个账户买的；你有几个账户，就分别登录去找。Apple 也写明了，退款资格可能因国家或地区而异（[针对从 Apple 购买的 App 或内容请求退款](https://support.apple.com/zh-cn/118223)）。
+
+## 换地区之前，先取消订阅
+
+哪天你想给这个账户换地区，订阅是要先处理的一件事。Apple 的要求是，取消会阻止更改<Term k="国家或地区" />的订阅，然后等到订阅期结束（[更改 Apple 账户国家或地区](https://support.apple.com/zh-cn/118283)）。所以换区不是今天想换、今天就能换，先算好订阅什么时候到期。完整的准备清单见[把已有账户换到别的地区](/howto/change-region/)。
+
+收到涨价邮件以后具体怎么做，见[订阅涨价了怎么办](/howto/price-rise/)。下一步讲最后一件事：账户被锁、购买被拒时找谁。
+
+## 卡住了？
+
+<Q q="「订阅」里找不到我要取消的那一项。">
+<p>它可能是用你的另一个账户订的。在邮箱里搜“Apple 提供的收据”，看收据上是哪个 Apple 账户，登录那个账户再取消。没有 Apple 的收据，可能是从别的公司订的，看你的银行或信用卡账单是谁扣的款（<a href="https://support.apple.com/zh-cn/118428">118428</a>）。</p>
+</Q>
+<Q q="涨价邮件要我同意，我不想同意。">
+<p>不用做什么。按 Apple 写给开发者的规则，你不同意，订阅会在原价的最后一个续订周期结束时到期（<a href="https://developer.apple.com/help/app-store-connect/manage-subscriptions/manage-pricing-for-auto-renewable-subscriptions">App Store Connect 帮助</a>）。到期前你仍可以随时在「订阅」里取消。</p>
+</Q>
+<Q q="我的土区订阅想今天就停，钱能退吗？">
+<p>土耳其的条款写着，可以随时联系 Apple 支持立即取消，并按比例退回费用（<a href="https://www.apple.com/tr/legal/internet-services/itunes/tr/terms.html">土耳其条款</a>）。也可以在 reportaproblem.apple.com 上申请退款，Apple 说退款资格可能因国家或地区而异（<a href="https://support.apple.com/zh-cn/118223">118223</a>）。</p>
+</Q>
+
+<Checkpoint id="s5" items={["我知道在「设置」→ 我的姓名 →「订阅」里查看和取消订阅", "我知道涨价有只通知和要同意两种，开发者也可以给老订阅者保留原价", "换地区之前，我会先取消订阅，等它到期"]} />

@@ -1,5 +1,76 @@
 ---
 layout: ../../../layouts/Guide.astro
 step: 6
+need: "Your account's email address, phone number and password"
+tldr: "If the account is locked or disabled, or a purchase says Purchase Not Completed, follow the path in Apple's support articles to recover it or request a review. Never give anyone your password or codes; Apple will never ask for them. Don't share the account with anyone, and never put someone else's account in iCloud."
+description: "Who to ask when an account in another region has a problem: what to do about \"disabled for security reasons\", \"locked or not active\" and \"Your Media & Purchases account has been disabled\"; requesting a review after Purchase Not Completed; how two-factor authentication and trusted phone numbers protect the account; why you don't share accounts or codes; what Activation Lock means for signing in to iCloud with someone else's account; gift card scams."
 ---
-{/* 待写 TBD: body. See docs/MAINTAINING.md (voice and hard rules); facts and their links are in docs/sources/README.md. */}
+import Callout from "../../../components/Callout.astro";
+import Checkpoint from "../../../components/Checkpoint.astro";
+import Term from "../../../components/Term.astro";
+import Q from "../../../components/Q.astro";
+
+One user on X posted a single line: "My Türkiye account got locked, what do I do?" ([@jaywcjlove](https://x.com/jaywcjlove/status/2054082597798740363), in Chinese). That's probably the most unnerving moment with an account in another region. You've signed up, set up payment and downloaded what you wanted, and one day it tells you the account is locked. Suddenly there are fixes everywhere online. Someone says an email will sort it out, and someone else offers to "unlock" it for you if you just send them your password and code.
+
+<mark><strong>When the account has a problem, the only one who can help is Apple, so follow the path in its support articles to recover it. Never give anyone your password or codes, and never put someone else's account in iCloud.</strong></mark>
+
+## First, work out which message you're seeing
+
+Apple splits "can't sign in" into three situations, each with its own fix ([If your Apple Account is locked, not active, or disabled](https://support.apple.com/en-us/102640)).
+
+| The message you see | What to do |
+| --- | --- |
+| Disabled or locked for security reasons, such as "This Apple Account has been disabled for security reasons" | Reset your password. Apple says this can happen when you or someone else entered your password or other account information incorrectly too many times, and the account locked itself to protect you |
+| Your Apple Account is locked or not active | Tap **Request Access** right in the alert, or request access at `iforgot.apple.com/unlock` |
+| "Your Media & Purchases account has been disabled" | Tap **Continue** in the alert to request reactivation, or use the request link in 102640 |
+
+After you request access, you might see "This Apple Account is locked and can't be used," or the request might be denied. Apple then gives two options: create a new <Term k="Apple 账户" />, or, if you need help removing <Term k="激活锁" /> and have proof of purchase, start an Activation Lock support request. There's more in [Your account is locked](/en/howto/locked/).
+
+<Callout type="no">
+If someone offers to "unlock" your account and asks for your password or a code, don't give it. Apple says never to give anyone your Apple Account password, verification codes, device passcode, recovery key or other security details, and that Apple itself will never ask you for them (<a href="https://support.apple.com/en-us/102614">Security and your Apple Account</a>).
+</Callout>
+
+## When a purchase says Purchase Not Completed
+
+Sometimes you can sign in fine but a purchase gets stopped. Apple says that if it detects suspicious purchase activity, you might need to submit a review request: go back to the item, try to buy it again, choose **Continue** when you see the Purchase Not Completed message, and follow the onscreen instructions to submit a review. Apple Support can't submit it for you or speed it up ([If your payment method is declined in the App Store](https://support.apple.com/en-us/108095)).
+
+One user on X shared that their new account tried to buy something right after adding funds, got a "Your Purchase Could Not Be Completed" message, and had it sorted out by contacting Apple Support ([@HughWalker618](https://x.com/HughWalker618/status/2080547506900066689)). That's one person's experience; go by what Apple tells you. Other payment problems are in [A purchase is refused or your payment method has a problem](/en/howto/purchase-failed/).
+
+## Two things that guard the account
+
+One is <Term k="双重认证" />. With it on, nobody can get into your account even if they know your password ([Two-factor authentication for Apple Account](https://support.apple.com/en-us/102660)). The other is your <Term k="受信任电话号码" />. [Step 1](/en/guide/1-prepare/) explained why it should be a number where you can always get codes, ideally with a second one that isn't on that iPhone. If you lose access to both, the only way back is account recovery, which Apple says can take a few days or longer, and contacting Apple can't speed it up ([About trusted phone numbers and trusted devices](https://support.apple.com/en-us/122621)).
+
+When something changes on your account, like signing in on a new device for the first time or changing the password, Apple tells you by email, text or notification. If you get one and don't remember making the change, someone else may have got into your account, and Apple says to change your password right away ([102614](https://support.apple.com/en-us/102614)).
+
+## The account is yours alone
+
+Apple says not to share an account with other people, even family members, because sharing it gives someone else access to all of your personal content, and that if someone else helped you set up your Apple Account and password, you should change the password ([102614](https://support.apple.com/en-us/102614)). So don't use an other-region account that someone lends you, sells you or "shares" with you. [Why you shouldn't sign in to an account someone gives you](/en/howto/shared-accounts/) explains why.
+
+Above all, never sign someone else's account in to iCloud. Apple doesn't cover this situation specifically, but here's how Activation Lock works: it turns on automatically when you set up Find My, Apple links the signed-in Apple Account to your device, and from then on that account's password is needed before anyone can turn off Find My, erase the device, or reactivate and use it ([Activation Lock for iPhone and iPad](https://support.apple.com/en-us/108794)). Following that mechanism through, if you sign in to iCloud with someone else's account and Find My is on, the phone ends up linked to their account, and turning off Find My, erasing it or reactivating it would all need their password. That's why this guide only ever signs the other-region account in under <Term k="媒体与购买项目" />.
+
+## Watch out for gift card scams
+
+Apple <Term k="充值卡" text="gift cards" /> can only be used for Apple's products and services. If someone asks you to pay with gift cards for something Apple doesn't sell, such as a bill or a tax payment, you might be the target of a scam, and the numbers on the back of a card shouldn't go to anyone you don't know well or haven't met. Scams tend to follow a pattern: they contact you by call, text, email or social media, create panic and urgency, ask you to pay with gift cards, walk you through buying them step by step, and then demand the redemption codes. If you think you've been scammed, contact Apple Support ([About gift card scams](https://support.apple.com/en-us/120933)).
+
+## Where to reach Apple
+
+For account and purchase problems, the way in is always Apple's own site: for a locked account, **Request Access** in the alert or `iforgot.apple.com/unlock`; for refunds, `reportaproblem.apple.com` (covered in [step 5](/en/guide/5-subscriptions/)); for anything else, Apple Support at `getsupport.apple.com`, where you describe what's happening and it suggests what to do next ([Manage and use your Apple Account](https://support.apple.com/en-us/105023)).
+
+That's the full guide. You worked out what you wanted the account for, created it with your own email address and phone number, set up payment, signed it in under Media & Purchases only, learned what happens when a subscription's price goes up, and know who to ask when something goes wrong. When a specific problem comes up later, look it up in the How-to section.
+
+## Stuck?
+
+<Q q="Someone online says a locked account just needs an email appeal.">
+<p>One user on X did say that (<a href="https://x.com/berryxia/status/2068879059342475395">@berryxia</a>), and it's their experience. The path Apple itself documents is Request Access in the alert or iforgot.apple.com/unlock (<a href="https://support.apple.com/en-us/102640">102640</a>), so start there.</p>
+</Q>
+<Q q="My request for access was denied.">
+<p>Apple gives two options: create a new Apple Account, or, if you need help removing Activation Lock and have proof of purchase, start an Activation Lock support request (<a href="https://support.apple.com/en-us/102640">102640</a>).</p>
+</Q>
+<Q q="A friend has a US account with apps already bought and says I can borrow it.">
+<p>Apple says not to share an account with anyone, even family (<a href="https://support.apple.com/en-us/102614">102614</a>). Above all, don't sign it in to iCloud, for the reason in the Activation Lock section above; see also <a href="/en/howto/shared-accounts/">Why you shouldn't sign in to an account someone gives you</a>.</p>
+</Q>
+<Q q="I sent a verification code to someone who said they were support.">
+<p>Apple says it will never ask you for a verification code. If you think someone may have got into your account, Apple says to change your password right away (<a href="https://support.apple.com/en-us/102614">102614</a>).</p>
+</Q>
+
+<Checkpoint id="s6" items={["I know what to do about each of the three locked or disabled messages", "I don't give anyone my password or codes, and I don't use other people's accounts", "The other-region account is signed in under Media & Purchases only, and iCloud is always my own"]} />

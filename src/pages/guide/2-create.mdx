@@ -1,5 +1,94 @@
 ---
 layout: ../../layouts/Guide.astro
 step: 2
+need: 第 1 步准备好的邮箱和手机号
+tldr: 在网页（account.apple.com）、iPhone 的 App Store 或 Mac 的系统设置里注册都行，Apple 三条路都写了步骤。注册时选的国家或地区，就是这个账户的地区。网页上注册没有付款方式这一步；在你天天用的 iPhone 上，别为了注册去退出 iCloud。
+description: 照 Apple 的步骤注册一个新的 Apple 账户：网页、iPhone 的 App Store、Mac 三种方式各按哪几个按钮，哪一步选国家或地区，为什么在登着自己 iCloud 的 iPhone 上改用网页注册；提示「此时无法创建你的账户」或「已激活了最大数目的免费账户」时 Apple 怎么说。
 ---
-{/* 待写：正文。写法见 docs/MAINTAINING.md 的「怎么写」和「硬规矩」，资料和出处在 docs/sources/README.md。 */}
+import Callout from "../../components/Callout.astro";
+import Checkpoint from "../../components/Checkpoint.astro";
+import Tabs from "../../components/Tabs.astro";
+import Term from "../../components/Term.astro";
+import Q from "../../components/Q.astro";
+
+你拿起天天用的那台 iPhone，打开 App Store，轻点屏幕顶部的头像，想找“创建新 Apple 账户”，却怎么也找不到。去查 Apple 的说明，它说没看到这个选项的话，要确保你已经退出登录 iCloud。可这台手机上登着的，是你所有的照片、通讯录和聊天记录。
+
+先别急着退出。注册<Term k="Apple 账户" />不只一条路，Apple 在[如何创建新的 Apple 账户](https://support.apple.com/zh-cn/108647)里写了好几种，网页上注册就不用碰你手机上的任何东西。真正要小心的，是注册时选<Term k="国家或地区" />的那一下。
+
+<mark><strong>注册时选的那个国家或地区，就是这个账户的地区。它决定你以后进的是哪个地区的商店、能用哪些付款方式，所以这一下要选你在第 0 步想好的那个地区。</strong></mark>
+
+按 Apple 媒体服务条款，你在哪个国家或地区创建账户，就等于把它指定为你的<Term k="居住国家或地区" />，这条规则新手入门的[第 1 课](/start/1-region/)讲得完整。美区、土区各自要注意的地方，分别见[注册一个美区 Apple 账户](/howto/us-account/)和[注册一个土区 Apple 账户](/howto/tr-account/)。
+
+## 选一种方式注册
+
+下面三种方式的按钮名都照 Apple 文章里的字写。Apple 的页面改版以后，你看到的可能不完全一样，以你看到的为准。
+
+<Tabs id="create" items={[["web", "网页"], ["iphone", "iPhone"], ["mac", "Mac"]]}>
+<div slot="web">
+
+在浏览器里打开 <code>account.apple.com</code>，点按「**创建你的 Apple 账户**」，然后照屏幕上的步骤来：
+
+1. 填邮箱，设一个强密码，再选地区。Apple 网页版的步骤把这一项叫作设备地区，你选的仍然是一个国家或地区，比如美国或者土耳其。
+2. 输入你的生日，和一个随时都能用的电话号码。
+3. 想收 Apple 的新闻邮件就勾上订阅的方框，不想收就空着。
+4. 点按「**继续**」，再照屏幕上的步骤验证你的邮箱和手机号。
+
+网页上的步骤里没有付款方式这一步。所以注册完以后，第一次登录 App Store 时，系统可能会让你添加付款信息（[在网页上或设备设置中登录 Apple 账户](https://support.apple.com/zh-cn/111001)），[第 3 步](/guide/3-payment/)讲到时怎么选。
+
+</div>
+<div slot="iphone">
+
+打开 App Store，轻点「**我的账户**」按钮，再轻点「**创建新 Apple 账户**」，然后：
+
+1. 照屏幕上的步骤填邮箱，设一个强密码，并设置国家或地区。
+2. 输入付款方式和账单信息，然后轻点「**下一步**」。这里也可以选「**无**」，Apple 说你不购买就不会收费。
+3. 确认你的电话号码，轻点「**下一步**」。
+4. 去邮箱里找 Apple 发来的验证邮件，验证你的电子邮件地址。
+
+<Callout type="warn">
+要是没看到「创建新 Apple 账户」，Apple 的说法是要先退出 iCloud。在登着你自己账户的 iPhone 上别这么做：在「设置」里退出 Apple 账户，会同时退出 iCloud、App Store、iMessage 信息和 FaceTime 通话，你不选保留副本的话，iCloud 里的数据还会从这台手机上移除（<a href="https://support.apple.com/zh-cn/104958">在你的设备上退出登录 Apple 账户和 iCloud</a>）。改用网页注册就行。
+</Callout>
+
+</div>
+<div slot="mac">
+
+在 Mac 上选取苹果菜单，点按「**系统设置**」，在边栏里点按「**登录**」，再点按「**没有账户？**」，然后：
+
+1. 照屏幕上的步骤输入生日，填邮箱，设一个强密码，并设置国家或地区。
+2. 输入付款方式和账单信息，然后点按「**继续**」。这里也可以选「**无**」。
+3. 确认你的电话号码，点按「**下一步**」。
+4. 去邮箱里找 Apple 发来的验证邮件，验证你的电子邮件地址。
+
+要是这台 Mac 已经登着你自己的账户，边栏里看不到「登录」，也别为了注册去退出它，道理和 iPhone 一样，改在网页上注册。
+
+</div>
+</Tabs>
+
+<Callout type="ok">
+Apple 发来的验证邮件到了你的邮箱，验证完以后，这个新账户就能登录 App Store 和其他 Apple 服务了。
+</Callout>
+
+## 注册不成功的时候
+
+最常见的提示是「此时无法创建你的账户」。Apple 给的建议是换一种方式注册：有 Apple 设备就在设备上注册，用 Windows 电脑或安卓设备的就到 account.apple.com 上注册；再把系统和 App 更新到最新，过一会儿再试。在装着最新软件的设备上，第一个账户仍然注册不了，Apple 让你去它的支持网站获取建议（[如果你无法创建 Apple 账户](https://support.apple.com/zh-cn/120636)）。更细的办法见[提示「此时无法创建你的账户」](/howto/cannot-create/)。
+
+另一种提示是「已激活了最大数目的免费账户」。它的意思是，一年里在同一台设备上设置为与 iCloud 搭配使用的账户，已经超过了上限；比如在今年已经创建过别的账户的设备上，又在「设置」里创建账户，就可能看到它（[如果你看到“已激活了最大数目的免费账户”](https://support.apple.com/zh-cn/101661)）。上限是几个，Apple 没有给数字，这一点 Apple 的页面没有写明，拿不准就先问 Apple 支持。
+
+账户注册好了，下一步给它配上付款方式，看看什么时候能选「无」、礼品卡和银行卡各要注意什么。
+
+## 卡住了？
+
+<Q q="App Store 里找不到「创建新 Apple 账户」。">
+<p>Apple 说这时要先退出 iCloud（<a href="https://support.apple.com/zh-cn/108647">如何创建新的 Apple 账户</a>）。手机上登着你自己的 iCloud，就别退出，改到 <code>account.apple.com</code> 上注册，步骤见上面的「网页」。</p>
+</Q>
+<Q q="一直提示「此时无法创建你的账户」。">
+<p>先照 Apple 的建议换一种方式、更新软件、稍后再试（<a href="https://support.apple.com/zh-cn/120636">120636</a>）。有网友在 X 上分享，他联系了 Apple 在线支持，报出注册不了的那个邮箱，之后用同一个邮箱就注册成功了（<a href="https://x.com/alin_zone/status/2118312466467979410">@alin_zone</a>）。这是他个人的经历，具体以 Apple 支持的答复为准，见<a href="/howto/cannot-create/">提示「此时无法创建你的账户」</a>。</p>
+</Q>
+<Q q="国家或地区选错了。">
+<p>账户的地区可以改，步骤见<a href="/howto/change-region/">把已有账户换到别的地区</a>。改的时候，Apple 可能会要你填新地区的有效付款方式（<a href="https://support.apple.com/zh-cn/118283">更改 Apple 账户国家或地区</a>）。</p>
+</Q>
+<Q q="昨天注册好的外区账户，今天看变成了国区。">
+<p>有网友在 X 上也遇到过：昨天注册的美区账户，第二天登录变成了国区（<a href="https://x.com/EvanWritesX/status/2059180529086529883">@EvanWritesX</a>）。Apple 的页面没有讲过这种情况。先照<a href="/howto/check-region/">看一眼账户现在是哪个地区</a>确认一下，地区确实不是你注册时选的，就问 Apple 支持。</p>
+</Q>
+
+<Checkpoint id="s2" items={["我用网页、iPhone 或 Mac 注册好了账户，邮箱和手机号都验证过了", "我注册时选的是第 0 步想好的那个国家或地区", "我没有为了注册去退出手机上自己的 iCloud"]} />

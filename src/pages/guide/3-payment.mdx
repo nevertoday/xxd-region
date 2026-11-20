@@ -1,5 +1,82 @@
 ---
 layout: ../../layouts/Guide.astro
 step: 3
+need: 第 2 步注册好的账户
+tldr: 每个地区收哪些付款方式，Apple 列了一张清单。注册时可以选「无」，可有订阅、欠款或者开着家人共享的购买项目共享时，至少要留一种付款方式。礼品卡只能用在买它的那个国家或地区的账户上，条款不许转卖。加银行卡时，姓名和账单地址要和你在银行留的资料一致。
+description: 外区 Apple 账户的付款方式：美国、土耳其、中国大陆各收哪些（Apple 的付款方式清单）；注册时什么时候能选「无」，什么时候必须留一种付款方式，为什么免费 App 也可能要付款方式；礼品卡只能用在买它的国家或地区，不得转卖，Apple 怀疑卡来路不正时能做什么；Apple Store 礼品卡不能用在 App Store 和 iCloud+；银行卡的账单资料要和银行一致；礼品卡诈骗。
 ---
-{/* 待写：正文。写法见 docs/MAINTAINING.md 的「怎么写」和「硬规矩」，资料和出处在 docs/sources/README.md。 */}
+import Callout from "../../components/Callout.astro";
+import Checkpoint from "../../components/Checkpoint.astro";
+import Term from "../../components/Term.astro";
+import Q from "../../components/Q.astro";
+
+有网友在 X 上分享过他注册土区账户时踩的坑：买礼品卡时没留意，买成了美区的，结果土区的账户兑换不了（[@zzgo_sh](https://x.com/zzgo_sh/status/1993977418630185424)）。卡是真卡，钱也花了，就是用不上。这不是他运气不好，Apple 的条款本来就是这么写的。
+
+<mark><strong>付款方式要和账户对得上：这个地区收什么，Apple 列了清单；礼品卡只认买它的那个国家或地区；银行卡的账单资料要和你在银行留的一致。三样里有一样对不上，买东西就会卡住。</strong></mark>
+
+这一步先看清单，再讲「无」、礼品卡和银行卡各自要注意什么。
+
+## 先看这个地区收什么
+
+一个<Term k="Apple 账户" />能用哪些付款方式，看它属于哪个<Term k="国家或地区" />。Apple 在[可与 Apple 账户搭配使用的付款方式](https://support.apple.com/zh-cn/111741)里按国家或地区列了清单，并且说付款方式可能会发生变化。三个地区是这样的：
+
+| 国家或地区 | Apple 列出的付款方式 |
+| --- | --- |
+| 美国 | Apple 账户余额（兑换 Apple Gift Card 或充值）、Apple Card、Apple Cash、Apple Pay、大多数信用卡和借记卡、PayPal |
+| 土耳其 | Apple 账户余额（兑换 App Store 与 iTunes 充值卡或充值）、手机账单支付（Paycell、Türk Telekom Mobil Ödeme、Vodafone Mobil Ödeme）、大多数信用卡和借记卡 |
+| 中国大陆 | 支付宝、Apple 账户余额（App Store 充值卡或充值）、抖音支付、大多数信用卡和借记卡、微信支付 |
+
+你会发现，中国大陆那一栏里的支付宝、微信支付，另外两个地区都没有。<Term k="Apple 账户余额" />三个地区都有，它来自兑换礼品卡或者充值。Apple 扣费时会先试着用余额付，不够再扣你的主要付款方式；不过同一篇也写着，某些订阅费用可能不会从余额里扣（[Apple 的 App、内容和订阅如何扣费](https://support.apple.com/zh-cn/118244)）。
+
+## 「无」：什么时候能选，什么时候不行
+
+在 iPhone 的 App Store 和 Mac 上注册时，填付款方式那一步可以选「**无**」，Apple 说你不购买就不会收费；在网页上注册，步骤里干脆没有付款方式这一步（[如何创建新的 Apple 账户](https://support.apple.com/zh-cn/108647)）。可“现在不填”不等于“一直不用填”。
+
+有几种情况，账户里必须至少留一种付款方式：你有 iCloud+ 这类订阅、有没付清的欠款，或者你是<Term k="家人共享" />的组织者并开着购买项目共享（[从 Apple 账户中移除付款方式](https://support.apple.com/zh-cn/118291)）。另外，下载或更新某些免费 App，也可能要一种付款方式（[为你的 Apple 账户添加付款方式](https://support.apple.com/zh-cn/118429)）；有没付款的订单时，结清以前你可能连免费 App 都下载不了（[如果你的付款方式被拒绝](https://support.apple.com/zh-cn/108095)）。
+
+<Callout type="warn">
+「无」什么时候不会出现，Apple 只列了上面那几种必须留付款方式的情况，没有说别的。这一点 Apple 的页面没有写明，拿不准就先问 Apple 支持。
+</Callout>
+
+## 礼品卡：只认买它的那个国家或地区
+
+礼品卡，Apple 的中文页面叫<Term k="充值卡" />，兑换以后变成账户余额。关于它，条款里有三件事要先知道。
+
+第一，它只能用在买它的那个国家或地区的账户上。美国的条款写着，在美国买的卡只能关联美国的账户、只能在美国消费（[Apple Gift Card 条款，美国](https://www.apple.com/legal/internet-services/itunes/giftcards/us/terms.html)）；土耳其的条款也写着，在土耳其买的余额和兑换码只能用在土耳其的账户上（[App Store Kartları 条款，土耳其](https://www.apple.com/legal/internet-services/itunes/giftcards/tr/terms.html)）。开头那位网友的美区卡进不了土区账户，和条款写的一致。
+
+第二，卡不能转卖，也不能换成现金，两份条款都这样写。第三，Apple 怀疑一张卡是以非法、欺诈或者违反条款的方式得来、用掉的，可以不通知你、不退款就作废这张卡，还可以暂停或终止账户。
+
+那从哪里买才稳妥？Apple 的页面没有列出各个国家或地区有哪些授权的卖家。这一点 Apple 的页面没有写明，拿不准就先问 Apple 支持。怎么买、怎么兑换，见[买和兑换礼品卡](/howto/gift-card/)。
+
+还有一种容易混的卡。Apple Store Gift Card 只能在美国的 Apple Store 零售店、apple.com 或打电话订购时用，不能用在 App Store 这些媒体服务上（[Apple Store Gift Card 条款](https://www.apple.com/legal/giftcards/applestore/)），也不能拿来升级 iCloud+（[iCloud+ 方案和定价](https://support.apple.com/zh-cn/108047)）。
+
+<Callout type="no">
+有人让你买礼品卡来付一笔钱，或者要你把卡背面的号码发给他，先当它是诈骗。Apple 的礼品卡只能用来买 Apple 的产品和服务，Apple 也提醒，别把卡背面的号码给不熟悉、没见过面的人（<a href="https://support.apple.com/zh-cn/120933">关于充值卡诈骗</a>）。
+</Callout>
+
+## 银行卡：账单资料要和银行一致
+
+加银行卡时，Apple 要你确认姓名、账单邮寄地址和其他信息拼写正确，并且和你在金融机构留存的信息一致（[为你的 Apple 账户添加付款方式](https://support.apple.com/zh-cn/118429)）；付款方式被拒时，它也把这一条放在最前面（[108095](https://support.apple.com/zh-cn/108095)）。所以一个不是你的地址，到你要加银行卡的那一天就会卡住。注册时地址该怎么填、Apple 的条款怎么说，新手入门的[第 1 课](/start/1-region/)讲过，这里不重复。
+
+同一篇 118429 的排错部分还有一句：你用的是被接受的付款方式，但 Apple 账户设成了别的国家或地区，就去更改国家或地区。至于一张在别的国家发行的银行卡能不能用在这个账户上，Apple 没有说。这一点 Apple 的页面没有写明，拿不准就先问 Apple 支持。
+
+在 iPhone 上加付款方式的路径是：在「**设置**」里轻点你的姓名，轻点「**付款与配送**」，再轻点「**添加付款方式**」。
+
+付款方式配好了，下一步把这个账户登到 iPhone 上，只登在<Term k="媒体与购买项目" />里，你的 iCloud 一直不动。
+
+## 卡住了？
+
+<Q q="我没看到「无」这个选项。">
+<p>先看看是不是上面那几种必须留付款方式的情况：有订阅、有欠款，或者你是开着购买项目共享的家人共享组织者（<a href="https://support.apple.com/zh-cn/118291">118291</a>）。都不是的话，这一点 Apple 的页面没有写明，拿不准就先问 Apple 支持。</p>
+</Q>
+<Q q="礼品卡兑换时提示用不了。">
+<p>先对一下卡是在哪个国家或地区买的，和账户的地区是不是同一个。美国、土耳其的条款都写着，卡只能用在买它的那个国家或地区的账户上。其他情况见<a href="/howto/gift-card/">买和兑换礼品卡</a>。</p>
+</Q>
+<Q q="银行卡被拒了。">
+<p>Apple 的建议是先核对账单资料，再添加一种新的付款方式、移除旧的，然后重试；要知道卡为什么被拒，得问发卡的银行，Apple 没有这方面的信息（<a href="https://support.apple.com/zh-cn/108095">如果你的付款方式被拒绝</a>）。更细的办法见<a href="/howto/purchase-failed/">购买被拒，或者说付款方式有问题</a>。</p>
+</Q>
+<Q q="有人说能便宜卖我一张礼品卡。">
+<p>条款写着礼品卡不得转卖，Apple 怀疑卡来路不正时，可以作废卡并暂停或终止账户（<a href="https://www.apple.com/legal/internet-services/itunes/giftcards/us/terms.html">美国条款</a>、<a href="https://www.apple.com/legal/internet-services/itunes/giftcards/tr/terms.html">土耳其条款</a>）。买之前想清楚这一点。</p>
+</Q>
+
+<Checkpoint id="s3" items={["我看过账户所在地区收哪些付款方式", "我知道礼品卡只能用在买它的那个国家或地区的账户上，也不能转卖", "要加银行卡的话，我填的姓名和账单地址和银行里的一致"]} />
