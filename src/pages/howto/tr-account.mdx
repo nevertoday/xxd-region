@@ -1,5 +1,92 @@
 ---
 layout: ../../layouts/HowTo.astro
 slug: tr-account
+step: 2
+time: 读 10 分钟
+for: 想要一个国家或地区是土耳其的 Apple 账户，打算自己注册
+tldr: 注册的步骤和美区一样，国家或地区选土耳其。不一样的是之后的一切：土耳其收的付款方式、能用的服务、里拉标价和土耳其语的条款，都按土耳其来。
+description: 用 Apple 自己的流程注册一个土区 Apple 账户：国家或地区选土耳其，只有土耳其语的条款里怎么写居住国家，土耳其收哪些付款方式，土耳其充值卡的条款，土区有哪些服务，里拉标价、含税、会变，以及土耳其条款里涨价和取消订阅的规定。
 ---
-{/* 待写：正文。写法见 docs/MAINTAINING.md 的「怎么写」和「硬规矩」，资料和出处在 docs/sources/README.md。 */}
+import Term from "../../components/Term.astro";
+import Q from "../../components/Q.astro";
+import Callout from "../../components/Callout.astro";
+
+照这一页做完，你会有一个国家或地区是土耳其的 <Term k="Apple 账户" />，也会知道这个账户在付款、服务、价格和条款上，哪些地方和美区不一样。
+
+先讲一个很容易碰到的落差。你注册好土区账户，打开 Apple Books 想买一本书，翻了半天只看到公版书；想订 Apple One，列表里也找不到它。这不是你哪一步做错了，Apple 的服务本来就按国家或地区提供，土耳其有的和美国有的不是同一张单子。所以注册之前，先看看这个地区有没有你要的东西。
+
+<mark>土区账户的注册流程和美区一样，只是国家或地区选土耳其；不一样的是之后的一切，付款方式、能用的服务、标价的货币和条款，都按土耳其来。</mark>
+
+## 注册：和美区一样，国家或地区选土耳其
+
+步骤和[注册一个美区 Apple 账户](/howto/us-account/)完全一样：在网页、iPhone 的 App Store 或者 Mac 上走 Apple 自己的流程，到 <Term k="国家或地区" /> 那一步选土耳其（Apple 的英文页面写作 Türkiye）。在 App Store 和 Mac 上注册，付款这一步可以选 **无**；网页那条路的步骤里没有付款这一步（[如何创建新的 Apple 账户](https://support.apple.com/zh-cn/108647)）。「无」什么时候不出现，Apple 没有写，这一点 Apple 的页面没有写明，拿不准就先问 Apple 支持。
+
+邮箱和手机号怎么准备，看[准备邮箱和手机号](/guide/1-prepare/)。和美区一样，这个账户以后只登在 iPhone 的 <Term k="媒体与购买项目" /> 里，iCloud 一直登你自己的账户。
+
+## 条款只有土耳其语
+
+土耳其的 Apple 媒体服务条款只有土耳其语版本，本站没有找到英文版。关于居住国家，它开头这样写：
+
+> Hizmetlerimiz, ikamet ettiğiniz ülkede veya bölgede ("Yaşadığınız Ülke") kullanımınıza sunulur.
+
+意思是：我们的服务供你在你居住的国家或地区（「居住国家」）使用。紧接着一句和美国条款一样：你为某个国家或地区创建账户，就等于把它定为你的<Term k="居住国家或地区" />（[Apple 媒体服务条款（土耳其）](https://www.apple.com/tr/legal/internet-services/itunes/tr/terms.html)）。
+
+不一样的地方在后果那一条。美国条款写的是你没遵守、或者 Apple 怀疑你没遵守任何一条，Apple 都可以不通知就终止账户；土耳其条款的范围窄一些，写的是你没有履行付款这类基本义务、或者有欺诈时，Apple 可以终止协议和账户、终止软件许可、不让你使用服务。账户的地区和你实际住的地方对不上时，Apple 实际上会怎么处理，它没有公开说过。这一点 Apple 的页面没有写明，拿不准就先问 Apple 支持。
+
+地址也和美区一样，本站不提供，也不教怎么编。添加付款方式时，Apple 要你确认姓名、账单邮寄地址这些信息和你在金融机构留存的一致（[为你的 Apple 账户添加付款方式](https://support.apple.com/zh-cn/118429)），一个不是你的地址，到你要加银行卡的那天就会卡住。住在土耳其的人填自己的真实地址；不住在那里的，规则和后果就是这些，怎么决定在你。这是 Apple 和你之间的条款问题，本站讲的是条款怎么写，不是法律意见。
+
+## 土耳其收哪些付款方式
+
+土耳其收的付款方式比美国少（[可与 Apple 账户搭配使用的付款方式](https://support.apple.com/zh-cn/111741)）：
+
+- <Term k="Apple 账户余额" />，来自兑换 App Store 与 iTunes 充值卡或者充值
+- 手机账单支付，只能通过受支持的运营商，Apple 列的是 Paycell、Türk Telekom Mobil Ödeme 和 Vodafone Mobil Ödeme
+- 大多数信用卡和借记卡
+
+单子里没有 Apple Pay，也没有 PayPal；Apple Pay 支持的国家和地区列表里也没有土耳其（[支持 Apple Pay 的国家和地区](https://support.apple.com/zh-cn/102775)）。Apple 也写了付款方式会变。土耳其以外发行的银行卡能不能用，Apple 没有说。
+
+## 土耳其的充值卡
+
+土耳其的 <Term k="充值卡" /> 由 Apple Distribution International 发行，条款同样是土耳其语（[App Store 卡和代码的条款（土耳其）](https://www.apple.com/legal/internet-services/itunes/giftcards/tr/terms.html)）。要紧的有三条：在土耳其买的余额和内容代码，只能用在土耳其的账户上；余额不能兑现、不能交换、不能转卖；Apple 怀疑余额是以欺诈、违法或者违反条款的方式取得、使用或者加到账户上的，可以不通知你、不退款就作废它，还可以暂停或终止账户。
+
+所以美国的卡兑换不到土区账户上，反过来也一样。怎么认卡、怎么兑换，看[买和兑换礼品卡](/howto/gift-card/)。
+
+## 土区有哪些服务
+
+Apple 按国家或地区列了各项媒体服务（[Apple 媒体服务的提供情况](https://support.apple.com/zh-cn/118205)）。土耳其那一栏有 App Store、Apple Music、Apple Arcade、Apple TV App 和 Apple TV 订阅、影片购买、iTunes Store 音乐、铃声、Shazam、Apple Sports App 和 Apple 创作坊；Apple Books 只有公共领域的图书，Apple 播客只有免费播客。列表里没有 Apple One，也没有 Apple Fitness+ 和 Apple News+。
+
+还有一处和美国反过来。同一篇的脚注说，你的 iCloud+ 订阅可能包含 Apple Arcade 和 Apple TV，而 Apple 的 iCloud+ 介绍页上，包含这两项的国家和地区名单里有土耳其（[iCloud+ with Apple TV and Apple Arcade](https://www.icloud.com/info/icloud-plus-tv-arcade)）。
+
+至于某个 App 在不在土区的 App Store 里，那由开发者决定：开发者可以选在哪些国家或地区上架，有的 App 也会因为法律或监管要求在某些地区不能下载或使用（[App Store Connect 帮助](https://developer.apple.com/help/app-store-connect/manage-your-apps-availability/manage-availability-for-your-app-on-the-app-store)）。
+
+## 价格：里拉标价，含税，会变
+
+土区的价格用里拉标。Apple 的 iCloud+ 价格页写着，土耳其所有价格都已含税；截至 2026-11-19，这一页上土耳其 2 TB 是每月 549.99 里拉（[iCloud+ 方案和定价](https://support.apple.com/zh-cn/108047)）。
+
+这个数字会变。有网友在 X 上分享，2025 年 8 月土区 iCloud+ 2 TB 从每月 249.99 里拉涨到了 399.99 里拉（[@landiantech 的帖子](https://x.com/landiantech/status/1958721244058329528)），而今天 Apple 页面上的价格又不一样了。Apple 和开发者都会调价，所以本站不拿价格做比较，你要订什么，就看它现在的价格页。
+
+涨价的时候，土耳其条款写了几条：订阅要涨价，至少提前 30 天发邮件通知你；你不接受，可以在新价格生效之前免费取消；需要你明确同意的涨价，这封邮件会请你同意，你不同意，订阅会在新价格生效前的最后一天自动取消。条款还写着，你可以随时取消订阅并让它立即生效，按比例退回费用，要这样做就联系 Apple 支持（[Apple 媒体服务条款（土耳其）](https://www.apple.com/tr/legal/internet-services/itunes/tr/terms.html)）。涨价时具体怎么办，看[订阅涨价了怎么办](/howto/price-rise/)。
+
+## 做完怎么确认
+
+验证完邮箱，去看一眼账户的国家或地区，[看一眼账户现在是哪个地区](/howto/check-region/)讲了去哪里看。
+
+<Callout type="ok">
+**国家/地区** 那一项显示的是土耳其。
+</Callout>
+
+接着把它登进「媒体与购买项目」，按[只在「媒体与购买项目」里登录](/guide/4-sign-in/)来。
+
+## 卡住了？
+
+<Q q="网上说先注册一个国区账户，再改到土区。">
+Apple 的注册流程本身就能选土耳其。给已有账户换地区，要先用完余额、取消订阅、等待处理中的项目，从中国大陆改出去，iCloud 里的内容还会迁走，见[把已有账户换到别的地区](/howto/change-region/)。
+</Q>
+<Q q="我手上的礼品卡兑换不进去。">
+先看卡是哪个国家或地区的。土耳其的条款写明，在土耳其买的余额只能用在土耳其的账户上；美国的卡也只能用在美国的账户上。见[买和兑换礼品卡](/howto/gift-card/)。
+</Q>
+<Q q="大家都说土区便宜，是真的吗？">
+本站不比价，也不换算成人民币。Apple 的价格用里拉标、含税，Apple 和开发者都会调价，涨价时 Apple 怎么通知你见[订阅涨价了怎么办](/howto/price-rise/)。要订一项服务，就看它此刻的价格页。
+</Q>
+
+刚才你注册了一个土区账户，也知道了土耳其在条款、付款、服务和价格上和美区的几处不同。下一步，去[只在「媒体与购买项目」里登录](/guide/4-sign-in/)。

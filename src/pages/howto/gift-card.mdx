@@ -1,5 +1,75 @@
 ---
 layout: ../../layouts/HowTo.astro
 slug: gift-card
+step: 3
+time: 读 8 分钟
+for: 想用礼品卡给美区或土区账户充值，或者手上有一张卡不知道能不能用
+tldr: Apple 的礼品卡只能用在买它的那个国家或地区的账户上，条款也不许转卖；先认清卡是哪个地区、哪一种，再在 App Store 里兑换。Apple 没有公开列出各地的授权卖家，本站也不点名任何卖卡的渠道。
+description: 认清 Apple 的几种卡（Apple Gift Card、App Store 卡、Apple Store 充值卡），为什么卡只能用在同一个国家或地区的账户上，美国和土耳其的充值卡条款写了什么，在 iPhone 上怎么兑换，以及充值卡诈骗长什么样。
 ---
-{/* 待写：正文。写法见 docs/MAINTAINING.md 的「怎么写」和「硬规矩」，资料和出处在 docs/sources/README.md。 */}
+import Term from "../../components/Term.astro";
+import Q from "../../components/Q.astro";
+import Callout from "../../components/Callout.astro";
+
+看完这一页，你会认得出手上的是 Apple 的哪一种卡，知道它能兑换到哪个<Term k="国家或地区" />的账户上，也会在 iPhone 上把它兑换进去。
+
+有网友在 X 上分享，注册土区账户时买礼品卡没留意，买成了美区的，结果土区账户兑换不了（[@zzgo_sh 的帖子](https://x.com/zzgo_sh/status/1993977418630185424)）。这不是运气不好，Apple 的条款就是这样写的。买卡之前多看一眼卡是哪里的，能省下这一趟。
+
+<mark>Apple 的礼品卡只能用在买它的那个国家或地区的账户上，条款也不许转卖；买之前先确认卡是哪个地区的、是哪一种。</mark>
+
+Apple 的中文页面把 Gift Card 叫作<Term k="充值卡" />，下面照它的叫法。
+
+## 先认清是哪一种
+
+Apple 卖的卡不止一种，能买的东西也不一样（[我拥有哪种类型的充值卡？](https://support.apple.com/zh-cn/118407)）：
+
+- **Apple Gift Card**，正面是白底上一个彩色的 Apple 标志。它可以在 Apple Store 买产品和配件，也可以在 App Store 里兑换，用来买 App、Apple Music 或 iCloud+ 这类订阅。
+- **App Store Card 和 App Store 与 iTunes 充值卡**，大多是蓝色、带图案的正面，兑换后用在 App Store 这些地方。
+- **Apple Store 充值卡**，正面是纯色的，灰、白、银或金。卡背面写着它只能在 Apple Store 在线商店或零售店用，或者不能在 iTunes Store 兑换。
+
+最后一种最容易买错。美国的 Apple Store 充值卡条款写着，它只能在美国的 Apple Store、apple.com 或打电话订购时用，不能拿来买 Apple 媒体服务里的东西（[Apple Store Gift Cards 条款](https://www.apple.com/legal/giftcards/applestore/)）；iCloud+ 价格页也写了，升级 iCloud+ 不收 Apple Store 充值卡（[iCloud+ 方案和定价](https://support.apple.com/zh-cn/108047)）。你要的是给 App Store 账户充值，就别买这一种。
+
+## 只能用在同一个国家或地区
+
+美国的充值卡条款写着，在美国买的卡和内容代码，只能关联到美国的账户，也只能用在美国的购买上；用它在美国买内容，要有一个美国的账户并接受 Apple 媒体服务条款（[Apple Gift Card 条款（美国）](https://www.apple.com/legal/internet-services/itunes/giftcards/us/terms.html)）。土耳其的条款也一样，在土耳其买的余额和内容代码只能用在土耳其的账户上（[App Store 卡和代码的条款（土耳其）](https://www.apple.com/legal/internet-services/itunes/giftcards/tr/terms.html)）。
+
+所以美区账户配美国的卡，土区账户配土耳其的卡。另外，并不是每个国家或地区都有充值卡，各地收哪些付款方式见[可与 Apple 账户搭配使用的付款方式](https://support.apple.com/zh-cn/111741)。
+
+## 在哪里买：Apple 没有公开各地的授权卖家
+
+这一件 Apple 没有说清楚。它没有公开列出各个国家或地区卖它的卡的授权卖家，从别的渠道买的卡会怎样，它也没有单独讲过。这一点 Apple 的页面没有写明，拿不准就先问 Apple 支持。本站不点名任何卖卡、代充的渠道。
+
+能确定的只有条款里的两条，它们不管你从哪里买都适用。一是卡不得转卖：美国条款写着卡不能兑现、不能交换、不能转卖，土耳其条款也写着余额不能转卖。二是 Apple 怀疑卡或余额是以违法、欺诈或违反条款的方式取得、使用或者加到账户上的，可以不通知你、不退款就作废它，并暂停或终止账户。美国条款还写着，可以要求你换别的付款方式，也可以取消或限制订单。
+
+## 兑换
+
+确认好卡和账户是同一个地区，兑换就简单了。先确保 App Store 登着你要充值的那个账户，也就是 <Term k="媒体与购买项目" /> 里的那个（怎么换见[在 iPhone 上切换 App Store 账户](/howto/switch-store/)）。然后照 Apple 写的步骤来（[兑换你的 Apple Gift Card、App Store Card 或 App Store 与 iTunes 充值卡](https://support.apple.com/zh-cn/118242)）：
+
+1. 在卡背面找到 16 位代码，有的卡要撕开或轻轻刮掉标签才看得到。
+2. 在 App Store 里轻点你的照片、姓名首字母或 **我的账户** 按钮，可能要你登录。
+3. 轻点 **兑换代码**。
+4. 轻点 **使用摄像头**，照屏幕上的说明做；扫不出来的，轻点 **Enter Code Manually**（手动输入代码）。
+5. 轻点 **兑换**。
+
+别人用电子邮件送你的卡，打开那封邮件，轻点 **立即兑换** 就行。在网页上兑换，入口是 apple.com/redeem。
+
+<Callout type="ok">
+在 App Store 里轻点你的照片或 **我的账户** 按钮，余额显示在你的姓名下面（[查看 Apple 账户余额](https://support.apple.com/zh-cn/119902)）。
+</Callout>
+
+兑换进去的钱就是 <Term k="Apple 账户余额" />，买东西时先扣它。同一篇还提醒，有些购买项目可能要求账户里登记一张信用卡，即使你用余额付款也一样。
+
+## 别把卡背面的号码给不认识的人
+
+Apple 的充值卡只能用来买 Apple 的产品和服务。有人让你用 Apple 充值卡去付不是 Apple 卖的东西，比如账单、政府部门的费用，你可能遇到了诈骗（[关于充值卡诈骗](https://support.apple.com/zh-cn/120933)）。Apple 也提醒，不要把卡背面的号码给你不了解、没见过的人，号码一旦到了骗子手里，卡上的钱可能在你联系上执法部门或 Apple 支持之前就被用掉了。觉得自己被骗了，联系 Apple 支持。
+
+## 卡住了？
+
+<Q q="兑换时说这张卡不能用在这个账户上。">
+先对一下卡是哪个国家或地区的，账户又是哪个地区的。美国和土耳其的条款都写明，卡只能用在同一个国家或地区的账户上。账户的地区去哪看，见[看一眼账户现在是哪个地区](/howto/check-region/)。
+</Q>
+<Q q="买错了，卡能退或者转给别人吗？">
+美国条款写着卡不能兑现、不能退款换现金（法律要求的除外）、不能交换、不能转卖；土耳其条款也写着不能兑现、不能交换、不能转卖。
+</Q>
+
+刚才你认清了卡的种类和地区，也把它兑换进了账户。有了余额以后订阅了服务，遇到涨价时怎么办，看[订阅涨价了怎么办](/howto/price-rise/)。

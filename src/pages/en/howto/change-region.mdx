@@ -1,5 +1,100 @@
 ---
 layout: ../../../layouts/HowTo.astro
 slug: change-region
+time: 10-minute read
+for: You want to move an Apple Account you already use to another country or region
+tldr: Before you change, spend your balance, cancel subscriptions and wait for them to end, let pending items finish, check Family Sharing, and have a payment method for the new region ready. Moving out of China mainland sends your iCloud content across the border to Apple, and GCBD then deletes its copy. If you only want another region's App Store, a second account is simpler.
+description: "Change an existing Apple Account's country or region: Apple's checklist, where to change it on iPhone, Mac and the web, what happens to iCloud storage when you cancel iCloud+, how iCloud content is migrated and deleted when you leave China mainland, Apple's advice for people who move, and why this site suggests a second account instead."
 ---
-{/* 待写 TBD: body. See docs/MAINTAINING.md (voice and hard rules); facts and their links are in docs/sources/README.md. */}
+import Term from "../../../components/Term.astro";
+import Q from "../../../components/Q.astro";
+import Callout from "../../../components/Callout.astro";
+import Tabs from "../../../components/Tabs.astro";
+
+When you finish this page, you'll know what you have to clear before moving an existing <Term k="Apple 账户" /> to another <Term k="国家或地区" />, where to change it, and what happens to iCloud when you do. You'll also see why this site suggests making a second account instead.
+
+Picture your main account. You've had it for years, it pays for iCloud+, all your photos are in it, there's a little balance left over, and you share purchases with your family through Family Sharing. You think "I'll just switch it to the US," tap through to **Country/Region**, and find you can't. Even if it goes through, iCloud changes along with it. You didn't tap the wrong thing. Apple simply has a list of conditions for changing region.
+
+<mark>Moving an existing account means dealing with its balance, subscriptions, pending items and Family Sharing first, and moving out of China mainland also sends your iCloud content across the border. If you only want another region's App Store, a second account is simpler.</mark>
+
+## What to clear first
+
+Apple lists what to do before you change in [Change your Apple Account country or region](https://support.apple.com/en-us/118283). There are seven things, and the bold text is Apple's own headings:
+
+1. **Spend any remaining Apple Account balance.** You can spend your remaining <Term k="Apple 账户余额" /> on the App Store or other Apple services. If you're not sure whether you have one, see [Check your Apple Account balance](https://support.apple.com/en-us/119902).
+2. **Clear a low Apple Account balance.** If your balance is less than the cost of a single item in the App Store or other Apple services and you can't spend it, contact Apple Support to clear it.
+3. **Cancel subscriptions that block a country or region change.** After cancelling, wait until the end of the subscription period. For how to cancel, see [Cancel a subscription from Apple](https://support.apple.com/en-us/118428).
+4. **Wait for pending activity to clear.** Wait for any memberships, pre-orders, movie rentals or Season Passes to finish, and you can cancel a pre-order ([View or cancel pre-orders for apps, movies, music, or books](https://support.apple.com/en-us/118414)). Any refunds Apple is still processing have to go through too.
+5. **Check your Family Sharing status.** If you're part of a <Term k="家人共享" /> group, you might not be able to change your country or region. For how to leave a group, see [How to leave or remove a member from a Family Sharing group](https://support.apple.com/en-us/102652).
+6. **Have a valid payment method ready.** You might need to enter a payment method accepted in your new country or region ([Payment methods that you can use with your Apple Account](https://support.apple.com/en-us/111741)).
+7. **Redownload your content.** Some content might not be available in your new country or region ([Availability of Apple Media Services](https://support.apple.com/en-us/118205)), so redownload your apps, music, movies, TV shows and books on every device you might use them on later.
+
+Item 6 comes with a line of advice for people who move. Apple says that if you don't want to enter a payment method, you should "wait until you're physically in your new country or region," and then create a new Apple Account. That line makes more sense next to the terms. Apple's terms tie an account's region to where you live ([Create a US Apple Account](/en/howto/us-account/) covers this), and Apple's article about iCloud in China mainland says the same kind of thing: if you're not a Chinese citizen residing in China mainland, you can edit your account's country or region setting to reflect your current country or region ([Learn more about iCloud in China mainland](https://support.apple.com/en-us/111754)). Read together, Apple's wording treats a region change as something for people whose home has changed.
+
+## After you cancel iCloud+
+
+iCloud+ in item 3 deserves its own note. This article says that if you cancel your Apple One or iCloud+ subscription, your iCloud storage is reduced to the free 5 GB plan ([Change your Apple Account country or region](https://support.apple.com/en-us/118283)). The Chinese version of the article doesn't have the "5 GB" part. This page follows the English version because it's more specific and more recent (English 2026-10-30, Chinese 2026-10-07).
+
+As for what happens when 5 GB isn't enough, Apple says in another article that if you store more in iCloud than your plan holds, iCloud won't sync or update your information, and iCloud backups won't complete ([Downgrade or cancel your iCloud+ plan](https://support.apple.com/en-us/108318)). After you've changed region and updated your payment details, you can subscribe again if the services are available in your new country or region.
+
+## Moving out of China mainland moves your iCloud content
+
+If the account's region is China mainland right now, there's a bigger issue. iCloud in China mainland is operated by <Term k="云上贵州" /> ([Learn more about iCloud in China mainland](https://support.apple.com/en-us/111754)). GCBD's iCloud terms say that if you change your account's country or region from China mainland to somewhere else, you authorize GCBD to provide the service during the transfer and to start migrating your content from GCBD to Apple, and you expressly consent to the cross-border transfer of your iCloud content outside China mainland. Once the migration is complete, GCBD deletes the content and no longer provides the service. The terms also say that, to the extent permitted by law, you may face restrictions when you try to change the account's country or region ([iCloud operated by GCBD terms and conditions](https://www.apple.com/legal/internet-services/icloud/en/gcbd-terms.html)).
+
+The Chinese version of "Change your Apple Account country or region" has a section on exactly this, and it agrees with the terms: changing away from China mainland means agreeing that GCBD transfers your content to Apple servers outside China mainland and deletes it from servers in China mainland once the transfer is done ([更改 Apple 账户国家或地区](https://support.apple.com/zh-cn/118283)). The English version has no such section, so this page links the Chinese one here.
+
+Your photos, backups and documents are all in iCloud, so this change moves the whole lot. It isn't worth it for one app.
+
+## Where to change it
+
+Once all of the above is sorted, Apple gives these ways in ([Change your Apple Account country or region](https://support.apple.com/en-us/118283)):
+
+<Tabs id="change" items={[["iphone", "iPhone"], ["mac", "Mac"], ["web", "Web"]]}>
+<div slot="iphone">
+
+In Settings, tap your name, then tap **Media & Purchases**. You might need to sign in. Tap **Country/Region**, select your new country or region, and tap **Continue**. Review the **Terms & Conditions**, tap **Agree**, then select a payment method, enter your new payment information and billing address, and tap **Done**.
+
+</div>
+<div slot="mac">
+
+Open the Apple Music app or Apple TV app. From the **Account** menu in the menu bar, choose **Account Settings**. You might need to sign in. Click **Country/Region**, select your new country or region, and click **Continue**. Review the **Terms & Conditions**, click **Agree**, then select a payment method, enter your new payment information and billing address, and click **Done**.
+
+</div>
+<div slot="web">
+
+Sign in to account.apple.com, select **Personal Information**, select **Country/Region**, and follow the onscreen instructions.
+
+</div>
+</Tabs>
+
+iOS and macOS menus change every few versions. If what you see doesn't match, go by what you see.
+
+## What you bought before
+
+Whether the apps, music and movies you bought before are still there after the change, Apple only says that some content might not be available in the new region, which is why it tells you to download it first. It doesn't say whether your purchase history is kept or lost. Apple's pages don't spell this out, so if you're unsure, ask Apple Support.
+
+## This site suggests a second account
+
+Put all of that together. You'd have to clear your balance, stop subscriptions and wait for them to run out, possibly leave Family Sharing, and find a payment method for the new region. Moving out of China mainland also sends your iCloud content across the border while GCBD deletes its copy. And Apple doesn't say what happens to your past purchases. If all you want is another region's App Store, make a second account and sign it in only under <Term k="媒体与购买项目" /> on your iPhone. Your main account, its iCloud, its balance, its subscriptions and its Family Sharing all stay exactly as they are. [Make a second account; leave your main one alone](/en/start/3-new-account/) explains why this is simpler, and the sign-up steps are in [Create a US Apple Account](/en/howto/us-account/) and [Create a Turkey Apple Account](/en/howto/tr-account/).
+
+## How to check it worked
+
+If you really have moved and changed the region, look afterwards. [Check which region an account is in](/en/howto/check-region/) shows where.
+
+<Callout type="ok">
+**Country/Region** shows your new country or region.
+</Callout>
+
+## Stuck?
+
+<Q q="I tapped Country/Region and it says I can't change it.">
+Apple says to make sure you've cancelled your subscriptions, waited for pending activity to clear, and spent your account balance. If your balance is less than the cost of a single item, contact Apple Support to clear it ([Change your Apple Account country or region](https://support.apple.com/en-us/118283)).
+</Q>
+<Q q="Can I get my balance back as cash?">
+Apple says you can't redeem or return Apple Gift Cards, App Store Gift Cards or unused Apple Account balance for cash, except as required by law. If your jurisdiction allows refunds of redeemed gift balances, you can contact Apple Support and include the primary email address you use to sign in to your Apple Account.
+</Q>
+<Q q="I'm in Family Sharing. Can I change?">
+Apple says you might not be able to, and explains how to leave the group. The US and China mainland terms both say all family members must share the same <Term k="居住国家或地区" />. What happens to the group after a member changes region, Apple doesn't say. Apple's pages don't spell this out, so if you're unsure, ask Apple Support.
+</Q>
+
+You've now seen what moving an existing account costs, what happens to iCloud when you leave China mainland, and what Apple itself advises. If you only want another region's App Store, go back to [Make a second account; leave your main one alone](/en/start/3-new-account/).

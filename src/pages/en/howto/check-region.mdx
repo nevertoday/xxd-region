@@ -1,5 +1,73 @@
 ---
 layout: ../../../layouts/HowTo.astro
 slug: check-region
+step: 2
+time: 5-minute read
+for: You've just created an account in another region and want to confirm it, or you suspect an account's region has changed
+tldr: On an iPhone, it's your name in Settings, then Media & Purchases, then Country/Region. On the web, it's Personal Information, then Country/Region at account.apple.com. Work out which account you're looking at first. If the region really has changed, Apple doesn't say why that happens, so ask Apple Support.
+description: "See which country or region an Apple Account belongs to right now on an iPhone, a Mac and the web, how to tell whether you're looking at the iCloud account or the one under Media & Purchases, and who to ask if the region has gone back to China mainland."
 ---
-{/* 待写 TBD: body. See docs/MAINTAINING.md (voice and hard rules); facts and their links are in docs/sources/README.md. */}
+import Term from "../../../components/Term.astro";
+import Q from "../../../components/Q.astro";
+import Callout from "../../../components/Callout.astro";
+import Copy from "../../../components/Copy.astro";
+import Tabs from "../../../components/Tabs.astro";
+
+Take a quick look as this page shows and you'll know which country or region an <Term k="Apple 账户" /> belongs to right now, on an iPhone, a Mac or the web.
+
+One user on X shares a question they get asked a lot: a US account created yesterday shows up as a China mainland account today, so what now ([@EvanWritesX's post](https://x.com/EvanWritesX/status/2059180529086529883))? If that happens to you, the first step isn't to panic or to go hunting for remedies. It's to go to the place where the region is shown, and check which account you're looking at and what its region really is.
+
+<mark>An account's country or region is shown under Media & Purchases on an iPhone or under Personal Information on the web. Before you look, work out which account you're looking at.</mark>
+
+## Where to look
+
+You see an account's <Term k="国家或地区" /> in the same place you'd change it, and Apple's article on changing region gives each path ([Change your Apple Account country or region](https://support.apple.com/en-us/118283)). You're only looking, so stop at **Country/Region** and don't tap any further.
+
+<Tabs id="where" items={[["iphone", "iPhone"], ["mac", "Mac"], ["web", "Web"]]}>
+<div slot="iphone">
+
+In Settings, tap your name, then tap **Media & Purchases**. You might need to sign in. Then look at **Country/Region**.
+
+</div>
+<div slot="mac">
+
+Open the Apple Music app or Apple TV app. From the **Account** menu in the menu bar, choose **Account Settings**. You might need to sign in. Find **Country/Region** there.
+
+</div>
+<div slot="web">
+
+Sign in to account.apple.com, select **Personal Information**, and look at **Country/Region**. What you see on the web is the account you signed in with this time.
+
+</div>
+</Tabs>
+
+iOS and macOS menus change every few versions. If what you see is different, go by what you see.
+
+<Callout type="ok">
+**Country/Region** shows the region you chose when you signed up, such as the United States or Turkey.
+</Callout>
+
+## First, work out which account you're looking at
+
+An iPhone can have two accounts signed in at once. iCloud and most features use the account on your name's page, and buying things in the App Store uses the account under <Term k="媒体与购买项目" />. Apple says that if you have a different account signed in for purchases, it shows under **Media & Purchases** ([Migrate purchases from one Apple Account to another Apple Account](https://support.apple.com/en-us/117294)). Following on from that, the iPhone path above opens the account signed in under Media & Purchases.
+
+So if you see China mainland, first check which account is signed in there. Maybe you didn't switch back after last time, or maybe you're actually looking at your own main account. The web is the hardest to mix up, because what you see belongs to the account you just signed in with.
+
+## If the region really has changed
+
+Say you've confirmed you're looking at the other-region account, and its country or region really is China mainland now. That's the situation the post above describes. Apple's pages don't describe an account's region changing back on its own, and don't say why it would. This site won't guess at a cause for Apple, and won't pass on remedies that circulate online. Apple's pages don't spell this out, so if you're unsure, ask Apple Support.
+
+When you contact Apple Support, just describe what you saw. For example:
+
+<Copy id="ask-apple" title="What you can tell Apple Support" code="A few days ago I created an Apple Account with the United States as its country or region. Today, in Settings > Media & Purchases on my iPhone, its Country/Region shows China mainland. I haven't changed it myself. Could you help me find out what happened and what I should do next?" />
+
+## Stuck?
+
+<Q q="Can I just change it back myself?">
+Changing country or region comes with a list of conditions: spending your balance, cancelling subscriptions that block the change, waiting for pending items to finish, and having a payment method for the new region. See [Move an existing account to another region](/en/howto/change-region/). Check with Apple Support first, then decide whether to touch it.
+</Q>
+<Q q="Tapping Country/Region asks me to sign in.">
+Apple's steps say you might need to sign in to your Apple Account when you tap **Media & Purchases**. Sign in with the account you want to check.
+</Q>
+
+You've now seen which region the account is in, and you know to work out which account it is first, and to ask Apple Support if it really has changed. For everything else an account's region decides, see [What an account's region decides](/en/start/1-region/).

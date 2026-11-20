@@ -1,5 +1,75 @@
 ---
 layout: ../../../layouts/HowTo.astro
 slug: gift-card
+step: 3
+time: 8-minute read
+for: You want to top up a US or Turkey account with a gift card, or you have a card and don't know whether it will work
+tldr: An Apple gift card only works on an account in the country or region where it was bought, and the terms don't allow reselling it. Check which region and which kind of card it is, then redeem it in the App Store. Apple doesn't publish a list of authorized sellers for each region, and this site names no card sellers.
+description: "Tell Apple's cards apart (Apple Gift Card, App Store Card, Apple Store Gift Card), why a card only works on an account in the same country or region, what the US and Turkish gift card terms say, how to redeem on an iPhone, and what a gift card scam looks like."
 ---
-{/* 待写 TBD: body. See docs/MAINTAINING.md (voice and hard rules); facts and their links are in docs/sources/README.md. */}
+import Term from "../../../components/Term.astro";
+import Q from "../../../components/Q.astro";
+import Callout from "../../../components/Callout.astro";
+
+When you finish this page, you'll be able to tell which of Apple's cards you're holding, know which <Term k="国家或地区" /> it can be used in, and redeem it on your iPhone.
+
+One user on X reports buying a gift card while setting up a Turkey account without looking closely, ending up with a US card, and finding the Turkey account couldn't redeem it ([@zzgo_sh's post](https://x.com/zzgo_sh/status/1993977418630185424)). That isn't bad luck. It's what Apple's terms say. A second look at where a card is from saves you the trip.
+
+<mark>An Apple gift card only works on an account in the country or region where it was bought, and the terms don't allow reselling it, so check which region and which kind of card it is before you buy.</mark>
+
+Apple's Chinese pages translate Gift Card as 充值卡 (literally "top-up card"), and this site's Chinese pages follow that. This page just says <Term k="充值卡" />.
+
+## Work out which kind of card it is
+
+Apple sells more than one kind of card, and they buy different things ([What type of gift card do I have?](https://support.apple.com/en-us/118407)):
+
+- **Apple Gift Card** has a colorful Apple logo on a white background on the front. You can use it at an Apple Store for products and accessories, or redeem it in the App Store for apps and subscriptions like Apple Music or iCloud+.
+- **App Store Card and App Store & iTunes Gift Card** are mostly blue with a pattern on the front, and you redeem them for the App Store and similar places.
+- **Apple Store Gift Card** is a solid color on the front, gray, white, silver or gold. The back says it can only be used in the Apple Online Store or Retail Store, or that it can't be redeemed in the iTunes Store.
+
+That last kind is the easiest to buy by mistake. The US Apple Store Gift Card terms say it can only be used for purchases in the US from an Apple Store, at apple.com, or by phone, and can't be redeemed for purchases from Apple Media Services ([Apple Store Gift Cards terms](https://www.apple.com/legal/giftcards/applestore/)). The iCloud+ pricing page also says Apple Store gift cards aren't accepted for upgrading iCloud+ ([iCloud+ plans and pricing](https://support.apple.com/en-us/108047)). If you want to top up an App Store account, don't buy this kind.
+
+## It only works in the same country or region
+
+The US gift card terms say gift cards bought in the United States and content codes can only be linked to an account in the United States and only used for purchases in the United States, and that using them to buy content in the US requires a US account and acceptance of the Apple Media Services Terms ([Apple Gift Card terms (US)](https://www.apple.com/legal/internet-services/itunes/giftcards/us/terms.html)). The Turkish terms say the same: store credit and content codes bought in Turkey can only be used on an account in Turkey ([App Store Cards and Codes terms (Turkey)](https://www.apple.com/legal/internet-services/itunes/giftcards/tr/terms.html)).
+
+So a US account takes US cards, and a Turkey account takes Turkish cards. Also, gift cards aren't available in every country or region. For what each region accepts, see [Payment methods that you can use with your Apple Account](https://support.apple.com/en-us/111741).
+
+## Where to buy: Apple doesn't publish authorized sellers by region
+
+Apple doesn't spell this one out. It doesn't publish a list of authorized sellers of its cards for each country or region, and it doesn't say separately what happens to cards bought elsewhere. Apple's pages don't spell this out, so if you're unsure, ask Apple Support. This site names no card sellers or top-up services.
+
+Two rules from the terms are certain, and they apply wherever you buy. First, cards can't be resold. The US terms say gift cards can't be redeemed for cash, exchanged or resold, and the Turkish terms also say store credit can't be resold. Second, if Apple suspects a card or credit was obtained, used or applied to an account unlawfully, fraudulently or against the terms, it can void it without notice or refund and suspend or terminate accounts. The US terms add that it can ask for another form of payment and cancel or limit orders.
+
+## Redeem it
+
+Once the card and the account are in the same region, redeeming is simple. First make sure the App Store is signed in to the account you want to top up, which is the one under <Term k="媒体与购买项目" /> (see [Switch App Store accounts on your iPhone](/en/howto/switch-store/) for how). Then follow Apple's steps ([Redeem your Apple Gift Card, App Store Card, or App Store & iTunes Gift Card](https://support.apple.com/en-us/118242)):
+
+1. Find the 16-digit code on the back of the card. On some cards you need to peel or gently scratch off the label to see it.
+2. In the App Store, tap your photo, initials or the **My Account** button. You might be asked to sign in.
+3. Tap **Redeem Code**.
+4. Tap **Use Camera** and follow the instructions on the screen. If it won't scan, tap **Enter Code Manually**.
+5. Tap **Redeem**.
+
+For a gift card someone emailed you, open the email and tap **Redeem Now**. On the web, the place to redeem is apple.com/redeem.
+
+<Callout type="ok">
+In the App Store, tap your photo or the **My Account** button, and your balance appears below your name ([Check your Apple Account balance](https://support.apple.com/en-us/119902)).
+</Callout>
+
+What you redeem becomes your <Term k="Apple 账户余额" />, and purchases use it first. The same article also warns that some purchases might require a credit card on file, even if you pay with your balance.
+
+## Don't give the numbers on the back to people you don't know
+
+Apple gift cards can only be used for Apple's products and services. If someone asks you to pay with Apple gift cards for something Apple doesn't sell, such as a bill or a government fee, you might be the target of a scam ([About gift card scams](https://support.apple.com/en-us/120933)). Apple also warns not to give the numbers on the back of a card to anyone you don't know well or haven't met. Once a scammer has them, the money on the card may be spent before you can reach law enforcement or Apple Support. If you think you've been scammed, contact Apple Support.
+
+## Stuck?
+
+<Q q="It says this card can't be used on this account.">
+Compare which country or region the card is from with the account's region. The US and Turkish terms both say a card only works on an account in the same country or region. For where to see the account's region, see [Check which region an account is in](/en/howto/check-region/).
+</Q>
+<Q q="I bought the wrong one. Can I return it or pass it on?">
+The US terms say gift cards can't be redeemed for cash or returned for a cash refund (except as required by law), exchanged or resold. The Turkish terms also say store credit can't be turned into cash, exchanged or resold.
+</Q>
+
+You've just worked out the kind and region of your card and put it into your account. Once you've subscribed to something, [When a subscription's price goes up](/en/howto/price-rise/) covers what to do if the price rises.
