@@ -1,5 +1,65 @@
 ---
 layout: ../../layouts/HowTo.astro
 slug: bad-tutorials
+step: 2
+time: 读 7 分钟
+for: 在网上看到一篇外区 Apple 账户的教程，拿不准里面哪一步能照着做
+tldr: 一篇教程只要有一步要你用不是你自己的地址、账户或号码，买来路不明的卡，把外区账户登进 iCloud，或者绕过激活锁，这一步就别照做，哪怕其余部分都对。每一种都对得上 Apple 的一条规则，或者一个实际的原因。
+description: 怎么认出不该照做的外区 Apple 账户教程：编出来的地址和免税州、网络设置、临时邮箱和接码平台、折价卡和代充、地区差价、共享和买来的账户、把外区账户登进 iCloud、绕过激活锁、「100% 成功」，每一种碰到的是 Apple 的哪条规则，附原文链接。
 ---
-{/* 待写：正文。写法见 docs/MAINTAINING.md 的「怎么写」和「硬规矩」，资料和出处在 docs/sources/README.md。 */}
+import Term from "../../components/Term.astro";
+import Q from "../../components/Q.astro";
+import Callout from "../../components/Callout.astro";
+
+你搜「美区 Apple ID 注册」，刷到一篇收藏量不小的教程。前面几步都很在理：用自己的邮箱，选对国家或地区，付款方式选「无」。读到中间，它轻描淡写地给了个地址生成器，或者一句「挑个免税州」，你也就跟着点了点头。看完这一页，你会有一张随手能对照的清单：教程里出现哪几种做法就该停下，每一种碰到的是 Apple 的哪条规则，原文在哪儿。
+
+<mark>一篇教程只要有一步要你用不是你自己的地址、账户或号码，或者把外区账户登进 iCloud，这一步就别照做，哪怕其余部分都对。</mark>
+
+下面这些做法，都出自网上真实流传的教程和帖子。本站不点名、不放链接，只讲做法本身和它碰到的那条规则。
+
+## 注册的时候
+
+**编出来的地址，或者地址生成器给的地址。** Apple 的条款写的是，服务供你在居住的国家或地区使用，在哪个国家或地区创建账户，就等于指定它为你的<Term k="居住国家或地区" />（[美国条款](https://www.apple.com/legal/internet-services/itunes/us/terms.html)）；加付款方式时，Apple 又要求你的姓名、账单地址和你在金融机构留的一致（[118429](https://support.apple.com/zh-cn/118429)、[108095](https://support.apple.com/zh-cn/108095)）。所以一个不是你的地址，到要加银行卡的那一天就对不上，完整的讲法在[第 1 课](/start/1-region/)。
+
+**挑「免税州」的地址。** 美国的税怎么算，Apple 的页面只说部分州的居民按州法律要在月费里加税（[iCloud+ 方案和定价](https://support.apple.com/zh-cn/108047)），税是不是按账单地址算，这一点 Apple 的页面没有写明，拿不准就先问 Apple 支持。地址本身的问题，和上一条一样。
+
+**网络怎么设置。** Apple 的页面没说过注册要什么特别的网络，注册失败时，它给的建议只是检查网络连接（[120636](https://support.apple.com/zh-cn/120636)）。本站不讲网络设置，也不判断要不要用。
+
+**临时邮箱和接码平台。** 邮箱是你登录这个账户用的（[105023](https://support.apple.com/zh-cn/105023)），开着双重认证，还至少要有一个能收到验证码的<Term k="受信任电话号码" />（[122621](https://support.apple.com/zh-cn/122621)），而 Apple 说验证码不要告诉任何人（[102614](https://support.apple.com/zh-cn/102614)）。一个过几天就作废、或者别人也收得到的邮箱和号码，用来登录和找回账户，就都由不得你了。
+
+## 付款的时候
+
+**折价卡、来路不明的卡、代充。** 美国和土耳其的充值卡条款都写着卡不得转卖；Apple 怀疑卡是以非法、欺诈或违反条款的方式得来的，可以不退款作废卡，并暂停或终止账户（[美国充值卡条款](https://www.apple.com/legal/internet-services/itunes/giftcards/us/terms.html)、[土耳其充值卡条款](https://www.apple.com/legal/internet-services/itunes/giftcards/tr/terms.html)）。Apple 没有公开列出各国的授权卖家，从哪里买才稳妥，这一点 Apple 的页面没有写明，拿不准就先问 Apple 支持。
+
+**利用地区之间的价格差。** 在一个地区订阅再分给别人用，或者转卖，碰到的是好几条：服务供你在居住的国家或地区使用，<Term k="家人共享" />要求所有成员的居住国家或地区相同（[美国条款](https://www.apple.com/legal/internet-services/itunes/us/terms.html)），账户不要和任何人共用（[102614](https://support.apple.com/zh-cn/102614)），充值卡不得转卖。价格本身也会变，开发者可以给订阅调价，涨价时 Apple 会照规则通知订阅者（[App Store Connect 帮助](https://developer.apple.com/help/app-store-connect/manage-subscriptions/manage-pricing-for-auto-renewable-subscriptions)），碰到了看[订阅涨价了怎么办](/howto/price-rise/)。
+
+## 账户和设备
+
+**共享账户、买来的或借来的账户。** Apple 说不要和任何人共用账户，连家人也不例外（[102614](https://support.apple.com/zh-cn/102614)）。用别人的账户登录 iCloud 会怎样，Apple 没有专门讲这种情况，不过按<Term k="激活锁" />的工作方式，你的设备会和那个账户关联在一起（[108794](https://support.apple.com/zh-cn/108794)），详细的看[别人给的账户为什么不能登](/howto/shared-accounts/)。
+
+**为了省掉来回切换，把外区账户登进 iCloud 或「备忘录」。** Apple 描述的用法是，iCloud 和手机上大部分功能登你自己的账户，另一个账户只登在<Term k="媒体与购买项目" />里（[117294](https://support.apple.com/zh-cn/117294)）；把外区账户登进 iCloud，写进去的东西就存在外区账户那边，而这个账户要是因为安全原因被停用，Apple 说它登不了、也用不了任何 Apple 服务（[102640](https://support.apple.com/zh-cn/102640)）。反过来把国区的主账户整个改成外区，也有代价。改出中国大陆，iCloud 里的内容会从<Term k="云上贵州" />跨境迁到 Apple，迁完以后云上贵州删掉它那份（[云上贵州条款](https://www.apple.com.cn/legal/internet-services/icloud/cn_si/gcbd-terms.html)）。
+
+**绕过激活锁的工具。** 激活锁打开以后，没有那个账户的密码，谁都关不了「查找」，也抹不掉、激活不了这台设备（[108794](https://support.apple.com/zh-cn/108794)）。Apple 给的正路写在 [108934](https://support.apple.com/zh-cn/108934) 里：照设备上的步骤输入设置设备时用的账户和密码或者设备密码，在网页上把设备从账户里移除，或者有购买凭证的，发起激活锁支持请求。
+
+## 打包票的话
+
+**「100% 成功」「永不封号」。** Apple 自己都不打这个包票。申请拿回被锁的账户，它写的是请求可能被拒（[102640](https://support.apple.com/zh-cn/102640)）；卡为什么被拒，它说自己没有这方面的信息（[108095](https://support.apple.com/zh-cn/108095)）。教程替 Apple 打的包票，Apple 自己并没有打。
+
+<Callout type="no" title="碰到这几种，就停在这一步">
+不是你的地址、账户或号码，来路不明的卡，登进 iCloud 的外区账户，绕过激活锁的工具。教程里其余的部分可以接着看，这一步不照做。
+</Callout>
+
+## 怎么核对一篇教程
+
+不用每一步都去查条款，先问三个问题：这一步用的是不是你自己的地址、邮箱、号码和账户？要登进 iCloud 的，是不是你自己的那个账户？它说的规则，在 Apple 的页面上找得到吗？三个答案都是「是」，再去对一下 Apple 的原文。本站每一条事实都附了原文链接；教程和 Apple 的页面说的不一样时，以 Apple 为准。
+
+## 卡住了？
+
+<Q q="我已经照着其中一步做过了，怎么办？">
+这是 Apple 和你之间的条款问题，本站讲的是条款怎么写，不是法律意见。能做的是从现在起换回正路：外区账户登进了 iCloud 的，照[第 2 课](/start/2-two-sign-ins/)把它换到「媒体与购买项目」；用的是别人的账户，看[别人给的账户为什么不能登](/howto/shared-accounts/)；别的拿不准，先问 Apple 支持。
+</Q>
+<Q q="教程作者说自己一直这么做，从来没出过事。">
+有没有出过事，和条款允不允许是两回事。比如账户的地区和你住的地方不一致，条款写了 Apple 可以做什么，实际上怎么处理，官方没有公开。本站只按条款和 Apple 支持文章的原文讲。
+</Q>
+
+现在你手里有一张清单了：不是你的地址、账户和号码，来路不明的卡，登进 iCloud 的外区账户，绕过激活锁的工具，还有打包票的话，碰到就停。想知道正路从哪里开始，看[完整教程第 0 步](/guide/0-why/)。

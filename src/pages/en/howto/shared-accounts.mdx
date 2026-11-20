@@ -1,5 +1,68 @@
 ---
 layout: ../../../layouts/HowTo.astro
 slug: shared-accounts
+step: 6
+time: 6-minute read
+for: Someone has given you a ready-made other-region account, lent by a friend, bought online or shared in a group chat, and you're wondering whether to sign in with it
+tldr: Apple says not to share an account with anyone, even family, and never to give anyone your password or codes. An account someone gives you is still theirs when you use it, and if you sign it in to iCloud, Activation Lock's design means your device gets linked to that account too. To share purchases with family, Apple's way is Family Sharing, with each person on their own account.
+description: Why you shouldn't sign in to an Apple Account someone gives you. What Apple says about sharing accounts in 102614, 105023 and 117294, where verification codes and app updates trip you up, why Activation Lock makes the iCloud step the one that matters most, how Family Sharing works, and what to do if you've already signed in.
 ---
-{/* 待写 TBD: body. See docs/MAINTAINING.md (voice and hard rules); facts and their links are in docs/sources/README.md. */}
+import Term from "../../../components/Term.astro";
+import Q from "../../../components/Q.astro";
+import Callout from "../../../components/Callout.astro";
+
+Someone in a group chat posts the email address and password of a US account and says everyone's welcome to use it, as long as nobody signs it in to iCloud. Or a friend kindly lends you their other-region account so you can download one app. It saves you signing up, and it doesn't look like it could do any harm. By the end of this page you'll know what Apple says about sharing accounts, where you get stuck once you're signed in to someone else's, why you shouldn't go anywhere near the iCloud step, and which route Apple gives when you want to share with family.
+
+<mark>An <Term k="Apple 账户" /> is tied to all of its owner's personal content, which is why Apple says not to share one with anyone, even family. An account someone gives you is still theirs while you use it.</mark>
+
+## What Apple says
+
+Apple's article on account security has a section headed "Don't share an Apple Account", and its first sentence is: "Don't share an account with other people, even family members." The reason it gives is that sharing an account gives someone else access to all of your personal content ([102614](https://support.apple.com/en-us/102614)). The same article says never to share your password, verification codes or account security details with anyone, and that if someone else helped you set up your account and password, you should change your password.
+
+Apple also asks you to use the same Apple Account every time you're asked to sign in on an Apple device or service ([105023](https://support.apple.com/en-us/105023)). This site shows you how to sign a second, other-region account in to <Term k="媒体与购买项目" />. Apple describes that setup in its articles on migrating purchases, where it calls the two accounts the primary Apple Account and the <Term k="备选账户" />. In the same passage, Apple says neither account should be shared with anyone else ([117294](https://support.apple.com/en-us/117294), [117267](https://support.apple.com/en-us/117267)). So even the account you only use for purchases should be your own.
+
+## Where you get stuck on someone else's account
+
+**The verification codes go to someone else.** With <Term k="双重认证" /> on, the first time you sign in on a new device or on the web, you need a six-digit verification code as well as the password. It shows up on the account owner's trusted devices or is sent to the owner's <Term k="受信任电话号码" /> ([102660](https://support.apple.com/en-us/102660)). Every time you use a new device, you have to ask the owner for a code, and Apple says codes shouldn't be shared with anyone.
+
+**Apps you download with it need it to update.** Apple says you can't sign in to the App Store with more than one Apple Account at the same time, or update content you bought with a different Apple Account ([111001](https://support.apple.com/en-us/111001)). Apps you download with a borrowed account need that account again whenever they're updated.
+
+**The account belongs to someone else, so they decide when you lose it.** The password is in their hands. If they change it, you're locked out, and anything you bought or any money you added stays in their account.
+
+## Never sign someone else's account in to iCloud
+
+Everything above is a nuisance. Signing in to iCloud is a different matter. <Term k="激活锁" /> turns on automatically when you set up Find My. Once it's on, Apple stores the Apple Account on its activation servers and links it to your device, and from then on the account's password is required before anyone can turn off Find My, erase the device, or reactivate and use it ([108794](https://support.apple.com/en-us/108794)).
+
+Apple doesn't cover this case specifically, but given how Activation Lock works, once you sign in to iCloud with someone else's account and set up Find My, your iPhone is linked to their account. By 108794's description, turning off Find My, erasing the iPhone or reactivating it would then need that account's password, and the password belongs to someone else. That's why this site always says to keep your own account in iCloud and sign the other-region account in to Media & Purchases only. [Switch App Store accounts on your iPhone](/en/howto/switch-store/) shows how.
+
+## To share with family, Apple's way is Family Sharing
+
+If you want people in your family to use the apps and subscriptions you've bought, Apple's way is <Term k="家人共享" />. You and up to five other family members can share services like iCloud+ and Apple Music, and once you turn on **Purchase Sharing**, everyone gets access to the apps, music, movies, TV shows and books family members buy, though some items can't be shared. Each member uses their own Apple Account ([105062](https://support.apple.com/en-us/105062)).
+
+There's one rule to know first. The US and China mainland terms both require every family member to have the same <Term k="居住国家或地区" /> ([US terms](https://www.apple.com/legal/internet-services/itunes/us/terms.html), [China mainland terms](https://www.apple.com.cn/legal/internet-services/itunes/cn/terms.html)), and the Turkey terms say, literally, that all family members must be in the Home Country ([Turkey terms](https://www.apple.com/tr/legal/internet-services/itunes/tr/terms.html)).
+
+## If you've already signed in
+
+If someone else's account is signed in under Media & Purchases, sign out there. Don't use the **Sign Out** at the bottom of the screen you get by tapping your name at the top of **Settings**. That one signs the whole device out, including iCloud, the App Store, iMessage and FaceTime ([104958](https://support.apple.com/en-us/104958)). [Switch App Store accounts on your iPhone](/en/howto/switch-store/) shows how to sign out of Media & Purchases only and switch back to your own account.
+
+If someone else's account is already signed in to iCloud with Find My on, then by the inference above, the device is now linked to their account. Apple covers signing out and removing Activation Lock in [104958](https://support.apple.com/en-us/104958) and [108934](https://support.apple.com/en-us/108934). If you're not sure, do it together with the account's owner, or ask Apple Support first.
+
+If someone else set up your own account for you, Apple says to change your password ([102614](https://support.apple.com/en-us/102614)). If you've ever told someone your password, change it too.
+
+<Callout type="no" title="Don't sign in to anyone else's account, and don't give yours away">
+This site doesn't teach or recommend buying, borrowing or sharing accounts, and doesn't cover getting around Activation Lock. If you want an other-region account, sign up for one with your own email address and phone number.
+</Callout>
+
+## Stuck?
+
+<Q q="The person who gave me the account says it's fine as long as I only use the App Store and stay out of iCloud.">
+Even if you stay out of iCloud, everything in the section above still applies: the codes go to the owner, apps need that account to update, and the account can be taken back at any time. Apple also says that neither the account signed in to iCloud nor the one signed in only to Media & Purchases should be shared with anyone else ([117294](https://support.apple.com/en-us/117294)).
+</Q>
+<Q q="Can my family share one account?">
+Apple says not to share, even with family ([102614](https://support.apple.com/en-us/102614)). To share what you've bought, use Family Sharing, with each person on their own account.
+</Q>
+<Q q="Will apps I downloaded with a borrowed account still work after I switch back to mine?">
+Apple says you can't update content you bought with a different Apple Account ([111001](https://support.apple.com/en-us/111001)). Whether the apps you already have keep opening, Apple's pages don't say. If you're not sure, ask Apple Support.
+</Q>
+
+You now know why you shouldn't sign in to someone else's account, and why the iCloud step matters most. To create your own, start with [Create a US Apple Account](/en/howto/us-account/) or [Create a Turkey Apple Account](/en/howto/tr-account/).

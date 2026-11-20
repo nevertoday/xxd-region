@@ -1,5 +1,71 @@
 ---
 layout: ../../../layouts/HowTo.astro
 slug: cannot-create
+step: 2
+time: 6-minute read
+for: Signing up for a new Apple Account keeps showing "Your account cannot be created at this time", or "The maximum number of free accounts have been activated"
+tldr: The message doesn't give a reason. Apple's advice is to try a different way of creating the account, update your software and check that your connection can open webpages, then ask Apple Support if it still fails. The fixes people share on X contradict each other, and none of them comes from Apple.
+description: What to do when creating an Apple Account shows "your account cannot be created at this time". The suggestions in Apple's article 120636 and the order to try them, how to explain the problem to Apple Support (with a message you can send), what "The maximum number of free accounts have been activated" means, and the contradicting experiences people share on X.
 ---
-{/* 待写 TBD: body. See docs/MAINTAINING.md (voice and hard rules); facts and their links are in docs/sources/README.md. */}
+import Term from "../../../components/Term.astro";
+import Q from "../../../components/Q.astro";
+import Callout from "../../../components/Callout.astro";
+import Copy from "../../../components/Copy.astro";
+
+You've typed your email address, set a password, picked a country or region and tapped Continue. The page pauses, then shows one line: your account cannot be created at this time. No error code, no reason. You try again a while later and get the same line. Search online and every post has a different fix. By the end of this page you'll know which suggestions Apple itself gives for this message and what order to try them in, how to put it to Apple Support if they don't work, and why the advice you find online doesn't agree.
+
+<mark>The message doesn't tell you why, and Apple's advice comes down to a few things: try a different way of creating the account, update your software, check your connection, and if none of that works, ask Apple Support. Work through them first and you'll have a clearer story to tell when you ask.</mark>
+
+## First, make sure it isn't something else
+
+Apple's article on this message ([120636](https://support.apple.com/en-us/120636)) starts by ruling out a few cases that look like a failed sign-up but each have their own fix. If the message says the email address or phone number is unavailable or can't be used, an <Term k="Apple 账户" /> already uses it, so try a different email address or number, or reset that account's password. If you only wanted a new account because you forgot the password to your old one, Apple suggests resetting the password instead ([102656](https://support.apple.com/en-us/102656)). If you're creating an account for a child, use <Term k="家人共享" /> to do it.
+
+Once those are out of the way, what's left is the real "your account cannot be created at this time".
+
+## What Apple suggests
+
+**Try a different way of creating it.** Apple says you can try again later or try a different way. If you have an Apple device, use it to create the account in **Settings** or **System Settings**. If you have a Windows PC or an Android device, create it on the web at [account.apple.com](https://account.apple.com). So if you've been signing up on the web and have an iPhone to hand, do what Apple says and try once in your iPhone's Settings. [Create a US Apple Account](/en/howto/us-account/) and [Create a Turkey Apple Account](/en/howto/tr-account/) walk through both routes.
+
+**Update your software.** Apple says your device or Apple app might not be up to date. Update iOS or iPadOS on an iPhone or iPad, and macOS on a Mac. On a Windows PC or an Android phone, update the operating system and check for the latest versions of Apple's apps.
+
+**Check your internet connection.** Apple is specific here. Make sure you can open webpages in your device's browser. If you can, try again later. You might switch to cellular data or a different Wi-Fi network if one is available, and you can check Apple's [System Status](https://www.apple.com/support/systemstatus/) page for an outage in your country or region. Beyond those lines from Apple, this site doesn't cover network setup.
+
+**This is your first account, and your device is up to date.** If you still see the message on a device with up-to-date software, Apple says to [get suggestions from Apple Support](https://getsupport.apple.com/?caller=kbase) on what to try next.
+
+## Still stuck? Ask Apple Support
+
+By now you've tried another way of signing up, updated your software and checked your connection. Say that when you explain the problem, and you don't need to explain anything else. You can send the message below, with the part in brackets replaced by your own details.
+
+<Copy id="ask-support" title="A message for Apple Support" code={`Hi, I'm trying to create a new Apple Account, but I keep seeing "Your account cannot be created at this time." I've tried both in Settings on my iPhone and on account.apple.com, my software is up to date, and webpages open normally, but I get the same message every time. The email address I used is (your email address). Could you help me find out why, and tell me what I should do next? Thank you.`} />
+
+<Callout type="warn" title="Never give anyone your password or codes">
+Apple says never to give your Apple Account password, verification codes or device passcode to anyone else, and that Apple will never ask you for them ([102614](https://support.apple.com/en-us/102614)). If someone claiming to be support asks for a code, treat it as a scam.
+</Callout>
+
+## How people on X got past it
+
+This message comes up a lot on X, and people's ways past it don't match. One user on X reports getting stuck on it while creating a US account, then switching to a Gmail address and signing up again in a private browser window, which worked first time ([post](https://x.com/TOMRICH1619/status/2043242237535174891)). Another user did the opposite. They kept the same email address, contacted Apple Support's online chat and gave the address that had failed, and after support dealt with it, signing up again with that same address worked ([post](https://x.com/alin_zone/status/2118312466467979410)).
+
+One changed the email address and one didn't, and both say it worked. Apple's article doesn't explain what's behind the message, so nobody can say which approach will help you. What this site can tell you is what Apple itself wrote, and that the last step is asking Apple Support.
+
+## A different message: the maximum number of free accounts
+
+If what you see is "The maximum number of free accounts have been activated", that's a different thing. Apple explains that there's a limit on how many accounts you can set up with iCloud on a single device in one year, and you've gone past it ([101661](https://support.apple.com/en-us/101661)). You might see it when you create an account in **Settings** on a device that's already been used to create other accounts this year, or when you sign in to an account you created on the web but haven't yet set up with iCloud.
+
+Apple offers two ways forward: set up iCloud with that account on another iPhone, iPad or Mac, or sign in with an account that's already set up with iCloud. With the setup this site uses, the other-region account never needs to go into iCloud. iCloud stays on your own account, and the other-region account signs in under <Term k="媒体与购买项目" /> only. [Lesson 2](/en/start/2-two-sign-ins/) explains why.
+
+101661 doesn't say what the limit is, and Apple doesn't say whether signing in under Media & Purchases only counts toward it. Apple's pages don't say. If you're not sure, ask Apple Support.
+
+## Stuck?
+
+<Q q="Is it my network? Should I switch networks?">
+Apple says only the lines above about your connection: make sure webpages open, try again later, switch to cellular data or another Wi-Fi network, and check the System Status page. Apple's pages have never said that signing up needs any special network. This site doesn't cover network setup and won't judge whether you need one.
+</Q>
+<Q q="It says the email address is unavailable.">
+That's not the same as "your account cannot be created at this time". Apple says it means an Apple Account already uses that email address or phone number. Use a different one, or reset that account's password ([120636](https://support.apple.com/en-us/120636)).
+</Q>
+<Q q="I've tried several email addresses and none of them work.">
+Once you've tried everything Apple suggests, stop trying one address after another. Write down what you've tried and ask Apple Support. The message above works as it is.
+</Q>
+
+You've now worked through Apple's suggestions in order and have a message ready for Apple Support. Once the account is created, the next thing is payment, covered in [step 3 of the full guide](/en/guide/3-payment/).
