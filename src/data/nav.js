@@ -29,9 +29,9 @@ export const APPLE_EN = "https://support.apple.com/en-us/apple-account";
 
 // 新手入门：给第一次想要外区账户的人。三课讲三件最要紧的事，讲完再去走完整教程。
 export const LESSONS = [
-  { n: 1, slug: "1-region", title: "账户的地区，管的是什么", minutes: "8 分钟", ready: false, sum: "地区决定商店里有哪些 App、用什么货币标价、能用什么付款；按 Apple 的条款，它是你居住的国家或地区", en: { title: "What an account's region decides", minutes: "8 minutes", sum: "The region decides which apps the store has, what currency prices are in and how you can pay; Apple's terms tie it to where you live" } },
-  { n: 2, slug: "2-two-sign-ins", title: "iCloud 和 App Store 是两个登录位", minutes: "8 分钟", ready: false, sum: "iCloud 一直登你自己的账户，外区账户只登在「媒体与购买项目」里；别人的账户永远不登进 iCloud", en: { title: "iCloud and the App Store are two separate sign-ins", minutes: "8 minutes", sum: "Keep your own account in iCloud and sign the other-region account into Media & Purchases only; never put someone else's account in iCloud" } },
-  { n: 3, slug: "3-new-account", title: "另注册一个，别动你的主账户", minutes: "8 分钟", ready: false, sum: "给主账户换地区要先清掉余额、订阅和家人共享，买过的东西也不跟着走；另注册一个更省事", en: { title: "Make a second account; leave your main one alone", minutes: "8 minutes", sum: "Moving your main account means clearing your balance, subscriptions and Family Sharing first, and purchases don't come along; a second account is simpler" } },
+  { n: 1, slug: "1-region", title: "账户的地区，管的是什么", minutes: "8 分钟", ready: true, sum: "地区决定商店里有哪些 App、用什么货币标价、能用什么付款；按 Apple 的条款，它是你居住的国家或地区", en: { title: "What an account's region decides", minutes: "8 minutes", sum: "The region decides which apps the store has, what currency prices are in and how you can pay; Apple's terms tie it to where you live" } },
+  { n: 2, slug: "2-two-sign-ins", title: "iCloud 和 App Store 是两个登录位", minutes: "8 分钟", ready: true, sum: "iCloud 一直登你自己的账户，外区账户只登在「媒体与购买项目」里；别人的账户永远不登进 iCloud", en: { title: "iCloud and the App Store are two separate sign-ins", minutes: "8 minutes", sum: "Keep your own account in iCloud and sign the other-region account into Media & Purchases only; never put someone else's account in iCloud" } },
+  { n: 3, slug: "3-new-account", title: "另注册一个，别动你的主账户", minutes: "8 分钟", ready: true, sum: "给主账户换地区要先清掉余额、订阅和家人共享，国区账户的 iCloud 还会迁出云上贵州；另注册一个更省事", en: { title: "Make a second account; leave your main one alone", minutes: "8 minutes", sum: "Moving your main account means clearing your balance, subscriptions and Family Sharing first, and a China mainland account's iCloud moves out of GCBD; a second account is simpler" } },
 ];
 export const lessonHref = (s, lang = "zh") => link(`/start/${s.slug}/`, lang);
 
