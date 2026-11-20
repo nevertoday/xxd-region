@@ -1,5 +1,73 @@
 ---
 layout: ../../../layouts/HowTo.astro
 slug: price-rise
+step: 5
+time: 8-minute read
+for: You've had a notice that a subscription's price is going up, or you've heard that something you subscribe to costs more now
+tldr: Apple handles subscription price rises in two ways. Either it just tells you, or it asks for your consent, and if it asks and you don't agree, the subscription expires at the end of the last period at the old price. Whether existing subscribers pay more depends on whether the developer kept their old price. If you don't want the new price, cancel; if you've already been charged, ask for a refund at reportaproblem.apple.com.
+description: "How Apple tells you about a subscription price rise: notice-only versus consent, when consent is needed, what happens if you don't agree, and why some existing subscribers pay more and others don't; how to cancel, how to ask for a refund, and the Turkish terms on 30 days' notice and prorated refunds."
 ---
-{/* 待写 TBD: body. See docs/MAINTAINING.md (voice and hard rules); facts and their links are in docs/sources/README.md. */}
+import Term from "../../../components/Term.astro";
+import Q from "../../../components/Q.astro";
+import Callout from "../../../components/Callout.astro";
+
+When you finish this page, you'll be able to tell which kind of notice a subscription price rise is, know what happens if you don't agree, and know where to cancel and how to ask for a refund.
+
+In June 2026, when ChatGPT Plus went up on the Turkey store, the talk on X was a mess. One user reported that ChatGPT Plus on iOS in Turkey had gone up to 999.99 TL ([@st7evechou's post](https://x.com/st7evechou/status/2064866774106218518)). Another said they were an existing subscriber and their renewal still showed 499.99 TL ([@ainotes_KK's post](https://x.com/ainotes_KK/status/2064954319586398536)). Someone else told people not to panic, since the rise was probably only for new subscribers ([@Lonely__MH's post](https://x.com/Lonely__MH/status/2064917859470647728)), and another asked whether existing subscribers would pay more at renewal while digging into Apple's rules ([@koffuxu's post](https://x.com/koffuxu/status/2064965284822458653)). These reports look contradictory, but they all fit the rules Apple gives developers.
+
+<mark>When a subscription's price goes up, Apple either just tells you or asks for your consent. If it asks and you don't agree, the subscription expires at the end of the last period at the old price.</mark>
+
+## Two kinds of price rise: a notice, or a request for consent
+
+Apple's instructions for developers say that when an auto-renewable subscription's price goes up, active subscribers get either a notice or a request for consent ([App Store Connect: Manage pricing for auto-renewable subscriptions](https://developer.apple.com/help/app-store-connect/manage-subscriptions/manage-pricing-for-auto-renewable-subscriptions)).
+
+Consent is needed in three cases, and any one is enough: the subscriber is in a region that requires consent for any price change; the rise is bigger than that <Term k="国家或地区" />'s threshold (the thresholds are listed by country or region in [a table](https://developer.apple.com/help/app-store-connect/reference/in-app-purchases-and-subscriptions/auto-renewable-subscription-price-increase-thresholds/)); or the subscription already went up for that subscriber within the past 12 months. Apple then contacts you by email or push notification to ask for consent. If you don't agree, or don't respond, Apple asks again roughly every week, by email, push notification and in-app message, until the subscription expires at the end of the current billing cycle. If you haven't agreed before the first renewal at the higher price, the subscription expires at the end of the last renewal period at the old price, rather than renewing at the new one.
+
+If none of the three applies, Apple just tells you, with no request for consent. After the new price takes effect, it sends an email, plus a push notification if you've turned those on, 27 or 7 days before your next renewal, and on iOS 13.4 or later it also tells you with an in-app message. With this kind, the subscription renews at the new price, so if you don't want it, you have to cancel it yourself.
+
+Apple's US terms say just one thing about this: you'll be notified if a subscription's price increases and, if required, your consent will be needed to continue ([Apple Media Services Terms and Conditions (US)](https://www.apple.com/legal/internet-services/itunes/us/terms.html)).
+
+## Why some existing subscribers pay more and others don't
+
+The same instructions have one key line: when developers raise a price, they "have the option to preserve prices for existing subscribers." If they keep the old price, anyone who subscribed before the change isn't affected. If they don't, the new price reaches existing subscribers too, through a notice or a request for consent as above.
+
+So the posts at the top don't contradict each other. As an existing subscriber, whether your renewal goes up depends on how that app's developer set it. That's a setting on the developer's side. What you can see is the notice Apple sends to the account.
+
+## If you don't want the new price: cancel
+
+On an iPhone, open Settings, tap your name, tap **Subscriptions**, tap the subscription, and tap **Cancel Subscription**. You might need to scroll down to find the button. If there's no Cancel button, or you see an expiration message in red, it's already cancelled ([Cancel a subscription from Apple](https://support.apple.com/en-us/118428)).
+
+There's one thing to watch with a subscription on another-region account. You cancel it with the account it belongs to. If you're not sure which that is, search your email for "receipt from Apple" or "invoice from Apple", see which <Term k="Apple 账户" /> the receipt shows, and sign in with that account to cancel. The web is the most direct way: sign in at account.apple.com with that account and open the subscriptions page.
+
+<Callout type="ok">
+The subscription's page no longer has a Cancel button, or shows an expiration message in red.
+</Callout>
+
+## Already charged: ask for a refund
+
+If you've already been charged the new price, you can try asking for a refund ([Request a refund for apps or content that you bought from Apple](https://support.apple.com/en-us/118223)):
+
+1. Sign in to reportaproblem.apple.com with the account that bought the subscription.
+2. Tap or click **I'd like to**, then choose **Request a refund**.
+3. Choose the reason, then choose **Next**.
+4. Choose the subscription, then choose **Submit**.
+
+After you submit, it takes 24 to 48 hours to hear back. If you can't find the charge on that site, search your email for the receipt and see which account made the purchase, and if you have several accounts, sign in with each one and look. Apple also says refund eligibility might vary by country or region, so whether you get one is up to Apple's decision.
+
+## Turkey subscriptions: the terms add a few rules
+
+The Turkish terms go into more detail on price rises ([Apple Media Services Terms (Turkey)](https://www.apple.com/tr/legal/internet-services/itunes/tr/terms.html), Turkish only). You'll be told by email at least 30 days before a subscription's price goes up. If you don't accept, you can cancel free of charge before the new price takes effect. Where your explicit consent is needed, that email will ask for it, and if you don't give it, the subscription is cancelled automatically on the last day before the new price takes effect. The terms also say you can cancel a subscription at any time with immediate effect and get a prorated refund, by contacting Apple Support.
+
+## Stuck?
+
+<Q q="I haven't had an email. Could the price have gone up quietly?">
+According to Apple's instructions for developers, subscribers are told about both kinds of price rise; only subscribers whose subscription isn't going to renew don't get a notice. Your other-region account has its own email address, so look there, and watch for push notifications. Turkey subscriptions also have the terms' 30 days' email notice.
+</Q>
+<Q q="Where's the button to agree?">
+Apple says it asks for consent by email, push notification and in-app message. It doesn't describe the buttons, so follow the notice you get. If you don't want to agree, you don't have to tap anything, and the subscription expires at the end of the last period at the old price.
+</Q>
+<Q q="Could I resubscribe from another region instead?">
+This site doesn't cover switching regions to compare prices. Changing region also means cancelling subscriptions that block the change and waiting for them to end first; see [Move an existing account to another region](/en/howto/change-region/).
+</Q>
+
+You've now told the two kinds of price rise apart, and you know where cancelling and refunds happen. For managing subscriptions from start to finish, see the full guide's step [Subscriptions, price rises and renewals](/en/guide/5-subscriptions/).

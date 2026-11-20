@@ -1,5 +1,110 @@
 ---
 layout: ../../../layouts/HowTo.astro
 slug: us-account
+step: 2
+time: 10-minute read
+for: You want an Apple Account whose country or region is the United States, and you're signing up yourself
+tldr: A US account is simply an account created through Apple's own sign-up flow with the United States chosen as its country or region. The web flow has no payment step; on an iPhone's App Store or a Mac you can choose None. Apple's terms say the address belongs to where you live, so this site doesn't supply one or show you how to make one up.
+description: "Create a US Apple Account through Apple's own flow: where the web, iPhone App Store and Mac flows ask for the country or region, None at the payment step, what the US accepts, the Home Country rule and billing address in Apple's terms, and the few points Apple doesn't spell out."
 ---
-{/* 待写 TBD: body. See docs/MAINTAINING.md (voice and hard rules); facts and their links are in docs/sources/README.md. */}
+import Term from "../../../components/Term.astro";
+import Q from "../../../components/Q.astro";
+import Callout from "../../../components/Callout.astro";
+import Tabs from "../../../components/Tabs.astro";
+
+When you finish this page, you'll have an <Term k="Apple 账户" /> whose country or region is the United States, created through Apple's own sign-up flow, and you'll know what each step is asking and which points Apple leaves unclear.
+
+It usually starts like this. A friend recommends an app, you go looking for it in the App Store and it isn't there, and your friend says "oh, that's on the US store." So you search for a tutorial, and the advice is all over the place: create one account and switch its region later, or copy an address someone hands you. In fact a US account is made with the same flow Apple uses for every account in every region. Only one thing is different: you choose the United States as the <Term k="国家或地区" />.
+
+<mark>A US account is an account created in Apple's own sign-up flow with the United States chosen as its country or region, and under Apple's terms that choice also makes the United States your Home Country.</mark>
+
+## Before you start
+
+You need two things: an email address that has never been used for an Apple Account, and a phone number where you can always get verification codes. [Get an email address and a phone number ready](/en/guide/1-prepare/) explains why, and [Create the account in the right country or region](/en/guide/2-create/) explains why the region you pick first matters so much.
+
+Decide one more thing up front. This account will only ever be signed in under <Term k="媒体与购买项目" /> on your iPhone, for the App Store, and iCloud stays on your own account. So don't touch the account that's signed in on your phone while you're signing up, either.
+
+## Three ways in, and where you choose the United States
+
+Apple describes several ways to create an account ([How to create a new Apple Account](https://support.apple.com/en-us/108647)). One of them is creating an account while you set up a device, which is for giving that device its own account, so skip it here. The three below are the useful ones. They ask for much the same things, and the big difference is the payment step.
+
+<Tabs id="create" items={[["web", "Web"], ["iphone", "iPhone App Store"], ["mac", "Mac"]]}>
+<div slot="web">
+
+Go to account.apple.com and click **Create Your Apple Account**. Follow the onscreen steps to enter an email address, create a strong password, and set the region to the United States. Then enter your birthday and a phone number you can always access, tick the boxes for Apple's update emails if you want them, click **Continue**, and follow the prompts to verify your email address and phone number.
+
+Apple's web steps have no payment step. The whole thing happens in a browser, so the accounts signed in on your iPhone and Mac aren't touched at all.
+
+</div>
+<div slot="iphone">
+
+Open the App Store, tap the **My Account** button, then tap **Create New Apple Account**. Follow the onscreen steps to enter an email address, create a password, and set the country or region to the United States. Next comes your payment method and billing information. You can enter them, or choose **None**, then tap **Next**. Finally, confirm your phone number, look for the verification email from Apple, and verify your email address.
+
+One thing to watch. Apple says that if you don't see **Create New Apple Account**, you should make sure you're signed out of iCloud. Signing out of iCloud also signs you out of the App Store, iMessage and FaceTime, and your iCloud data is removed from that iPhone unless you choose to keep a copy when prompted ([Sign out of your Apple Account and iCloud on your devices](https://support.apple.com/en-us/104958)). Signing out of your own iCloud isn't worth it for a second-region account. If this happens, use the web flow instead.
+
+</div>
+<div slot="mac">
+
+Choose **System Settings** from the Apple menu, click **Sign in** in the sidebar, then click **Don’t Have an Account?**. Follow the onscreen steps to enter your birthday, an email address and a password, and set the country or region to the United States. Next comes your payment method and billing information. You can enter them, or choose **None**, then click **Continue**. Finally, confirm your phone number and verify your email address.
+
+A Mac also signs in to an Apple Account from that same **Sign in** in the sidebar ([Sign in to your Apple Account on the web or in your device settings](https://support.apple.com/en-us/111001)), so this flow goes through the Mac's own sign-in. If your Mac is already signed in with your own account, use the web flow.
+
+</div>
+</Tabs>
+
+## The payment step: None, and when it isn't there
+
+When you sign up in the App Store on an iPhone or on a Mac, Apple says you can choose **None** at the payment step and won't be charged until you buy something ([How to create a new Apple Account](https://support.apple.com/en-us/108647)). The web flow has no payment step at all. That doesn't mean the question never comes back, though. Apple's sign-in article says that when you sign in on the App Store and other media services for the first time, you might need to add a credit card or other payment information ([Sign in to your Apple Account on the web or in your device settings](https://support.apple.com/en-us/111001)), and you might need a payment method to download or update some free apps ([Add a payment method to your Apple Account](https://support.apple.com/en-us/118429)).
+
+Some people don't see None at the payment step at all. Apple only says you can choose it, not when it might be missing. It does list cases where you must keep at least one payment method on file, namely having a subscription like iCloud+, having an unpaid balance, or being a <Term k="家人共享" /> organizer who uses purchase sharing ([Remove a payment method from your Apple Account](https://support.apple.com/en-us/118291)), but that's about accounts already in use, not new ones. Apple's pages don't spell this out, so if you're unsure, ask Apple Support.
+
+When you do pay, the United States accepts these ([Payment methods that you can use with your Apple Account](https://support.apple.com/en-us/111741)):
+
+- <Term k="Apple 账户余额" />, from redeeming an Apple Gift Card or adding funds
+- Apple Card and Apple Cash
+- Apple Pay, which requires <Term k="双重认证" />
+- Most credit and debit cards
+- PayPal, which might ask you to verify your account with PayPal
+
+Apple also says payment methods are subject to change. Whether a card issued outside the United States works, Apple doesn't say. A <Term k="充值卡" /> only works on an account in the country or region where it was bought; [Buy and redeem a gift card](/en/howto/gift-card/) covers how to tell and how to redeem, and [Payment: None, gift cards or a card](/en/guide/3-payment/) covers how to choose between them.
+
+## The address: this site doesn't give one, so read the rules first
+
+When you enter billing information, or later add a bank card, you'll be asked for an address. This site doesn't supply addresses and doesn't show you how to make one up, because Apple has rules about this, and you should read them and decide for yourself.
+
+Here are the rules. Apple's US Media Services Terms say the services are available for use in your country or territory of residence, and that by creating an account for use in a particular country or territory you're specifying it as your <Term k="居住国家或地区" /> ([Apple Media Services Terms and Conditions (US)](https://www.apple.com/legal/internet-services/itunes/us/terms.html)). The same terms say that if you fail, or Apple suspects you have failed, to comply with any provision, Apple may, without notice, terminate the agreement or your account, terminate your license to the software, and preclude your access to the services. What Apple actually does when an account's region doesn't match where you live, it hasn't said publicly. Apple's pages don't spell this out, so if you're unsure, ask Apple Support.
+
+The other rule is more concrete. When you add a payment method, Apple asks you to confirm that your name, billing address and other information are spelled correctly and match what you have on file with your financial institution ([Add a payment method to your Apple Account](https://support.apple.com/en-us/118429)). So an address that isn't yours gets stuck on the day you add a bank card.
+
+If you live in the United States, use your real address. If you don't, the rules and what they allow are the ones above. Apple's own advice to people who move is that if you don't want to enter a payment method for your new region, wait until you're physically there and then create a new Apple Account ([Change your Apple Account country or region](https://support.apple.com/en-us/118283)). The decision is yours. As for whether it's legal, that's a matter of the terms between you and Apple. This site explains what the terms say, and it isn't legal advice.
+
+## Tax
+
+On whether US prices have tax added, Apple says one thing, in a footnote on the iCloud+ pricing page: residents in some US states have tax added to the monthly payment due to state laws ([iCloud+ plans and pricing](https://support.apple.com/en-us/108047)). The terms only say charges include any applicable taxes. Whether tax is worked out from your billing address, Apple doesn't say. If you're not sure, ask Apple Support.
+
+## How to check it worked
+
+Once you've verified your email address (and, on the web, your phone number), the account exists. Now look at its country or region. [Check which region an account is in](/en/howto/check-region/) shows where to look on an iPhone, a Mac and the web.
+
+<Callout type="ok">
+**Country/Region** shows the United States.
+</Callout>
+
+Next, sign it in under Media & Purchases on your iPhone and leave iCloud alone, as in [Sign in under Media & Purchases only](/en/guide/4-sign-in/). For exactly what to tap, see [Switch App Store accounts on your iPhone](/en/howto/switch-store/).
+
+## Stuck?
+
+<Q q="It says “Your account cannot be created at this time.”">
+Apple suggests trying again later or trying a different way to create the account, and updating your software and apps to the latest versions ([If you can’t create an Apple Account or see “your account cannot be created at this time”](https://support.apple.com/en-us/120636)). There's more in [“Your account cannot be created at this time”](/en/howto/cannot-create/).
+</Q>
+<Q q="There's no None at the payment step.">
+Apple doesn't say when None is missing. Apple's web steps have no payment step to begin with, though your first App Store sign-in might still ask for payment information. Don't get past it with a card or an address that isn't yours, because billing details have to match your bank's records. Apple's pages don't spell this out, so if you're unsure, ask Apple Support.
+</Q>
+<Q q="Can I use a +86 phone number?">
+Apple only says that in China mainland you might be required to provide a +86 number. It doesn't say whether an account in another country or region can use a +86 number for verification codes. Apple's pages don't spell this out, so if you're unsure, ask Apple Support. For getting a phone number ready, see [Get an email address and a phone number ready](/en/guide/1-prepare/).
+</Q>
+<Q q="Tutorials say to create a China mainland account first, then switch it to the US.">
+Apple's sign-up flow lets you choose the United States directly, so there's no need for the detour. Moving an existing account means clearing your balance, subscriptions and more first, and moving out of China mainland also moves your iCloud content. See [Move an existing account to another region](/en/howto/change-region/).
+</Q>
+
+You've just made a US account with Apple's own flow, and you've seen what Apple says, and doesn't say, about None, addresses and tax. Next, go to [Sign in under Media & Purchases only](/en/guide/4-sign-in/).

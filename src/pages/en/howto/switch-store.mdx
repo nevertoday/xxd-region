@@ -1,5 +1,70 @@
 ---
 layout: ../../../layouts/HowTo.astro
 slug: switch-store
+step: 4
+time: 8-minute read
+for: iCloud on your iPhone uses your own account, and you want the App Store on another account to download and update apps
+tldr: In Settings, tap your name, tap Media & Purchases, sign out, then use "Not [your name]?" to sign in with the other account. Switching back is the same steps again. Don't tap the Sign Out at the bottom of your name's page, because that signs the whole iPhone out.
+description: "Switch only the Media & Purchases account on your iPhone and leave iCloud alone: Apple's steps, the difference between the two Sign Out buttons, switching back, updating and redownloading apps bought with the other account, and why a device might have to wait up to 90 days before it can be associated with a different account."
 ---
-{/* 待写 TBD: body. See docs/MAINTAINING.md (voice and hard rules); facts and their links are in docs/sources/README.md. */}
+import Term from "../../../components/Term.astro";
+import Q from "../../../components/Q.astro";
+import Callout from "../../../components/Callout.astro";
+
+Follow this page and you'll be able to sign the App Store on your iPhone into another <Term k="Apple 账户" />, download and update, then switch back, with iCloud signed in to your own account the whole time.
+
+The first time people switch, a lot of them get a fright like this. They tap their name in Settings, scroll down, see a red **Sign Out** at the very bottom, and nearly tap it. That button is for the whole iPhone and has nothing to do with what you're trying to do. What you need is one small row on that page.
+
+<mark>Switching App Store accounts only touches the Media & Purchases sign-in. The Sign Out at the bottom of your name's page signs the whole iPhone out of your Apple Account, iCloud included, so leave it alone.</mark>
+
+## Two Sign Out buttons
+
+Your iPhone really has two sign-ins. <Term k="媒体与购买项目" /> is the sign-in used by the App Store, Music, Books and the other places you buy things. Your name's page itself is tied to iCloud and most features on your iPhone. Apple calls a different account signed in just under Media & Purchases the <Term k="备选账户" />, and the one signed in for iCloud the primary Apple Account ([Migrate purchases from one Apple Account to another Apple Account](https://support.apple.com/en-us/117294)).
+
+Each has a Sign Out, and they do very different things. The **Sign Out** at the bottom of your name's page signs you out of iCloud, the App Store and other media services, iMessage and FaceTime all at once, and your iCloud data is removed from the iPhone unless you choose to keep a copy when prompted ([Sign out of your Apple Account and iCloud on your devices](https://support.apple.com/en-us/104958)). The **Sign Out** inside Media & Purchases only signs out the account you buy things with. [iCloud and the App Store are two separate sign-ins](/en/start/2-two-sign-ins/) explains why it's worth keeping them apart.
+
+## Switch to the other account
+
+These are Apple's steps ([Migrate purchases from one Apple Account to another Apple Account](https://support.apple.com/en-us/117294)):
+
+1. Open Settings and tap your name.
+2. Tap **Media & Purchases**, then tap **Sign Out**.
+3. Once you're signed out, tap **Media & Purchases** again, choose **Not [your name]?**, and sign in with the other account.
+
+If you're asked for a code while signing in, that's the other account's <Term k="双重认证" />. Enter the six-digit code sent to that account's trusted device or phone number ([Sign in to your Apple Account on the web or in your device settings](https://support.apple.com/en-us/111001)). So that account's phone number needs to be one where you can always get texts.
+
+iOS menus change every few versions. If what you see on your iPhone is different, go by what you see.
+
+<Callout type="ok">
+Back on your name's page in Settings, the other account shows under **Media & Purchases**, and the name at the top of the page is still yours.
+</Callout>
+
+## Downloading, updating and redownloading
+
+Once you've switched, anything you download from the App Store uses that account. Remember one rule. You can't sign in on the App Store with more than one account at the same time, or update content you bought with a different account ([Sign in to your Apple Account on the web or in your device settings](https://support.apple.com/en-us/111001)). So to update an app you downloaded with your US account, switch Media & Purchases back to the US account first.
+
+If you deleted an app and want it back, you don't buy it again. In the App Store, tap the **My Account** button or your photo, tap **Apps & Purchase History**, then **Your Apps**, then **Not on this [device]**, find the app and tap **Redownload** ([Redownload apps from Apple](https://support.apple.com/en-us/102417)). Apple's instructions are to sign in to your account in the App Store and redownload, so switch to whichever account bought it first.
+
+## Switch back
+
+It's the same steps, except that you sign in with your own account at the end. In Settings, tap your name, tap **Media & Purchases**, tap **Sign Out**, then tap **Media & Purchases** again and sign in with your own account. Throughout, the top of your name's page is still you, and iCloud never moved.
+
+## Device association: up to a 90-day wait
+
+There's one more thing tied to switching that Apple writes up in a different article. A device you buy things on gets associated with an account. Associated devices aren't the same as devices you're signed in on. An Apple Account for purchases can have ten devices associated at one time, no more than five of them computers. To add a device to that list, Apple's instruction is to use it to buy something from the App Store, the Apple TV app or another Apple service ([View and remove your devices that are associated with your Apple Account for purchases](https://support.apple.com/en-us/118412)).
+
+The same article says that when you try to associate a device that was previously associated, you might see a message saying the device is associated with another Apple Account and can't be associated with another Apple Account for a number of days. You might need to wait up to 90 days to associate it with a different account. When that message appears, waiting is what Apple's article says to do. If you're unsure, ask Apple Support.
+
+## Stuck?
+
+<Q q="I tapped the Sign Out at the bottom by mistake.">
+Any information stored in iCloud remains available in iCloud ([Sign out of your Apple Account and iCloud on your devices](https://support.apple.com/en-us/104958)). To sign back in, open Settings, tap Apple Account at the top, and sign in with your own account ([Sign in to your Apple Account on the web or in your device settings](https://support.apple.com/en-us/111001)).
+</Q>
+<Q q="I can't find Sign Out in the App Store.">
+This page uses Media & Purchases in Settings, which is the path Apple gives in 117294. Menus change between iOS versions, so if yours looks different, go by what you see.
+</Q>
+<Q q="Can I move what I bought on the other-region account into my main account?">
+Apple has a migrate-purchases feature, but one condition is that both accounts are set to the same country and region for purchases, so by that condition a US account and a China mainland account can't be merged. After a migration, the secondary account also can't be used for Media & Purchases any more ([Migrate purchases from one Apple Account to another Apple Account](https://support.apple.com/en-us/117294)).
+</Q>
+
+You've just switched the App Store to another account and back by touching only the Media & Purchases sign-in. In the full guide, this is the step [Sign in under Media & Purchases only](/en/guide/4-sign-in/).

@@ -1,5 +1,92 @@
 ---
 layout: ../../../layouts/HowTo.astro
 slug: tr-account
+step: 2
+time: 10-minute read
+for: You want an Apple Account whose country or region is Turkey (Türkiye), and you're signing up yourself
+tldr: The sign-up steps are the same as for a US account, with Turkey chosen as the country or region. What differs is everything after that. The payment methods, the services, prices in lira and the Turkish-language terms all follow Turkey.
+description: "Create a Turkey Apple Account through Apple's own flow: choosing Turkey, what the Turkish-only terms say about Home Country, which payment methods Turkey accepts, the Turkish gift card terms, which services Turkey has, prices in lira that include tax and change, and what the Turkish terms say about price rises and cancelling."
 ---
-{/* 待写 TBD: body. See docs/MAINTAINING.md (voice and hard rules); facts and their links are in docs/sources/README.md. */}
+import Term from "../../../components/Term.astro";
+import Q from "../../../components/Q.astro";
+import Callout from "../../../components/Callout.astro";
+
+When you finish this page, you'll have an <Term k="Apple 账户" /> whose country or region is Turkey, and you'll know where that account differs from a US one in payment, services, prices and terms.
+
+Here's a gap people run into early. You set up a Turkey account, open Apple Books to buy a book, and find only public-domain titles. You go to subscribe to Apple One and it isn't in the list. You didn't do anything wrong. Apple offers its services country by country, and Turkey's list isn't the same as the US one. So before you sign up, check that the region has what you want.
+
+<mark>A Turkey account is created with the same flow as a US account, with Turkey chosen as the country or region. What differs is everything after that, because the payment methods, services, currency and terms all follow Turkey.</mark>
+
+## Signing up: the same as the US, with Turkey chosen
+
+The steps are exactly the ones in [Create a US Apple Account](/en/howto/us-account/). Go through Apple's own flow on the web, in the App Store on an iPhone, or on a Mac, and at the <Term k="国家或地区" /> step choose Turkey (Apple's English pages write it as Türkiye). In the App Store and on a Mac you can choose **None** at the payment step, and Apple's web steps have no payment step ([How to create a new Apple Account](https://support.apple.com/en-us/108647)). When None might be missing, Apple doesn't say. Apple's pages don't spell this out, so if you're unsure, ask Apple Support.
+
+For the email address and phone number, see [Get an email address and a phone number ready](/en/guide/1-prepare/). As with a US account, this one is only ever signed in under <Term k="媒体与购买项目" /> on your iPhone, and iCloud stays on your own account.
+
+## The terms are only in Turkish
+
+Apple's Media Services Terms for Turkey exist only in Turkish; this site found no English version. On Home Country, they begin like this:
+
+> Hizmetlerimiz, ikamet ettiğiniz ülkede veya bölgede ("Yaşadığınız Ülke") kullanımınıza sunulur.
+
+That means "Our Services are available for your use in the country or region where you reside (your 'Home Country')." The next sentence matches the US terms: by creating an account for use in a particular country or region, you make it your <Term k="居住国家或地区" /> ([Apple Media Services Terms (Turkey)](https://www.apple.com/tr/legal/internet-services/itunes/tr/terms.html)).
+
+The difference is in the consequences clause. The US terms say that if you fail, or Apple suspects you have failed, to comply with any provision, Apple may terminate your account without notice. The Turkish terms are narrower. They say that if you fail to meet basic obligations such as payment, or in case of fraud, Apple may terminate the agreement and your account, terminate your software license, and preclude your access to the services. What Apple actually does when an account's region doesn't match where you live, it hasn't said publicly. Apple's pages don't spell this out, so if you're unsure, ask Apple Support.
+
+The address works the same way as for a US account. This site doesn't supply one or show you how to make one up. When you add a payment method, Apple asks you to confirm that your name, billing address and other information match what your financial institution has on file ([Add a payment method to your Apple Account](https://support.apple.com/en-us/118429)), so an address that isn't yours gets stuck on the day you add a bank card. If you live in Turkey, use your real address. If you don't, the rules and what they allow are the ones above, and the decision is yours. That's a matter of the terms between you and Apple. This site explains what the terms say, and it isn't legal advice.
+
+## Which payment methods Turkey accepts
+
+Turkey accepts fewer payment methods than the US ([Payment methods that you can use with your Apple Account](https://support.apple.com/en-us/111741)):
+
+- <Term k="Apple 账户余额" />, from redeeming App Store & iTunes Gift Cards or adding funds
+- Mobile phone billing, only with supported carriers; Apple lists Paycell, Türk Telekom Mobil Ödeme and Vodafone Mobil Ödeme
+- Most credit and debit cards
+
+There's no Apple Pay and no PayPal on that list, and Turkey isn't on Apple's list of countries and regions that support Apple Pay either ([Countries and regions that support Apple Pay](https://support.apple.com/en-us/102775)). Apple also says payment methods are subject to change. Whether a card issued outside Turkey works, Apple doesn't say.
+
+## Turkish gift cards
+
+Turkey's <Term k="充值卡" /> are issued by Apple Distribution International, and their terms are in Turkish too ([App Store Cards and Codes terms (Turkey)](https://www.apple.com/legal/internet-services/itunes/giftcards/tr/terms.html)). Three points matter. Store credit and content codes bought in Turkey can only be used on an account in Turkey. Store credit can't be turned into cash, exchanged or resold. And if Apple suspects store credit was obtained, used or applied to an Apple Account fraudulently, unlawfully or otherwise against the terms, it can void it without notice or refund and suspend or terminate accounts.
+
+So a US card won't redeem on a Turkey account, and the reverse is true too. For telling cards apart and redeeming them, see [Buy and redeem a gift card](/en/howto/gift-card/).
+
+## Which services Turkey has
+
+Apple lists its media services by country or region ([Availability of Apple Media Services](https://support.apple.com/en-us/118205)). Turkey's entry has the App Store, Apple Music, Apple Arcade, the Apple TV app and Apple TV subscription, movie purchases, iTunes Store music, ringtones, Shazam, the Apple Sports app and Apple Creator Studio. Apple Books has public-domain books only, and Apple Podcasts has free podcasts only. Apple One isn't on the list, and neither are Apple Fitness+ or Apple News+.
+
+One thing runs the other way from the US. A footnote in the same article says Apple Arcade and Apple TV access might be included with your iCloud+ subscription, and on Apple's iCloud+ page, the list of countries and regions where they're included has Türkiye on it ([iCloud+ with Apple TV and Apple Arcade](https://www.icloud.com/info/icloud-plus-tv-arcade)).
+
+Whether a given app is in Turkey's App Store is up to its developer. Developers choose which countries or regions to release in, and some apps may not be available for download or use in some places because of legal or regulatory requirements ([App Store Connect Help](https://developer.apple.com/help/app-store-connect/manage-your-apps-availability/manage-availability-for-your-app-on-the-app-store)).
+
+## Prices: in lira, tax included, and they change
+
+Prices on a Turkey account are in lira. Apple's iCloud+ pricing page says taxes are included in all prices for Turkey, and as of 2026-11-19, that page lists Turkey's 2 TB plan at 549.99 TL a month ([iCloud+ plans and pricing](https://support.apple.com/en-us/108047)).
+
+That number changes. One user on X reports that in August 2025, Turkey's iCloud+ 2 TB plan went from 249.99 TL to 399.99 TL a month ([@landiantech's post](https://x.com/landiantech/status/1958721244058329528)), and the price on Apple's page today is different again. Apple and developers both change prices, so this site doesn't compare them. If you want to subscribe to something, check its price page as it stands now.
+
+For price rises, the Turkish terms set out a few things. You'll be told by email at least 30 days before a subscription's price goes up. If you don't accept, you can cancel free of charge before the new price takes effect. Where your explicit consent is needed, that email will ask for it, and if you don't give it, the subscription is cancelled automatically on the last day before the new price takes effect. The terms also say you can cancel a subscription at any time with immediate effect and get a prorated refund, by contacting Apple Support ([Apple Media Services Terms (Turkey)](https://www.apple.com/tr/legal/internet-services/itunes/tr/terms.html)). For what to do when a price goes up, see [When a subscription's price goes up](/en/howto/price-rise/).
+
+## How to check it worked
+
+Once you've verified your email address, look at the account's country or region. [Check which region an account is in](/en/howto/check-region/) shows where.
+
+<Callout type="ok">
+**Country/Region** shows Turkey.
+</Callout>
+
+Then sign it in under Media & Purchases, as in [Sign in under Media & Purchases only](/en/guide/4-sign-in/).
+
+## Stuck?
+
+<Q q="Tutorials say to create a China mainland account first, then switch it to Turkey.">
+Apple's sign-up flow lets you choose Turkey directly. Moving an existing account means spending your balance, cancelling subscriptions and waiting for pending items first, and moving out of China mainland also moves your iCloud content. See [Move an existing account to another region](/en/howto/change-region/).
+</Q>
+<Q q="My gift card won't redeem.">
+Check which country or region the card is from first. The Turkish terms say credit bought in Turkey only works on an account in Turkey, and US cards only work on US accounts. See [Buy and redeem a gift card](/en/howto/gift-card/).
+</Q>
+<Q q="Everyone says Turkey costs less. Is that true?">
+This site doesn't compare prices or convert them into yuan. Apple's prices are in lira with tax included, and Apple and developers both change them; [When a subscription's price goes up](/en/howto/price-rise/) explains how Apple tells you about a rise. If you want a service, check its price page as it stands now.
+</Q>
+
+You've just created a Turkey account, and you've seen where Turkey differs from the US in terms, payment, services and prices. Next, go to [Sign in under Media & Purchases only](/en/guide/4-sign-in/).
