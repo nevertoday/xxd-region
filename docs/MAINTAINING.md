@@ -7,17 +7,23 @@
 
 - 站点骨架沿用 xxd-payout（跨境收款新手教程站，`../xxd-payout`，它又是从 Saily、Grok Bot 新手教程站搭出来的）：同样的外壳、组件、搜索和写作规矩。
 - 界面用 xxd-ui-kit（`public/xxd/` 里自带一份，不走 CDN）。
-- **只有中文和英文。** 读者住在中国大陆，中文在根路径；英文在 `/en/` 下，给想对照 Apple 英文原文的人。两种语言 slug 相同，顶栏的语言菜单切到对应页。改了一篇中文，**同一次提交里把英文版也改了**：
+- **十种语言，其中中文、英文是全站。** 读者住在中国大陆，中文在根路径；英文在 `/en/` 下，给想对照 Apple 英文原文的人。两种语言 slug 相同，顶栏的语言菜单切到对应页。改了一篇中文，**同一次提交里把英文版也改了**：
   - 正文：`src/pages/en/start/`、`src/pages/en/guide/`、`src/pages/en/howto/`（MDX，路径多一层 `../`；站内链接加 `/en`；`<Term k="中文键" />` 照原样，英文名在 `nav.js` 的 `GLOSSARY[k].en`）。
   - 数据：`nav.js` 各条目的 `en: {}`；`wiki.en.js`、`faq.en.js`（按 slug 叠加，结构和条数要和中文一致）；界面文字在各组件和 `views/` 里的 zh / en 两份。
   - 强调：每页最多一处 `<mark>`（这页最要紧的一句），`<u>` 只给照做会出错的坑；英文页放在对应的那句上。
   - `node scripts/check-i18n.mjs` 查两边对不对得上（缺页、多页、frontmatter、复制块 id、图示、`<mark>`、站内链接的语言、Wiki 和常见问题的条数）。
+- **另外 8 种语言（日、韩、西、葡（巴西）、法、德、俄、阿）** 在 `/ja/`、`/ko/`、`/es/`、`/pt/`、`/fr/`、`/de/`、`/ru/`、`/ar/` 下，只有首页和新手入门三课；完整教程、How-to、Wiki、常见问题链到英文版（侧栏里是「More (in English)」一组）。机器和 Saily 新手教程站（`../xxd-saily`）是同一套。阿拉伯语从右往左：`LANGS` 里写了 `dir: "rtl"`，样式在 `site.css` 最后一节。
+  - 语言清单在 `nav.js` 的 `LANGS`（中文、英文标了 `full: true`）；页脚和顶栏「相关链接」指向 Apple 支持在那种语言里的 Apple 账户页（`APPLE_BY_LANG`）。界面文字、首页、三课的标题在 `src/i18n/<语言>.js`，结构照 `src/i18n/base.js`（英文底稿，也是缺键时的兜底），在 `src/i18n/index.js` 的 `EXTRA` 里登记；新手三课里两张图示的文字在各自的 `figs` 里（哪几张图见 `figs.js` 的 `LESSON_FIGS`）。
+  - 三课正文在 `src/pages/<语言>/start/`，照英文版翻、对照中文版的意思；三课之间的链接指向本语言，其他站内链接指向 `/en/`，Apple 支持文章链到那种语言的版本（`en-us` 换成 ja-jp、ko-kr、es-es、pt-br、fr-fr、de-de、ru-ru、ar-ae），条款链接不动。
+  - 按钮名照 Apple 支持在那种语言里的写法：三课引用的 16 篇文章，每种语言一份副本在 `docs/sources/raw/official/support-<语言>/`（清单在 `official-urls.tsv`）。翻译的要求和每种语言的 locale 见 `docs/TRANSLATE.md`。
+  - 改了中文 / 英文的新手入门或首页，同一次提交里把这 8 种语言也改了（还是英文副本的，照英文改）。改完跑 `node scripts/check-i18n.mjs`（查键、占位、编译、复制块 id、图示、链接），译好的语言再跑 `node scripts/check-lesson-parity.mjs . <语言> <locale>`（和英文版引用同样的 Apple 文章、同样的组件和数字，加粗的按钮名在那种语言的 Apple 副本里找得到）。
+  - README 顶上是 10 种语言的语言栏，`README.<语言>.md` 由译者照 `README.en.md` 写。
 
 ```bash
 npm install
 npm run dev        # http://localhost:4460
 npm run build      # 输出到 dist/
-npm run check      # 构建以后：中英文对照检查 + 整站检查
+npm run check      # 构建以后：多语言对照检查 + 整站检查
 ```
 
 本机内存小，开发服务器用完自己关掉（连同它带起来的 esbuild、workerd），用 `lsof -i :4460` 确认端口空了。
@@ -26,13 +32,15 @@ npm run check      # 构建以后：中英文对照检查 + 整站检查
 
 2026-11-19 全站写完、核对完、上线：新手入门 3 课、完整教程 7 步、How-to 12 篇、Wiki 12 条、常见问题 28 条，中英文各一套；首页、README、三张动图和分享大图都是本站自己的。
 
+同一天加了另外 8 种语言的骨架：首页和三课现在还是英文副本，等译者照 `docs/TRANSLATE.md` 翻。翻译合并之前别 `npm run release`，不然 `/ja/` 这些路径会带着英文上线。
+
 - 写作分五路并行（课程和首页、完整教程、注册和日常 How-to、出问题和避坑 How-to、Wiki 和常见问题），再由三个独立的核对者照 `docs/FACTCHECK.md` 逐句对 Apple 原文，约 700 条事实里改了 18 处（含删掉的 1 处）。
 - 新加或改写一页以后，`grep -rlE '待写|TBD:' src` 要是空的；`npm run release` 看到「待写」或「TBD:」会在部署前停下，所以讲解性的注释里别写这两个词。
 - 新加一页的流程见下面「怎么改」：先在 `nav.js` 加一条 `ready: false`，`node scripts/new-pages.mjs` 生成中英文空白页，写完改成 `ready: true`。
 
 ## 怎么改
 
-- **站点结构**只在 `src/data/nav.js` 改：新手入门三课（`LESSONS`）、主线 7 步（`STEPS`）、How-to 清单（`HOWTO`）、术语解释（`GLOSSARY`）、本站仓库（`REPO`）、Apple 支持（`APPLE`、`APPLE_EN`，顶栏菜单和页脚用）。
+- **站点结构**只在 `src/data/nav.js` 改：新手入门三课（`LESSONS`）、主线 7 步（`STEPS`）、How-to 清单（`HOWTO`）、术语解释（`GLOSSARY`）、本站仓库（`REPO`）、Apple 支持（`APPLE`、`APPLE_EN`，其他语言是 `APPLE_BY_LANG`，顶栏菜单和页脚用）、网站的语言（`LANGS`）。
 - **加一页**：先在 `nav.js` 里加一条（带 `en`、`ready: false`），再跑 `node scripts/new-pages.mjs`，它给每个还没有页面的条目写一对中英文空白页；已有的页一个字不动。
 - **新手入门**每一课是 `src/pages/start/<n>-<slug>.mdx`，开头写 `layout: ../../layouts/Lesson.astro` 和 `lesson: n`。
 - **主线教程**每一步是 `src/pages/guide/<n>-<slug>.mdx`，开头写 `layout: ../../layouts/Guide.astro` 和 `step: n`。
@@ -53,7 +61,7 @@ npm run check      # 构建以后：中英文对照检查 + 整站检查
 
 - 原文副本在 `docs/sources/raw/`（官方页面在 `official/<分组>/`，帖子在 `community/`），每个文件开头写着原网址和抓取时间。只留在本地，不提交（`.gitignore` 里排除了）：仓库是公开的，别人的文章不整篇转载。
 - 抓取的脚本在 `docs/sources/tools/`：`fetch.py` 抓网页转成文字（`--en` 发英文的 Accept-Language，`--html` 给对 JSON 请求返回 404 的支持页），`fetch-list.sh` 按 `official-urls.tsv` 重抓整份清单，`checkquotes.py` 核对 `README.md` 里的引文还在不在原文副本里，`fxtweet.py` 抓一条 X 帖子，`sentences.py` 找出含某些关键词的句子。`blocked.txt` 是脚本打不开、要用浏览器看的页面。读了新资料，先抓到 `raw/`，再把要点和链接记进 `README.md`，然后才写进网站。
-- 写进网站的内容一律用自己的话讲，引用原话一次不超过一句，并附原文那一页的链接。中文页链 `support.apple.com/zh-cn/<编号>`，英文页链 `support.apple.com/en-us/<编号>`；中英文两版内容不一样的（`README.md` 第 16 节），写清楚以哪一版为准。
+- 写进网站的内容一律用自己的话讲，引用原话一次不超过一句，并附原文那一页的链接。中文页链 `support.apple.com/zh-cn/<编号>`，英文页链 `support.apple.com/en-us/<编号>`，其他语言链那种语言的版本；中英文两版内容不一样的（`README.md` 第 16 节），写清楚以哪一版为准。
 - 资料里没写的规定、价格、按钮名、数字，不写。拿不准就不写。
 - **官方没说清楚的事**（`README.md` 第 15 节，比如受信任电话号码能不能是别的国家的、「无」什么时候不出现、改区后过去的购买怎么办、非官方渠道的充值卡会怎样）照「官方没有说」写，不替 Apple 下结论，告诉读者去问 Apple 支持：「这一点 Apple 的页面没有写明，拿不准就先问 Apple 支持。」
 - **推出来的事**要标明是推出来的。比如激活锁：Apple 没有专门讲用别人的账户登录 iCloud 会怎样，但 108794 讲了激活锁怎么把设备和登录的账户绑在一起，写成「Apple 没有专门讲这种情况，不过按激活锁的工作方式……」。
@@ -82,7 +90,7 @@ npm run check      # 构建以后：中英文对照检查 + 整站检查
 ### 写事实的规矩
 
 - **价格带「截至」日期和那一页的链接。** 写法：「截至 2026-11-19，Apple 的 iCloud+ 价格页上，土耳其 2 TB 是每月 549.99 里拉（含税）（[iCloud+ 方案和定价](链接)）」。不从帖子里拿价格当事实；帖子里的价格只能当「有网友反映涨到了……」，并附链接。
-- **界面上的按钮和菜单名，照 Apple 支持文章上的字写，加粗。** 中文页照 zh-cn 版文章的字（「**媒体与购买项目**」「**付款与配送**」「**国家/地区**」），英文页照 en-us 版。iOS 版本之间界面会变；文章里的路径和你手上的不一样时，写「如果你的 iPhone 上看到的不一样，以你看到的为准」，不替 Apple 猜新路径。
+- **界面上的按钮和菜单名，照 Apple 支持文章上的字写，加粗。** 中文页照 zh-cn 版文章的字（「**媒体与购买项目**」「**付款与配送**」「**国家/地区**」），英文页照 en-us 版，其他语言照 `support-<语言>/` 里那种语言的版本。iOS 版本之间界面会变；文章里的路径和你手上的不一样时，写「如果你的 iPhone 上看到的不一样，以你看到的为准」，不替 Apple 猜新路径。
 - **说清楚是哪个地区。** 美国、土耳其、中国大陆三地的付款方式、服务、价格、条款都不一样，只有对三地都成立的话才不写地区。
 - **官方没说清楚的事，照官方没说写**，并告诉读者去问 Apple 支持（见上面「资料来源」）。
 - **网友的帖子**只当作标明了的个人经验：写「有网友在 X 上分享」，附原帖链接，不替他补充、不评价他本人。**只能链接下面这 12 条**（其余 13 条里有具体地址或免税州、网络设置、卖卡渠道、共享号、虚拟卡或差价套利的内容，一律不链接，也不复述那部分）：
@@ -136,7 +144,7 @@ npm run check      # 构建以后：中英文对照检查 + 整站检查
 - **画法**在 `src/components/Fig.astro`，样式在 `public/site.css` 的「图示」一节。全部是 HTML + CSS：颜色、圆角用令牌，跟着亮暗、直角圆角、主色走；字能换行，正文栏窄了自动竖排（容器查询）。
 - **动画**：进入视野后一步步亮起来，放两遍停在完整的样子，图下面出「再看一遍」。只动 opacity / transform；系统设了减少动效、或者没有脚本时直接显示完整的图。
 - **图里的字**：一格一件事，短。不抄正文整句，也不喊卖点。界面上的按钮名照 Apple 文章里的字写。图里不画 Apple 的标志和图标。
-- **新加一张**：先在 `figs.js` 写数据，再在中文页、`/en/` 页同一位置放 `<Fig id="…" />` 并 `import Fig`；`npm run build` 后亮色、暗色、手机宽度各看一眼。
+- **新加一张**：先在 `figs.js` 写数据，再在中文页、`/en/` 页同一位置放 `<Fig id="…" />` 并 `import Fig`；放在新手三课里的，还要加进 `LESSON_FIGS`，在 8 种语言的 lesson 页放同一张、在 `src/i18n/<语言>.js` 的 `figs` 里写文字（check-i18n 会查）；`npm run build` 后亮色、暗色、手机宽度各看一眼。
 
 ## 反馈入口
 
@@ -147,7 +155,7 @@ npm run check      # 构建以后：中英文对照检查 + 整站检查
 Apple 的支持文章和条款都会变。每隔一阵：
 
 ```bash
-npm run check                                                   # 构建以后：中英文对照 + 整站检查
+npm run check                                                   # 构建以后：多语言对照 + 整站检查
 node scripts/check-doc-links.mjs                                # 联网查 src/ 里每一个站外链接
 FORCE=1 bash docs/sources/tools/fetch-list.sh docs/sources/tools/official-urls.tsv docs/sources/raw/official   # 重抓全部官方页面
 python3 -I docs/sources/tools/checkquotes.py                   # README.md 里的引文还在不在新副本里
@@ -165,6 +173,6 @@ Cloudflare Workers 静态资源，配置在 `wrangler.jsonc`（Worker 名 `xxd-r
 
 ## 分享大图和标志
 
-- 分享大图：样子和文字都在 `tools/og.html`（一张 HTML 海报，`?lang=zh` / `?lang=en`）。`python3 tools/build_og.py` 用 Chrome 截图，2 倍清晰度（2560×1280），写出 `public/og.png`（中文页分享用）、`public/og-en.png`（英文页分享用），再复制一份到 `assets/social.png`、`assets/en/social.png`（README 头图）。`Site.astro` 只在两张 og 图存在时才输出 `og:image`。GitHub 仓库的 Social preview 用英文那张，要在仓库 Settings → General 手动上传。
+- 分享大图：样子和文字都在 `tools/og.html`（一张 HTML 海报，`?lang=zh` / `?lang=en`）。`python3 tools/build_og.py` 用 Chrome 截图，2 倍清晰度（2560×1280），写出 `public/og.png`（中文页分享用）、`public/og-en.png`（英文页和其他 8 种语言分享用），再复制一份到 `assets/social.png`、`assets/en/social.png`（README 头图）。`Site.astro` 只在两张 og 图存在时才输出 `og:image`。GitHub 仓库的 Social preview 用英文那张，要在仓库 Settings → General 手动上传。
 - 本站标志（`Site.astro` 里的 `site-mark` 和 `public/favicon.svg`）：墨色圆片上挖出一个地球，一圈外框、一条经线、一条赤道。不用 Apple 的任何图形。
 - 配色要干净通透：画布接近白（`#FAFAF8`，一圈 `#E9E7E4` 淡边），卡片纯白，线和次要文字用 UI Kit 的 `--line`、`--muted`。不用 Apple 的配色和字体（SF Pro 之类）。

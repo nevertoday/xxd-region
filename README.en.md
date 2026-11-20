@@ -2,7 +2,7 @@
 
 # Apple Account regions, for beginners
 
-[中文](./README.md) · **English**
+[中文](./README.md) · **English** · [日本語](./README.ja.md) · [한국어](./README.ko.md) · [Español](./README.es.md) · [Português](./README.pt.md) · [Français](./README.fr.md) · [Deutsch](./README.de.md) · [Русский](./README.ru.md) · [العربية](./README.ar.md)
 
 ### Keep your account, switch the store
 
