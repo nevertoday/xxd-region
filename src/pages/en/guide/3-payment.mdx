@@ -1,5 +1,82 @@
 ---
 layout: ../../../layouts/Guide.astro
 step: 3
+need: "The account you created in step 2"
+tldr: "Apple lists which payment methods each region accepts. You can choose None when you sign up, but with a subscription, an unpaid balance, or purchase sharing on as a Family Sharing organizer, you must keep at least one payment method. A gift card only works on an account in the country or region it was bought in, and the terms don't allow reselling it. When you add a card, your name and billing address must match what your bank has on file."
+description: "Payment for an Apple Account in another region: what the United States, Türkiye and China mainland each accept (Apple's payment methods list); when you can choose None and when you must keep a payment method, and why even free apps might need one; gift cards only work in the country or region they were bought in, can't be resold, and what Apple can do if it suspects a card; Apple Store Gift Cards don't work for the App Store or iCloud+; card billing details must match your bank; gift card scams."
 ---
-{/* 待写 TBD: body. See docs/MAINTAINING.md (voice and hard rules); facts and their links are in docs/sources/README.md. */}
+import Callout from "../../../components/Callout.astro";
+import Checkpoint from "../../../components/Checkpoint.astro";
+import Term from "../../../components/Term.astro";
+import Q from "../../../components/Q.astro";
+
+One user on X shared a mistake from setting up a Türkiye account: they didn't look closely when buying a <Term k="充值卡" />, ended up with a US one, and the Türkiye account couldn't redeem it ([@zzgo_sh](https://x.com/zzgo_sh/status/1993977418630185424)). The card was real and the money was spent, but it was no use. That wasn't bad luck. It's what Apple's terms say.
+
+<mark><strong>The payment method has to fit the account. Apple lists what each region accepts, a gift card only works in the country or region it was bought in, and a card's billing details must match what your bank has. If any one of the three doesn't fit, purchases get stuck.</strong></mark>
+
+This step starts with the list, then covers what to watch for with None, gift cards and cards.
+
+## First, what the region accepts
+
+Which payment methods an <Term k="Apple 账户" /> can use depends on its <Term k="国家或地区" />. Apple's [Payment methods that you can use with your Apple Account](https://support.apple.com/en-us/111741) lists them by country or region and notes that payment methods are subject to change. Here are the three regions:
+
+| Country or region | Payment methods Apple lists |
+| --- | --- |
+| United States | Apple Account balance (from redeeming Apple Gift Card or adding funds), Apple Card, Apple Cash, Apple Pay, most credit and debit cards, PayPal |
+| Türkiye | Apple Account balance (from redeeming App Store & iTunes Gift Cards or adding funds), mobile phone billing (Paycell, Türk Telekom Mobil Ödeme, Vodafone Mobil Ödeme), most credit and debit cards |
+| China mainland | Alipay, Apple Account balance (from App Store top-up card or adding funds), Douyin Pay, most credit and debit cards, WeChat Pay |
+
+Notice that Alipay and WeChat Pay, from the China mainland column, aren't in the other two. All three have <Term k="Apple 账户余额" />, which comes from redeeming a gift card or adding funds. When Apple charges you, it tries your balance first and then your primary payment method, though the same article says some subscriptions might not be charged to your balance ([How apps, content, and subscriptions from Apple are billed](https://support.apple.com/en-us/118244)).
+
+## None: when you can choose it, and when you can't
+
+When you sign up in the iPhone App Store or on a Mac, the payment step lets you choose **None**, and Apple says you won't be charged until you make a purchase. On the web, the steps have no payment step at all ([How to create a new Apple Account](https://support.apple.com/en-us/108647)). But "not now" doesn't mean "never."
+
+In a few cases you must keep at least one payment method on file: you have a subscription like iCloud+, you have an unpaid balance, or you're a <Term k="家人共享" /> organizer who uses purchase sharing ([Remove a payment method from your Apple Account](https://support.apple.com/en-us/118291)). You might also need a payment method to download or update some free apps ([Add a payment method to your Apple Account](https://support.apple.com/en-us/118429)), and if you have an unpaid order, you might not be able to download even free apps until it's paid ([If your payment method is declined](https://support.apple.com/en-us/108095)).
+
+<Callout type="warn">
+When None won't appear, Apple doesn't say beyond the cases above where you must keep a payment method. Apple's pages don't say this clearly, so if you're unsure, ask Apple Support first.
+</Callout>
+
+## Gift cards: only in the country or region they were bought in
+
+A gift card turns into account balance when you redeem it. The terms say three things about it that you should know first.
+
+First, it only works on an account in the country or region where it was bought. The US terms say gift cards purchased in the United States can only be linked to an account in the United States and only used for purchases there ([Apple Gift Card terms, US](https://www.apple.com/legal/internet-services/itunes/giftcards/us/terms.html)). The Türkiye terms say store credit and content codes bought in Türkiye can only be used on an account in Türkiye ([App Store Kartları terms, Türkiye](https://www.apple.com/legal/internet-services/itunes/giftcards/tr/terms.html)). The US card that wouldn't go into the user's Türkiye account matches what the terms say.
+
+Second, both sets of terms say gift cards can't be resold or exchanged for cash. Third, if Apple suspects a card was obtained or used unlawfully, fraudulently or otherwise in violation of the terms, it can void the card without a refund and without notice, and suspend or terminate accounts.
+
+So where is it safe to buy one? Apple's pages don't list which sellers are authorized in each country or region. Apple's pages don't say this clearly, so if you're unsure, ask Apple Support first. How to buy and redeem one is in [Buy and redeem a gift card](/en/howto/gift-card/).
+
+There's also a card that's easy to mix up. An Apple Store Gift Card can only be used for purchases in the US from an Apple Store, at apple.com or by phone order, and can't be redeemed for Apple Media Services purchases like the App Store ([Apple Store Gift Card terms](https://www.apple.com/legal/giftcards/applestore/)). It isn't accepted for upgrading iCloud+ either ([iCloud+ plans and pricing](https://support.apple.com/en-us/108047)).
+
+<Callout type="no">
+If someone asks you to buy gift cards to pay them, or to send them the numbers on the back of a card, treat it as a scam. Apple gift cards can only be used for Apple's products and services, and Apple says not to give the numbers on the back to someone you don't know well or haven't met (<a href="https://support.apple.com/en-us/120933">About gift card scams</a>).
+</Callout>
+
+## Cards: billing details must match your bank
+
+When you add a card, Apple asks you to confirm that your name, billing address and other information are spelled correctly and match what you have on file with your financial institution ([Add a payment method to your Apple Account](https://support.apple.com/en-us/118429)). It puts the same check first when a payment method is declined ([108095](https://support.apple.com/en-us/108095)). So an address that isn't yours will get stuck the day you try to add a card. What to put as your address when signing up, and what Apple's terms say, is covered in [lesson 1](/en/start/1-region/) of Getting started, so it isn't repeated here.
+
+The troubleshooting part of 118429 also says that if you're using an accepted payment method but your Apple Account is set to a different country or region, change your country or region. Whether a card issued in another country works on this account, Apple doesn't say. Apple's pages don't say this clearly, so if you're unsure, ask Apple Support first.
+
+To add a payment method on iPhone, go to **Settings**, tap your name, tap **Payment & Shipping**, then tap **Add Payment Method**.
+
+With a payment method sorted, the next step signs this account in on your iPhone, under <Term k="媒体与购买项目" /> only, with your iCloud untouched.
+
+## Stuck?
+
+<Q q="I don't see None.">
+<p>First check whether you're in one of the cases where you must keep a payment method: a subscription, an unpaid balance, or Family Sharing organizer with purchase sharing on (<a href="https://support.apple.com/en-us/118291">118291</a>). If none apply, Apple's pages don't say this clearly, so if you're unsure, ask Apple Support first.</p>
+</Q>
+<Q q="Redeeming a gift card says it can't be used.">
+<p>Check which country or region the card was bought in, and whether that's the account's region. The US and Türkiye terms both say a card only works on an account in the country or region where it was bought. For other cases, see <a href="/en/howto/gift-card/">Buy and redeem a gift card</a>.</p>
+</Q>
+<Q q="My card was declined.">
+<p>Apple suggests checking your billing details, then adding a new payment method, removing the old one and trying again. To find out why a card was declined, ask the bank that issued it; Apple doesn't have that information (<a href="https://support.apple.com/en-us/108095">If your payment method is declined</a>). For more, see <a href="/en/howto/purchase-failed/">A purchase is refused or your payment method has a problem</a>.</p>
+</Q>
+<Q q="Someone offers to sell me a gift card cheaply.">
+<p>The terms say gift cards can't be resold, and if Apple suspects a card was obtained improperly, it can void the card and suspend or terminate accounts (<a href="https://www.apple.com/legal/internet-services/itunes/giftcards/us/terms.html">US terms</a>, <a href="https://www.apple.com/legal/internet-services/itunes/giftcards/tr/terms.html">Türkiye terms</a>). Think about that before you buy.</p>
+</Q>
+
+<Checkpoint id="s3" items={["I've checked which payment methods the account's region accepts", "I know a gift card only works on an account in the country or region it was bought in, and can't be resold", "If I add a card, the name and billing address I enter match what my bank has"]} />

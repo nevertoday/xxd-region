@@ -1,5 +1,94 @@
 ---
 layout: ../../../layouts/Guide.astro
 step: 2
+need: "The email address and phone number from step 1"
+tldr: "You can sign up on the web (account.apple.com), in the App Store on iPhone, or in System Settings on a Mac, and Apple gives steps for all three. The country or region you pick becomes the account's region. The web flow has no payment step, and on the iPhone you use every day, don't sign out of iCloud just to sign up."
+description: "Creating a new Apple Account with Apple's own steps: which buttons to press on the web, in the iPhone App Store and on a Mac, where you pick the country or region, why you use the web instead on an iPhone signed in to your own iCloud; what Apple says about \"your account cannot be created at this time\" and \"the maximum number of free accounts have been activated.\""
 ---
-{/* 待写 TBD: body. See docs/MAINTAINING.md (voice and hard rules); facts and their links are in docs/sources/README.md. */}
+import Callout from "../../../components/Callout.astro";
+import Checkpoint from "../../../components/Checkpoint.astro";
+import Tabs from "../../../components/Tabs.astro";
+import Term from "../../../components/Term.astro";
+import Q from "../../../components/Q.astro";
+
+You pick up the iPhone you use every day, open the App Store, tap your photo at the top of the screen and look for "Create New Apple Account", but it isn't there. You check Apple's instructions, and they say that if you don't see the option, you should make sure you're signed out of iCloud. But this phone is signed in with all your photos, contacts and messages.
+
+Don't sign out yet. There's more than one way to create an <Term k="Apple 账户" />. Apple's article [How to create a new Apple Account](https://support.apple.com/en-us/108647) describes several, and signing up on the web doesn't touch anything on your phone. The moment to be careful about is the one where you pick the <Term k="国家或地区" />.
+
+<mark><strong>The country or region you pick when you sign up becomes the account's region. It decides which region's store you'll be in and which payment methods you can use, so pick the region you settled on in step 0.</strong></mark>
+
+Under Apple's Media Services Terms, creating an account for a particular country or region specifies it as your <Term k="居住国家或地区" />, and [lesson 1](/en/start/1-region/) of Getting started covers that rule fully. What to watch for in each region is in [Create a US Apple Account](/en/howto/us-account/) and [Create a Turkey Apple Account](/en/howto/tr-account/).
+
+## Pick a way to sign up
+
+The button names below are the ones in Apple's article. Apple's pages change, so if what you see is a little different, go with what you see.
+
+<Tabs id="create" items={[["web", "Web"], ["iphone", "iPhone"], ["mac", "Mac"]]}>
+<div slot="web">
+
+Open <code>account.apple.com</code> in a browser, click **Create Your Apple Account**, then follow the onscreen steps:
+
+1. Enter an email address, create a strong password, and set the region. Apple's web steps call this the device region; what you choose is still a country or region, such as the United States or Türkiye.
+2. Enter your birthday and a phone number you can always access.
+3. Check the boxes for Apple's updates if you want its news emails, or leave them empty.
+4. Click **Continue**, then follow the onscreen steps to verify your email address and phone number.
+
+The web steps don't include a payment method. So after signing up, the first time you sign in to the App Store you might need to add payment information ([Sign in to your Apple Account](https://support.apple.com/en-us/111001)), and [step 3](/en/guide/3-payment/) covers what to choose then.
+
+</div>
+<div slot="iphone">
+
+Open the App Store, tap the **My Account** button, then tap **Create New Apple Account**, and:
+
+1. Follow the onscreen steps to enter an email address, create a strong password, and set your country or region.
+2. Enter your payment method and billing information, then tap **Next**. You can also choose **None** here; Apple says you won't be charged until you make a purchase.
+3. Confirm your phone number and tap **Next**.
+4. Look for the verification email from Apple and verify your email address.
+
+<Callout type="warn">
+If you don't see Create New Apple Account, Apple says to sign out of iCloud first. Don't do that on an iPhone signed in with your own account. Signing out of your Apple Account in Settings also signs you out of iCloud, the App Store, iMessage and FaceTime, and your iCloud data is removed from the phone unless you choose to keep a copy (<a href="https://support.apple.com/en-us/104958">Sign out of your Apple Account and iCloud on your devices</a>). Sign up on the web instead.
+</Callout>
+
+</div>
+<div slot="mac">
+
+On your Mac, choose the Apple menu, click **System Settings**, click **Sign in** in the sidebar, then click **Don't Have an Account?**, and:
+
+1. Follow the onscreen steps to enter your birthday, provide an email address, create a strong password, and set your country or region.
+2. Enter your payment method and billing information, then click **Continue**. You can also choose **None** here.
+3. Confirm your phone number and click **Next**.
+4. Look for the verification email from Apple and verify your email address.
+
+If this Mac is already signed in with your own account and there's no Sign in in the sidebar, don't sign out just to sign up. It's the same reason as on the iPhone. Sign up on the web instead.
+
+</div>
+</Tabs>
+
+<Callout type="ok">
+The verification email from Apple arrives in your inbox. Once you've verified, you can sign in to the new account for the App Store and other Apple services.
+</Callout>
+
+## When signing up doesn't work
+
+The message people see most is "your account cannot be created at this time." Apple suggests trying a different way to sign up: on an Apple device, in Settings; on a Windows PC or Android device, at account.apple.com. Then update your software and apps, and try again later. If your first account still can't be created on a device with up-to-date software, Apple sends you to its support site for suggestions ([If you can't create an Apple Account](https://support.apple.com/en-us/120636)). For more, see ["Your account cannot be created at this time"](/en/howto/cannot-create/).
+
+The other message is "The maximum number of free accounts have been activated." It means you've exceeded the number of accounts you can set up with iCloud on a single device in one year. You might see it, for example, when you create an account in Settings on a device that has already been used to create other accounts this year ([If you see "The maximum number of free accounts have been activated"](https://support.apple.com/en-us/101661)). Apple doesn't give the number. Apple's pages don't say this clearly, so if you're unsure, ask Apple Support first.
+
+With the account created, the next step is giving it a payment method: when None is an option, and what to watch for with <Term k="充值卡" text="gift cards" /> and cards.
+
+## Stuck?
+
+<Q q="There's no Create New Apple Account in the App Store.">
+<p>Apple says to sign out of iCloud first in that case (<a href="https://support.apple.com/en-us/108647">How to create a new Apple Account</a>). If the phone is signed in to your own iCloud, don't sign out. Sign up at <code>account.apple.com</code> instead, using the Web steps above.</p>
+</Q>
+<Q q='It keeps saying "your account cannot be created at this time."'>
+<p>First try Apple's suggestions: a different way to sign up, updated software, and trying again later (<a href="https://support.apple.com/en-us/120636">120636</a>). One user on X reports contacting Apple's online support, giving them the email address that couldn't be used, and then signing up successfully with that same address (<a href="https://x.com/alin_zone/status/2118312466467979410">@alin_zone</a>). That's one person's experience; go by what Apple Support tells you. See <a href="/en/howto/cannot-create/">"Your account cannot be created at this time"</a>.</p>
+</Q>
+<Q q="I picked the wrong country or region.">
+<p>You can change an account's region; the steps are in <a href="/en/howto/change-region/">Move an existing account to another region</a>. When you change it, Apple might ask for a valid payment method for the new region (<a href="https://support.apple.com/en-us/118283">Change your Apple Account country or region</a>).</p>
+</Q>
+<Q q="The account I made yesterday shows as China mainland today.">
+<p>One user on X ran into this too: a US account made the day before showed as a China mainland account the next day (<a href="https://x.com/EvanWritesX/status/2059180529086529883">@EvanWritesX</a>). Apple's pages don't describe this. First check with <a href="/en/howto/check-region/">Check which region an account is in</a>, and if the region really isn't the one you picked, ask Apple Support.</p>
+</Q>
+
+<Checkpoint id="s2" items={["I've created the account on the web, an iPhone or a Mac, and verified the email address and phone number", "I picked the country or region I settled on in step 0", "I didn't sign out of my own iCloud on my phone to sign up"]} />

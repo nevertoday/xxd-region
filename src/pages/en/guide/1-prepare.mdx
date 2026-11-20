@@ -1,5 +1,57 @@
 ---
 layout: ../../../layouts/Guide.astro
 step: 1
+need: "An email address and a phone number, both ones you actually use"
+tldr: "The email address must never have been used for an Apple Account, and it becomes the primary email address you sign in with. The phone number must be one where you can always get codes, and it becomes a trusted phone number. Apple doesn't say whether a trusted phone number can be from another country."
+description: "The two things to have ready before you create an Apple Account in another region: an email address never used for an Apple Account, and a phone number where you can always get codes; what two-factor authentication and trusted phone numbers are, and why a second number helps; the +86 number in China mainland; Apple's age rules."
 ---
-{/* 待写 TBD: body. See docs/MAINTAINING.md (voice and hard rules); facts and their links are in docs/sources/README.md. */}
+import Callout from "../../../components/Callout.astro";
+import Checkpoint from "../../../components/Checkpoint.astro";
+import Term from "../../../components/Term.astro";
+import Q from "../../../components/Q.astro";
+
+Picture yourself a year from now. You've got a new phone, and when you sign in to this account on it, the screen asks for a six-digit code it says it has sent to your phone number. But that number was an old one you typed in without thinking, and you stopped using it months ago. You wait, and the code never comes.
+
+<mark><strong>The email address and the phone number are your two ways back into this account later, so both should be your own, and both should still reach you a year from now.</strong></mark>
+
+Signing up takes a few minutes, but these two things stay with the account for years. This step gets them ready, and takes a quick look at Apple's age rules on the way.
+
+## An email address never used for an Apple Account
+
+The email address you sign up with becomes the primary email address of this <Term k="Apple 账户" />, and it's what you'll sign in with ([How to create a new Apple Account](https://support.apple.com/en-us/108647)). So it should be one you use often and will keep using, which is also what Apple recommends for a primary email address ([Manage and use your Apple Account](https://support.apple.com/en-us/105023)).
+
+It also has to be an address no Apple Account uses yet. If your China mainland account was created with this address, you can't use it for a second account. In Apple's words, if you see a message that the email address or phone number is unavailable or can't be used, an Apple Account already uses it, so try a different one ([If you can't create an Apple Account](https://support.apple.com/en-us/120636)).
+
+Apple's articles don't say which email provider to use. Pick an address that's yours, that you can sign in to, and that won't stop working in a few months.
+
+## A phone number where you can always get codes
+
+A new account uses <Term k="双重认证" />. The first time you sign in on a new device or on the web, you enter a six-digit code as well as your password, and the code shows up on a device you're already signed in on or is sent to your phone number ([Two-factor authentication for Apple Account](https://support.apple.com/en-us/102660)). Apple calls a number that can receive those codes a <Term k="受信任电话号码" />, and with two-factor authentication you need at least one on file ([About trusted phone numbers and trusted devices](https://support.apple.com/en-us/122621)). When you sign up on the web, Apple puts it plainly: enter "a phone number that you can always access" ([108647](https://support.apple.com/en-us/108647)).
+
+The same article, 122621, points out something practical. If your iPhone is your only trusted device and the only device that gets your trusted phone number, you can't receive codes if it's lost or damaged. So if you have another number, it suggests adding one that isn't tied to that iPhone. Once the account exists, go to **Settings**, tap your name, choose **Sign-In & Security**, then tap **Two-Factor Authentication**, and you'll find **Add Trusted Phone Number** below the list of devices and phone numbers.
+
+<Callout type="warn">
+Whether a trusted phone number can be from another country or region, for example a China mainland number on a US account, isn't covered by Apple's articles on trusted phone numbers or two-factor authentication. Apple's pages don't say this clearly, so if you're unsure, ask Apple Support first.
+</Callout>
+
+One more rule applies only to China mainland. The English version of 108647 says that in China mainland you might be required to provide a +86 phone number for your Apple Account; the Chinese version says you might need one to create the account. Both say you can change the number later and that it's only for verification. The account management article, 105023, adds that you can change the number later or change your <Term k="国家或地区" /> to a place that doesn't require it.
+
+## Age
+
+The age for a child account differs by place. Under Apple's region-specific rules, the United States (outside Texas) and Türkiye use under 13, and China mainland uses under 14; a child account is set up by a parent or guardian through <Term k="家人共享" />. Texas uses under 18, and adults there might have to confirm they're 18 or older when they create a new account ([Region-specific rules for managing an Apple Account](https://support.apple.com/en-us/125666)).
+
+With the email address and the phone number ready, the next step is signing up, and the first thing there is picking the right country or region.
+
+## Stuck?
+
+<Q q="Sign-up says the email address is unavailable.">
+<p>That means an Apple Account already uses the address, maybe one you made long ago and forgot. Apple suggests trying a different email address or resetting the password for that account (<a href="https://support.apple.com/en-us/120636">If you can't create an Apple Account</a>).</p>
+</Q>
+<Q q="How many accounts can use one phone number as a trusted phone number?">
+<p>Apple's pages don't say this clearly, so if you're unsure, ask Apple Support first.</p>
+</Q>
+<Q q="I have only one phone number and only one iPhone.">
+<p>Then take extra care of that number and don't let it lapse. Apple says that if you temporarily can't use your trusted devices or number, the fastest way back in is to wait a few days until you can; if you've lost them for good, you can start account recovery, which can take a few days or longer, and contacting Apple can't speed it up (<a href="https://support.apple.com/en-us/122621">About trusted phone numbers and trusted devices</a>).</p>
+</Q>
+
+<Checkpoint id="s1" items={["I have an email address that's mine, that I keep using, and that has never been used for an Apple Account", "I have a phone number where I can always get codes", "I know Apple doesn't say whether a trusted phone number can be from another country"]} />

@@ -1,5 +1,66 @@
 ---
 layout: ../../../layouts/Guide.astro
 step: 0
+need: "The app or service you want, or the price you heard about"
+tldr: "Write down what you want the account for first. Whether an app is in a region is the developer's choice in App Store Connect; whether an Apple service is there, check Apple's Availability of Apple Media Services list. Prices change, so don't make one your reason to sign up."
+description: "Before you sign up for an account in another region, know what you want it for: developers choose which countries or regions an app is in, and some apps can't be downloaded in some places for legal or regulatory reasons; which Apple services the United States, Türkiye and China mainland each have, from Apple's list; why a price is a poor reason to sign up."
 ---
-{/* 待写 TBD: body. See docs/MAINTAINING.md (voice and hard rules); facts and their links are in docs/sources/README.md. */}
+import Checkpoint from "../../../components/Checkpoint.astro";
+import Term from "../../../components/Term.astro";
+import Q from "../../../components/Q.astro";
+
+A friend tells you about an app they love. You open the App Store, search for it and get nothing, and a few other search terms don't help either. Someone online says, "It's not in the China store. Just make a US account." So you're about to do that. Before you do, it's worth stopping to ask yourself one thing: what exactly do I want this account for?
+
+<mark><strong>An account in another region is only a key, and other people decide which doors it opens: the developer decides whether an app is in that region, and Apple decides whether its own services are. Make sure what you want is really there before you sign up.</strong></mark>
+
+So this step has no buttons to tap. Write down what you want, then check it against what's below. It's usually one of three things: a particular app, a particular Apple service, or a particular price.
+
+## You want an app
+
+Developers choose which countries or regions their app is in. Apple's App Store Connect help for developers says an app can be released in any of the 175 countries or regions where the App Store is available, and the developer can pick all of them or only some. The same page says a customer's <Term k="Apple 账户" /> country or region setting decides which App Store they can buy apps from. Its example is an account set to Japan, which can only buy apps from the Japanese App Store ([App Store Connect Help: Manage availability for your app](https://developer.apple.com/help/app-store-connect/manage-your-apps-availability/manage-availability-for-your-app-on-the-app-store)).
+
+So if the app isn't in the China mainland store, it may be that the developer didn't put it there, or, as the same help page puts it, "Your app may not be available for download or use in some countries or regions due to legal or regulatory requirements." So the thing to find out is whether the app is in the store of the region you have in mind. If you're not sure, Apple's advice is to ask the developer: if you think an app should be available in your country or region, contact the developer or publisher directly ([Availability of Apple Media Services](https://support.apple.com/en-us/118205)).
+
+## You want an Apple service
+
+For Apple's own services, like Apple TV, Apple Arcade and Apple Books, Apple keeps a long list of where each one is offered. Every account belongs to one <Term k="国家或地区" />, and the column that applies to you is the one for your account's region. Here are a few services people often ask about, side by side for the United States, Türkiye and China mainland. "No" means that region's list doesn't include it ([Availability of Apple Media Services](https://support.apple.com/en-us/118205)).
+
+| Service | United States | Türkiye | China mainland |
+| --- | --- | --- | --- |
+| App Store | Yes | Yes | Yes |
+| Apple Music | Yes | Yes | Yes |
+| Apple TV subscription | Yes | Yes, and iCloud+ might include it | No |
+| Apple Arcade | Yes | Yes, and iCloud+ might include it | No |
+| Apple Books | Yes | Public domain books only | No |
+| Apple Podcasts | Yes | Free podcasts only | Free podcasts only |
+| Buying movies | Movies and TV shows | Movies, without iTunes Extras | No |
+| Apple One | Yes | No | No |
+| Apple Fitness+, Apple News+ | Yes | No | No |
+
+This table is a snapshot. Apple's list changes, so find your region in the original and check again before you rely on it.
+
+## You want a price
+
+Sometimes what draws you isn't an app at all, but a price you heard was lower. That's the reason most likely to let you down. Prices aren't fixed. Apple and developers both change them, a subscription can go up after you've signed up, and [step 5](/en/guide/5-subscriptions/) covers how Apple tells you and what you can do. Signing up for a price means betting the account on a number that can change at any time.
+
+## One rule to keep in mind
+
+An account's region is more than a way into a store. Under Apple's Media Services Terms, creating an account for a particular country or region specifies it as your <Term k="居住国家或地区" />. What that rule means for you is covered fully in [lesson 1](/en/start/1-region/) of Getting started. Read it before you sign up.
+
+One more thing: don't change the region of the China mainland account you already use just for one app. Before a region change you have to spend your balance and cancel subscriptions that block the change ([Change your Apple Account country or region](https://support.apple.com/en-us/118283)). And when an account moves out of China mainland, its iCloud content is migrated from <Term k="云上贵州" /> to Apple, outside China mainland, and GCBD then deletes its copy ([iCloud (operated by GCBD) terms](https://www.apple.com/legal/internet-services/icloud/en/gcbd-terms.html)). Making a second account is much simpler, and [lesson 3](/en/start/3-new-account/) explains why.
+
+Once you've written down what you want and checked that it's in that region, you know which region's account to make. Next, you get an email address and a phone number ready.
+
+## Stuck?
+
+<Q q="The app isn't in the China store. Was it taken down?">
+<p>Not necessarily. Developers choose which countries or regions their app is in, and some apps can't be downloaded in some places because of legal or regulatory requirements (<a href="https://developer.apple.com/help/app-store-connect/manage-your-apps-availability/manage-availability-for-your-app-on-the-app-store">App Store Connect Help</a>). For the specific reason, ask the app's developer.</p>
+</Q>
+<Q q="Should I make a US account or a Türkiye account?">
+<p>It depends on where the thing you want is. For an app, it's whichever region's store the developer put it in. For an Apple service, it's that region's column in the <a href="https://support.apple.com/en-us/118205">availability list</a>. If both have it, look at which region's payment methods you can actually use. <a href="/en/guide/3-payment/">Step 3</a> lists what each region accepts.</p>
+</Q>
+<Q q="Türkiye's list has no Apple One. Does that mean it isn't offered?">
+<p>Apple doesn't say "not offered." Türkiye's list just doesn't include Apple One. Apple's pages don't say this clearly, so if you're unsure, ask Apple Support first.</p>
+</Q>
+
+<Checkpoint id="s0" items={["I've written down what I want the account for: which app or which service", "I've checked that it's available in the region I have in mind", "I know the terms tie an account's region to where you live, and I'll read lesson 1 first"]} />

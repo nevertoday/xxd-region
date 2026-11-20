@@ -1,5 +1,66 @@
 ---
 layout: ../../layouts/Guide.astro
 step: 0
+need: 你想用的那个 App、那项服务，或者你听说的那个价格
+tldr: 先写下你要外区账户做什么。App 在不在某个地区，由开发者在 App Store Connect 里选；Apple 自己的服务在不在，看 Apple 的「媒体服务的提供情况」列表。价格会变，别把它当成注册的理由。
+description: 注册外区账户之前先想清楚要它做什么：App 上架哪些国家或地区由开发者设定，有的 App 因为法律或监管要求在某些地区不能下载；Apple 自己的服务在美国、土耳其、中国大陆各有哪些，照 Apple 的列表对照；为什么不该为了一个价格去注册。
 ---
-{/* 待写：正文。写法见 docs/MAINTAINING.md 的「怎么写」和「硬规矩」，资料和出处在 docs/sources/README.md。 */}
+import Checkpoint from "../../components/Checkpoint.astro";
+import Term from "../../components/Term.astro";
+import Q from "../../components/Q.astro";
+
+朋友给你推荐了一个 App，说好用得很。你打开 App Store 搜了半天，什么都没有，换了几个关键词也一样。网上有人说：“国区没有，注册个美区账户就行。”于是你准备动手了。可在动手之前，值得先停下来问自己一句：我到底要这个账户做什么？
+
+<mark><strong>外区账户只是一把钥匙，它能打开的门由别人决定：App 在不在那个地区，由开发者决定；Apple 自己的服务在不在，由 Apple 决定。先确认你要的东西真的在那边，再去注册。</strong></mark>
+
+所以这一步不用点任何按钮，只要把你要的东西写下来，再照下面的办法对一对。它大致是三种：某一个 App，某一项 Apple 的服务，或者某一个价格。
+
+## 你要的是一个 App
+
+App 在哪些国家或地区上架，是开发者自己选的。Apple 写给开发者的 App Store Connect 帮助里说，App 可以在 App Store 覆盖的 175 个国家或地区里上架，开发者可以选全部，也可以只选其中一些。同一篇还说，顾客的<Term k="Apple 账户" />设的是哪个国家或地区，就只能在那个地区的 App Store 里买 App；它举的例子是，账户设成日本，就只能买日本 App Store 里的 App（[App Store Connect 帮助：管理 App 的上架范围](https://developer.apple.com/help/app-store-connect/manage-your-apps-availability/manage-availability-for-your-app-on-the-app-store)）。
+
+所以你在国区搜不到它，可能是开发者没把它放进中国大陆的商店，也可能像这篇帮助里写的，“由于法律或监管要求，你的 App 可能无法在某些国家或地区下载或使用”。所以要先弄清楚的，是这个 App 在你想去的那个地区有没有上架。拿不准的话，Apple 的建议是直接问开发者：你觉得某个 App 应该在你的地区能用，就联系它的开发者或发布者（[Apple 媒体服务的提供情况](https://support.apple.com/zh-cn/118205)）。
+
+## 你要的是一项 Apple 的服务
+
+Apple 自己的服务，比如 Apple TV、Apple Arcade、Apple Books，在哪些地区提供，Apple 列了一张很长的清单。每个账户都属于一个<Term k="国家或地区" />，账户在哪个地区，就照哪个地区的那一栏。下面把美国、土耳其、中国大陆三栏里几项常被问到的服务摆在一起，“没有”指的是那一栏的列表里没写（[Apple 媒体服务的提供情况](https://support.apple.com/zh-cn/118205)）。
+
+| 服务 | 美国 | 土耳其 | 中国大陆 |
+| --- | --- | --- | --- |
+| App Store | 有 | 有 | 有 |
+| Apple Music | 有 | 有 | 有 |
+| Apple TV 订阅 | 有 | 有，iCloud+ 订阅可能包含 | 没有 |
+| Apple Arcade | 有 | 有，iCloud+ 订阅可能包含 | 没有 |
+| Apple Books | 有 | 仅限公共领域图书 | 没有 |
+| Apple 播客 | 有 | 仅免费播客 | 仅免费播客 |
+| 买影片 | 影片和电视节目都能买 | 能买影片，没有 iTunes Extras | 没有 |
+| Apple One | 有 | 没有 | 没有 |
+| Apple Fitness+、Apple News+ | 有 | 没有 | 没有 |
+
+这张表只是一个快照，Apple 的列表会改，用之前到原文里找到你的地区再看一眼。
+
+## 你要的是一个价格
+
+有时候吸引你的不是哪个 App，而是一个听说更低的价格。这一条最容易让人失望。价格不是定死的，Apple 和开发者都会调价，你订阅以后它也可能涨，涨价时 Apple 怎么通知你、你能怎么选，[第 5 步](/guide/5-subscriptions/)会讲。为了一个价格去注册，等于把账户押在一个随时会变的数字上。
+
+## 再记住一条规则
+
+账户的地区不只是一个商店的入口。按 Apple 媒体服务条款，你在哪个国家或地区创建账户，就等于把它指定为你的<Term k="居住国家或地区" />。这条规则是什么意思、和你有什么关系，新手入门的[第 1 课](/start/1-region/)讲得完整，注册之前去看一遍。
+
+还有一件事：别为了一个 App 去给你现在用的国区主账户换地区。换地区之前要先用完余额、取消会挡住换区的订阅；账户改出中国大陆，iCloud 里的内容还会由<Term k="云上贵州" />跨境转到 Apple 的服务器，转完以后云上贵州删掉它那份（[更改 Apple 账户国家或地区](https://support.apple.com/zh-cn/118283)）。另注册一个省事得多，[第 3 课](/start/3-new-account/)讲了为什么。
+
+写下你要的那样东西，确认它在那个地区，你就知道该注册哪个地区的账户了。下一步准备一个邮箱和一个手机号。
+
+## 卡住了？
+
+<Q q="国区搜不到那个 App，是被下架了吗？">
+<p>不一定。App 上架哪些国家或地区由开发者设定，有的 App 也会因为法律或监管要求在某些地区不能下载（<a href="https://developer.apple.com/help/app-store-connect/manage-your-apps-availability/manage-availability-for-your-app-on-the-app-store">App Store Connect 帮助</a>）。想知道具体原因，问这个 App 的开发者。</p>
+</Q>
+<Q q="我该注册美区还是土区？">
+<p>看你要的东西在哪边。App 看开发者把它放进了哪个地区的商店；Apple 的服务看<a href="https://support.apple.com/zh-cn/118205">提供情况列表</a>里那个地区的一栏。两边都有的，再看哪边的付款方式你用得上，<a href="/guide/3-payment/">第 3 步</a>有每个地区收哪些付款方式。</p>
+</Q>
+<Q q="列表里土耳其没有 Apple One，是不提供吗？">
+<p>Apple 没有明说“不提供”，只是土耳其那一栏里没有写 Apple One。这一点 Apple 的页面没有写明，拿不准就先问 Apple 支持。</p>
+</Q>
+
+<Checkpoint id="s0" items={["我写下了要外区账户做的那件事：哪个 App、哪项服务", "我确认了它在我想去的那个地区有", "我知道账户的地区按条款是居住地，打算先看一遍新手第 1 课"]} />
